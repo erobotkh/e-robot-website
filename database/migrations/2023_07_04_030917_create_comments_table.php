@@ -1,5 +1,7 @@
 <?php
 
+use App\Models\PostContent;
+use App\Models\User;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -11,9 +13,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('oauth_personal_access_clients', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->uuid('client_id')->constrained();
+        Schema::create('comments', function (Blueprint $table) {
+            $table->id();
+            $table->foreignIdFor(User::class)->constrained();
+            $table->foreignIdFor(PostContent::class)->constrained();
+            $table->string('comment_text');
             $table->timestamps();
         });
     }
@@ -23,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('oauth_personal_access_clients');
+        Schema::dropIfExists('comments');
     }
 };

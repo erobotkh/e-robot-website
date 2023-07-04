@@ -1,5 +1,7 @@
 <?php
 
+use App\Models\PostContent;
+use App\Models\User;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -11,11 +13,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('oauth_refresh_tokens', function (Blueprint $table) {
-            $table->string('id', 100)->primary();
-            $table->string('access_token_id', 100)->index()->constrained();
-            $table->boolean('revoked');
-            $table->dateTime('expires_at')->nullable();
+        Schema::create('likes', function (Blueprint $table) {
+            $table->id();
+            $table->foreignIdFor( User::class)->constrained();
+            $table->foreignIdFor(PostContent::class)->constrained();
+            $table->timestamps();
         });
     }
 
@@ -24,6 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('oauth_refresh_tokens');
+        Schema::dropIfExists('likes');
     }
 };

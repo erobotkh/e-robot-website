@@ -65,7 +65,7 @@ class AuthController extends Controller
             'email' => 'required',
             'password' => 'required'
         ]);
-
+        // dd($request->all());
         $user = User::where('email', $request['email'])->first();
         if (!isset($user)) {
             return $this->sendError('User does not exist with this details');
