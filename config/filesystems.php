@@ -55,6 +55,16 @@ return [
             'use_path_style_endpoint' => env('AWS_USE_PATH_STYLE_ENDPOINT', false),
             'throw' => false,
         ],
+        'do' => [
+            'driver' => 's3',
+            'key' => env('DO_KEY'),
+            'secret' => env('DO_SECRET'),
+            'endpoint'  => env('DO_ENDPOINT'),
+            'bucket' => env('DO_BUCKET'),
+            'region' => env('DO_REGIONS'),
+            'bucket_endpoint' => true,
+            'url' => env('DO_URL'),
+        ],
 
     ],
 
