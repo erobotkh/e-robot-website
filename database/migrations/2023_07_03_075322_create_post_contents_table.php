@@ -18,8 +18,8 @@ return new class extends Migration
             $table->string('title');
             $table->string('discription')->nullable();
             $table->string('image_name');
-            $table->foreignIdFor(Category::class)->constrained();
-            $table->foreignIdFor(User::class)->constrained();
+            $table->foreignIdFor(Category::class)->constrained()->onDelete('cascade')->onUpdate('cascade');;
+            $table->foreignIdFor(User::class)->constrained()->onDelete('cascade')->onUpdate('cascade');;
             $table->timestamps();
         });
     }

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Category;
 use App\Models\Comment;
+use App\Models\Like;
 use App\Models\PostContent;
 use App\Models\SubComment;
 use Illuminate\Http\Request;
@@ -116,24 +117,13 @@ class PostContentController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(PostContent $post_content_id)
+    public function destroy( $post_content_id)
     {
-        dd($post_content_id);
-        // $post_content=PostContent::where(['id'=>$post_content_id])->delete();
-        
-        // if($comment){
-        //     return $this->sendError("Fail",$comment);
-        // }
-        
-        // $sub_comment=SubComment::where(['post_content_id'=>$post_content_id]);
-        // if(!asset($sub_comment)){
-        //     return $this->sendError("Fail",$sub_comment);
-        // }
-        // $sub_comment?->delete();
-        // if($post_content){
-        //     return $this->sendResponse($post_content,"Delete Successfully");
-        // }
-        return $this->sendError("Delete Fail");
-        
+        $post=PostContent::where(['id'=>$post_content_id])?->delete();
+      
+        if($post){
+            return $this->sendResponse($post,"Delete Successfully");
+        }
+        return $this->sendError("Fail");
     }
 }
