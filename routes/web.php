@@ -17,4 +17,12 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-
+Route::get('/post_content',function(){
+    return view('post_content');
+});
+Route::get('/list_content',function(){
+    return view('list_content');
+});
+Route::get('/detail_content',function(){
+    return view('detail_content');
+});
