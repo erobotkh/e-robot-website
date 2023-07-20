@@ -1,5 +1,5 @@
 <x-layout>
-<div class="fixed inset-0 backdrop-blur-sm">
+<div class="my-4">
       <div
         class="p-8 py-8 w-[350px] md:w-[500px] border border-red-200 rounded-lg mx-auto mt-5 shadow-md shadow-slate-800"
       >
@@ -146,10 +146,13 @@
             Login
           </button>
         </div>
-        <div class="mt-4 flex items-center justify-between">
-          <span class="border-b w-1/5 md:w-1/4"></span>
-          <a href="#" class="text-xs text-gray-500 uppercase">or sign up</a>
-          <span class="border-b w-1/5 md:w-1/4"></span>
+        <div class="mt-4 ">
+          <div class="text-xs text-gray-500 text-center">Don't have an account?</div>
+          <div class="mt-4 flex items-center justify-between">
+            <span class="border-b w-1/5 md:w-1/4"></span>
+            <a href="/register" class="text-xs text-blue-500 underline">Sign up now</a>
+            <span class="border-b w-1/5 md:w-1/4"></span>
+          </div>
         </div>
       </div>
     </div>

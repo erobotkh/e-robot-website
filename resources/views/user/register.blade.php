@@ -160,10 +160,14 @@
             Sign Up
           </button>
         </div>
-        <div class="mt-4 flex items-center justify-between">
-          <span class="border-b w-1/5 md:w-1/4"></span>
-          <a href="#" class="text-xs text-gray-500 uppercase">or Sign in</a>
-          <span class="border-b w-1/5 md:w-1/4"></span>
+
+        <div class="mt-4 ">
+          <div class="text-xs text-gray-500 text-center">Have an account?</div>
+          <div class="mt-4 flex items-center justify-between">
+            <span class="border-b w-1/5 md:w-1/4"></span>
+            <a href="/login" class="text-xs text-blue-500 underline">Sign in now</a>
+            <span class="border-b w-1/5 md:w-1/4"></span>
+          </div>
         </div>
       </div>
     </div>
