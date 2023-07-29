@@ -1,7 +1,8 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Api;
 
+use App\Http\Controllers\Controller;
 use App\Models\Category;
 use App\Models\Comment;
 use App\Models\Like;
@@ -79,7 +80,7 @@ class PostContentController extends Controller
         $user_id=Auth::id();
         $image_file=$request->image_file;
         $url = Storage::disk('do')->putFile(
-            "erobot",
+            "erobot/post-content",
             $image_file,
             'public'
         );

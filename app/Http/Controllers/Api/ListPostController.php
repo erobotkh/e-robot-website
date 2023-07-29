@@ -1,7 +1,8 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Api;
 
+use App\Http\Controllers\Controller;
 use App\Models\Category;
 use App\Models\PostContent;
 use Illuminate\Http\Request;
@@ -44,4 +45,5 @@ class ListPostController extends Controller
         $data=Category::find($category_id)?->postcontents;
         return $this->sendResponse($data,"Successfully");
     }
+    
 }

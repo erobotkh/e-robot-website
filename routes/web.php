@@ -26,3 +26,11 @@ Route::get('/list_content',function(){
 Route::get('/detail_content',function(){
     return view('detail_content');
 });
+
+Route::get('/login', function(){
+    return view('user.login');
+});
+
+Route::get('/register', function(){
+    return view('user.register');
+});
