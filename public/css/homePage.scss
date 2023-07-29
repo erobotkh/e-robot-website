@@ -1,0 +1,1297 @@
+:root{
+    --bgDefualt:#f2f2f2;
+    --bgColor:#FEFBFF;
+    --bgForcus:#EB0100;
+    --bgHover:#FF1517;
+    --colorContent:#7D7573;
+
+    // font
+    --font_title:18px;
+    --font_subTitle:14px;
+    --font_text:13px;
+    --font_subContent:10px;
+    --font_icon:13px;
+
+    // width & height
+    --headerHeight:10%;//70px;
+    --footerHeight:100px;
+    --homeCardWidth:150px;
+    --homeCardheight:150px;
+    --logoHeight:70px;
+    --slideHeight:90%;
+    
+    --fontWeightTitle:500;
+
+
+}
+.home_wrapper{
+    width: 100%;
+    height: 100%;
+    background-color: var(--bgDefualt);
+    font-family: 'Open Sans', sans-serif;
+    header.header{
+        width: 100%;
+        height: var(--headerHeight);
+        background-color: var(--bgColor);
+        box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 20px;
+        position: sticky;
+        top: 0;
+        left: 0;
+        z-index: 8;
+        .header__logo{
+            img{
+                width: var(--logoHeight);
+                object-fit: cover;
+            }
+        }
+        .header__menu{
+            ul{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                li{
+                    list-style-type: none;
+                    padding: 3px 15px;
+                    border-right: 1px solid gray;
+                    transition:0.5s;
+
+                    a{
+                        font-size: var(--font_title);
+                        font-weight: 700;
+                        text-decoration: none;
+                        color: black;
+                    }    
+                }
+                li:hover{
+                    padding: 10px 15px;
+                    transition: 0.5s;
+                    a{
+                        color: var(--bgForcus)
+                    }
+                    a:after{
+                        display: none;
+                    }
+                }
+                .active{
+                    a{
+                        color: var(--bgForcus);
+                    }
+                    a:after{
+                        display: block;
+                        content: '';
+                        width: 100%;
+                        height: 2px;
+                        border-radius: 10px;
+                        background-color: var(--bgForcus);
+                    }
+                }
+                .about{
+                    border: none;
+                }
+            }
+        }
+        .header__manageAccount{
+            ul{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                li{
+                    font-size: var(--font_subTitle);
+                    list-style-type: none;
+                    padding: 10px;
+                    a{
+                        color: black;
+                    }
+                    img{
+                        height: 30px;
+                        border-radius: 50%;
+                        box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+                    }
+                }
+                li:hover{
+                    color: var(--bgForcus);
+                    cursor: pointer;
+                    a{
+                        color: var(--bgForcus);
+                    }
+                    .headerNotificationContainer{
+                        a{
+                            color: black;
+                        }
+                    }
+                }
+
+                .headerNotification{
+                    position: relative;
+
+                    .headerNotificationContainer{
+                        width: 300px;
+                        height: 85vh;
+                        background-color: var(--bgColor);
+                        box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+                        position: absolute;
+                        right: 0;
+                        border-radius: 5px;
+                        overflow: scroll;
+                        overflow-y: scroll;
+                        overflow-x: hidden;
+                        display: none;
+                        
+                        ul{
+                            display: block;
+                            width: 100%; 
+                            li.notificationContent{
+                                width: 100%;
+                                font-size: 15px;
+                                padding: 10px;
+                                border-bottom: 1px solid rgba(128, 128, 128, 0.566);
+                                a{
+                                    text-decoration: none;
+                                    .notificationTitle{
+                                        width: 100%;
+    
+                                    }
+                                    .notificationDate{
+                                        width: 100%;
+                                        font-size: 13px;
+                                        color: gray;
+                                    }
+                                }
+                                
+                                
+                            }
+
+                        }
+                        &.headerNotificationContainer:hover{
+                            color: black;
+                            li:hover{
+                                a{
+                                    color: var(--bgForcus);
+                                }
+                            }
+                        }
+                        
+                    }
+                    .showNoti{
+                        display: block;
+                        transition: 1s;
+
+                    }
+                    
+                    
+                }
+                .profileSection{
+                    position: relative;
+                
+                    .profileContainer{
+                        width: 250px;
+                        height: 35vh;
+                        background-color: var(--bgColor);
+                        box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+                        position: absolute;
+                        right: 20px;
+                        border-radius: 5px;
+                        display: none;
+                        
+                        .personalInfo{
+
+                            
+                            border-radius: 10px;
+                            a{
+                                display: flex;
+                                align-items: center;
+                                padding: 10px 20px;
+                                background-color: #eb000066;
+                                text-decoration: none;
+                                color: black;
+                                border-radius: 10px 10px 0 0;
+
+                                .profileImage{
+                                    padding-right: 30px;
+
+                                    img{
+                                        height: 50px;
+                                        
+                                    }
+                                    
+                                }
+                            }
+                            
+                            
+                        }
+                        .loginOrlogout{
+                            width: 100%;
+                            position: absolute;
+                            bottom: 20px;
+                            align-self: self-end;
+                            font-size: 20px;
+                            padding: 10px 20px;
+                            color: black;
+
+                        }
+                    }
+                    
+                        .personalInfo:hover{
+                            background-color: #eb00002f;
+                            a{
+                                .subtitle{
+                                    color: white;
+                            
+                                }
+                            }
+                        }
+                        .loginOrlogout:hover{
+                            background-color: #eb000066;
+                            color: white;
+                        }
+                        
+                    
+                    .showProfile{
+                        display: block;
+                    }
+                }
+                
+            }
+        }
+    }
+    main.mainContainer{
+        width: 100%;
+        height: var(--slideHeight);
+        .slideShow{
+            width: 100%;
+            height: 100%;
+            display: flex;
+
+            img{
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .programSection{
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                padding: 15px;
+                .programTitle{
+                    padding: 50px 0 35px 0;
+
+                    h1{
+                        font-weight: var(--fontWeightTitle);
+                    }
+                
+                }
+                .programContainer{
+                    display: grid;
+                    grid-template-columns: repeat(4,auto);
+                    gap: 20px;
+
+                    .programCard{
+                        width: 100%;
+                        height: 55vh;
+                        background-color: var(--bgColor);
+                        padding: 30px;
+                        cursor: pointer;
+                        a{
+                            text-decoration: none;
+                            color: black;
+                            .programObject{
+                                width: 100px;
+                                img{
+                                    width: 100%;
+                                    height: 100%;
+                                }
+                            }
+                            .programSubtitle{
+                                h2{
+                                    font-weight: 700;
+                                    padding: 10px 0;
+                                }
+                            }
+                            article.aboutProgram{
+                                font-size: 15px;
+                                color: var(--colorContent);
+                            }
+                        }
+                        
+                    }
+                    .programCard:hover{
+                        box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+                    }
+                }
+        }
+
+
+    
+
+
+
+        // -------------video
+        .videoSection{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+        
+            margin-top: 50px;
+
+            background-color: var(--bgColor);
+
+            padding: 15px;
+            
+            .videoContainer{
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                .video{
+                    iframe{
+                        width:750px;
+                        height:315px;
+                    }
+                }
+                
+                .articleContianer{
+                    width: 50%;
+                    align-self: self-start;
+                    padding: 0 30px;
+                    .videoSubtitle{
+
+                        h2{
+                        }
+                    }
+                    .videoDate{
+                        font-size: 14px;
+                        color: var(--colorContent);
+                        padding-bottom: 10px;
+                        .bx-time-five{
+                            color: #009EF7;
+                        }
+                        span{
+        
+                        }
+                    }
+                    .videoDetail{
+                        
+                        text-align: justify;
+                    }
+                    .seeMorevideo{
+                        width: 100%;
+                        display: flex;
+                        justify-content: end;
+                        button{
+                            cursor: pointer;
+                            padding: 10px;
+                            font-size: 15px;
+                            background-color: #FFAB00;
+                            outline: none;
+                            border: none;
+                            border-radius: 5px;
+                            a{
+                                text-decoration: none;
+                                color: white;
+                            }
+                            &:hover{
+                                background-color:#ffaa009f;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        //------------------- team
+        .teamsSection{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 15px;
+            .teamsTitle{
+                padding: 50px 0 35px 0;
+
+                h1{
+                    font-weight: var(--fontWeightTitle);
+                }
+            
+            }
+            .teamContainer{
+                width: 100%;
+                display: grid;
+                grid-template-columns: repeat(3,auto);
+                
+                gap: 20px;
+
+                .teamCard{
+                    width: 100%;
+                    height: 80vh;
+                    border-radius: 10px;
+                    background-color: var(--bgColor);
+                    cursor: pointer;
+                    a{
+                        width: 100%;
+                        text-decoration: none;
+                        color: black;
+                        .teamImage{
+                            width: 100%;
+                            height: 40%;
+                            border-radius: 10px;
+                            position: relative;
+
+                            img{
+                                width: 100%;
+                                height: 100%;
+                                object-fit: cover;
+                                border-radius: 10px 10px 0 0;
+
+                            }
+                            .grayScreen{
+                                display: none;
+                                
+                            }
+                            
+                        }
+                        .teamLeader{
+                            width: 100%;
+                            position: relative;
+                            height: 13%;
+                            .leader{
+                                width: 100px;
+                                height: 100px;
+                                position: absolute;
+                                background-color: white;
+
+                                border-radius: 50%;
+                                top: -30px;
+                                left: 5%;
+                                img{
+                                    width: 100%;
+                                    height: 100%;
+                                    border-radius: 50%;
+                                    border: 4px solid white;
+                                }
+                            }
+                            .teamPosition{
+                                padding-left: 33%;
+                                font-size: 18px;
+                                color: gray;
+                                padding-top: 10px;
+                            }
+                        }
+                        .teamSubtitle{
+                            padding:0 30px;
+
+                            h2{
+                                
+                                font-weight: 500;
+                                padding: 10px 0 5px 0;
+                            }
+                        }
+                        
+                        article.aboutteam{
+                            padding:0 30px;
+                            font-size: 15px;
+                            color: var(--colorContent);
+                        }
+                    }
+                    
+                }
+                .teamCard:hover{
+                    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+                    a{
+                        .teamImage{
+                            .grayScreen{
+                                display: block;
+                                width: 100%;
+                                height: 100%;
+                                position: absolute; 
+                                top: 0;
+                                background-color:rgba(0, 0, 0, 0.591);
+                                border-radius: 10px;
+                                
+                            }
+                        }
+                    }
+                }
+            }
+        
+        }
+
+
+
+
+
+
+    }
+    .to_top{
+        background-color: rgba(128, 128, 128, 0.635);
+        border: 2px solid white;
+        position: fixed;
+        bottom: 16px;
+        right: 20px;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 30px;
+        color: var(--bgForcus);
+        pointer-events: none;
+        transition: all .5s;
+        opacity: 0;
+        text-decoration: none;
+        z-index: 20;
+        &:hover{
+            color: white;
+            border-color: red;
+
+        }
+    
+    
+    }
+    .to_top.active{
+        bottom: 32px;
+        pointer-events: auto;
+        opacity: 1;
+        z-index: 7;
+    }
+    
+
+    .footer{
+        width: 100%;
+        background-color: #22272B;
+        color: rgba(255, 255, 255, 0.596);
+        padding: 15px 30px;
+        .footerContainer{
+            width: 100%;
+            display: flex;
+            
+
+            .footerLogo{
+                width: 25%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                border-right: 1px solid gray;
+                .logo{
+                    width: 100px;
+                    border-radius: 50%;
+                    
+                    img{
+                        border-radius: 50%;
+                        cursor: pointer;
+                        width: 100%;
+                    } 
+                }
+                .quote{
+                    padding: 10px;
+                    p{
+                        text-align: center;
+                        color: white;
+                    }
+                }
+                .media{
+                    
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 10px;
+                    a{
+                        width: 30px;
+                        height: 30PX;
+                        img{
+                            width: 100%;
+                            height: 100%;
+                            object-fit: contain;
+                        }
+                    }
+                }
+            }
+            .footerContent{
+                width: 50%;
+                padding: 10px 100px;
+                display: flex;
+                justify-content: space-between;
+    
+                border-right: 1px solid gray;
+                
+                .contentEssentail{
+                    font-size: 15px;
+                    color: white;
+                    &.contentEssentail::after{
+                        display: block;
+                        content: "";
+                        width: 35px;
+                        height: 2px;
+                        background-color: gray;
+                        border-radius: 10px;
+                        margin-top:3px ;
+                    }
+                    
+    
+                }
+                .contentLink{
+                    padding: 5px 0;
+                    font-size: 13px;
+                    
+                    li{
+                        padding: 5px 0;
+                        list-style-type: none;
+                        a{
+                            color: rgba(255, 255, 255, 0.596);
+                            text-decoration: none;
+                        }
+                        a:hover{
+                            color: white;
+                        }
+                        i{
+                            color: gray;
+                            padding-right: 5px;
+                        }
+                    }
+                }
+    
+                .contentContact{
+                    font-size: 15px;
+                    color: white;
+                    &.contentContact::after{
+                        display: block;
+                        content: "";
+                        width: 35px;
+                        height: 2px;
+                        background-color: gray;
+                        border-radius: 10px;
+                        margin-top:3px ;
+                    }
+    
+                }
+            }
+            .footerMoblieApp{
+                width: 25%;
+                padding: 10px 60px;
+                font-size: 15px;
+                    color: white;
+                .contentApp{
+                    &.contentApp::after{
+                        display: block;
+                        content: "";
+                        width: 35px;
+                        height: 2px;
+                        background-color: gray;
+                        border-radius: 10px;
+                        margin-top:3px ;
+                    }
+                }
+                .playStore{
+                    
+                    padding: 5px 10px;
+                    background-color: white;
+                    border-radius: 10px;
+                    margin-top: 10px;
+                    a{
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        text-decoration: none;
+                    }
+                    .playStoreImage{
+                        width: 30px;
+    
+                        img{
+                            width: 100%;
+                        }
+                    }
+                    .subtitle{
+                        color: black;
+                        font-size: 20px;
+                        padding: 5px;
+                        font-weight: 700;
+                    }&.playStore:hover{
+                        background-color: rgb(239, 234, 234);
+                        cursor: pointer;
+                        
+                    }
+                }
+                
+    
+            }
+        }
+        .copyRightTermPrivacy{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 13px;
+            color: gray;
+            padding-bottom: 15px;
+        }
+        
+
+    }
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+// tablet responsive
+
+@media (max-width: 885px) {
+    .home_wrapper{
+        
+        main.mainContainer{
+            width: 100%;
+            height: 100%;
+            
+            
+            .programSection{
+                
+                    .programContainer{
+                        display: grid;
+                        grid-template-columns: repeat(3,auto);
+                        gap: 20px;
+    
+                        .programCard{
+                            width: 100%;
+                            height: 30vh;
+                            
+                            
+                        }
+                    }
+            }
+
+ 
+            // -------------video
+            .videoSection{
+
+                .videoContainer{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    .articleContianer{
+                        width: 100%;
+                    }
+                    
+                }
+            }
+    
+            //------------------- team
+            .teamsSection{
+                
+                .teamContainer{
+                    width: 100%;
+                    display: grid;
+                    grid-template-columns: repeat(2,auto);
+    
+                    .teamCard{
+                        width: 100%;
+                        height: 40vh;
+                        
+                    }
+                    
+                }
+            
+            }
+
+        }
+        
+        .footer{
+            
+            .footerContainer{
+                
+                .footerContent{
+                    width: 50%;
+                    padding: 10px 20px;
+                    display: flex;
+                    justify-content: space-between;
+        
+
+                    
+                }
+                .footerMoblieApp{
+                    width: 25%;
+                    padding: 10px;
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+}
+// mobie responsive
+@media (max-width: 428px) {
+    .home_wrapper{
+        
+        header.header{
+            width: 100%;
+            height: var(--headerHeight);
+            background-color: var(--bgColor);
+            box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 20px;
+            position: sticky;
+            top: 0;
+            left: 0;
+            z-index: 8;
+            .header__logo{
+                img{
+                    width: var(--logoHeight);
+                    object-fit: cover;
+                }
+            }
+            .header__menu{
+                display: none;
+                ul{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+    
+                    li{
+                        list-style-type: none;
+                        padding: 3px 15px;
+                        border-right: 1px solid gray;
+                        transition:0.5s;
+    
+                        a{
+                            font-size: var(--font_title);
+                            font-weight: 700;
+                            text-decoration: none;
+                            color: black;
+                        }    
+                    }
+                    li:hover{
+                        padding: 10px 15px;
+                        transition: 0.5s;
+                        a{
+                            color: var(--bgForcus)
+                        }
+                        a:after{
+                            display: none;
+                        }
+                    }
+                    .active{
+                        a{
+                            color: var(--bgForcus);
+                        }
+                        a:after{
+                            display: block;
+                            content: '';
+                            width: 100%;
+                            height: 2px;
+                            border-radius: 10px;
+                            background-color: var(--bgForcus);
+                        }
+                    }
+                    .about{
+                        border: none;
+                    }
+                }
+            }
+            .header__manageAccount{
+                ul{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    li{
+                        font-size: var(--font_subTitle);
+                        list-style-type: none;
+                        padding: 10px;
+                        a{
+                            color: black;
+                        }
+                        img{
+                            height: 30px;
+                            border-radius: 50%;
+                            box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+                        }
+                    }
+                    li:hover{
+                        color: var(--bgForcus);
+                        cursor: pointer;
+                        a{
+                            color: var(--bgForcus);
+                        }
+                        .headerNotificationContainer{
+                            a{
+                                color: black;
+                            }
+                        }
+                    }
+    
+                    .headerNotification{
+                        position: relative;
+    
+                        .headerNotificationContainer{
+                            width: 300px;
+                            height: 85vh;
+                            background-color: var(--bgColor);
+                            box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+                            position: absolute;
+                            right: 0;
+                            border-radius: 5px;
+                            overflow: scroll;
+                            overflow-y: scroll;
+                            overflow-x: hidden;
+                            display: none;
+                            
+                            ul{
+                                display: block;
+                                width: 100%; 
+                                li.notificationContent{
+                                    width: 100%;
+                                    font-size: 15px;
+                                    padding: 10px;
+                                    border-bottom: 1px solid rgba(128, 128, 128, 0.566);
+                                    a{
+                                        text-decoration: none;
+                                        .notificationTitle{
+                                            width: 100%;
+        
+                                        }
+                                        .notificationDate{
+                                            width: 100%;
+                                            font-size: 13px;
+                                            color: gray;
+                                        }
+                                    }
+                                    
+                                    
+                                }
+    
+                            }
+                            &.headerNotificationContainer:hover{
+                                color: black;
+                                li:hover{
+                                    a{
+                                        color: var(--bgForcus);
+                                    }
+                                }
+                            }
+                            
+                        }
+                        .showNoti{
+                            display: block;
+                            transition: 1s;
+    
+                        }
+                        
+                        
+                    }
+                    .profileSection{
+                        position: relative;
+                    
+                        .profileContainer{
+                            width: 250px;
+                            height: 35vh;
+                            background-color: var(--bgColor);
+                            box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+                            position: absolute;
+                            right: 20px;
+                            border-radius: 5px;
+                            display: none;
+                            
+                            .personalInfo{
+    
+                                
+                                border-radius: 10px;
+                                a{
+                                    display: flex;
+                                    align-items: center;
+                                    padding: 10px 20px;
+                                    background-color: #eb000066;
+                                    text-decoration: none;
+                                    color: black;
+                                    border-radius: 10px 10px 0 0;
+    
+                                    .profileImage{
+                                        padding-right: 30px;
+    
+                                        img{
+                                            height: 50px;
+                                            
+                                        }
+                                        
+                                    }
+                                }
+                                
+                                
+                            }
+                            .loginOrlogout{
+                                width: 100%;
+                                position: absolute;
+                                bottom: 20px;
+                                align-self: self-end;
+                                font-size: 20px;
+                                padding: 10px 20px;
+                                color: black;
+    
+                            }
+                        }
+                        
+                            .personalInfo:hover{
+                                background-color: #eb00002f;
+                                a{
+                                    .subtitle{
+                                        color: white;
+                                
+                                    }
+                                }
+                            }
+                            .loginOrlogout:hover{
+                                background-color: #eb000066;
+                                color: white;
+                            }
+                            
+                        
+                        .showProfile{
+                            display: block;
+                        }
+                    }
+                    
+                }
+            }
+        }
+        main.mainContainer{
+            width: 100%;
+            height: var(--slideHeight);
+            .slideShow{
+                width: 100%;
+                height: 250px;
+                display: flex;
+    
+            }
+            
+            .programSection{
+                
+                    .programContainer{
+                        display: grid;
+                        grid-template-columns: repeat(1,auto);
+                        gap: 20px;
+    
+                        .programCard{
+                            width: 100%;
+                            height: 35vh;
+                            background-color: var(--bgColor);
+                            padding: 30px;
+                            cursor: pointer;
+                            
+                            
+                        }
+                    }
+            }
+
+            
+    
+            
+    
+    
+            // -------------video
+            .videoSection{
+
+                .videoContainer{
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    .video{
+                        iframe{
+                            width:400px;
+                            height:255px;
+                        }
+                    }
+                    .articleContianer{
+                        width: 100%;
+                        
+                        padding: 10px 30px;
+                        .videoSubtitle{
+    
+                            h2{
+                            }
+                        }
+                        .videoDate{
+                            font-size: 14px;
+                            color: var(--colorContent);
+                            padding-bottom: 10px;
+                            .bx-time-five{
+                                color: #009EF7;
+                            }
+                            span{
+            
+                            }
+                        }
+                        .videoDetail{
+                            
+                            text-align: justify;
+                        }
+                        .seeMorevideo{
+                            width: 100%;
+                            display: flex;
+                            justify-content: end;
+                            button{
+                                cursor: pointer;
+                                padding: 10px;
+                                font-size: 15px;
+                                background-color: #FFAB00;
+                                outline: none;
+                                border: none;
+                                border-radius: 5px;
+                                a{
+                                    text-decoration: none;
+                                    color: white;
+                                }
+                                &:hover{
+                                    background-color:#ffaa009f;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+    
+            //------------------- team
+            .teamsSection{
+                
+                
+                .teamContainer{
+                    width: 100%;
+                    display: grid;
+                    grid-template-columns: repeat(1,auto);
+                    
+                    gap: 20px;
+    
+                    .teamCard{
+                        width: 100%;
+                        height: 50vh;
+                        border-radius: 10px;
+                        background-color: var(--bgColor);
+                        cursor: pointer;
+                        
+                        
+                    }
+                    
+                }
+            
+            }
+
+        }    
+        .footer{
+            
+            .footerContainer{
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                
+    
+                .footerLogo{
+                    width: 100%;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    align-items: center;
+                    border-right: none;
+                    .logo{
+                        width: 30%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        
+                        img{
+                        
+                            width: 100px;
+                        } 
+                    }
+                    .quote{
+                        width: 70%;
+                        p{
+                            text-align: center;
+                        }
+                    }
+                    .media{
+                        
+                        display: none;
+                        
+                    }
+                }
+                .footerContent{
+                    width: 100%;
+                    padding: 10px;
+                    display: flex;
+                    flex-direction: column;
+                    
+                    border-right: none;
+                    
+                    .contentEssentail{
+                        font-size: 15px;
+                        padding-top: 10px;
+                        
+                    }
+                    .contentLink{
+                        padding: 5px 0;
+                        font-size: 13px;
+                        
+                    
+                    }
+        
+                    .contentContact{
+                        font-size: 15px;
+                        padding-top: 10px;
+    
+                    }
+                }
+                .footerMoblieApp{
+                    width: 100%;
+                    padding: 15px;
+                    font-size: 15px;
+    
+                    .playStore{
+                        width: 50%;
+                        background-color: white;
+                        
+                        a{
+                            font-size: 13px;
+                        }
+                        .playStoreImage{
+                            width: 25px;
+        
+                            img{
+                                width: 100%;
+                            }
+                        }
+                        .subtitle{
+                            color: black;
+                            font-size: 20px;
+                            padding: 5px;
+                            font-weight: 700;
+                        }&.playStore:hover{
+                            background-color: rgb(239, 234, 234);
+                            cursor: pointer;
+                            
+                        }
+                    }
+                    
+        
+                }
+            }
+            .copyRightTermPrivacy{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 12px;
+                color: gray;
+                padding-bottom: 15px;
+            }
+            
+    
+        }
+    }
+}
