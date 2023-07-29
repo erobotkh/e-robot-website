@@ -18,3 +18,12 @@ Route::get('/', function () {
 });
 
 
+Route::get('/login', function(){
+    return view('user.login');
+});
+
+Route::get('/register', function(){
+    return view('user.register');
+});
+
+
