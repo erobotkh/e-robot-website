@@ -21,4 +21,20 @@ Route::get('/home', function () {
 });
 
 
+Route::get('/post_content',function(){
+    return view('post_content');
+});
+Route::get('/list_content',function(){
+    return view('list_content');
+});
+Route::get('/detail_content',function(){
+    return view('detail_content');
+});
 
+Route::get('/login', function(){
+    return view('user.login');
+});
+
+Route::get('/register', function(){
+    return view('user.register');
+});
