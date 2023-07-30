@@ -17,8 +17,8 @@
 
 <body>
     <div class="md:flex md:p-5 ">
-        <div>
-            <div class="flex">
+        <div class="md:w-1/2 p-5">
+            <div class="flex ">
                 <div id="arrow-left" class="arrow cursor-pointer"><img
                         src="https://www.svgrepo.com/show/384730/rounded-square-arrow-indicator-left.svg" alt=""
                         class="w-[50px] mt-[100px]">
@@ -120,7 +120,7 @@
                         alt="" class="w-[50px] h-[50px] rounded-full">
                     <div class="flex">
                         <input type="text" placeholder="Write a Comment..."
-                            class="px-2 py-2 mt-1 ml-3 rounded-md bg-[#EBE0DD] w-[400px]">
+                            class="px-2 py-2 mt-1 ml-3 rounded-md bg-[#EBE0DD] md:w-[400px] sm:w-[400px] w-[300px]">
                         <button class="px-7 py-2 mt-1 ml-3 rounded-md bg-[#EB0100] font-bold text-white">Post</button>
                     </div>
                 </div>
