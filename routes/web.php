@@ -76,3 +76,20 @@ Route::get('/pages-register', function () {
 Route::get('/pages-login', function () {
     return view('NiceAdmin.pages-login');
 });
+
+
+//about us 
+Route::get('about/mission-vision', function () {
+    return view('about.mission_vision');
+});
+Route::get('about/history', function () {
+    return view('about.history');
+});
+Route::get('about/team-leader', function () {
+    return view('about.team-leader');
+});
+Route::get('about/team-member', function () {
+    return view('about.team-member');
+});Route::get('about/department', function () {
+    return view('about.department');
+});
