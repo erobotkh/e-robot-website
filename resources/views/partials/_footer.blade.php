@@ -5,7 +5,7 @@
             <p class="font-bold uppercase text-red-600 text-xl text-center">E-robot</p>
 
                 <div class="flex flex-col mx-auto mt-6 space-y-3 md:space-y-0 md:flex-row">
-                    <a href="#">
+                    <a href="/home">
                         <img class="w-auto h-24" src="{{asset('./images/logo_erobot-removebg.png')}}" alt="">
                     </a>
                 </div>
@@ -15,8 +15,8 @@
                 <p class="font-bold uppercase text-red-600 text-xl">Quick Link</p>
 
                 <div class="flex flex-col items-start mt-5 space-y-2">
-                    <a href="/" class="  hover:underline hover:text-red-600">Home</a>
-                    <a href="/shop" class="  hover:underline hover:text-red-600">Activity</a>
+                    <a href="/home" class="  hover:underline hover:text-red-600">Home</a>
+                    <a href="/list_content" class="  hover:underline hover:text-red-600">Activity</a>
                     <a href="/about/history" class="  hover:underline hover:text-red-600">About</a>
                 </div>
             </div>
@@ -70,4 +70,76 @@
         </div>
     </div>
 </footer>
+
+<!-- <footer class="footer">
+            <div class="footerContainer">
+                <div class="footerLogo">
+                    <div class="logo">
+                        <a href="./homePage.html">
+                            <img src="images/logo_erobot.png" alt="">
+
+                        </a>
+                        
+                    </div>
+                    <div class="quote"><p>The universe of us is loving and curiosity.</p></div>
+                    <div class="media">
+                        <a class="facebookMedia" href=" https://www.facebook.com/ERobotKH?mibextid=LQQJ4d" >
+                            <img src="images/FacebookLogo.png" alt="">
+                        </a>
+                        <a class="youtubeMedia" href="https://www.youtube.com/@erobotkh ">
+                            <img src="images/youtube_logo.png" alt="">
+                        </a>
+                        <a class="telegramMedia" href=" https://t.me/erobot_generalknowledge">
+                            <img src="images/Telegram_logo.webp" alt="">
+                        </a>
+                        <a class="linkInMedia" href="https://www.linkedin.com/company/erobotkh">
+                            <img src="images/linkedin.svg" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="footerContent">
+                    <div class="contentContainer">
+                        <div class="contentEssentail">
+                            <h3>Essentail</h3>
+                        </div>
+                        <ul class="contentLink">
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Team</a></li>
+                            <li><a href="#">Donate</a></li>
+                            <li><a href="#">About Us</a></li>
+                        </ul>
+                    </div>
+                    <div class="contentContainer">
+                        <div class="contentContact">
+                            <h3>Contact Us</h3>
+                        </div>
+                        <ul class="contentLink">
+                            <li><i class='bx bx-location-plus' ></i>Phnom Phenh, Cambodia</li>
+                            <li><i class='bx bx-phone'></i>+855 10567014</li>
+                            <li><i class='bx bx-envelope'></i>ERobotTeam@gmail.com</li>
+                            <li><i class='bx bxl-telegram' ></i>010567014</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footerMoblieApp">
+                    <div class="contentApp">
+                        <h3>Application</h3>
+                    </div>
+                    <div class="playStore">
+                        <a href="#">
+                            <div class="playStoreImage">
+                                <img src="images/playStore.png" alt="">
+    
+                            </div>
+                            <div class="subtitle">Play Store</div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <hr style="width: 90%; margin: 20px auto; background-color: rgba(128, 128, 128, 0.224); border-color: rgba(128, 128, 128, 0.228);">
+            <div class="copyRightTermPrivacy">
+                <span>Copyright&copy; 202x E-Robot, All rights reversed.</span>
+                <a href="#">Term & Privacy</a>
+            </div>
+        </footer> -->
 

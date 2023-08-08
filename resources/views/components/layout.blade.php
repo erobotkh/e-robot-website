@@ -10,6 +10,9 @@
     <link rel="stylesheet" href="{{asset('styles/style.css')}}">
     <script src="//unpkg.com/alpinejs" defer></script>
     <script src="https://unpkg.com/flowbite@1.3.4/dist/flowbite.js"></script>
+    <link rel="stylesheet" href="{{ URL:: asset('css/homePage.css')}}">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&family=Poppins:wght@500&display=swap" rel="stylesheet">
     <title>E-robot</title>
 </head>
 <body>

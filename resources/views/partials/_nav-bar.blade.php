@@ -6,14 +6,14 @@ x-data="{open:false,menu:false, lokasi:false}">
     <div class="max-w-7xl mx-auto px-2 sm:px-4 lg:px-8">
       <div class="relative flex items-center justify-between h-20">
         <div class="flex items-center px-2 lg:px-0">
-          <a class="flex-shrink-0" href="#">
+          <a class="flex-shrink-0" href="/home">
             <img class="block lg:hidden h-12 w-16 " src="{{asset('./images/logo_erobot-removebg.png')}}" alt="Logo">
             <img class="hidden lg:block h-16 w-auto " src="{{asset('./images/logo_erobot-removebg.png')}}" alt="Logo">
           </a>
           <div class="hidden lg:block">
             <div class="flex">
-                <a href="/" class="uppercase ml-4 px-3 py-2 rounded-md  leading-5 text-red-600 font-bold hover:bg-black hover:text-white transition duration-150 ease-in-out cursor-pointer focus:outline-none focus:text-white focus:bg-black "> Home </a>
-                <a href="#" class="uppercase ml-4 px-3 py-2 rounded-md  leading-5 text-red-600 font-bold hover:bg-black hover:text-white transition duration-150 ease-in-out cursor-pointer focus:outline-none focus:text-white focus:bg-black "> Activity </a>
+                <a href="/home" class="uppercase ml-4 px-3 py-2 rounded-md  leading-5 text-red-600 font-bold hover:bg-black hover:text-white transition duration-150 ease-in-out cursor-pointer focus:outline-none focus:text-white focus:bg-black "> Home </a>
+                <a href="/list_content" class="uppercase ml-4 px-3 py-2 rounded-md  leading-5 text-red-600 font-bold hover:bg-black hover:text-white transition duration-150 ease-in-out cursor-pointer focus:outline-none focus:text-white focus:bg-black "> Activity </a>
 
                 <div class="group relative ml-4  rounded-md  leading-5 text-red-600 font-bold transition duration-150 ease-in-out cursor-pointer focus:outline-none focus:text-white focus:bg-black ">
                     <button
@@ -89,10 +89,10 @@ x-data="{open:false,menu:false, lokasi:false}">
     <div x-show="menu" class="block lg:hidden">
       <ul class="px-2 pt-2 pb-3" >
         <li>
-          <a href="/" class="mt-1 block px-3 py-2 rounded-md text-red-600 font-semibold hover:bg-black f hover:text-white focus:outline-none focus:text-white focus:bg-black transition duration-150 ease-in-out">Home </a>
+          <a href="/home" class="mt-1 block px-3 py-2 rounded-md text-red-600 font-semibold hover:bg-black f hover:text-white focus:outline-none focus:text-white focus:bg-black transition duration-150 ease-in-out">Home </a>
         </li>
         <li>
-          <a href="#" class="mt-1 block px-3 py-2 rounded-md text-red-600  font-semibold hover:bg-black f hover:text-white focus:outline-none focus:text-white focus:bg-black transition duration-150 ease-in-out">Activity </a>
+          <a href="/list_content" class="mt-1 block px-3 py-2 rounded-md text-red-600  font-semibold hover:bg-black f hover:text-white focus:outline-none focus:text-white focus:bg-black transition duration-150 ease-in-out">Activity </a>
         </li>
         <li>
 					<button type="button" class="flex items-center w-full font-bold py-2 pr-2 text-base text-red-600 hover:text-white transition duration-75 rounded-lg group hover:bg-black" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
