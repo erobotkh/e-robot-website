@@ -12,9 +12,11 @@ use App\Http\Controllers\Api\SocailController;
 use App\Http\Controllers\Api\SocailLinkController;
 use App\Http\Controllers\Api\SubCommentController;
 use App\Http\Controllers\Api\TeamController;
+use App\Http\Controllers\Api\UserProfileController;
 use App\Models\MemberPosition;
 use App\Models\PostContent;
 use App\Models\SubComment;
+use App\Models\UserProfile;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -73,4 +75,8 @@ Route::middleware(['auth:api'])->group(function () {
 
     Route::post('comment/sub-comment/store', [SubCommentController::class, 'store']);
     Route::post('comment/sub-comment/delete', [SubCommentController::class, 'destroy']);
+
+   
+    Route::post('user-profile/edit',[UserProfileController::class,'editUserProfile']);
+    Route::get('user-profile/show-user-profile',[UserProfileController::class,'showUserProfile']);
 });
