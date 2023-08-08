@@ -57,11 +57,13 @@ Route::get('member-position/show-all',[MemberPositionController::class,'show']);
 
 Route::post('socail-link/store',[SocailLinkController::class,'store']);
 
+Route::get('category/show', [CategoryController::class, 'show']);
+
 Route::middleware(['auth:api'])->group(function () {
     Route::post('logout', [AuthController::class, 'logout']);
 
     Route::post('category/store', [CategoryController::class, 'store']);
-    Route::get('category/show', [CategoryController::class, 'show']);
+    
 
     Route::post('post-content/store', [PostContentController::class, 'store']);
     Route::get('post-content/index', [PostContentController::class, 'index']);
