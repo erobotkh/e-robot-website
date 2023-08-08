@@ -1,28 +1,10 @@
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home page</title>
-    <link rel="stylesheet" href="{{ URL:: asset('css/homePage.css')}}">
-
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&family=Poppins:wght@500&display=swap" rel="stylesheet"></head>
-</head>
-<style>
-    *{
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-</style>
-<body>
+<x-layout>
     <div class="home_wrapper">
-        <header class="header">
+        <!-- <header class="header">
             <div class="header__logo">
                 <a href="./homePage.html">
-                    <!-- <link rel="stylesheet" href="{{ URL:: asset('css/homePage.css')}}"> -->
+                    <link rel="stylesheet" href="{{ URL:: asset('css/homePage.css')}}">
 
                     <img src="images/logo_erobot-removebg.png" alt="E-Robot Logo">
                 </a>
@@ -68,7 +50,7 @@
                     </li>
                 </ul>
             </div>
-        </header>
+        </header> -->
 
         <main class="mainContainer">
             <div class="slideShow" id="slideShow">
@@ -281,81 +263,6 @@
             <i class='bx bx-chevrons-up'></i>
         </a>
 
-        <footer class="footer">
-            <div class="footerContainer">
-                <div class="footerLogo">
-                    <div class="logo">
-                        <a href="./homePage.html">
-                            <img src="images/logo_erobot.png" alt="">
-
-                        </a>
-                        
-                    </div>
-                    <div class="quote"><p>The universe of us is loving and curiosity.</p></div>
-                    <div class="media">
-                        <a class="facebookMedia" href=" https://www.facebook.com/ERobotKH?mibextid=LQQJ4d" >
-                            <img src="images/FacebookLogo.png" alt="">
-                        </a>
-                        <a class="youtubeMedia" href="https://www.youtube.com/@erobotkh ">
-                            <img src="images/youtube_logo.png" alt="">
-                        </a>
-                        <a class="telegramMedia" href=" https://t.me/erobot_generalknowledge">
-                            <img src="images/Telegram_logo.webp" alt="">
-                        </a>
-                        <a class="linkInMedia" href="https://www.linkedin.com/company/erobotkh">
-                            <img src="images/linkedin.svg" alt="">
-                        </a>
-                    </div>
-                </div>
-                <div class="footerContent">
-                    <div class="contentContainer">
-                        <div class="contentEssentail">
-                            <h3>Essentail</h3>
-                        </div>
-                        <ul class="contentLink">
-                            <li><a href="#">Blog</a></li>
-                            <li><a href="#">Team</a></li>
-                            <li><a href="#">Donate</a></li>
-                            <li><a href="#">About Us</a></li>
-                        </ul>
-                    </div>
-                    <div class="contentContainer">
-                        <div class="contentContact">
-                            <h3>Contact Us</h3>
-                        </div>
-                        <ul class="contentLink">
-                            <li><i class='bx bx-location-plus' ></i>Phnom Phenh, Cambodia</li>
-                            <li><i class='bx bx-phone'></i>+855 10567014</li>
-                            <li><i class='bx bx-envelope'></i>ERobotTeam@gmail.com</li>
-                            <li><i class='bx bxl-telegram' ></i>010567014</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="footerMoblieApp">
-                    <div class="contentApp">
-                        <h3>Application</h3>
-                    </div>
-                    <div class="playStore">
-                        <a href="#">
-                            <div class="playStoreImage">
-                                <img src="images/playStore.png" alt="">
-    
-                            </div>
-                            <div class="subtitle">Play Store</div>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <hr style="width: 90%; margin: 20px auto; background-color: rgba(128, 128, 128, 0.224); border-color: rgba(128, 128, 128, 0.228);">
-            <div class="copyRightTermPrivacy">
-                <span>Copyright&copy; 202x E-Robot, All rights reversed.</span>
-                <a href="#">Term & Privacy</a>
-            </div>
-                
-
-        </footer>
-    </div>
-
     <script>
 
         // slide show
@@ -410,5 +317,4 @@
 
         
     </script>
-</body>
-</html>
+</x-layout>
