@@ -16,6 +16,15 @@ class UserProfile extends Model
         'bio',
         'user_id'
     ];
+    protected $appends = ['profile_image_url','cover_image_url'];
+
+    public function getProfileImageUrlAttribute() {
+        return env('DO_URL').$this->profile_image;
+    }
+
+    public function getCoverImageUrlAttribute() {
+        return env('DO_URL').$this->cover_image;
+    }
     public function user():BelongsTo{
         return $this->belongsTo(User::class);
     }

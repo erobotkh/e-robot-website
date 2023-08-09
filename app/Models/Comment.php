@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Notifications\Notifiable;
 
 class Comment extends Model
@@ -20,5 +21,8 @@ class Comment extends Model
     }
     public function postcontent():BelongsTo{
         return $this->belongsTo(PostContent::class);
+    }
+    public function sub_comments():HasMany{
+        return $this->hasMany(SubComment::class);
     }
 }
