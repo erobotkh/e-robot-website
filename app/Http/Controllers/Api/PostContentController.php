@@ -48,12 +48,12 @@ class PostContentController extends Controller
     {
         $datas = PostContent::orderBy('updated_at', 'desc')->get();
         foreach ($datas as $data) {
-            $users = PostContent::find($data->user_id)->user;
-            $user_profiles = User::find($data->user_id)->user_profiles;
-            $likes = PostContent::find($data->id)->likes;
-            $comments = PostContent::find($data->id)->comments;
+            $users = PostContent::find($data->user_id)?->user;
+            $user_profiles = User::find($data->user_id)?->user_profiles;
+            $likes = PostContent::find($data->id)?->likes;
+            $comments = PostContent::find($data->id)?->comments;
             foreach ($comments as $comment) {
-                $sub_comment_numbers = SubComment::where('comment_id', $comment->id)->where('post_content_id', $data->id)->get();
+                $sub_comment_numbers = SubComment::where('comment_id', $comment->id)->where('post_content_id', $data->id)?->get();
                 $comment['sub'] = $sub_comment_numbers->count();
                 $data['total_sub_comment'] += $comment['sub'];
             }
@@ -111,14 +111,14 @@ class PostContentController extends Controller
     {
         $this->validate($request, ['category_id' => 'required']);
         $category_id = $request->category_id;
-        $datas = PostContent::where('category_id',$category_id)->orderBy('updated_at', 'desc')->get();
+        $datas = PostContent::where('category_id',$category_id)->orderBy('updated_at', 'desc')?->get();
         foreach ($datas as $data) {
-            $users = PostContent::find($data->user_id)->user;
-            $user_profiles = User::find($data->user_id)->user_profiles;
-            $likes = PostContent::find($data->id)->likes;
-            $comments = PostContent::find($data->id)->comments;
+            $users = PostContent::find($data->user_id)?->user;
+            $user_profiles = User::find($data->user_id)?->user_profiles;
+            $likes = PostContent::find($data->id)?->likes;
+            $comments = PostContent::find($data->id)?->comments;
             foreach ($comments as $comment) {
-                $sub_comment_numbers = SubComment::where('comment_id', $comment->id)->where('post_content_id', $data->id)->get();
+                $sub_comment_numbers = SubComment::where('comment_id', $comment->id)->where('post_content_id', $data->id)?->get();
                 $comment['sub'] = $sub_comment_numbers->count();
                 $data['total_sub_comment'] += $comment['sub'];
             }
