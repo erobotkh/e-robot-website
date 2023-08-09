@@ -51,7 +51,7 @@ class ListPostController extends Controller
                 $data['total_sub_comment'] += $comment['sub'];
             }
             $data['total_comment'] = $comments->count();
-            $data['user_profile'] = $user_profiles->profile_image_url;
+            $data['user_profile'] = $user_profiles?->profile_image_url;
             $data['like_number'] = $likes->count();
         }
         return $this->sendResponse($datas, "Successfully");
