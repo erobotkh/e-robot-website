@@ -42,7 +42,7 @@ class ListPostController extends Controller
     {
         $datas = PostContent::orderBy('updated_at', 'desc')?->get();
         foreach ($datas as $data) {
-            $users = User::where('id',$data->user->id)?->first();
+            User::where('id',$data->user->id)?->first();
             $user_profiles = User::find($data->user_id)?->user_profiles;
             $likes = PostContent::find($data->id)?->likes;
             $comments = PostContent::find($data->id)?->comments;
@@ -52,7 +52,6 @@ class ListPostController extends Controller
                 $data['total_sub_comment'] += $comment['sub'];
             }
             $data['total_comment'] = $comments->count();
-            $data['user_name'] = $users?->name;
             $data['user_profile'] = $user_profiles?->profile_image_url;
             $data['like_number'] = $likes->count();
         }
@@ -65,7 +64,7 @@ class ListPostController extends Controller
         $category_id = $request->category_id;
         $datas = PostContent::where('category_id',$category_id)->orderBy('updated_at', 'desc')?->get();
         foreach ($datas as $data) {
-            $users = User::where('id',$data->user->id)?->first();
+            User::where('id',$data->user->id)?->first();
             $user_profiles = User::find($data->user_id)?->user_profiles;
             $likes = PostContent::find($data->id)?->likes;
             $comments = PostContent::find($data->id)?->comments;
@@ -75,7 +74,6 @@ class ListPostController extends Controller
                 $data['total_sub_comment'] += $comment['sub'];
             }
             $data['total_comment'] = $comments->count();
-            $data['user_name'] = $users?->name;
             $data['user_profile'] = $user_profiles?->profile_image_url;
             $data['like_number'] = $likes->count();
         }
