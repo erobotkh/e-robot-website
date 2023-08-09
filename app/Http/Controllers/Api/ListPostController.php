@@ -42,7 +42,7 @@ class ListPostController extends Controller
     {
         $datas = PostContent::orderBy('updated_at', 'desc')?->get();
         foreach ($datas as $data) {
-            $users = PostContent::find($data->user_id)?->user;
+            $users = User::where('id',$data->user->id)?->first();
             $user_profiles = User::find($data->user_id)?->user_profiles;
             $likes = PostContent::find($data->id)?->likes;
             $comments = PostContent::find($data->id)?->comments;
@@ -65,7 +65,7 @@ class ListPostController extends Controller
         $category_id = $request->category_id;
         $datas = PostContent::where('category_id',$category_id)->orderBy('updated_at', 'desc')?->get();
         foreach ($datas as $data) {
-            $users = PostContent::find($data->user_id)?->user;
+            $users = User::where('id',$data->user->id)?->first();
             $user_profiles = User::find($data->user_id)?->user_profiles;
             $likes = PostContent::find($data->id)?->likes;
             $comments = PostContent::find($data->id)?->comments;
