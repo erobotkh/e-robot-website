@@ -65,32 +65,44 @@
                     <div class="programCard">
                         <a href="#">
                             <div class="programObject"><img src="images/roboticObject.svg" alt=""></div>
-                            <div class="programSubtitle"><h2>Robotic</h2></div>
-                            <article class="aboutProgram">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio reiciendis quas et asperiores quasi odio ut autem eos hic impedit.</article>
+                            <div class="subtitleDetail">
+                                <div class="programSubtitle"><h2>Robotic</h2></div>
+                                <article class="aboutProgram">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio reiciendis quas et asperiores quasi odio ut autem eos hic impedit.</article>
+                            </div>
+                    
                         </a>
                         
                     </div>
                     <div class="programCard">
                         <a href="#">
                             <div class="programObject"><img src="images/roboticObject.svg" alt=""></div>
-                            <div class="programSubtitle"><h2>Robotic</h2></div>
-                            <article class="aboutProgram">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio reiciendis quas et asperiores quasi odio ut autem eos hic impedit.</article>
+                            <div class="subtitleDetail">
+                                <div class="programSubtitle"><h2>Robotic</h2></div>
+                                <article class="aboutProgram">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio reiciendis quas et asperiores quasi odio ut autem eos hic impedit.</article>
+                            </div>
+                    
                         </a>
                         
                     </div>
                     <div class="programCard">
                         <a href="#">
                             <div class="programObject"><img src="images/roboticObject.svg" alt=""></div>
-                            <div class="programSubtitle"><h2>Robotic</h2></div>
-                            <article class="aboutProgram">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio reiciendis quas et asperiores quasi odio ut autem eos hic impedit.</article>
+                            <div class="subtitleDetail">
+                                <div class="programSubtitle"><h2>Robotic</h2></div>
+                                <article class="aboutProgram">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio reiciendis quas et asperiores quasi odio ut autem eos hic impedit.</article>
+                            </div>
+                    
                         </a>
                         
                     </div>
                     <div class="programCard">
                         <a href="#">
                             <div class="programObject"><img src="images/roboticObject.svg" alt=""></div>
-                            <div class="programSubtitle"><h2>Robotic</h2></div>
-                            <article class="aboutProgram">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio reiciendis quas et asperiores quasi odio ut autem eos hic impedit.</article>
+                            <div class="subtitleDetail">
+                                <div class="programSubtitle"><h2>Robotic</h2></div>
+                                <article class="aboutProgram">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio reiciendis quas et asperiores quasi odio ut autem eos hic impedit.</article>
+                            </div>
+                    
                         </a>
                         
                     </div>
@@ -99,32 +111,44 @@
                     <div class="programCard">
                         <a href="#">
                             <div class="programObject"><img src="images/roboticObject.svg" alt=""></div>
-                            <div class="programSubtitle"><h2>Robotic</h2></div>
-                            <article class="aboutProgram">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio reiciendis quas et asperiores quasi odio ut autem eos hic impedit.</article>
+                            <div class="subtitleDetail">
+                                <div class="programSubtitle"><h2>Robotic</h2></div>
+                                <article class="aboutProgram">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio reiciendis quas et asperiores quasi odio ut autem eos hic impedit.</article>
+                            </div>
+                    
                         </a>
                         
                     </div>
                     <div class="programCard">
                         <a href="#">
                             <div class="programObject"><img src="images/roboticObject.svg" alt=""></div>
-                            <div class="programSubtitle"><h2>Robotic</h2></div>
-                            <article class="aboutProgram">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio reiciendis quas et asperiores quasi odio ut autem eos hic impedit.</article>
+                            <div class="subtitleDetail">
+                                <div class="programSubtitle"><h2>Robotic</h2></div>
+                                <article class="aboutProgram">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio reiciendis quas et asperiores quasi odio ut autem eos hic impedit.</article>
+                            </div>
+                    
                         </a>
                         
                     </div>
                     <div class="programCard">
                         <a href="#">
                             <div class="programObject"><img src="images/roboticObject.svg" alt=""></div>
-                            <div class="programSubtitle"><h2>Robotic</h2></div>
-                            <article class="aboutProgram">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio reiciendis quas et asperiores quasi odio ut autem eos hic impedit.</article>
+                            <div class="subtitleDetail">
+                                <div class="programSubtitle"><h2>Robotic</h2></div>
+                                <article class="aboutProgram">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio reiciendis quas et asperiores quasi odio ut autem eos hic impedit.</article>
+                            </div>
+                    
                         </a>
                         
                     </div>
                     <div class="programCard">
                         <a href="#">
                             <div class="programObject"><img src="images/roboticObject.svg" alt=""></div>
-                            <div class="programSubtitle"><h2>Robotic</h2></div>
-                            <article class="aboutProgram">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio reiciendis quas et asperiores quasi odio ut autem eos hic impedit.</article>
+                            <div class="subtitleDetail">
+                                <div class="programSubtitle"><h2>Robotic</h2></div>
+                                <article class="aboutProgram">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio reiciendis quas et asperiores quasi odio ut autem eos hic impedit.</article>
+                            </div>
+                    
                         </a>
                         
                     </div>
@@ -157,10 +181,71 @@
                     
                 </div>
             </div>
+<!-- activity  -->
+            <div class="activitySection">
+                <div class="activityContainer">
+                    <div class="activity1 activityImage">
+                        <img src="images/activity1.jpg" alt="">
+                        <div class="activitytext">
+                            <h2 class="activitySubtittle">New Coding and Robotics Training Program</h2>
+                            <article class="activityDetail">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio laudantium laboriosam aliquid nostrum officiis ipsum modi quisquam accusamus sit quod?</article>
+                        </div>
+                        
+                    </div>
+                    <div class="activity2 activityImage">
+                        <img src="images/activity2.jpg" alt="">
+                        <div class="activitytext">
+                            <h2 class="activitySubtittle">Donation</h2>
+                            <article class="activityDetail">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio laudantium laboriosam aliquid nostrum officiis ipsum modi quisquam accusamus sit quod?</article>
+                        </div>
+                        
+                    </div>
+                </div>
+                        
+
+            </div>
+<!-- About us, impact and achievement -->
+            <div class="aboutUsImpactAchievement">
+                <div class="aboutImpactAchieveContainer">
+                    
+                    <div class="content  contentImg">
+                        
+                        <img src="images/workshop.jpg" alt="">
+                        <div class="subtitleNumContainer ">
+                            <div class="date">15/Aug/2023</div>
+                            <div class="detail"><b>WorkShop : </b>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati, excepturi.</div>
+                        </div>
+                    </div>
+                    
+                    <div class="content contentBg1">
+                        <div class="socailImpact contentContainer">
+                            <div class="num">2M</div>
+                            <div class="subtitle">Socail Impact</div>
+                        </div>
+                        <div class="province contentContainer">
+                            <div class="num">3</div>
+                            <div class="subtitle">Provinces</div>
+                        </div>
+                        <div class="achievmentTitle">
+                            Achievments
+                        </div>
+                        <div class="student contentContainer">
+                            <div class="num">500+</div>
+                            <div class="subtitle">Students</div>
+                        </div>
+                        <div class="member contentContainer">
+                            <div class="num">100+</div>
+                            <div class="subtitle">Members</div>
+                        </div>
+                    </div>
+                    
+                    
+                </div>
+            </div>
 <!-- team -->
             <div class="teamsSection">
                 <div class="teamsTitle">
-                    <h1>E-Robot Teams</h1>
+                    <h1>E-Robot Departement</h1>
                 </div>
                 <div class="teamContainer">
                     <div class="teamCard">
@@ -204,6 +289,26 @@
                             <article class="aboutteam">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio reiciendis quas et asperiores quasi odio ut autem eos hic impedit.</article>
                         </a>
                     </div>
+                    <div class="teamCard">
+                        <a href="#">
+                            <div class="teamImage">
+                                
+                                <img src="images/events1.jpg" alt="">
+                                <div class="grayScreen"></div>
+                            </div>
+                            
+                            <div class="teamLeader">
+                                <div class="leader">
+                                    <img src="images/blogPost.jpg" alt="">
+                                </div>
+                                <div class="teamPosition">
+                                    Leader name 
+                                </div>
+                            </div>
+                            <div class="teamSubtitle"><h2>Robotic</h2></div>
+                            <article class="aboutteam">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio reiciendis quas et asperiores quasi odio ut autem eos hic impedit.</article>
+                        </a>
+                    </div>
                     
                     <div class="teamCard">
                         <a href="#">
@@ -254,7 +359,28 @@
                     
                 </div>
             </div>
+<!-- partner -->
+            <div class="partnerSection">
+                <div class="title">Our partners</div>
+                <div class="partnerContainer">
+                    <div class="partner"><img src="images/STEM-logo.png" alt=""></div>
+                    <div class="partner"><img src="images/partner2.jpg" alt=""></div>
+                    <div class="partner"><img src="images/greenUnbrella.jpg" alt=""></div>
+                    <div class="partner"><img src="images/boreyVichearSchool.jpg" alt=""></div>
+                </div>
+            </div>
+<!-- sponsor -->
+            <div class="sponsorSection">
+            <div class="title">Our sponsors</div>
+                <div class="sponsorContainer">
+                    <div class="sponsor"><img src="images/smart.jpg" alt=""></div>
+                    <div class="sponsor"><img src="images/myTeb.jpg" alt=""></div>
+                    <div class="sponsor"><img src="images/nicc.jpg" alt=""></div>
+                    <div class="sponsor"><img src="images/usaid.jpg" alt=""></div>
+                    <div class="sponsor"><img src="images/transparency_international_Cambodia.jpg" alt=""></div>
 
+                </div>
+            </div>
 
         </main>
 
@@ -296,23 +422,23 @@
         })
 
         
-        const showNotification = ()=>{
+        // const showNotification = ()=>{
 
-            const notificat = document.getElementById("IdheaderNotificationContainer");
-            notificat.classList.toggle("showNoti");
+        //     const notificat = document.getElementById("IdheaderNotificationContainer");
+        //     notificat.classList.toggle("showNoti");
+
+        // }
+        // const notificationBtn = document.getElementById("bx-bell");
+        // notificationBtn.addEventListener("click",showNotification);
+
+        // const showPro = ()=>{
+
+        //     const notificat = document.getElementById("profileContainer");
+        //     notificat.classList.toggle("showProfile");
             
-        }
-        const notificationBtn = document.getElementById("bx-bell");
-        notificationBtn.addEventListener("click",showNotification);
-
-        const showPro = ()=>{
-
-            const notificat = document.getElementById("profileContainer");
-            notificat.classList.toggle("showProfile");
-            
-        }
-        const profileBtn = document.getElementById("profile");
-        profileBtn.addEventListener("click",showPro);
+        // }
+        // const profileBtn = document.getElementById("profile");
+        // profileBtn.addEventListener("click",showPro);
 
 
         

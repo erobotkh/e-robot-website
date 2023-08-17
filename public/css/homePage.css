@@ -4,8 +4,8 @@
   --bgForcus:#EB0100;
   --bgHover:#FF1517;
   --colorContent:#7D7573;
-  --font_title:18px;
-  --font_subTitle:14px;
+  --font_title:24px;
+  --font_subTitle:18px;
   --font_text:13px;
   --font_subContent:10px;
   --font_icon:13px;
@@ -15,7 +15,7 @@
   --homeCardheight:150px;
   --logoHeight:70px;
   --slideHeight:90%;
-  --fontWeightTitle:500;
+  --fontWeightTitle:700;
 }
 
 .home_wrapper {
@@ -23,194 +23,6 @@
   height: 100%;
   background-color: var(--bgDefualt);
   font-family: "Open Sans", sans-serif;
-}
-.home_wrapper header.header {
-  width: 100%;
-  height: var(--headerHeight);
-  background-color: var(--bgColor);
-  box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 20px;
-  position: sticky;
-  top: 0;
-  left: 0;
-  z-index: 8;
-}
-.home_wrapper header.header .header__logo img {
-  width: var(--logoHeight);
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-.home_wrapper header.header .header__menu ul {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.home_wrapper header.header .header__menu ul li {
-  list-style-type: none;
-  padding: 3px 15px;
-  border-right: 1px solid gray;
-  transition: 0.5s;
-}
-.home_wrapper header.header .header__menu ul li a {
-  font-size: var(--font_title);
-  font-weight: 700;
-  text-decoration: none;
-  color: black;
-}
-.home_wrapper header.header .header__menu ul li:hover {
-  padding: 10px 15px;
-  transition: 0.5s;
-}
-.home_wrapper header.header .header__menu ul li:hover a {
-  color: var(--bgForcus);
-}
-.home_wrapper header.header .header__menu ul li:hover a:after {
-  display: none;
-}
-.home_wrapper header.header .header__menu ul .active a {
-  color: var(--bgForcus);
-}
-.home_wrapper header.header .header__menu ul .active a:after {
-  display: block;
-  content: "";
-  width: 100%;
-  height: 2px;
-  border-radius: 10px;
-  background-color: var(--bgForcus);
-}
-.home_wrapper header.header .header__menu ul .about {
-  border: none;
-}
-.home_wrapper header.header .header__manageAccount ul {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.home_wrapper header.header .header__manageAccount ul li {
-  font-size: var(--font_subTitle);
-  list-style-type: none;
-  padding: 10px;
-}
-.home_wrapper header.header .header__manageAccount ul li a {
-  color: black;
-}
-.home_wrapper header.header .header__manageAccount ul li img {
-  height: 30px;
-  border-radius: 50%;
-  box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
-}
-.home_wrapper header.header .header__manageAccount ul li:hover {
-  color: var(--bgForcus);
-  cursor: pointer;
-}
-.home_wrapper header.header .header__manageAccount ul li:hover a {
-  color: var(--bgForcus);
-}
-.home_wrapper header.header .header__manageAccount ul li:hover .headerNotificationContainer a {
-  color: black;
-}
-.home_wrapper header.header .header__manageAccount ul .headerNotification {
-  position: relative;
-}
-.home_wrapper header.header .header__manageAccount ul .headerNotification .headerNotificationContainer {
-  width: 300px;
-  height: 85vh;
-  background-color: var(--bgColor);
-  box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
-  position: absolute;
-  right: 0;
-  border-radius: 5px;
-  overflow: scroll;
-  overflow-y: scroll;
-  overflow-x: hidden;
-  display: none;
-}
-.home_wrapper header.header .header__manageAccount ul .headerNotification .headerNotificationContainer ul {
-  display: block;
-  width: 100%;
-}
-.home_wrapper header.header .header__manageAccount ul .headerNotification .headerNotificationContainer ul li.notificationContent {
-  width: 100%;
-  font-size: 15px;
-  padding: 10px;
-  border-bottom: 1px solid rgba(128, 128, 128, 0.566);
-}
-.home_wrapper header.header .header__manageAccount ul .headerNotification .headerNotificationContainer ul li.notificationContent a {
-  text-decoration: none;
-}
-.home_wrapper header.header .header__manageAccount ul .headerNotification .headerNotificationContainer ul li.notificationContent a .notificationTitle {
-  width: 100%;
-}
-.home_wrapper header.header .header__manageAccount ul .headerNotification .headerNotificationContainer ul li.notificationContent a .notificationDate {
-  width: 100%;
-  font-size: 13px;
-  color: gray;
-}
-.home_wrapper header.header .header__manageAccount ul .headerNotification .headerNotificationContainer.headerNotificationContainer:hover {
-  color: black;
-}
-.home_wrapper header.header .header__manageAccount ul .headerNotification .headerNotificationContainer.headerNotificationContainer:hover li:hover a {
-  color: var(--bgForcus);
-}
-.home_wrapper header.header .header__manageAccount ul .headerNotification .showNoti {
-  display: block;
-  transition: 1s;
-}
-.home_wrapper header.header .header__manageAccount ul .profileSection {
-  position: relative;
-}
-.home_wrapper header.header .header__manageAccount ul .profileSection .profileContainer {
-  width: 250px;
-  height: 35vh;
-  background-color: var(--bgColor);
-  box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
-  position: absolute;
-  right: 20px;
-  border-radius: 5px;
-  display: none;
-}
-.home_wrapper header.header .header__manageAccount ul .profileSection .profileContainer .personalInfo {
-  border-radius: 10px;
-}
-.home_wrapper header.header .header__manageAccount ul .profileSection .profileContainer .personalInfo a {
-  display: flex;
-  align-items: center;
-  padding: 10px 20px;
-  background-color: rgba(235, 0, 0, 0.4);
-  text-decoration: none;
-  color: black;
-  border-radius: 10px 10px 0 0;
-}
-.home_wrapper header.header .header__manageAccount ul .profileSection .profileContainer .personalInfo a .profileImage {
-  padding-right: 30px;
-}
-.home_wrapper header.header .header__manageAccount ul .profileSection .profileContainer .personalInfo a .profileImage img {
-  height: 50px;
-}
-.home_wrapper header.header .header__manageAccount ul .profileSection .profileContainer .loginOrlogout {
-  width: 100%;
-  position: absolute;
-  bottom: 20px;
-  align-self: self-end;
-  font-size: 20px;
-  padding: 10px 20px;
-  color: black;
-}
-.home_wrapper header.header .header__manageAccount ul .profileSection .personalInfo:hover {
-  background-color: rgba(235, 0, 0, 0.1843137255);
-}
-.home_wrapper header.header .header__manageAccount ul .profileSection .personalInfo:hover a .subtitle {
-  color: white;
-}
-.home_wrapper header.header .header__manageAccount ul .profileSection .loginOrlogout:hover {
-  background-color: rgba(235, 0, 0, 0.4);
-  color: white;
-}
-.home_wrapper header.header .header__manageAccount ul .profileSection .showProfile {
-  display: block;
 }
 .home_wrapper main.mainContainer {
   width: 100%;
@@ -237,7 +49,9 @@
   padding: 50px 0 35px 0;
 }
 .home_wrapper main.mainContainer .programSection .programTitle h1 {
+  font-size: var(--font_title);
   font-weight: var(--fontWeightTitle);
+  color: #DC2626;
 }
 .home_wrapper main.mainContainer .programSection .programContainer {
   display: grid;
@@ -246,7 +60,6 @@
 }
 .home_wrapper main.mainContainer .programSection .programContainer .programCard {
   width: 100%;
-  height: 55vh;
   background-color: var(--bgColor);
   padding: 30px;
   cursor: pointer;
@@ -263,11 +76,12 @@
   height: 100%;
 }
 .home_wrapper main.mainContainer .programSection .programContainer .programCard a .programSubtitle h2 {
-  font-weight: 700;
+  font-size: var(--font_subTitle);
+  font-weight: 600;
   padding: 10px 0;
 }
 .home_wrapper main.mainContainer .programSection .programContainer .programCard a article.aboutProgram {
-  font-size: 15px;
+  font-size: 13px;
   color: var(--colorContent);
 }
 .home_wrapper main.mainContainer .programSection .programContainer .programCard:hover {
@@ -296,16 +110,22 @@
   align-self: self-start;
   padding: 0 30px;
 }
+.home_wrapper main.mainContainer .videoSection .videoContainer .articleContianer .videoSubtitle h2 {
+  font-size: 24px;
+  font-weight: var(--fontWeightTitle);
+  color: #DC2626;
+}
 .home_wrapper main.mainContainer .videoSection .videoContainer .articleContianer .videoDate {
   font-size: 14px;
   color: var(--colorContent);
   padding-bottom: 10px;
 }
 .home_wrapper main.mainContainer .videoSection .videoContainer .articleContianer .videoDate .bx-time-five {
-  color: #009EF7;
+  color: red;
 }
 .home_wrapper main.mainContainer .videoSection .videoContainer .articleContianer .videoDetail {
   text-align: justify;
+  font-size: var(--font_text);
 }
 .home_wrapper main.mainContainer .videoSection .videoContainer .articleContianer .seeMorevideo {
   width: 100%;
@@ -316,7 +136,7 @@
   cursor: pointer;
   padding: 10px;
   font-size: 15px;
-  background-color: #FFAB00;
+  background-color: red;
   outline: none;
   border: none;
   border-radius: 5px;
@@ -326,7 +146,101 @@
   color: white;
 }
 .home_wrapper main.mainContainer .videoSection .videoContainer .articleContianer .seeMorevideo button:hover {
-  background-color: rgba(255, 170, 0, 0.6235294118);
+  background-color: rgba(255, 0, 0, 0.692);
+}
+.home_wrapper main.mainContainer .activitySection {
+  width: 100%;
+  margin-top: 20px;
+}
+.home_wrapper main.mainContainer .activitySection .activityContainer {
+  width: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.home_wrapper main.mainContainer .activitySection .activityContainer .activityImage {
+  width: 50%;
+  height: 70vh;
+  background-color: black;
+  position: relative;
+}
+.home_wrapper main.mainContainer .activitySection .activityContainer .activityImage img {
+  width: 100%;
+  height: 100%;
+  opacity: 0.7;
+}
+.home_wrapper main.mainContainer .activitySection .activityContainer .activityImage .activitytext {
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  translate: -50% 0;
+  color: white;
+}
+.home_wrapper main.mainContainer .activitySection .activityContainer .activityImage .activitytext .activitySubtittle {
+  font-size: var(--font_title);
+}
+.home_wrapper main.mainContainer .activitySection .activityContainer .activityImage .activitytext .activityDetail {
+  font-size: var(--font_text);
+}
+.home_wrapper main.mainContainer .aboutUsImpactAchievement .aboutImpactAchieveContainer {
+  display: flex;
+  padding: 50px 150px;
+}
+.home_wrapper main.mainContainer .aboutUsImpactAchievement .aboutImpactAchieveContainer .content {
+  position: relative;
+  width: 50%;
+  height: 50vh;
+  color: white;
+}
+.home_wrapper main.mainContainer .aboutUsImpactAchievement .aboutImpactAchieveContainer .content img {
+  width: 100%;
+  height: 100%;
+  opacity: 0.85;
+  border-radius: 5px 0 0 5px;
+}
+.home_wrapper main.mainContainer .aboutUsImpactAchievement .aboutImpactAchieveContainer .content .subtitleNumContainer {
+  position: absolute;
+  bottom: 5%;
+  font-size: 13px;
+  padding: 0 50px;
+  opacity: 1;
+}
+.home_wrapper main.mainContainer .aboutUsImpactAchievement .aboutImpactAchieveContainer .content.contentImg {
+  background-color: black;
+  border-radius: 5px 0 0 5px;
+}
+.home_wrapper main.mainContainer .aboutUsImpactAchievement .aboutImpactAchieveContainer .content.contentBg1 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  border: 1px solid #DC2626;
+  border-left: none;
+  border-radius: 0 5px 5px 0;
+}
+.home_wrapper main.mainContainer .aboutUsImpactAchievement .aboutImpactAchieveContainer .content.contentBg1 .contentContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bgColor);
+  border-radius: 0 5px 5px 0;
+}
+.home_wrapper main.mainContainer .aboutUsImpactAchievement .aboutImpactAchieveContainer .content.contentBg1 .contentContainer .num {
+  font-size: 32px;
+  color: #DC2626;
+}
+.home_wrapper main.mainContainer .aboutUsImpactAchievement .aboutImpactAchieveContainer .content.contentBg1 .contentContainer .subtitle {
+  font-size: 15px;
+  color: #A8A196;
+}
+.home_wrapper main.mainContainer .aboutUsImpactAchievement .aboutImpactAchieveContainer .content.contentBg1 .achievmentTitle {
+  grid-column: 1/span 2;
+  background-color: #DC2626;
+  border: 2px solid white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--font_title);
 }
 .home_wrapper main.mainContainer .teamsSection {
   width: 100%;
@@ -340,7 +254,9 @@
   padding: 50px 0 35px 0;
 }
 .home_wrapper main.mainContainer .teamsSection .teamsTitle h1 {
+  font-size: var(--font_title);
   font-weight: var(--fontWeightTitle);
+  color: red;
 }
 .home_wrapper main.mainContainer .teamsSection .teamContainer {
   width: 100%;
@@ -403,9 +319,10 @@
   padding-top: 10px;
 }
 .home_wrapper main.mainContainer .teamsSection .teamContainer .teamCard a .teamSubtitle {
-  padding: 0 30px;
+  padding: 10px 30px;
 }
 .home_wrapper main.mainContainer .teamsSection .teamContainer .teamCard a .teamSubtitle h2 {
+  font-size: var(--font_subTitle);
   font-weight: 500;
   padding: 10px 0 5px 0;
 }
@@ -425,6 +342,58 @@
   top: 0;
   background-color: rgba(0, 0, 0, 0.591);
   border-radius: 10px;
+}
+.home_wrapper main.mainContainer .partnerSection {
+  padding: 30px 0;
+}
+.home_wrapper main.mainContainer .partnerSection .title {
+  text-align: center;
+  padding: 30px 0;
+  font-size: var(--font_title);
+  font-weight: var(--fontWeightTitle);
+  color: #DC2626;
+}
+.home_wrapper main.mainContainer .partnerSection .partnerContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.home_wrapper main.mainContainer .partnerSection .partnerContainer .partner {
+  width: 15%;
+}
+.home_wrapper main.mainContainer .partnerSection .partnerContainer .partner img {
+  width: 100%;
+  aspect-ratio: 3/2;
+  -o-object-fit: contain;
+     object-fit: contain;
+  mix-blend-mode: darken;
+}
+.home_wrapper main.mainContainer .sponsorSection {
+  padding: 30px 0;
+}
+.home_wrapper main.mainContainer .sponsorSection .title {
+  text-align: center;
+  padding: 30px 0;
+  font-size: var(--font_title);
+  font-weight: var(--fontWeightTitle);
+  color: #DC2626;
+}
+.home_wrapper main.mainContainer .sponsorSection .sponsorContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.home_wrapper main.mainContainer .sponsorSection .sponsorContainer .sponsor {
+  width: 15%;
+}
+.home_wrapper main.mainContainer .sponsorSection .sponsorContainer .sponsor img {
+  width: 100%;
+  aspect-ratio: 3/2;
+  -o-object-fit: contain;
+     object-fit: contain;
+  mix-blend-mode: darken;
 }
 .home_wrapper .to_top {
   background-color: rgba(128, 128, 128, 0.635);
@@ -456,159 +425,6 @@
   opacity: 1;
   z-index: 7;
 }
-.home_wrapper .footer {
-  width: 100%;
-  background-color: #22272B;
-  color: rgba(255, 255, 255, 0.596);
-  padding: 15px 30px;
-}
-.home_wrapper .footer .footerContainer {
-  width: 100%;
-  display: flex;
-}
-.home_wrapper .footer .footerContainer .footerLogo {
-  width: 25%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  border-right: 1px solid gray;
-}
-.home_wrapper .footer .footerContainer .footerLogo .logo {
-  width: 100px;
-  border-radius: 50%;
-}
-.home_wrapper .footer .footerContainer .footerLogo .logo img {
-  border-radius: 50%;
-  cursor: pointer;
-  width: 100%;
-}
-.home_wrapper .footer .footerContainer .footerLogo .quote {
-  padding: 10px;
-}
-.home_wrapper .footer .footerContainer .footerLogo .quote p {
-  text-align: center;
-  color: white;
-}
-.home_wrapper .footer .footerContainer .footerLogo .media {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-}
-.home_wrapper .footer .footerContainer .footerLogo .media a {
-  width: 30px;
-  height: 30PX;
-}
-.home_wrapper .footer .footerContainer .footerLogo .media a img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
-}
-.home_wrapper .footer .footerContainer .footerContent {
-  width: 50%;
-  padding: 10px 100px;
-  display: flex;
-  justify-content: space-between;
-  border-right: 1px solid gray;
-}
-.home_wrapper .footer .footerContainer .footerContent .contentEssentail {
-  font-size: 15px;
-  color: white;
-}
-.home_wrapper .footer .footerContainer .footerContent .contentEssentail.contentEssentail::after {
-  display: block;
-  content: "";
-  width: 35px;
-  height: 2px;
-  background-color: gray;
-  border-radius: 10px;
-  margin-top: 3px;
-}
-.home_wrapper .footer .footerContainer .footerContent .contentLink {
-  padding: 5px 0;
-  font-size: 13px;
-}
-.home_wrapper .footer .footerContainer .footerContent .contentLink li {
-  padding: 5px 0;
-  list-style-type: none;
-}
-.home_wrapper .footer .footerContainer .footerContent .contentLink li a {
-  color: rgba(255, 255, 255, 0.596);
-  text-decoration: none;
-}
-.home_wrapper .footer .footerContainer .footerContent .contentLink li a:hover {
-  color: white;
-}
-.home_wrapper .footer .footerContainer .footerContent .contentLink li i {
-  color: gray;
-  padding-right: 5px;
-}
-.home_wrapper .footer .footerContainer .footerContent .contentContact {
-  font-size: 15px;
-  color: white;
-}
-.home_wrapper .footer .footerContainer .footerContent .contentContact.contentContact::after {
-  display: block;
-  content: "";
-  width: 35px;
-  height: 2px;
-  background-color: gray;
-  border-radius: 10px;
-  margin-top: 3px;
-}
-.home_wrapper .footer .footerContainer .footerMoblieApp {
-  width: 25%;
-  padding: 10px 60px;
-  font-size: 15px;
-  color: white;
-}
-.home_wrapper .footer .footerContainer .footerMoblieApp .contentApp.contentApp::after {
-  display: block;
-  content: "";
-  width: 35px;
-  height: 2px;
-  background-color: gray;
-  border-radius: 10px;
-  margin-top: 3px;
-}
-.home_wrapper .footer .footerContainer .footerMoblieApp .playStore {
-  padding: 5px 10px;
-  background-color: white;
-  border-radius: 10px;
-  margin-top: 10px;
-}
-.home_wrapper .footer .footerContainer .footerMoblieApp .playStore a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
-}
-.home_wrapper .footer .footerContainer .footerMoblieApp .playStore .playStoreImage {
-  width: 30px;
-}
-.home_wrapper .footer .footerContainer .footerMoblieApp .playStore .playStoreImage img {
-  width: 100%;
-}
-.home_wrapper .footer .footerContainer .footerMoblieApp .playStore .subtitle {
-  color: black;
-  font-size: 20px;
-  padding: 5px;
-  font-weight: 700;
-}
-.home_wrapper .footer .footerContainer .footerMoblieApp .playStore.playStore:hover {
-  background-color: rgb(239, 234, 234);
-  cursor: pointer;
-}
-.home_wrapper .footer .copyRightTermPrivacy {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 13px;
-  color: gray;
-  padding-bottom: 15px;
-}
 
 html {
   scroll-behavior: smooth;
@@ -626,7 +442,6 @@ html {
   }
   .home_wrapper main.mainContainer .programSection .programContainer .programCard {
     width: 100%;
-    height: 30vh;
   }
   .home_wrapper main.mainContainer .videoSection .videoContainer {
     display: flex;
@@ -644,212 +459,9 @@ html {
   }
   .home_wrapper main.mainContainer .teamsSection .teamContainer .teamCard {
     width: 100%;
-    height: 40vh;
-  }
-  .home_wrapper .footer .footerContainer .footerContent {
-    width: 50%;
-    padding: 10px 20px;
-    display: flex;
-    justify-content: space-between;
-  }
-  .home_wrapper .footer .footerContainer .footerMoblieApp {
-    width: 25%;
-    padding: 10px;
-    font-size: 15px;
   }
 }
 @media (max-width: 428px) {
-  .home_wrapper header.header {
-    width: 100%;
-    height: var(--headerHeight);
-    background-color: var(--bgColor);
-    box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 20px;
-    position: sticky;
-    top: 0;
-    left: 0;
-    z-index: 8;
-  }
-  .home_wrapper header.header .header__logo img {
-    width: var(--logoHeight);
-    -o-object-fit: cover;
-       object-fit: cover;
-  }
-  .home_wrapper header.header .header__menu {
-    display: none;
-  }
-  .home_wrapper header.header .header__menu ul {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .home_wrapper header.header .header__menu ul li {
-    list-style-type: none;
-    padding: 3px 15px;
-    border-right: 1px solid gray;
-    transition: 0.5s;
-  }
-  .home_wrapper header.header .header__menu ul li a {
-    font-size: var(--font_title);
-    font-weight: 700;
-    text-decoration: none;
-    color: black;
-  }
-  .home_wrapper header.header .header__menu ul li:hover {
-    padding: 10px 15px;
-    transition: 0.5s;
-  }
-  .home_wrapper header.header .header__menu ul li:hover a {
-    color: var(--bgForcus);
-  }
-  .home_wrapper header.header .header__menu ul li:hover a:after {
-    display: none;
-  }
-  .home_wrapper header.header .header__menu ul .active a {
-    color: var(--bgForcus);
-  }
-  .home_wrapper header.header .header__menu ul .active a:after {
-    display: block;
-    content: "";
-    width: 100%;
-    height: 2px;
-    border-radius: 10px;
-    background-color: var(--bgForcus);
-  }
-  .home_wrapper header.header .header__menu ul .about {
-    border: none;
-  }
-  .home_wrapper header.header .header__manageAccount ul {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .home_wrapper header.header .header__manageAccount ul li {
-    font-size: var(--font_subTitle);
-    list-style-type: none;
-    padding: 10px;
-  }
-  .home_wrapper header.header .header__manageAccount ul li a {
-    color: black;
-  }
-  .home_wrapper header.header .header__manageAccount ul li img {
-    height: 30px;
-    border-radius: 50%;
-    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
-  }
-  .home_wrapper header.header .header__manageAccount ul li:hover {
-    color: var(--bgForcus);
-    cursor: pointer;
-  }
-  .home_wrapper header.header .header__manageAccount ul li:hover a {
-    color: var(--bgForcus);
-  }
-  .home_wrapper header.header .header__manageAccount ul li:hover .headerNotificationContainer a {
-    color: black;
-  }
-  .home_wrapper header.header .header__manageAccount ul .headerNotification {
-    position: relative;
-  }
-  .home_wrapper header.header .header__manageAccount ul .headerNotification .headerNotificationContainer {
-    width: 300px;
-    height: 85vh;
-    background-color: var(--bgColor);
-    box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
-    position: absolute;
-    right: 0;
-    border-radius: 5px;
-    overflow: scroll;
-    overflow-y: scroll;
-    overflow-x: hidden;
-    display: none;
-  }
-  .home_wrapper header.header .header__manageAccount ul .headerNotification .headerNotificationContainer ul {
-    display: block;
-    width: 100%;
-  }
-  .home_wrapper header.header .header__manageAccount ul .headerNotification .headerNotificationContainer ul li.notificationContent {
-    width: 100%;
-    font-size: 15px;
-    padding: 10px;
-    border-bottom: 1px solid rgba(128, 128, 128, 0.566);
-  }
-  .home_wrapper header.header .header__manageAccount ul .headerNotification .headerNotificationContainer ul li.notificationContent a {
-    text-decoration: none;
-  }
-  .home_wrapper header.header .header__manageAccount ul .headerNotification .headerNotificationContainer ul li.notificationContent a .notificationTitle {
-    width: 100%;
-  }
-  .home_wrapper header.header .header__manageAccount ul .headerNotification .headerNotificationContainer ul li.notificationContent a .notificationDate {
-    width: 100%;
-    font-size: 13px;
-    color: gray;
-  }
-  .home_wrapper header.header .header__manageAccount ul .headerNotification .headerNotificationContainer.headerNotificationContainer:hover {
-    color: black;
-  }
-  .home_wrapper header.header .header__manageAccount ul .headerNotification .headerNotificationContainer.headerNotificationContainer:hover li:hover a {
-    color: var(--bgForcus);
-  }
-  .home_wrapper header.header .header__manageAccount ul .headerNotification .showNoti {
-    display: block;
-    transition: 1s;
-  }
-  .home_wrapper header.header .header__manageAccount ul .profileSection {
-    position: relative;
-  }
-  .home_wrapper header.header .header__manageAccount ul .profileSection .profileContainer {
-    width: 250px;
-    height: 35vh;
-    background-color: var(--bgColor);
-    box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
-    position: absolute;
-    right: 20px;
-    border-radius: 5px;
-    display: none;
-  }
-  .home_wrapper header.header .header__manageAccount ul .profileSection .profileContainer .personalInfo {
-    border-radius: 10px;
-  }
-  .home_wrapper header.header .header__manageAccount ul .profileSection .profileContainer .personalInfo a {
-    display: flex;
-    align-items: center;
-    padding: 10px 20px;
-    background-color: rgba(235, 0, 0, 0.4);
-    text-decoration: none;
-    color: black;
-    border-radius: 10px 10px 0 0;
-  }
-  .home_wrapper header.header .header__manageAccount ul .profileSection .profileContainer .personalInfo a .profileImage {
-    padding-right: 30px;
-  }
-  .home_wrapper header.header .header__manageAccount ul .profileSection .profileContainer .personalInfo a .profileImage img {
-    height: 50px;
-  }
-  .home_wrapper header.header .header__manageAccount ul .profileSection .profileContainer .loginOrlogout {
-    width: 100%;
-    position: absolute;
-    bottom: 20px;
-    align-self: self-end;
-    font-size: 20px;
-    padding: 10px 20px;
-    color: black;
-  }
-  .home_wrapper header.header .header__manageAccount ul .profileSection .personalInfo:hover {
-    background-color: rgba(235, 0, 0, 0.1843137255);
-  }
-  .home_wrapper header.header .header__manageAccount ul .profileSection .personalInfo:hover a .subtitle {
-    color: white;
-  }
-  .home_wrapper header.header .header__manageAccount ul .profileSection .loginOrlogout:hover {
-    background-color: rgba(235, 0, 0, 0.4);
-    color: white;
-  }
-  .home_wrapper header.header .header__manageAccount ul .profileSection .showProfile {
-    display: block;
-  }
   .home_wrapper main.mainContainer {
     width: 100%;
     height: var(--slideHeight);
@@ -866,10 +478,20 @@ html {
   }
   .home_wrapper main.mainContainer .programSection .programContainer .programCard {
     width: 100%;
-    height: 35vh;
     background-color: var(--bgColor);
     padding: 30px;
     cursor: pointer;
+  }
+  .home_wrapper main.mainContainer .programSection .programContainer .programCard a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .home_wrapper main.mainContainer .programSection .programContainer .programCard a .programObject {
+    width: 30%;
+  }
+  .home_wrapper main.mainContainer .programSection .programContainer .programCard a .subtitleDetail {
+    width: 70%;
   }
   .home_wrapper main.mainContainer .videoSection .videoContainer {
     width: 100%;
@@ -891,9 +513,6 @@ html {
     color: var(--colorContent);
     padding-bottom: 10px;
   }
-  .home_wrapper main.mainContainer .videoSection .videoContainer .articleContianer .videoDate .bx-time-five {
-    color: #009EF7;
-  }
   .home_wrapper main.mainContainer .videoSection .videoContainer .articleContianer .videoDetail {
     text-align: justify;
   }
@@ -901,22 +520,6 @@ html {
     width: 100%;
     display: flex;
     justify-content: end;
-  }
-  .home_wrapper main.mainContainer .videoSection .videoContainer .articleContianer .seeMorevideo button {
-    cursor: pointer;
-    padding: 10px;
-    font-size: 15px;
-    background-color: #FFAB00;
-    outline: none;
-    border: none;
-    border-radius: 5px;
-  }
-  .home_wrapper main.mainContainer .videoSection .videoContainer .articleContianer .seeMorevideo button a {
-    text-decoration: none;
-    color: white;
-  }
-  .home_wrapper main.mainContainer .videoSection .videoContainer .articleContianer .seeMorevideo button:hover {
-    background-color: rgba(255, 170, 0, 0.6235294118);
   }
   .home_wrapper main.mainContainer .teamsSection .teamContainer {
     width: 100%;
@@ -926,95 +529,8 @@ html {
   }
   .home_wrapper main.mainContainer .teamsSection .teamContainer .teamCard {
     width: 100%;
-    height: 50vh;
     border-radius: 10px;
     background-color: var(--bgColor);
     cursor: pointer;
-  }
-  .home_wrapper .footer .footerContainer {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-  }
-  .home_wrapper .footer .footerContainer .footerLogo {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    border-right: none;
-  }
-  .home_wrapper .footer .footerContainer .footerLogo .logo {
-    width: 30%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .home_wrapper .footer .footerContainer .footerLogo .logo img {
-    width: 100px;
-  }
-  .home_wrapper .footer .footerContainer .footerLogo .quote {
-    width: 70%;
-  }
-  .home_wrapper .footer .footerContainer .footerLogo .quote p {
-    text-align: center;
-  }
-  .home_wrapper .footer .footerContainer .footerLogo .media {
-    display: none;
-  }
-  .home_wrapper .footer .footerContainer .footerContent {
-    width: 100%;
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-    border-right: none;
-  }
-  .home_wrapper .footer .footerContainer .footerContent .contentEssentail {
-    font-size: 15px;
-    padding-top: 10px;
-  }
-  .home_wrapper .footer .footerContainer .footerContent .contentLink {
-    padding: 5px 0;
-    font-size: 13px;
-  }
-  .home_wrapper .footer .footerContainer .footerContent .contentContact {
-    font-size: 15px;
-    padding-top: 10px;
-  }
-  .home_wrapper .footer .footerContainer .footerMoblieApp {
-    width: 100%;
-    padding: 15px;
-    font-size: 15px;
-  }
-  .home_wrapper .footer .footerContainer .footerMoblieApp .playStore {
-    width: 50%;
-    background-color: white;
-  }
-  .home_wrapper .footer .footerContainer .footerMoblieApp .playStore a {
-    font-size: 13px;
-  }
-  .home_wrapper .footer .footerContainer .footerMoblieApp .playStore .playStoreImage {
-    width: 25px;
-  }
-  .home_wrapper .footer .footerContainer .footerMoblieApp .playStore .playStoreImage img {
-    width: 100%;
-  }
-  .home_wrapper .footer .footerContainer .footerMoblieApp .playStore .subtitle {
-    color: black;
-    font-size: 20px;
-    padding: 5px;
-    font-weight: 700;
-  }
-  .home_wrapper .footer .footerContainer .footerMoblieApp .playStore.playStore:hover {
-    background-color: rgb(239, 234, 234);
-    cursor: pointer;
-  }
-  .home_wrapper .footer .copyRightTermPrivacy {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 12px;
-    color: gray;
-    padding-bottom: 15px;
   }
 }/*# sourceMappingURL=homePage.css.map */
