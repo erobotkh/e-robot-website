@@ -34,3 +34,6 @@ Route::get('/login', function(){
 Route::get('/register', function(){
     return view('user.register');
 });
+Route::get('/donate', function(){
+    return view('donation');
+});
