@@ -22,4 +22,7 @@ class SubComment extends Model
     public function postcontent():BelongsTo{
         return $this->belongsTo(PostContent::class);
     }
+    public function user():BelongsTo{
+        return $this->belongsTo(User::class);
+    }
 }

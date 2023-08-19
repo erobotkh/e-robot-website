@@ -20,7 +20,7 @@ class Comment extends Model
         return $this->belongsTo(User::class);
     }
     public function postcontent():BelongsTo{
-        return $this->belongsTo(PostContent::class);
+        return $this->belongsTo(PostContent::class, 'post_content_id', 'id');
     }
     public function sub_comments():HasMany{
         return $this->hasMany(SubComment::class);

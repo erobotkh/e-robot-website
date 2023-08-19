@@ -31,7 +31,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-
+Route::get('verifyOtp', [AuthController::class, 'verifyOtp']);
+Route::post('sendOtp', [AuthController::class, 'sendOtp']);
 Route::post('register', [AuthController::class, 'register']);
 Route::post('login', [AuthController::class, 'login']);
 
@@ -81,4 +82,5 @@ Route::middleware(['auth:api'])->group(function () {
    
     Route::post('user-profile/edit',[UserProfileController::class,'editUserProfile']);
     Route::get('user-profile/show-user-profile',[UserProfileController::class,'showUserProfile']);
+    Route::get('post-content/show_post_of_user', [PostContentController::class, 'postContentOfUser']);
 });
