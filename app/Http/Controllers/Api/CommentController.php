@@ -1,10 +1,15 @@
 <?php
+
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
+use App\Http\Resources\CommentResource;
+use App\Http\Resources\PostContentResource;
 use App\Models\Comment;
 use App\Models\PostContent;
 use App\Models\SubComment;
+use App\Models\User;
+use App\Models\UserProfile;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -57,21 +62,28 @@ class CommentController extends Controller
     }
     public function store(Request $request)
     {
-        $this->validate($request, ['post_content_id' => 'required','comment_text'=>'required']);
+        $this->validate($request, ['post_content_id' => 'required', 'comment_text' => 'required']);
         $user_id = Auth::id();
         $post_content_id = $request->post_content_id;
-        $commet_text=$request->comment_text;
-        $data = Comment::create(['user_id' => $user_id, 'post_content_id' => $post_content_id,'comment_text'=>$commet_text]);
+        $commet_text = $request->comment_text;
+        $data = Comment::create(['user_id' => $user_id, 'post_content_id' => $post_content_id, 'comment_text' => $commet_text]);
         return $this->sendResponse($data, 'Add Comment Successfully');
     }
 
     /**
      * Display the specified resource.
      */
-    public function show($post_content_id)
+    public function show($id)
     {
-       $data=PostContent::find($post_content_id)?->comments;
-       return $this->sendResponse($data,"Successfully");
+        $datas = CommentResource::collection(PostContent::find($id)->comments);
+       
+        $datas = $datas->sortByDesc('created_at');
+        $datas = $datas->values()->all();
+        $post=PostContent::withCount(['comments','sub_comments'])->where('id',$id)->first();
+        
+        
+        return $this->sendResponse(  ['post_content'=>$post,"data"=>$datas], "Successfully"
+        );
     }
 
     /**
@@ -95,10 +107,10 @@ class CommentController extends Controller
      */
     public function destroy($comment_id)
     {
-        $comment=Comment::where(['id'=>$comment_id]);
+        $comment = Comment::where(['id' => $comment_id]);
         $comment?->delete();
-        $sub_comment=SubComment::where(['comment_id'=>$comment_id]);
+        $sub_comment = SubComment::where(['comment_id' => $comment_id]);
         $sub_comment?->delete();
-       return $this->sendResponse(null,"Delete Successfully");
+        return $this->sendResponse(null, "Delete Successfully");
     }
 }

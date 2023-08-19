@@ -12,9 +12,11 @@ use App\Http\Controllers\Api\SocailController;
 use App\Http\Controllers\Api\SocailLinkController;
 use App\Http\Controllers\Api\SubCommentController;
 use App\Http\Controllers\Api\TeamController;
+use App\Http\Controllers\Api\UserProfileController;
 use App\Models\MemberPosition;
 use App\Models\PostContent;
 use App\Models\SubComment;
+use App\Models\UserProfile;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -29,7 +31,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-
+Route::get('verifyOtp', [AuthController::class, 'verifyOtp']);
+Route::post('sendOtp', [AuthController::class, 'sendOtp']);
 Route::post('register', [AuthController::class, 'register']);
 Route::post('login', [AuthController::class, 'login']);
 
@@ -55,11 +58,13 @@ Route::get('member-position/show-all',[MemberPositionController::class,'show']);
 
 Route::post('socail-link/store',[SocailLinkController::class,'store']);
 
+Route::get('category/show', [CategoryController::class, 'show']);
+
 Route::middleware(['auth:api'])->group(function () {
     Route::post('logout', [AuthController::class, 'logout']);
 
     Route::post('category/store', [CategoryController::class, 'store']);
-    Route::get('category/show', [CategoryController::class, 'show']);
+    
 
     Route::post('post-content/store', [PostContentController::class, 'store']);
     Route::get('post-content/index', [PostContentController::class, 'index']);
@@ -73,4 +78,9 @@ Route::middleware(['auth:api'])->group(function () {
 
     Route::post('comment/sub-comment/store', [SubCommentController::class, 'store']);
     Route::post('comment/sub-comment/delete', [SubCommentController::class, 'destroy']);
+
+   
+    Route::post('user-profile/edit',[UserProfileController::class,'editUserProfile']);
+    Route::get('user-profile/show-user-profile',[UserProfileController::class,'showUserProfile']);
+    Route::get('post-content/show_post_of_user', [PostContentController::class, 'postContentOfUser']);
 });
