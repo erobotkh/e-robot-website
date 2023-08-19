@@ -1,4 +1,4 @@
-<x-layout>
+<x-login-register-layout>
 <div class="my-4">
       <div
         class="p-8 py-5 w-[350px] md:w-[500px] border border-red-200 rounded-lg mx-auto mt-5 shadow-md shadow-slate-800"
@@ -171,4 +171,4 @@
         </div>
       </div>
     </div>
-</x-layout>
+</x-login-register-layout>
