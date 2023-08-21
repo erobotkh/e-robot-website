@@ -44,11 +44,11 @@ x-data="{open:false,menu:false, lokasi:false}">
                             <li class="rounded-sm px-3 py-2 text-xs font-semibold hover:bg-black hover:text-white">Mission and Vision</li>
                         </a>
                         <a href="/about/team-leader">
-                            <li class="rounded-sm px-3 py-2 text-xs font-semibold hover:bg-black hover:text-white">Team Leader</li>
+                            <li class="rounded-sm px-3 py-2 text-xs font-semibold hover:bg-black hover:text-white">Team</li>
                         </a>
-                        <a href="/about/team-member">
+                        <!-- <a href="/about/team-member">
                             <li class="rounded-sm px-3 py-2 text-xs font-semibold hover:bg-black hover:text-white">Team Member</li>
-                        </a>
+                        </a> -->
                         <a href="/about/department">
                             <li class="rounded-sm px-3 py-2 text-xs font-semibold hover:bg-black hover:text-white">Department</li>
                         </a>
@@ -110,12 +110,12 @@ x-data="{open:false,menu:false, lokasi:false}">
 						</li>
 						<li>
 							<a href="/about/team-leader"
-								class="flex items-center w-full p-2 text-base transition duration-75 rounded-lg group hover:bg-black pl-11">Team Leader</a>
+								class="flex items-center w-full p-2 text-base transition duration-75 rounded-lg group hover:bg-black pl-11">Team</a>
 						</li>
-						<li>
+						<!-- <li>
 							<a href="/about/team-member"
 								class="flex items-center w-full p-2 text-base transition duration-75 rounded-lg group hover:bg-black pl-11">Team Member</a>
-						</li>
+						</li> -->
             <li>
 							<a href="/about/department"
 								class="flex items-center w-full p-2 text-base transition duration-75 rounded-lg group hover:bg-black pl-11">Department</a>

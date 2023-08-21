@@ -37,9 +37,9 @@
         </div>
 
         <!-- component -->
-<section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-4 pb-12">
+<section class=" mx-auto px-4 sm:px-6 lg:px-10 pb-12">
     <div class="text-center pb-12">
-        <h1 class="font-bold text-3xl font-heading text-red-600">
+        <h1 class="font-bold text-3xl font-heading text-red-600 uppercase">
             Check our awesome team leaders
         </h1>
     </div>
@@ -53,5 +53,23 @@
         <x-team-leader-card name="Jade Bradley" title="Website Team" photo="https://images.unsplash.com/photo-1499952127939-9bbf5af6c51c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1176&q=80" facebook="#" youtube="#" linkin="#" />
         <x-team-leader-card name="Jade Bradley" title="Website Team" photo="https://images.unsplash.com/photo-1499952127939-9bbf5af6c51c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1176&q=80" facebook="#" youtube="#" linkin="#" />
 </section>
+
+        <!-- component -->
+        <section class="mx-auto px-4 sm:px-6 lg:px-10 pb-12">
+            <div class="text-center pb-12">
+                <h1 class="font-bold text-3xl font-heading text-red-600 uppercase">
+                    Check our awesome team members
+                </h1>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                <x-team-leader-card name="Jade Bradley" title="Website Team" photo="https://images.unsplash.com/photo-1499952127939-9bbf5af6c51c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1176&q=80" facebook="#" youtube="#" linkin="#" />
+                <x-team-leader-card name="Jade Bradley" title="Website Team" photo="https://images.unsplash.com/photo-1499952127939-9bbf5af6c51c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1176&q=80" facebook="#" youtube="#" linkin="#" />
+                <x-team-leader-card name="Jade Bradley" title="Website Team" photo="https://images.unsplash.com/photo-1499952127939-9bbf5af6c51c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1176&q=80" facebook="#" youtube="#" linkin="#" />
+                <x-team-leader-card name="Jade Bradley" title="Website Team" photo="https://images.unsplash.com/photo-1499952127939-9bbf5af6c51c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1176&q=80" facebook="#" youtube="#" linkin="#" />
+                <x-team-leader-card name="Jade Bradley" title="Website Team" photo="https://images.unsplash.com/photo-1499952127939-9bbf5af6c51c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1176&q=80" facebook="#" youtube="#" linkin="#" />
+                <x-team-leader-card name="Jade Bradley" title="Website Team" photo="https://images.unsplash.com/photo-1499952127939-9bbf5af6c51c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1176&q=80" facebook="#" youtube="#" linkin="#" />
+                <x-team-leader-card name="Jade Bradley" title="Website Team" photo="https://images.unsplash.com/photo-1499952127939-9bbf5af6c51c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1176&q=80" facebook="#" youtube="#" linkin="#" />
+                <x-team-leader-card name="Jade Bradley" title="Website Team" photo="https://images.unsplash.com/photo-1499952127939-9bbf5af6c51c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1176&q=80" facebook="#" youtube="#" linkin="#" />
+        </section>
     </div>
 </x-layout>

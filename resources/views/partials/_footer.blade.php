@@ -2,14 +2,15 @@
     <div class="container px-6 py-8 mx-auto">
         <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-y-10 lg:grid-cols-4">
             <div class="sm:col-span-2 flex  flex-col gap-4 align-items-center">
-            <p class="font-bold uppercase text-red-600 text-xl text-center">E-robot</p>
+         
 
-                <div class="flex flex-col mx-auto mt-6 space-y-3 md:space-y-0 md:flex-row">
+                <div class="flex flex-col mx-auto space-y-3 md:space-y-0 md:flex-row">
                     <a href="/home">
                         <img class="w-auto h-24" src="{{asset('./images/logo_erobot-removebg.png')}}" alt="">
                     </a>
-                </div>
-            </div>
+                </div>  
+                <p class="text-center px-12">Lorem ipsum dolor sit amet consectetur adipisicing elit. A explicabo sunt totam veniam quos nam neque sit fugiat doloremque quisquam.</p>
+            </div>  
 
             <div>
                 <p class="font-bold uppercase text-red-600 text-xl">Quick Link</p>
