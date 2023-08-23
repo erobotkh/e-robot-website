@@ -82,7 +82,7 @@ class CommentController extends Controller
         $post=PostContent::withCount(['comments','sub_comments'])->where('id',$id)->first();
         
         
-        return $this->sendResponse(  ['post_content'=>$post,"data"=>$datas], "Successfully"
+        return $this->sendResponse(  ['post_content'=>$post,"comment_data"=>$datas], "Successfully"
         );
     }
 

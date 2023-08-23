@@ -106,7 +106,7 @@ class UserProfileController extends Controller
             $data['cover_image']=$data->cover_image;
             $data['profile_image_url']=$data->profile_image_url;
             $data['cover_image_url']=$data->cover_image_url;
-            $data['create_at']=$data->create_at;
+            $data['create_at']=$data->created_at;
             $data['update_at']=$data->updated_at;
         }
         

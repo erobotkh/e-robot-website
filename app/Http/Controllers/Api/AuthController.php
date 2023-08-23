@@ -82,6 +82,7 @@ class AuthController extends Controller
         ]);
 
         $user = User::where('phone', $request->phone)->first();
+        
         if (!isset($user)) {
             return $this->sendError('User does not exist with this details');
         }
