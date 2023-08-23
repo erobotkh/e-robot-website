@@ -31,7 +31,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('verifyOtp', [AuthController::class, 'verifyOtp']);
+Route::post('verifyOtp', [AuthController::class, 'verifyOtp']);
 Route::post('sendOtp', [AuthController::class, 'sendOtp']);
 Route::post('register', [AuthController::class, 'register']);
 Route::post('login', [AuthController::class, 'login']);

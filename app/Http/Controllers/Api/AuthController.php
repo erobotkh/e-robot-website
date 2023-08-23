@@ -117,7 +117,7 @@ class AuthController extends Controller
         }
 
         $phone = $request->phone;
-        $expirationTime = 180; // 1 minute
+        $expirationTime = 60; // 1 minute
 
         // Check if the OTP code has already been sent for this phone number.
         $phoneCache = Cache::get('phone_' . $phone);
