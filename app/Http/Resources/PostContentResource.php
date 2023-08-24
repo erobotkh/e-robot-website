@@ -33,7 +33,7 @@ class PostContentResource extends JsonResource
                                     'last_name' => $this['user']['last_name'],
                                     'post_user_profiles' => UserProfile::where('user_id', $this['user']['id'])->first(),
                                   ],
-            'comments_count' => $this['comments_count'] + $this['sub_comments_count'],
+            'comments_count' => $this['comments_count'],
             'likes_count'        => $this['likes_count'],
             'isSave'             => 0,
             'canDelete'          => $this->when(1, function () {
