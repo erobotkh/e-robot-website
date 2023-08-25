@@ -40,7 +40,7 @@ Route::get('/register', function () {
 });
 Route::get('/donate', function(){
     return view('donation');
-
+});
 
 // Admin Route
 Route::get('/admin', function () {
