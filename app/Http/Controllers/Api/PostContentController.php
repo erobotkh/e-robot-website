@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
+use App\Http\Resources\PostContentResource;
 use App\Models\Category;
 use App\Models\Comment;
 use App\Models\Like;
@@ -13,6 +14,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
 use Validator;
+
 class PostContentController extends Controller
 {
     public function sendResponse($result, $message)
@@ -46,22 +48,29 @@ class PostContentController extends Controller
      */
     public function index()
     {
-        $datas = PostContent::orderBy('updated_at', 'desc')->get();
-        foreach ($datas as $data) {
-            User::where('id',$data->user->id)?->first();
-            $user_profiles = User::find($data->user_id)?->user_profiles;
-            $likes = PostContent::find($data->id)?->likes;
-            $comments = PostContent::find($data->id)?->comments;
-            foreach ($comments as $comment) {
-                $sub_comment_numbers = SubComment::where('comment_id', $comment->id)->where('post_content_id', $data->id)?->get();
-                $comment['sub'] = $sub_comment_numbers->count();
-                $data['total_sub_comment'] += $comment['sub'];
-            }
-            $data['total_comment'] = $comments->count();
-            $data['user_profile'] = $user_profiles?->profile_image_url;
-            $data['like_number'] = $likes->count();
-        }
-        return $this->sendResponse($datas, "Successfully");
+        $data = PostContent::withCount([
+            'likes',
+            'comments',
+            'sub_comments'
+        ])->orderBy('updated_at', 'desc')->paginate(10);
+        return $this->success([
+            'post_content_data' => [
+                'post_content_list' => PostContentResource::collection($data)
+            ],
+
+            'current_page' => $data->currentPage(),
+            'first_page_url' => $data->url(1),
+            'from' => ($data->currentPage() - 1) * $data->perPage() + 1,
+            'last_page' => $data->lastPage(),
+            'last_page_url' => $data->url($data->lastPage()),
+            'next_page_url' => $data->nextPageUrl(),
+            'per_page' => $data->perPage(),
+            'prev_page_url' => $data->previousPageUrl(),
+            'to' => min($data->currentPage() * $data->perPage(), $data->total()),
+            "total" => $data->total()
+        ], "Successfully");
+
+       
     }
 
 
@@ -78,29 +87,31 @@ class PostContentController extends Controller
      */
     public function store(Request $request)
     {
-        $rule=['title'=>'required',
-        'description'=>'nullable',
-        'image_file'=>'required|image|max:10240',
-        'category_id'=>'required'];
-        
-        $input=$request->only('title','description','image_file','category_id');
-        $validator=Validator::make($input,$rule);
+        $rule = [
+            'title' => 'required',
+            'description' => 'nullable',
+            'image_file' => 'required|image|max:10240',
+            'category_id' => 'required'
+        ];
+
+        $input = $request->only('title', 'description', 'image_file', 'category_id');
+        $validator = Validator::make($input, $rule);
         if ($validator->fails()) {
-            return $this->sendError("Post Fail",$validator->messages());
+            return $this->sendError("Post Fail", $validator->messages());
         }
 
-        $title=$request->title;
-        $discription=$request->discription;
-        $category_id=$request->category_id;
-        $user_id=Auth::id();
-        $image_file=$request->image_file;
+        $title = $request->title;
+        $discription = $request->discription;
+        $category_id = $request->category_id;
+        $user_id = Auth::id();
+        $image_file = $request->image_file;
         $url = Storage::disk('do')->putFile(
             "erobot/post-content",
             $image_file,
             'public'
         );
-        $data=PostContent::create(['title'=>$title,'discription'=>$discription,'image_name'=>$url,'category_id'=>$category_id,'user_id'=>$user_id]);
-        return $this->sendResponse($data,"Post Successfully");
+        $data = PostContent::create(['title' => $title, 'discription' => $discription, 'image_name' => $url, 'category_id' => $category_id, 'user_id' => $user_id]);
+        return $this->sendResponse($data, "Post Successfully");
     }
 
     /**
@@ -109,32 +120,84 @@ class PostContentController extends Controller
     public function show(Request $request)
     {
         $this->validate($request, ['category_id' => 'required']);
-        $category_id = $request->category_id;
-        $datas = PostContent::where('category_id',$category_id)->orderBy('updated_at', 'desc')?->get();
-        foreach ($datas as $data) {
-            User::where('id',$data->user->id)?->first();
-            $user_profiles = User::find($data->user_id)?->user_profiles;
-            $likes = PostContent::find($data->id)?->likes;
-            $comments = PostContent::find($data->id)?->comments;
-            foreach ($comments as $comment) {
-                $sub_comment_numbers = SubComment::where('comment_id', $comment->id)->where('post_content_id', $data->id)?->get();
-                $comment['sub'] = $sub_comment_numbers->count();
-                $data['total_sub_comment'] += $comment['sub'];
-            }
-            $data['total_comment'] = $comments->count();
-            $data['user_profile'] = $user_profiles?->profile_image_url;
-            $data['like_number'] = $likes->count();
-        }
+        $data = PostContent::withCount([
+            'likes',
+            'comments',
+            'sub_comments'
+        ])->where('category_id', $request->category_id)->orderBy('updated_at', 'desc')->paginate(10);
+        return $this->success([
+            'post_content_data' => [
+                'post_content_list' => PostContentResource::collection($data)
+            ],
 
-        return $this->sendResponse($datas, "Successfully");
+            'current_page' => $data->currentPage(),
+            'first_page_url' => $data->url(1),
+            'from' => ($data->currentPage() - 1) * $data->perPage() + 1,
+            'last_page' => $data->lastPage(),
+            'last_page_url' => $data->url($data->lastPage()),
+            'next_page_url' => $data->nextPageUrl(),
+            'per_page' => $data->perPage(),
+            'prev_page_url' => $data->previousPageUrl(),
+            'to' => min($data->currentPage() * $data->perPage(), $data->total()),
+            "total" => $data->total()
+        ], "Successfully");
+        // $datas = PostContent::where('category_id', $category_id)->orderBy('updated_at', 'desc')?->get();
+        // foreach ($datas as $data) {
+        //     User::where('id', $data->user->id)?->first();
+        //     $user_profiles = User::find($data->user_id)?->user_profiles;
+        //     $likes = PostContent::find($data->id)?->likes;
+        //     $comments = PostContent::find($data->id)?->comments;
+        //     foreach ($comments as $comment) {
+        //         $sub_comment_numbers = SubComment::where('comment_id', $comment->id)->where('post_content_id', $data->id)?->get();
+        //         $comment['sub'] = $sub_comment_numbers->count();
+        //         $data['total_sub_comment'] += $comment['sub'];
+        //     }
+        //     $data['total_comment'] = $comments->count();
+        //     $data['user_profile'] = $user_profiles?->profile_image_url;
+        //     $data['like_number'] = $likes->count();
+        //     if ($likes->count() != 0) {
+        //         foreach ($likes as $like) {
+        //             if ($like->user_id == Auth::id()) {
+        //                 $data['isLike'] = 1;
+        //             } else {
+        //                 $data['isLike'] = 0;
+        //             }
+        //         }
+        //     } else {
+        //         $data['isLike'] = 0;
+        //     }
+        // }
+
+        // return $this->sendResponse($datas, "Successfully");
     }
 
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function postContentOfUser()
     {
-        //
+        $data = PostContent::withCount([
+            'likes',
+            'comments',
+            'sub_comments'
+        ])->where('user_id',Auth::id())->orderBy('updated_at', 'desc')->paginate(10);
+        return $this->success([
+            'post_content_data' => [
+                'post_content_list' => PostContentResource::collection($data)
+            ],
+
+            'current_page' => $data->currentPage(),
+            'first_page_url' => $data->url(1),
+            'from' => ($data->currentPage() - 1) * $data->perPage() + 1,
+            'last_page' => $data->lastPage(),
+            'last_page_url' => $data->url($data->lastPage()),
+            'next_page_url' => $data->nextPageUrl(),
+            'per_page' => $data->perPage(),
+            'prev_page_url' => $data->previousPageUrl(),
+            'to' => min($data->currentPage() * $data->perPage(), $data->total()),
+            "total" => $data->total()
+        ], "Successfully");
+
     }
 
     /**
@@ -148,12 +211,12 @@ class PostContentController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy( $post_content_id)
+    public function destroy($post_content_id)
     {
-        $post=PostContent::where(['id'=>$post_content_id])?->delete();
-      
-        if($post){
-            return $this->sendResponse($post,"Delete Successfully");
+        $post = PostContent::where(['id' => $post_content_id])?->delete();
+
+        if ($post) {
+            return $this->sendResponse($post, "Delete Successfully");
         }
         return $this->sendError("Fail");
     }

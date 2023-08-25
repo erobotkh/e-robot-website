@@ -12,7 +12,8 @@ class Member extends Model
 {
     use HasFactory,Notifiable;
     protected $fillable=[
-        'name',
+        'first_name',
+        'last_name',
         'bio',
         'profile',
         'member_position_id',

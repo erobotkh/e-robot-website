@@ -38,7 +38,9 @@ Route::get('/login', function () {
 Route::get('/register', function () {
     return view('user.register');
 });
-
+Route::get('/donate', function(){
+    return view('donation');
+});
 
 // Admin Route
 Route::get('/admin', function () {
@@ -92,4 +94,5 @@ Route::get('about/team-member', function () {
     return view('about.team-member');
 });Route::get('about/department', function () {
     return view('about.department');
+
 });
