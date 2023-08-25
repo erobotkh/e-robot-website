@@ -18,7 +18,7 @@
     <meta name="google-site-verification" content="+nxGUDJ4QpAZ5l9Bsjdi102tLVC21AIh5d1Nl23908vVuFHs34=">
     <title>Erobot</title>
     <meta name="robots" content="noindex,nofollow">
-   
+    <link href="https://fonts.googleapis.com/css2?family=Battambang:wght@300;400;700;900&display=swap" rel="stylesheet">
 </head>
 <body>
     @include('./partials/_nav-bar')

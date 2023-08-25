@@ -5,15 +5,33 @@
     <p class="text-center mb-5"> If you would like to share additional resources, please send an email to support@first.global.</p>
 
     <!-- resource card wrapper -->
-    <div class="grid auto-rows-auto sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-        <x-resource-card title="Title" image="https://i0.wp.com/first.global/wp-content/uploads/2020/06/Autodesk-Tinkercad.png?w=300&ssl=1" description="SOLIDWORKS has a desktop product and the 3DEXPERIENCE platform—a cloud-based portfolio of integrated tools and apps." link="#" />
-        <x-resource-card title="Title" image="https://i0.wp.com/first.global/wp-content/uploads/2020/06/Solidworks.png?w=300&ssl=1" description="SOLIDWORKS has a desktop product and the 3DEXPERIENCE platform." link="#" />
-        <x-resource-card title="Title" image="https://i0.wp.com/first.global/wp-content/uploads/2020/06/Autodesk.png?w=300&ssl=1" description="SOLIDWOR oud-based portfolio of integrated tools and apps." link="#" />
-        <x-resource-card title="Title" image="https://i0.wp.com/first.global/wp-content/uploads/2020/06/Onshape.png?w=300&ssl=1" description="SOLIDWORKS has a desktop product and the 3DEXPERIENCE platform—a cloud-based portfolio of integrated tools and apps." link="#" />
-        <x-resource-card title="Title" image="https://i0.wp.com/first.global/wp-content/uploads/2020/06/Autodesk-Tinkercad.png?w=300&ssl=1" description="SOLIDWORKS has a desktop product and the 3DEXPERIENCE platform—a cloud-based portfolio of integrated tools and apps." link="#" />
-        <x-resource-card title="Title" image="https://i0.wp.com/first.global/wp-content/uploads/2020/06/Autodesk-Tinkercad.png?w=300&ssl=1" description="SOLIDWORKS has a desktop product and the 3DEXPERIENCE platform—a cloud-based portfolio of integrated tools and apps." link="#" />
-        <x-resource-card title="Title" image="https://i0.wp.com/first.global/wp-content/uploads/2020/06/Autodesk-Tinkercad.png?w=300&ssl=1" description="SOLIDWORKS has a desktop product and the 3DEXPERIENCE platform—a cloud-based portfolio of integrated tools and apps." link="#" />
-        <x-resource-card title="Title" image="https://i0.wp.com/first.global/wp-content/uploads/2020/06/Autodesk-Tinkercad.png?w=300&ssl=1" description="SOLIDWORKS has a desktop product and the 3DEXPERIENCE platform—a cloud-based portfolio of integrated tools and apps." link="#" />
+    <div>
+        <div class="pb-5">
+            <x-resource-category name="Category name"/>
+            <div class="grid auto-rows-auto sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                <x-resource-card title="Title" image="https://i0.wp.com/first.global/wp-content/uploads/2020/06/Autodesk-Tinkercad.png?w=300&ssl=1" description="SOLIDWORKS has a desktop product and the 3DEXPERIENCE platform—a cloud-based portfolio of integrated tools and apps." link="#" />
+                <x-resource-card title="Title" image="https://i0.wp.com/first.global/wp-content/uploads/2020/06/Solidworks.png?w=300&ssl=1" description="SOLIDWORKS has a desktop product and the 3DEXPERIENCE platform." link="#" />
+                <x-resource-card title="Title" image="https://i0.wp.com/first.global/wp-content/uploads/2020/06/Autodesk.png?w=300&ssl=1" description="SOLIDWOR oud-based portfolio of integrated tools and apps." link="#" />
+                <x-resource-card title="Title" image="https://i0.wp.com/first.global/wp-content/uploads/2020/06/Onshape.png?w=300&ssl=1" description="SOLIDWORKS has a desktop product and the 3DEXPERIENCE platform—a cloud-based portfolio of integrated tools and apps." link="#" />
+                <x-resource-card title="Title" image="https://i0.wp.com/first.global/wp-content/uploads/2020/06/Autodesk-Tinkercad.png?w=300&ssl=1" description="SOLIDWORKS has a desktop product and the 3DEXPERIENCE platform—a cloud-based portfolio of integrated tools and apps." link="#" />
+                <x-resource-card title="Title" image="https://i0.wp.com/first.global/wp-content/uploads/2020/06/Autodesk-Tinkercad.png?w=300&ssl=1" description="SOLIDWORKS has a desktop product and the 3DEXPERIENCE platform—a cloud-based portfolio of integrated tools and apps." link="#" />
+                <x-resource-card title="Title" image="https://i0.wp.com/first.global/wp-content/uploads/2020/06/Autodesk-Tinkercad.png?w=300&ssl=1" description="SOLIDWORKS has a desktop product and the 3DEXPERIENCE platform—a cloud-based portfolio of integrated tools and apps." link="#" />
+                <x-resource-card title="Title" image="https://i0.wp.com/first.global/wp-content/uploads/2020/06/Autodesk-Tinkercad.png?w=300&ssl=1" description="SOLIDWORKS has a desktop product and the 3DEXPERIENCE platform—a cloud-based portfolio of integrated tools and apps." link="#" />
+            </div>
+        </div>
+        <div class="pb-5">
+            <x-resource-category name="Category name"/>
+            <div class="grid auto-rows-auto sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                <x-resource-card title="Title" image="https://i0.wp.com/first.global/wp-content/uploads/2020/06/Autodesk-Tinkercad.png?w=300&ssl=1" description="SOLIDWORKS has a desktop product and the 3DEXPERIENCE platform—a cloud-based portfolio of integrated tools and apps." link="#" />
+                <x-resource-card title="Title" image="https://i0.wp.com/first.global/wp-content/uploads/2020/06/Solidworks.png?w=300&ssl=1" description="SOLIDWORKS has a desktop product and the 3DEXPERIENCE platform." link="#" />
+                <x-resource-card title="Title" image="https://i0.wp.com/first.global/wp-content/uploads/2020/06/Autodesk.png?w=300&ssl=1" description="SOLIDWOR oud-based portfolio of integrated tools and apps." link="#" />
+                <x-resource-card title="Title" image="https://i0.wp.com/first.global/wp-content/uploads/2020/06/Onshape.png?w=300&ssl=1" description="SOLIDWORKS has a desktop product and the 3DEXPERIENCE platform—a cloud-based portfolio of integrated tools and apps." link="#" />
+                <x-resource-card title="Title" image="https://i0.wp.com/first.global/wp-content/uploads/2020/06/Autodesk-Tinkercad.png?w=300&ssl=1" description="SOLIDWORKS has a desktop product and the 3DEXPERIENCE platform—a cloud-based portfolio of integrated tools and apps." link="#" />
+                <x-resource-card title="Title" image="https://i0.wp.com/first.global/wp-content/uploads/2020/06/Autodesk-Tinkercad.png?w=300&ssl=1" description="SOLIDWORKS has a desktop product and the 3DEXPERIENCE platform—a cloud-based portfolio of integrated tools and apps." link="#" />
+                <x-resource-card title="Title" image="https://i0.wp.com/first.global/wp-content/uploads/2020/06/Autodesk-Tinkercad.png?w=300&ssl=1" description="SOLIDWORKS has a desktop product and the 3DEXPERIENCE platform—a cloud-based portfolio of integrated tools and apps." link="#" />
+                <x-resource-card title="Title" image="https://i0.wp.com/first.global/wp-content/uploads/2020/06/Autodesk-Tinkercad.png?w=300&ssl=1" description="SOLIDWORKS has a desktop product and the 3DEXPERIENCE platform—a cloud-based portfolio of integrated tools and apps." link="#" />
+            </div>
+        </div>
     </div>
 
    
