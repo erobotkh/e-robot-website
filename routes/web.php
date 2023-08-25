@@ -96,3 +96,14 @@ Route::get('about/team-member', function () {
     return view('about.department');
 
 });
+
+
+//resoure
+
+Route::get('/resource', function () {
+    return view('resource.index');
+});
+
+Route::get('/resource/show', function () {
+    return view('resource.show');
+});
