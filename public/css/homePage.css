@@ -4,7 +4,7 @@
   --bgForcus:#EB0100;
   --bgHover:#FF1517;
   --colorContent:#7D7573;
-  --font_title:24px;
+  --font_title:36px;
   --font_subTitle:18px;
   --font_text:13px;
   --font_subContent:10px;
@@ -79,6 +79,7 @@
   font-size: var(--font_subTitle);
   font-weight: 600;
   padding: 10px 0;
+  color: #DC2626;
 }
 .home_wrapper main.mainContainer .programSection .programContainer .programCard a article.aboutProgram {
   font-size: 13px;
@@ -161,7 +162,7 @@
 }
 .home_wrapper main.mainContainer .activitySection .activityContainer .activityImage {
   width: 50%;
-  height: 70vh;
+  height: 75vh;
   background-color: black;
   position: relative;
 }
@@ -171,76 +172,18 @@
   opacity: 0.7;
 }
 .home_wrapper main.mainContainer .activitySection .activityContainer .activityImage .activitytext {
+  width: 70%;
   position: absolute;
-  bottom: 5%;
-  left: 50%;
-  translate: -50% 0;
+  bottom: 10%;
+  left: 15%;
   color: white;
 }
 .home_wrapper main.mainContainer .activitySection .activityContainer .activityImage .activitytext .activitySubtittle {
-  font-size: var(--font_title);
+  font-size: 24px;
 }
 .home_wrapper main.mainContainer .activitySection .activityContainer .activityImage .activitytext .activityDetail {
   font-size: var(--font_text);
-}
-.home_wrapper main.mainContainer .aboutUsImpactAchievement .aboutImpactAchieveContainer {
-  display: flex;
-  padding: 50px 150px;
-}
-.home_wrapper main.mainContainer .aboutUsImpactAchievement .aboutImpactAchieveContainer .content {
-  position: relative;
-  width: 50%;
-  height: 50vh;
-  color: white;
-}
-.home_wrapper main.mainContainer .aboutUsImpactAchievement .aboutImpactAchieveContainer .content img {
-  width: 100%;
-  height: 100%;
-  opacity: 0.85;
-  border-radius: 5px 0 0 5px;
-}
-.home_wrapper main.mainContainer .aboutUsImpactAchievement .aboutImpactAchieveContainer .content .subtitleNumContainer {
-  position: absolute;
-  bottom: 5%;
-  font-size: 13px;
-  padding: 0 50px;
-  opacity: 1;
-}
-.home_wrapper main.mainContainer .aboutUsImpactAchievement .aboutImpactAchieveContainer .content.contentImg {
-  background-color: black;
-  border-radius: 5px 0 0 5px;
-}
-.home_wrapper main.mainContainer .aboutUsImpactAchievement .aboutImpactAchieveContainer .content.contentBg1 {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  border: 1px solid #DC2626;
-  border-left: none;
-  border-radius: 0 5px 5px 0;
-}
-.home_wrapper main.mainContainer .aboutUsImpactAchievement .aboutImpactAchieveContainer .content.contentBg1 .contentContainer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background-color: var(--bgColor);
-  border-radius: 0 5px 5px 0;
-}
-.home_wrapper main.mainContainer .aboutUsImpactAchievement .aboutImpactAchieveContainer .content.contentBg1 .contentContainer .num {
-  font-size: 32px;
-  color: #DC2626;
-}
-.home_wrapper main.mainContainer .aboutUsImpactAchievement .aboutImpactAchieveContainer .content.contentBg1 .contentContainer .subtitle {
-  font-size: 15px;
-  color: #A8A196;
-}
-.home_wrapper main.mainContainer .aboutUsImpactAchievement .aboutImpactAchieveContainer .content.contentBg1 .achievmentTitle {
-  grid-column: 1/span 2;
-  background-color: #DC2626;
-  border: 2px solid white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: var(--font_title);
+  text-align: justify;
 }
 .home_wrapper main.mainContainer .teamsSection {
   width: 100%;
@@ -261,25 +204,27 @@
 .home_wrapper main.mainContainer .teamsSection .teamContainer {
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(3, auto);
+  grid-template-columns: repeat(2, 1fr);
   gap: 20px;
 }
 .home_wrapper main.mainContainer .teamsSection .teamContainer .teamCard {
   width: 100%;
   height: 80vh;
-  border-radius: 10px;
+  border-radius: 5px;
   background-color: var(--bgColor);
   cursor: pointer;
+  position: relative;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
 }
 .home_wrapper main.mainContainer .teamsSection .teamContainer .teamCard a {
   width: 100%;
+  height: 100%;
   text-decoration: none;
   color: black;
 }
 .home_wrapper main.mainContainer .teamsSection .teamContainer .teamCard a .teamImage {
   width: 100%;
-  height: 40%;
-  border-radius: 10px;
+  height: 55%;
   position: relative;
 }
 .home_wrapper main.mainContainer .teamsSection .teamContainer .teamCard a .teamImage img {
@@ -287,61 +232,110 @@
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  border-radius: 10px 10px 0 0;
+  border-radius: 5px 5px 0 0;
 }
 .home_wrapper main.mainContainer .teamsSection .teamContainer .teamCard a .teamImage .grayScreen {
   display: none;
 }
-.home_wrapper main.mainContainer .teamsSection .teamContainer .teamCard a .teamLeader {
-  width: 100%;
-  position: relative;
-  height: 13%;
-}
-.home_wrapper main.mainContainer .teamsSection .teamContainer .teamCard a .teamLeader .leader {
-  width: 100px;
-  height: 100px;
-  position: absolute;
+.home_wrapper main.mainContainer .teamsSection .teamContainer .teamCard a .teamDetail {
+  width: 60%;
   background-color: white;
-  border-radius: 50%;
-  top: -30px;
-  left: 5%;
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  translate: -50% -50%;
+  padding: 10px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-.home_wrapper main.mainContainer .teamsSection .teamContainer .teamCard a .teamLeader .leader img {
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  border: 4px solid white;
+.home_wrapper main.mainContainer .teamsSection .teamContainer .teamCard a .teamDetail .teamSubtitle {
+  font-size: 28px;
+  font-weight: 700;
+  padding-bottom: 20px;
+  color: #DC2626;
 }
-.home_wrapper main.mainContainer .teamsSection .teamContainer .teamCard a .teamLeader .teamPosition {
-  padding-left: 33%;
-  font-size: 18px;
-  color: gray;
-  padding-top: 10px;
+.home_wrapper main.mainContainer .teamsSection .teamContainer .teamCard a .teamDetail .aboutTeam {
+  text-align: center;
 }
-.home_wrapper main.mainContainer .teamsSection .teamContainer .teamCard a .teamSubtitle {
-  padding: 10px 30px;
+.home_wrapper main.mainContainer .teamsSection .teamContainer .teamCard.teamCard:hover {
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
 }
-.home_wrapper main.mainContainer .teamsSection .teamContainer .teamCard a .teamSubtitle h2 {
-  font-size: var(--font_subTitle);
-  font-weight: 500;
-  padding: 10px 0 5px 0;
-}
-.home_wrapper main.mainContainer .teamsSection .teamContainer .teamCard a article.aboutteam {
-  padding: 0 30px;
-  font-size: 15px;
-  color: var(--colorContent);
-}
-.home_wrapper main.mainContainer .teamsSection .teamContainer .teamCard:hover {
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
-}
-.home_wrapper main.mainContainer .teamsSection .teamContainer .teamCard:hover a .teamImage .grayScreen {
+.home_wrapper main.mainContainer .teamsSection .teamContainer .teamCard.teamCard:hover a .teamImage .grayScreen {
   display: block;
   width: 100%;
   height: 100%;
   position: absolute;
   top: 0;
-  background-color: rgba(0, 0, 0, 0.591);
-  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 5px 5px 0 0;
+}
+.home_wrapper main.mainContainer .teamsSection .teamContainer .teamCard.teamCard:hover a .teamDetail {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+  border-radius: 5px;
+}
+.home_wrapper main.mainContainer .aboutUsImpactAchievement {
+  padding: 20px;
+}
+.home_wrapper main.mainContainer .aboutUsImpactAchievement .aboutImpactAchieveContainer {
+  display: flex;
+  border: 1px solid #DC2626;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+}
+.home_wrapper main.mainContainer .aboutUsImpactAchievement .aboutImpactAchieveContainer .content {
+  position: relative;
+  width: 50%;
+  height: 60vh;
+  color: white;
+}
+.home_wrapper main.mainContainer .aboutUsImpactAchievement .aboutImpactAchieveContainer .content img {
+  width: 100%;
+  height: 100%;
+  opacity: 0.85;
+  border-radius: 5px 0 0 5px;
+}
+.home_wrapper main.mainContainer .aboutUsImpactAchievement .aboutImpactAchieveContainer .content .subtitleNumContainer {
+  position: absolute;
+  bottom: 5%;
+  font-size: 15px;
+  padding: 0 50px;
+  opacity: 1;
+}
+.home_wrapper main.mainContainer .aboutUsImpactAchievement .aboutImpactAchieveContainer .content.contentImg {
+  background-color: black;
+  border-radius: 5px 0 0 5px;
+}
+.home_wrapper main.mainContainer .aboutUsImpactAchievement .aboutImpactAchieveContainer .content.contentBg1 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-left: none;
+  border-radius: 0 5px 5px 0;
+}
+.home_wrapper main.mainContainer .aboutUsImpactAchievement .aboutImpactAchieveContainer .content.contentBg1 .contentContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bgColor);
+  border-radius: 0 5px 5px 0;
+}
+.home_wrapper main.mainContainer .aboutUsImpactAchievement .aboutImpactAchieveContainer .content.contentBg1 .contentContainer .num {
+  font-size: 32px;
+  color: #DC2626;
+}
+.home_wrapper main.mainContainer .aboutUsImpactAchievement .aboutImpactAchieveContainer .content.contentBg1 .contentContainer .subtitle {
+  font-size: 15px;
+  color: #A8A196;
+}
+.home_wrapper main.mainContainer .aboutUsImpactAchievement .aboutImpactAchieveContainer .content.contentBg1 .achievmentTitle {
+  grid-column: 1/span 3;
+  background-color: #DC2626;
+  border: 2px solid white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--font_title);
 }
 .home_wrapper main.mainContainer .partnerSection {
   padding: 30px 0;
@@ -453,15 +447,29 @@ html {
     width: 100%;
   }
   .home_wrapper main.mainContainer .teamsSection .teamContainer {
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(2, auto);
+    gap: 10px;
   }
-  .home_wrapper main.mainContainer .teamsSection .teamContainer .teamCard {
-    width: 100%;
+  .home_wrapper main.mainContainer .teamsSection .teamContainer .teamCard a .teamDetail .teamSubtitle {
+    font-size: 19px;
+  }
+  .home_wrapper main.mainContainer .teamsSection .teamContainer .teamCard a .teamDetail .aboutTeam {
+    text-align: center;
+    font-size: 14px;
+  }
+  .home_wrapper main.mainContainer .aboutUsImpactAchievement .aboutImpactAchieveContainer .content.contentBg1 .contentContainer .num {
+    font-size: 24px;
+  }
+  .home_wrapper main.mainContainer .aboutUsImpactAchievement .aboutImpactAchieveContainer .content.contentBg1 .contentContainer .subtitle {
+    font-size: 12px;
+  }
+  .home_wrapper main.mainContainer .aboutUsImpactAchievement .aboutImpactAchieveContainer .content.contentBg1 .achievmentTitle {
+    font-size: 24px;
   }
 }
 @media (max-width: 428px) {
+  :root {
+    --font_title:24px;
+  }
   .home_wrapper main.mainContainer {
     width: 100%;
     height: var(--slideHeight);
@@ -521,16 +529,44 @@ html {
     display: flex;
     justify-content: end;
   }
-  .home_wrapper main.mainContainer .teamsSection .teamContainer {
+  .home_wrapper main.mainContainer .activitySection .activityContainer {
+    display: block;
+  }
+  .home_wrapper main.mainContainer .activitySection .activityContainer .activityImage {
     width: 100%;
+  }
+  .home_wrapper main.mainContainer .teamsSection .teamContainer {
     display: grid;
     grid-template-columns: repeat(1, auto);
-    gap: 20px;
+    gap: 10px;
   }
-  .home_wrapper main.mainContainer .teamsSection .teamContainer .teamCard {
+  .home_wrapper main.mainContainer .aboutUsImpactAchievement {
+    padding: 15px;
+  }
+  .home_wrapper main.mainContainer .aboutUsImpactAchievement .aboutImpactAchieveContainer {
+    display: block;
+  }
+  .home_wrapper main.mainContainer .aboutUsImpactAchievement .aboutImpactAchieveContainer .content {
     width: 100%;
-    border-radius: 10px;
-    background-color: var(--bgColor);
-    cursor: pointer;
+  }
+  .home_wrapper main.mainContainer .aboutUsImpactAchievement .aboutImpactAchieveContainer .content img {
+    border-radius: 5px 5px 0 0;
+  }
+  .home_wrapper main.mainContainer .aboutUsImpactAchievement .aboutImpactAchieveContainer .content.contentImg {
+    border-radius: 5px 5px 0 0;
+  }
+  .home_wrapper main.mainContainer .aboutUsImpactAchievement .aboutImpactAchieveContainer .content.contentBg1 {
+    border-radius: 5px;
+  }
+  .home_wrapper main.mainContainer .aboutUsImpactAchievement .aboutImpactAchieveContainer .content.contentBg1 .contentContainer {
+    border-radius: 5px;
+  }
+  .home_wrapper main.mainContainer .aboutUsImpactAchievement .aboutImpactAchieveContainer .content.contentBg1 .contentContainer .num {
+    font-size: 28px;
+    color: #DC2626;
+  }
+  .home_wrapper main.mainContainer .aboutUsImpactAchievement .aboutImpactAchieveContainer .content.contentBg1 .contentContainer .subtitle {
+    font-size: 13px;
+    color: #A8A196;
   }
 }/*# sourceMappingURL=homePage.css.map */

@@ -204,6 +204,112 @@
                         
 
             </div>
+
+<!-- team -->
+            <div class="teamsSection">
+                <div class="teamsTitle">
+                    <h1>E-Robot Departements</h1>
+                </div>
+                <div class="teamContainer">
+                    <!-- <div class="teamCard">
+                        <a href="#">
+                            <div class="teamImage">
+                                
+                                <img src="images/events1.jpg" alt="">
+                                <div class="grayScreen"></div>
+                            </div>
+                            
+                            <div class="teamLeader">
+                                <div class="leader">
+                                    <img src="images/blogPost.jpg" alt="">
+                                </div>
+                                <div class="teamPosition">
+                                    Leader name 
+                                </div>
+                            </div>
+                            <div class="teamSubtitle"><h2>Robotic</h2></div>
+                            <article class="aboutteam">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio reiciendis quas et asperiores quasi odio ut autem eos hic impedit.</article>
+                        </a>
+                    </div> -->
+
+                    <div class="teamCard">
+                        <a href="about/department">
+                            <div class="teamImage">
+                                
+                                <img src="images/inovation_cover.webp" alt="">
+                                <div class="grayScreen"></div>
+                            </div>
+                            
+                            <div class="teamDetail">
+                                <div class="teamSubtitle">INOVATION</div>
+                                <article class="aboutTeam">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio reiciendis quas et asperiores quasi odio ut autem eos hic impedit.</article>
+                            </div>
+                            
+                        </a>
+                    </div>
+                    <div class="teamCard">
+                        <a href="about/department">
+                            <div class="teamImage">
+                                
+                                <img src="images/social_engagement_cover.png" alt="">
+                                <div class="grayScreen"></div>
+                            </div>
+                            
+                            <div class="teamDetail">
+                                <div class="teamSubtitle">SOCIAL ENGAGEMENT</div>
+                                <article class="aboutTeam">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio reiciendis quas et asperiores quasi odio ut autem eos hic impedit.</article>
+                            </div>
+                            
+                        </a>
+                    </div>
+                    <div class="teamCard">
+                        <a href="about/department">
+                            <div class="teamImage">
+                                
+                                <img src="images/finance.jpg" alt="">
+                                <div class="grayScreen"></div>
+                            </div>
+                            
+                            <div class="teamDetail">
+                                <div class="teamSubtitle">FINANCE</div>
+                                <article class="aboutTeam">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio reiciendis quas et asperiores quasi odio ut autem eos hic impedit.</article>
+                            </div>
+                            
+                        </a>
+                    </div>
+                    <div class="teamCard">
+                        <a href="about/department">
+                            <div class="teamImage">
+                                
+                                <img src="images/plannig_strategy_cover.jpg" alt="">
+                                <div class="grayScreen"></div>
+                            </div>
+                            
+                            <div class="teamDetail">
+                                <div class="teamSubtitle">PLANNIG & STRATEGY</div>
+                                <article class="aboutTeam">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio reiciendis quas et asperiores quasi odio ut autem eos hic impedit.</article>
+                            </div>
+                            
+                        </a>
+                    </div>
+                    <div class="teamCard">
+                        <a href="about/department">
+                            <div class="teamImage">
+                                
+                                <img src="images/hr_admin_cover.jpg" alt="">
+                                <div class="grayScreen"></div>
+                            </div>
+                            
+                            <div class="teamDetail">
+                                <div class="teamSubtitle">HR & ADMIN</div>
+                                <article class="aboutTeam">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio reiciendis quas et asperiores quasi odio ut autem eos hic impedit.</article>
+                            </div>
+                            
+                        </a>
+                    </div>
+                    
+                </div>
+            </div>
 <!-- About us, impact and achievement -->
             <div class="aboutUsImpactAchievement">
                 <div class="aboutImpactAchieveContainer">
@@ -226,6 +332,10 @@
                             <div class="num">3</div>
                             <div class="subtitle">Provinces</div>
                         </div>
+                        <div class="province contentContainer">
+                            <div class="num">50+</div>
+                            <div class="subtitle">Projects</div>
+                        </div>
                         <div class="achievmentTitle">
                             Achievments
                         </div>
@@ -234,127 +344,14 @@
                             <div class="subtitle">Students</div>
                         </div>
                         <div class="member contentContainer">
-                            <div class="num">100+</div>
+                            <div class="num">40</div>
                             <div class="subtitle">Members</div>
                         </div>
+                        <div class="province contentContainer">
+                            <div class="num">100+</div>
+                            <div class="subtitle">Volunteers</div>
+                        </div>
                     </div>
-                    
-                    
-                </div>
-            </div>
-<!-- team -->
-            <div class="teamsSection">
-                <div class="teamsTitle">
-                    <h1>E-Robot Departement</h1>
-                </div>
-                <div class="teamContainer">
-                    <div class="teamCard">
-                        <a href="#">
-                            <div class="teamImage">
-                                
-                                <img src="images/events1.jpg" alt="">
-                                <div class="grayScreen"></div>
-                            </div>
-                            
-                            <div class="teamLeader">
-                                <div class="leader">
-                                    <img src="images/blogPost.jpg" alt="">
-                                </div>
-                                <div class="teamPosition">
-                                    Leader name 
-                                </div>
-                            </div>
-                            <div class="teamSubtitle"><h2>Robotic</h2></div>
-                            <article class="aboutteam">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio reiciendis quas et asperiores quasi odio ut autem eos hic impedit.</article>
-                        </a>
-                    </div>
-
-                    <div class="teamCard">
-                        <a href="#">
-                            <div class="teamImage">
-                                
-                                <img src="images/events1.jpg" alt="">
-                                <div class="grayScreen"></div>
-                            </div>
-                            
-                            <div class="teamLeader">
-                                <div class="leader">
-                                    <img src="images/blogPost.jpg" alt="">
-                                </div>
-                                <div class="teamPosition">
-                                    Leader name 
-                                </div>
-                            </div>
-                            <div class="teamSubtitle"><h2>Robotic</h2></div>
-                            <article class="aboutteam">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio reiciendis quas et asperiores quasi odio ut autem eos hic impedit.</article>
-                        </a>
-                    </div>
-                    <div class="teamCard">
-                        <a href="#">
-                            <div class="teamImage">
-                                
-                                <img src="images/events1.jpg" alt="">
-                                <div class="grayScreen"></div>
-                            </div>
-                            
-                            <div class="teamLeader">
-                                <div class="leader">
-                                    <img src="images/blogPost.jpg" alt="">
-                                </div>
-                                <div class="teamPosition">
-                                    Leader name 
-                                </div>
-                            </div>
-                            <div class="teamSubtitle"><h2>Robotic</h2></div>
-                            <article class="aboutteam">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio reiciendis quas et asperiores quasi odio ut autem eos hic impedit.</article>
-                        </a>
-                    </div>
-                    
-                    <div class="teamCard">
-                        <a href="#">
-                            <div class="teamImage">
-                                
-                                <img src="images/events1.jpg" alt="">
-                                <div class="grayScreen"></div>
-                            </div>
-                            
-                            <div class="teamLeader">
-                                <div class="leader">
-                                    <img src="images/blogPost.jpg" alt="">
-                                </div>
-                                <div class="teamPosition">
-                                    Leader name 
-                                </div>
-                            </div>
-                            <div class="teamSubtitle"><h2>Robotic</h2></div>
-                            <article class="aboutteam">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio reiciendis quas et asperiores quasi odio ut autem eos hic impedit.</article>
-                        </a>
-                    </div>
-                    
-                    <div class="teamCard">
-                        <a href="#">
-                            <div class="teamImage">
-                                
-                                <img src="images/events1.jpg" alt="">
-                                <div class="grayScreen"></div>
-                            </div>
-                            
-                            <div class="teamLeader">
-                                <div class="leader">
-                                    <img src="images/blogPost.jpg" alt="">
-                                </div>
-                                <div class="teamPosition">
-                                    Leader name 
-                                </div>
-                            </div>
-                            <div class="teamSubtitle"><h2>Robotic</h2></div>
-                            <article class="aboutteam">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio reiciendis quas et asperiores quasi odio ut autem eos hic impedit.</article>
-                        </a>
-                    </div>
-                    
-
-                    
-                        
                     
                     
                 </div>
@@ -411,7 +408,7 @@
         }
         setInterval(function(){ slideNext()},5000);
         
-        // to top scroll
+        // top up btn
         const toTop = document.querySelector('.to_top');
         window.addEventListener("scroll",()=>{
             if(window.pageYOffset >100){
@@ -420,26 +417,6 @@
                 toTop.classList.remove("active");
             }
         })
-
-        
-        // const showNotification = ()=>{
-
-        //     const notificat = document.getElementById("IdheaderNotificationContainer");
-        //     notificat.classList.toggle("showNoti");
-
-        // }
-        // const notificationBtn = document.getElementById("bx-bell");
-        // notificationBtn.addEventListener("click",showNotification);
-
-        // const showPro = ()=>{
-
-        //     const notificat = document.getElementById("profileContainer");
-        //     notificat.classList.toggle("showProfile");
-            
-        // }
-        // const profileBtn = document.getElementById("profile");
-        // profileBtn.addEventListener("click",showPro);
-
 
         
     </script>
