@@ -2,7 +2,7 @@
 
 <div class="p-4 border shadow-xl rounded">
     <div class="w-100 h-[150px]"><img class="w-full h-full object-fit" src="{{$image}}"/> </div>
-    <h2 class="font-semibold text-2xl text-center uppercase mb-5 mt-6">{{$title}}</h2>
+    <h2 class="font-semibold text-2xl text-center uppercase mb-5 mt-6" style="font-family: 'Battambang', cursive;">{{$title}}</h2>
     <p class="text-center line-clamp-4 mb-7">{{$description}}.</p>
     <div>
         <a href="{{$link}}">
