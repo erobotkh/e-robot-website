@@ -5,23 +5,12 @@
         <x-about-title title="History of E-robot"/>
         <div>
             <p class="my-3 text-lg">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro ipsam nihil a, veritatis veniam velit laboriosam hic vero nemo, accusamus pariatur praesentium autem dicta voluptatibus sed assumenda reprehenderit. Dicta, officia.
-            </p>
+            ​E-Robot is a group that provides the opportunity for young people to participate in social work, and scientific work related to new technologies to study and research. Towards the creation of new specific achievements serving the proper development work of the human society.
             <p class="my-3 text-lg">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro ipsam nihil a, veritatis veniam velit laboriosam hic vero nemo, accusamus pariatur praesentium autem dicta voluptatibus sed assumenda reprehenderit. Dicta, officia.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro ipsam nihil a, veritatis veniam velit laboriosam hic vero nemo, accusamus pariatur praesentium autem dicta voluptatibus sed assumenda reprehenderit. Dicta, officia.
-                            Lorem ipsum dolor sit amet consectetur adipisicing 
-                
+ E-Robot was created on September 8, 2018, by our team members in the form of free mutual instruction. And then we started to get some projects related to robotics and we also continued with the work of sharing and developing a series of new technologies.
             </p>
-            <p class="my-3 text-lg">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro ipsam nihil a, veritatis veniam velit laboriosam hic vero nemo, accusamus pariatur praesentium autem dicta voluptatibus sed assumenda reprehenderit. Dicta, officia.
-
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro ipsam nihil a, veritatis veniam velit laboriosam hic vero nemo, accusamus pariatur praesentium autem dicta voluptatibus sed assumenda reprehenderit. Dicta, officia.
-            </p>
-            <p class="my-3 text-lg">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro ipsam nihil a, veritatis veniam velit laboriosam hic vero nemo, accusamus pariatur praesentium autem dicta voluptatibus sed assumenda reprehenderit. Dicta, officia.
-            </p>
+            
         </div>
-        <div class="w-full my-8"><img class="object-fit w-full" src={{asset('./images/history-erobot.webp')}} alt=""></div>
+        <div class="w-full my-8"><img class="object-fit w-full" src={{asset('./images/erobot-cover.jpg')}} alt=""></div>
     </div>
 </x-layout>

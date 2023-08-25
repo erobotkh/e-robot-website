@@ -4,8 +4,8 @@ class="z-0 relative"
 x-data="{open:false,menu:false, lokasi:false}">
   <div class="relative z-10 bg-white shadow-xl">
     <div class="max-w-7xl mx-auto px-2 sm:px-4 lg:px-8">
-      <div class="relative flex items-center justify-between h-20">
-        <div class="flex items-center px-2 lg:px-0">
+      <div class="relative flex items-center justify-end h-20">
+        <div class="flex items-center justify-end  px-2 lg:px-0">
           <a class="flex-shrink-0" href="/home">
             <img class="block lg:hidden h-12 w-16 " src="{{asset('./images/logo_erobot-removebg.png')}}" alt="Logo">
             <img class="hidden lg:block h-16 w-auto " src="{{asset('./images/logo_erobot-removebg.png')}}" alt="Logo">
@@ -58,8 +58,8 @@ x-data="{open:false,menu:false, lokasi:false}">
             </div>
           </div>
         </div>
-        <div class="flex-1 flex justify-center px-2 lg:ml-6 lg:justify-end gap-3">
-          <div class="max-w-lg w-full lg:max-w-xs">
+        <div class="flex-1 flex justify-center px-2 lg:ml-6 lg:justify-end gap-3 h-full">
+          <!-- <div class="max-w-lg w-full lg:max-w-xs">
             <label for="search" class="sr-only">Search </label>
             <form methode="get" action="#" class="relative z-50">
               <button type="submit" id="searchsubmit" class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
@@ -67,11 +67,19 @@ x-data="{open:false,menu:false, lokasi:false}">
                   <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"></path>
                 </svg>
               </button>
-              <input type="text" name="s" id="s" class="block w-full pl-10 pr-3 py-2   rounded-md leading-5  text-gray-300 placeholder-gray-400 focus:outline-none focus:bg-white focus sm: transition duration-150 ease-in-out border-2 border-red-600" placeholder="Search">
+              <input type="text" name="s" id="s" class="block w-full pl-10 pr-3 py-2   rounded-md leading-5  text-gray-300 placeholder-gray-400 focus:outline-none focus:bg-white focus sm: transition duration-150 ease-in-out border" placeholder="Search">
             </form>
-          </div>
+          </div> -->
         
-            <button class="px-4 rounded-md border-2 border-red-600 text-red-600 font-bold hidden lg:inline-block"> <a href="/login">Login</a></button>
+          <button class="px-4 py-2  bg-red-600 text-white font-bold hidden lg:inline-block"> <a href="/login">Donate us</a></button>
+          <button class="px-4 py-2  text-red-600 font-bold hidden lg:inline-block "> 
+            <a href="/login" class="flex flex-col justify-center items-center">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
+              <span>Account</span>
+            </a>
+          </button>
 
         </div>
         <div class="flex lg:hidden">
