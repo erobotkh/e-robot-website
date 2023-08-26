@@ -12,7 +12,7 @@
                         <img class="w-64 h-64 mx-auto object-cover rounded-xl md:w-40 md:h-40 lg:w-64 lg:h-64 " 
                             src="https://tailus.io/sources/blocks/classic/preview/images/woman1.jpg" alt="woman" loading="lazy" width="640" height="805">
                         <div>
-                            <h4 class="text-2xl font-bold">Hentoni Doe</h4>
+                            <h4 class="text-2xl font-bold"  style="font-family: 'Battambang', cursive;">Hentoni Doe</h4>
                             <span class="block text-sm text-gray-500">Co-Founder</span>
                         </div>
                     </div>
@@ -20,7 +20,7 @@
                         <img class="w-64 h-64 mx-auto object-cover rounded-xl md:w-48 md:h-64 lg:w-64 lg:h-80" 
                             src="https://tailus.io/sources/blocks/classic/preview/images/man.jpg" alt="man" loading="lazy" width="1000" height="667">
                         <div>
-                            <h4 class="text-2xl font-bold">Jonathan Doe</h4>
+                            <h4 class="text-2xl font-bold"  style="font-family: 'Battambang', cursive;">Jonathan Doe</h4>
                             <span class="block text-sm text-gray-500">Founder</span>
                         </div>
                     </div>
@@ -28,7 +28,7 @@
                         <img class="w-64 h-64 mx-auto object-cover rounded-xl md:w-40 md:h-40 lg:w-64 lg:h-64" 
                             src="https://tailus.io/sources/blocks/classic/preview/images/woman.jpg" alt="woman" loading="lazy" width="1000" height="667">
                         <div>
-                            <h4 class="text-2xl font-bold">Anabelle Doe</h4>
+                            <h4 class="text-2xl font-bold"  style="font-family: 'Battambang', cursive;">Anabelle Doe</h4>
                             <span class="block text-sm text-gray-500">Co-Founder</span>
                         </div>
                     </div>
@@ -39,7 +39,7 @@
         <!-- component -->
 <section class=" mx-auto px-4 sm:px-6 lg:px-10 pb-12">
     <div class="text-center pb-12">
-        <h1 class="font-bold text-3xl font-heading text-red-600 uppercase">
+        <h1 class="font-bold text-3xl font-heading text-red-600 uppercase"  style="font-family: 'Battambang', cursive;">
             Check our awesome team leaders
         </h1>
     </div>
@@ -57,7 +57,7 @@
         <!-- component -->
         <section class="mx-auto px-4 sm:px-6 lg:px-10 pb-12">
             <div class="text-center pb-12">
-                <h1 class="font-bold text-3xl font-heading text-red-600 uppercase">
+                <h1 class="font-bold text-3xl font-heading text-red-600 uppercase"  style="font-family: 'Battambang', cursive;">
                     Check our awesome team members
                 </h1>
             </div>

@@ -42,7 +42,7 @@
             </div>  
 
             <div class=" grid-1 border-l border-red-600 pl-5">
-                <p class="font-bold uppercase text-red-600 text-xl">Quick Link</p>
+                <p class="font-bold uppercase text-red-600 text-xl"  style="font-family: 'Battambang', cursive;">Quick Link</p>
 
                 <div class="flex flex-col items-start mt-5 space-y-2">
                     <a href="/home" class="  hover:underline hover:text-red-600">Home</a>
@@ -52,7 +52,7 @@
             </div>
 
             <div class="grid-1 border-l border-red-600 pl-5">
-                <p class="font-bold uppercase text-red-600 text-xl">Contact</p>
+                <p class="font-bold uppercase text-red-600 text-xl"  style="font-family: 'Battambang', cursive;">Contact</p>
 
                 <div class="flex flex-col items-start mt-5 space-y-2">
                     <a href="#" class=" hover:underline hover:text-red-600">Example@gmail.com</a>

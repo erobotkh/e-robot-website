@@ -2,7 +2,7 @@
     <div>
         <div class="p-10">
             <!-- Category1 -->
-            <div class="text-[33px] text-[#EB0100] font-bold py-5">Knowledge</div>
+            <div class="text-[33px] text-[#EB0100] font-bold py-5"  style="font-family: 'Battambang', cursive;">Knowledge</div>
             <div class="grid grid-cols-1 md:grid-cols-2 sm:grid-cols-1 gap-10 ">
 
                 <div
@@ -14,7 +14,7 @@
                                     class="rounded-t-md h-[280px] w-[800px] shadow-2 shadow-[#B2A9A7] hover:shadow-xl">
                             </div>
                             <div class="p-5">
-                                <h1 class="font-bold text-2xl ">This is the title</h1>
+                                <h1 class="font-bold text-2xl "  style="font-family: 'Battambang', cursive;">This is the title</h1>
                                 <p class="text-justify">Desc Lorem ipsum dolor sit amet consectetur adipisicing elit.
                                     Sunt
                                     nobisrem
@@ -75,7 +75,7 @@
                                     class="rounded-t-md h-[280px] w-[800px] shadow-2 shadow-[#B2A9A7] hover:shadow-xl">
                             </div>
                             <div class="p-5">
-                                <h1 class="font-bold text-2xl ">This is the title</h1>
+                                <h1 class="font-bold text-2xl "  style="font-family: 'Battambang', cursive;">This is the title</h1>
                                 <p class="text-justify">Desc Lorem ipsum dolor sit amet consectetur adipisicing elit.
                                     Sunt
                                     nobisrem
@@ -136,7 +136,7 @@
                                     class="rounded-t-md h-[280px] w-[800px] shadow-2 shadow-[#B2A9A7] hover:shadow-xl">
                             </div>
                             <div class="p-5">
-                                <h1 class="font-bold text-2xl ">This is the title</h1>
+                                <h1 class="font-bold text-2xl "  style="font-family: 'Battambang', cursive;">This is the title</h1>
                                 <p class="text-justify">Desc Lorem ipsum dolor sit amet consectetur adipisicing elit.
                                     Sunt
                                     nobisrem
@@ -197,7 +197,7 @@
                                     class="rounded-t-md h-[280px] w-[800px] shadow-2 shadow-[#B2A9A7] hover:shadow-xl">
                             </div>
                             <div class="p-5">
-                                <h1 class="font-bold text-2xl ">This is the title</h1>
+                                <h1 class="font-bold text-2xl "  style="font-family: 'Battambang', cursive;">This is the title</h1>
                                 <p class="text-justify">Desc Lorem ipsum dolor sit amet consectetur adipisicing elit.
                                     Sunt
                                     nobisrem
@@ -292,7 +292,7 @@
                                     class="rounded-t-md h-[280px] w-[800px] shadow-2 shadow-[#B2A9A7] hover:shadow-xl">
                             </div>
                             <div class="p-5">
-                                <h1 class="font-bold text-2xl ">This is the title</h1>
+                                <h1 class="font-bold text-2xl "  style="font-family: 'Battambang', cursive;">This is the title</h1>
                                 <p class="text-justify">Desc Lorem ipsum dolor sit amet consectetur adipisicing elit.
                                     Sunt
                                     nobisrem
@@ -388,7 +388,7 @@
                                     class="rounded-t-md h-[280px] w-[800px] shadow-2 shadow-[#B2A9A7] hover:shadow-xl">
                             </div>
                             <div class="p-5">
-                                <h1 class="font-bold text-2xl ">This is the title</h1>
+                                <h1 class="font-bold text-2xl "  style="font-family: 'Battambang', cursive;">This is the title</h1>
                                 <p class="text-justify">Desc Lorem ipsum dolor sit amet consectetur adipisicing elit.
                                     Sunt
                                     nobisrem

@@ -11,15 +11,15 @@ x-data="{open:false,menu:false, lokasi:false}">
             <img class="hidden lg:block h-16 w-auto " src="{{asset('./images/logo_erobot-removebg.png')}}" alt="Logo">
           </a>
           <div class="hidden lg:block">
-            <div class="flex">
-                <a href="/home" class="uppercase ml-4 px-3 py-2 rounded-md  leading-5 text-red-600 font-bold hover:bg-black hover:text-white transition duration-150 ease-in-out cursor-pointer focus:outline-none focus:text-white focus:bg-black "> Home </a>
-                <a href="/list_content" class="uppercase ml-4 px-3 py-2 rounded-md  leading-5 text-red-600 font-bold hover:bg-black hover:text-white transition duration-150 ease-in-out cursor-pointer focus:outline-none focus:text-white focus:bg-black "> Activity </a>
+            <div class="flex" >
+                <a href="/home" class="uppercase ml-4 px-3 py-2 rounded-md  leading-5 text-red-600 font-bold hover:bg-black hover:text-white transition duration-150 ease-in-out cursor-pointer focus:outline-none focus:text-white focus:bg-black "  style="font-family: 'Battambang', cursive;"> Home </a>
+                <a href="/list_content" class="uppercase ml-4 px-3 py-2 rounded-md  leading-5 text-red-600 font-bold hover:bg-black hover:text-white transition duration-150 ease-in-out cursor-pointer focus:outline-none focus:text-white focus:bg-black "  style="font-family: 'Battambang', cursive;"> Activity </a>
 
                 <div class="group relative ml-4  rounded-md  leading-5 text-red-600 font-bold transition duration-150 ease-in-out cursor-pointer focus:outline-none focus:text-white focus:bg-black ">
                     <button
                         class="outline-none focus:outline-none px-3 rounded-sm flex items-center"
                     >
-                        <span class="font-bold flex-1 pr-1 px-3 py-2 uppercase">About</span>
+                        <span class="font-bold flex-1 pr-1 px-3 py-2 uppercase"  style="font-family: 'Battambang', cursive;">About</span>
                         <span>
                         <svg
                             class="fill-current h-4 w-4 transform group-hover:-rotate-180
@@ -71,13 +71,13 @@ x-data="{open:false,menu:false, lokasi:false}">
             </form>
           </div> -->
         
-          <button class="px-4 py-2  bg-red-600 text-white font-bold hidden lg:inline-block"> <a href="/login">Donate us</a></button>
+          <button class="px-4 py-2  bg-red-600 text-white font-bold hidden lg:inline-block"> <a href="/login"  style="font-family: 'Battambang', cursive;">Donate us</a></button>
           <button class="px-4 py-2  text-red-600 font-bold hidden lg:inline-block "> 
             <a href="/login" class="flex flex-col justify-center items-center">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z" />
               </svg>
-              <span>Account</span>
+              <span  style="font-family: 'Battambang', cursive;">Account</span>
             </a>
           </button>
 
