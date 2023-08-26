@@ -97,20 +97,20 @@ x-data="{open:false,menu:false, lokasi:false}">
     <div x-show="menu" class="block lg:hidden">
       <ul class="px-2 pt-2 pb-3" >
         <li>
-          <a href="/home" class="mt-1 block px-3 py-2 rounded-md text-red-600 font-semibold hover:bg-black f hover:text-white focus:outline-none focus:text-white focus:bg-black transition duration-150 ease-in-out">Home </a>
+          <a href="/home" class="mt-1 block px-3 py-2 rounded-md text-red-600 font-semibold hover:bg-black f hover:text-white focus:outline-none focus:text-white focus:bg-black transition duration-150 ease-in-out"  style="font-family: 'Battambang', cursive;">Home </a>
         </li>
         <li>
-          <a href="/list_content" class="mt-1 block px-3 py-2 rounded-md text-red-600  font-semibold hover:bg-black f hover:text-white focus:outline-none focus:text-white focus:bg-black transition duration-150 ease-in-out">Activity </a>
+          <a href="/list_content" class="mt-1 block px-3 py-2 rounded-md text-red-600  font-semibold hover:bg-black f hover:text-white focus:outline-none focus:text-white focus:bg-black transition duration-150 ease-in-out"  style="font-family: 'Battambang', cursive;">Activity </a>
         </li>
         <li>
 					<button type="button" class="flex items-center w-full font-bold py-2 pr-2 text-base text-red-600 hover:text-white transition duration-75 rounded-lg group hover:bg-black" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
-                  <span class="flex-1 ml-3 text-left whitespace-nowrap" sidebar-toggle-item>About</span>
+                  <span class="flex-1 ml-3 text-left whitespace-nowrap" sidebar-toggle-item  style="font-family: 'Battambang', cursive;">About</span>
                   <svg sidebar-toggle-item class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
             </button>
 					<ul id="dropdown-example" class="hidden py-2 space-y-2 text-semibold text-red-600 ">
 						<li>
 							<a href="/about/history"
-								class="flex items-center w-full p-2 text-base transition duration-75 rounded-lg group hover:bg-black  pl-11">History</a>
+								class="flex items-center w-full p-2 text-base transition duration-75 rounded-lg group hover:bg-black  pl-11" >History</a>
 						</li>
             <li>
 							<a href="/about/mission-vision"
@@ -126,12 +126,12 @@ x-data="{open:false,menu:false, lokasi:false}">
 						</li> -->
             <li>
 							<a href="/about/department"
-								class="flex items-center w-full p-2 text-base transition duration-75 rounded-lg group hover:bg-black pl-11">Department</a>
+								class="flex items-center w-full p-2 text-base transition duration-75 rounded-lg group hover:bg-black pl-11"  style="font-family: 'Battambang', cursive;">Department</a>
 						</li>
 					</ul>
 				</li>
         <li>
-          <a href="/login" class="mt-1 block px-3 py-2 rounded-md text-red-600 font-semibold hover:bg-black f hover:text-white focus:outline-none focus:text-white focus:bg-black transition duration-150 ease-in-out">Login </a>
+          <a href="/login" class="mt-1 block px-3 py-2 rounded-md text-red-600 font-semibold hover:bg-black f hover:text-white focus:outline-none focus:text-white focus:bg-black transition duration-150 ease-in-out"  style="font-family: 'Battambang', cursive;">Login </a>
         </li>
       </ul>
     </div>
