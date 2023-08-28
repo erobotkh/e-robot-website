@@ -60,13 +60,13 @@
 
 
             <div class="programSection">
-                <div class="programTitle"><h1>Our Programs</h1></div>
+                <div class="programTitle"><h1 style="font-family: 'Battambang', cursive;">Our Programs</h1></div>
                 <div class="programContainer">
                     <div class="programCard">
                         <a href="#">
                             <div class="programObject"><img src="images/roboticObject.svg" alt=""></div>
                             <div class="subtitleDetail">
-                                <div class="programSubtitle"><h2>Robotic</h2></div>
+                                <div class="programSubtitle"><h2  style="font-family: 'Battambang', cursive;">Robotic</h2></div>
                                 <article class="aboutProgram">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio reiciendis quas et asperiores quasi odio ut autem eos hic impedit.</article>
                             </div>
                     
@@ -77,7 +77,7 @@
                         <a href="#">
                             <div class="programObject"><img src="images/roboticObject.svg" alt=""></div>
                             <div class="subtitleDetail">
-                                <div class="programSubtitle"><h2>Robotic</h2></div>
+                                <div class="programSubtitle"><h2  style="font-family: 'Battambang', cursive;">Robotic</h2></div>
                                 <article class="aboutProgram">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio reiciendis quas et asperiores quasi odio ut autem eos hic impedit.</article>
                             </div>
                     
@@ -88,7 +88,7 @@
                         <a href="#">
                             <div class="programObject"><img src="images/roboticObject.svg" alt=""></div>
                             <div class="subtitleDetail">
-                                <div class="programSubtitle"><h2>Robotic</h2></div>
+                                <div class="programSubtitle"><h2  style="font-family: 'Battambang', cursive;">Robotic</h2></div>
                                 <article class="aboutProgram">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio reiciendis quas et asperiores quasi odio ut autem eos hic impedit.</article>
                             </div>
                     
@@ -99,7 +99,7 @@
                         <a href="#">
                             <div class="programObject"><img src="images/roboticObject.svg" alt=""></div>
                             <div class="subtitleDetail">
-                                <div class="programSubtitle"><h2>Robotic</h2></div>
+                                <div class="programSubtitle"><h2  style="font-family: 'Battambang', cursive;">Robotic</h2></div>
                                 <article class="aboutProgram">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio reiciendis quas et asperiores quasi odio ut autem eos hic impedit.</article>
                             </div>
                     
@@ -112,7 +112,7 @@
                         <a href="#">
                             <div class="programObject"><img src="images/roboticObject.svg" alt=""></div>
                             <div class="subtitleDetail">
-                                <div class="programSubtitle"><h2>Robotic</h2></div>
+                                <div class="programSubtitle"><h2  style="font-family: 'Battambang', cursive;">Robotic</h2></div>
                                 <article class="aboutProgram">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio reiciendis quas et asperiores quasi odio ut autem eos hic impedit.</article>
                             </div>
                     
@@ -123,7 +123,7 @@
                         <a href="#">
                             <div class="programObject"><img src="images/roboticObject.svg" alt=""></div>
                             <div class="subtitleDetail">
-                                <div class="programSubtitle"><h2>Robotic</h2></div>
+                                <div class="programSubtitle"><h2  style="font-family: 'Battambang', cursive;">Robotic</h2></div>
                                 <article class="aboutProgram">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio reiciendis quas et asperiores quasi odio ut autem eos hic impedit.</article>
                             </div>
                     
@@ -134,7 +134,7 @@
                         <a href="#">
                             <div class="programObject"><img src="images/roboticObject.svg" alt=""></div>
                             <div class="subtitleDetail">
-                                <div class="programSubtitle"><h2>Robotic</h2></div>
+                                <div class="programSubtitle"><h2 style="font-family: 'Battambang', cursive;">Robotic</h2></div>
                                 <article class="aboutProgram">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio reiciendis quas et asperiores quasi odio ut autem eos hic impedit.</article>
                             </div>
                     
@@ -145,7 +145,7 @@
                         <a href="#">
                             <div class="programObject"><img src="images/roboticObject.svg" alt=""></div>
                             <div class="subtitleDetail">
-                                <div class="programSubtitle"><h2>Robotic</h2></div>
+                                <div class="programSubtitle"><h2 style="font-family: 'Battambang', cursive;">Robotic</h2></div>
                                 <article class="aboutProgram">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio reiciendis quas et asperiores quasi odio ut autem eos hic impedit.</article>
                             </div>
                     
@@ -166,7 +166,7 @@
                         <iframe  src="https://www.youtube.com/embed/iz6Ke1YNcV0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                     </div>
                     <div class="articleContianer">
-                        <div class="videoSubtitle"><h2>Education Program </h2></div>
+                        <div class="videoSubtitle"><h2 style="font-family: 'Battambang', cursive;">Education Program </h2></div>
                         <div class="videoDate">
                             <i class='bx bx-time-five'></i>
                             <span>1/June/2023</span>
@@ -208,7 +208,7 @@
 <!-- team -->
             <div class="teamsSection">
                 <div class="teamsTitle">
-                    <h1>E-Robot Departements</h1>
+                    <h1  style="font-family: 'Battambang', cursive;">E-Robot Departements</h1>
                 </div>
                 <div class="teamContainer">
                     <!-- <div class="teamCard">
@@ -241,7 +241,7 @@
                             </div>
                             
                             <div class="teamDetail">
-                                <div class="teamSubtitle">INOVATION</div>
+                                <div class="teamSubtitle"  style="font-family: 'Battambang', cursive;">INOVATION</div>
                                 <article class="aboutTeam">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio reiciendis quas et asperiores quasi odio ut autem eos hic impedit.</article>
                             </div>
                             
@@ -256,7 +256,7 @@
                             </div>
                             
                             <div class="teamDetail">
-                                <div class="teamSubtitle">SOCIAL ENGAGEMENT</div>
+                                <div class="teamSubtitle"  style="font-family: 'Battambang', cursive;">SOCIAL ENGAGEMENT</div>
                                 <article class="aboutTeam">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio reiciendis quas et asperiores quasi odio ut autem eos hic impedit.</article>
                             </div>
                             
@@ -271,7 +271,7 @@
                             </div>
                             
                             <div class="teamDetail">
-                                <div class="teamSubtitle">FINANCE</div>
+                                <div class="teamSubtitle"  style="font-family: 'Battambang', cursive;">FINANCE</div>
                                 <article class="aboutTeam">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio reiciendis quas et asperiores quasi odio ut autem eos hic impedit.</article>
                             </div>
                             
@@ -286,7 +286,7 @@
                             </div>
                             
                             <div class="teamDetail">
-                                <div class="teamSubtitle">PLANNIG & STRATEGY</div>
+                                <div class="teamSubtitle"  style="font-family: 'Battambang', cursive;">PLANNIG & STRATEGY</div>
                                 <article class="aboutTeam">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio reiciendis quas et asperiores quasi odio ut autem eos hic impedit.</article>
                             </div>
                             
@@ -301,7 +301,7 @@
                             </div>
                             
                             <div class="teamDetail">
-                                <div class="teamSubtitle">HR & ADMIN</div>
+                                <div class="teamSubtitle"  style="font-family: 'Battambang', cursive;">HR & ADMIN</div>
                                 <article class="aboutTeam">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio reiciendis quas et asperiores quasi odio ut autem eos hic impedit.</article>
                             </div>
                             
@@ -336,7 +336,7 @@
                             <div class="num">50+</div>
                             <div class="subtitle">Projects</div>
                         </div>
-                        <div class="achievmentTitle">
+                        <div class="achievmentTitle"  style="font-family: 'Battambang', cursive;">
                             Achievments
                         </div>
                         <div class="student contentContainer">
@@ -358,7 +358,7 @@
             </div>
 <!-- partner -->
             <div class="partnerSection">
-                <div class="title">Our partners</div>
+                <div class="title"  style="font-family: 'Battambang', cursive;">Our partners</div>
                 <div class="partnerContainer">
                     <div class="partner"><img src="images/STEM-logo.png" alt=""></div>
                     <div class="partner"><img src="images/partner2.jpg" alt=""></div>
@@ -368,7 +368,7 @@
             </div>
 <!-- sponsor -->
             <div class="sponsorSection">
-            <div class="title">Our sponsors</div>
+            <div class="title"  style="font-family: 'Battambang', cursive;">Our sponsors</div>
                 <div class="sponsorContainer">
                     <div class="sponsor"><img src="images/smart.jpg" alt=""></div>
                     <div class="sponsor"><img src="images/myTeb.jpg" alt=""></div>

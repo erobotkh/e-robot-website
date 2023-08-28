@@ -5,7 +5,7 @@
         <img class="object-center object-cover rounded-full h-36 w-36" src="{{asset($photo)}}" alt="photo">
     </div>
     <div class="text-center">
-        <p class="text-xl text-gray-700 font-bold mb-2">{{$name}}</p>
+        <p class="text-xl text-gray-700 font-bold mb-2"  style="font-family: 'Battambang', cursive;">{{$name}}</p>
         <p class="text-base text-gray-400 font-normal">{{$title}}</p>
     </div>
     <div class="flex flex-wrap justify-center gap-5 mt-5">
