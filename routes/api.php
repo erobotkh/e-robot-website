@@ -33,6 +33,9 @@ use Illuminate\Support\Facades\Route;
 
 Route::post('verifyOtp', [AuthController::class, 'verifyOtp']);
 Route::post('sendOtp', [AuthController::class, 'sendOtp']);
+Route::post('sendOtp/forgot-password', [AuthController::class, 'sendOtpForgotPassword']);
+Route::post('verifyOtp/forgot-password', [AuthController::class, 'verifyOtpForgotPassword']);
+Route::post('forgot-password', [AuthController::class, 'editPassword']);
 Route::post('register', [AuthController::class, 'register']);
 Route::post('login', [AuthController::class, 'login']);
 
@@ -81,6 +84,9 @@ Route::middleware(['auth:api'])->group(function () {
 
    
     Route::post('user-profile/edit',[UserProfileController::class,'editUserProfile']);
+    Route::post('user-profile/edit-profile-image',[UserProfileController::class,'editUserProfileImage']);
+    Route::post('user-profile/edit-cover-image',[UserProfileController::class,'editUserCoverImage']);
+    Route::post('user-profile/edit-bio',[UserProfileController::class,'editUserBio']);
     Route::get('user-profile/show-user-profile',[UserProfileController::class,'showUserProfile']);
     Route::get('post-content/show_post_of_user', [PostContentController::class, 'postContentOfUser']);
 });

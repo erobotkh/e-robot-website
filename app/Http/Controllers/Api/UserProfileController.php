@@ -69,11 +69,99 @@ class UserProfileController extends Controller
         $user_profile = UserProfile::where('user_id', Auth::id())->first();
         if ($user_profile == null) {
             $data = UserProfile::create(['bio' => $bio, 'profile_image' => $url_profile, 'cover_image' => $url_cover, 'user_id' => Auth::id()]);
-            return $this->sendResponse($data, "Create Successfully");
+            return $this->sendResponse($data, "Create Profile Successfully");
         }else{
             $user_profile->bio=$bio;
             $user_profile->profile_image=$url_profile;
             $user_profile->cover_image=$url_cover;
+            $user_profile->update();
+            $data=$user_profile;
+            return $this->sendResponse($data, "Update  Profile Successfully");
+        }
+        
+    }
+    public function editUserCoverImage(Request $request)
+    {
+        $rule = [
+            'cover_image' => 'required|image|max:10240'
+        ];
+
+        $input = $request->only( 'cover_image');
+        $validator = Validator::make($input, $rule);
+        if ($validator->fails()) {
+            return $this->sendError("Post Fail", $validator->messages());
+        }
+
+        $cover_image = $request->cover_image;
+        $url_cover = Storage::disk('do')->putFile(
+            "erobot/user-cover",
+            $cover_image,
+            'public'
+        );
+        $user_profile = UserProfile::where('user_id', Auth::id())->first();
+        if ($user_profile == null) {
+            $data = UserProfile::create(['cover_image' => $url_cover, 'user_id' => Auth::id()]);
+            return $this->sendResponse($data, "Create Profile Successfully");
+        }else{
+            $user_profile->cover_image=$url_cover;
+            $user_profile->update();
+            $data=$user_profile;
+            return $this->sendResponse($data, "Update Profile Successfully");
+        }
+        
+    }
+    public function editUserProfileImage(Request $request)
+    {
+        $rule = [
+            'profile_image' => 'required|image|max:10240',
+        ];
+
+        $input = $request->only('profile_image');
+        $validator = Validator::make($input, $rule);
+        if ($validator->fails()) {
+            return $this->sendError("Post Fail", $validator->messages());
+        }
+
+        $profile_image = $request->profile_image;
+        $url_profile = Storage::disk('do')->putFile(
+            "erobot/user-profile",
+            $profile_image,
+            'public'
+        );
+        
+        $user_profile = UserProfile::where('user_id', Auth::id())->first();
+        if ($user_profile == null) {
+            $data = UserProfile::create(['profile_image' => $url_profile,'user_id' => Auth::id()]);
+            return $this->sendResponse($data, "Create Successfully");
+        }else{
+            $user_profile->profile_image=$url_profile;
+            $user_profile->update();
+            $data=$user_profile;
+            return $this->sendResponse($data, "Update Successfully");
+        }
+        
+    }
+    public function editUserBio(Request $request)
+    {
+        $rule = [
+            'bio' => 'required',
+        ];
+
+        $input = $request->only('bio');
+        $validator = Validator::make($input, $rule);
+        if ($validator->fails()) {
+            return $this->sendError("Post Fail", $validator->messages());
+        }
+
+
+        $bio = $request->bio;
+       
+        $user_profile = UserProfile::where('user_id', Auth::id())->first();
+        if ($user_profile == null) {
+            $data = UserProfile::create(['bio' => $bio, 'user_id' => Auth::id()]);
+            return $this->sendResponse($data, "Create Successfully");
+        }else{
+            $user_profile->bio=$bio;
             $user_profile->update();
             $data=$user_profile;
             return $this->sendResponse($data, "Update Successfully");
