@@ -100,7 +100,7 @@ class UserProfileController extends Controller
         );
         $user_profile = UserProfile::where('user_id', Auth::id())->first();
         if ($user_profile == null) {
-            $data = UserProfile::create(['cover_image' => $url_cover, 'user_id' => Auth::id()]);
+            $data = UserProfile::create(['profile_image' =>"",'cover_image' => $url_cover, 'user_id' => Auth::id()]);
             return $this->sendResponse($data, "Create Profile Successfully");
         }else{
             $user_profile->cover_image=$url_cover;
@@ -131,7 +131,7 @@ class UserProfileController extends Controller
         
         $user_profile = UserProfile::where('user_id', Auth::id())->first();
         if ($user_profile == null) {
-            $data = UserProfile::create(['profile_image' => $url_profile,'user_id' => Auth::id()]);
+            $data = UserProfile::create(['profile_image' => $url_profile,'cover_image'=>"",'user_id' => Auth::id()]);
             return $this->sendResponse($data, "Create Successfully");
         }else{
             $user_profile->profile_image=$url_profile;
@@ -158,7 +158,7 @@ class UserProfileController extends Controller
        
         $user_profile = UserProfile::where('user_id', Auth::id())->first();
         if ($user_profile == null) {
-            $data = UserProfile::create(['bio' => $bio, 'user_id' => Auth::id()]);
+            $data = UserProfile::create(['profile_image' =>"",'cover_image' => "",'bio' => $bio, 'user_id' => Auth::id()]);
             return $this->sendResponse($data, "Create Successfully");
         }else{
             $user_profile->bio=$bio;
