@@ -16,8 +16,18 @@
 </style>
 
 <body>
+
     <div class="md:flex md:p-5 ">
+
         <div class="md:w-1/2 p-5">
+            <a href="./list_content">
+                <svg class="h-[30px] -ml-10" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100"
+                    viewBox="0 0 50 50">
+                    <path
+                        d="M25,2C12.319,2,2,12.319,2,25s10.319,23,23,23s23-10.319,23-23S37.681,2,25,2z M33.71,32.29c0.39,0.39,0.39,1.03,0,1.42	C33.51,33.9,33.26,34,33,34s-0.51-0.1-0.71-0.29L25,26.42l-7.29,7.29C17.51,33.9,17.26,34,17,34s-0.51-0.1-0.71-0.29	c-0.39-0.39-0.39-1.03,0-1.42L23.58,25l-7.29-7.29c-0.39-0.39-0.39-1.03,0-1.42c0.39-0.39,1.03-0.39,1.42,0L25,23.58l7.29-7.29	c0.39-0.39,1.03-0.39,1.42,0c0.39,0.39,0.39,1.03,0,1.42L26.42,25L33.71,32.29z">
+                    </path>
+                </svg>
+            </a>
             <div class="flex ">
                 <div id="arrow-left" class="arrow cursor-pointer"><img
                         src="https://www.svgrepo.com/show/384730/rounded-square-arrow-indicator-left.svg" alt=""
@@ -136,7 +146,7 @@
                             <h1 class="font-light pl-3">. 1day ago</h1>
                         </div>
                         <p class="pl-3">I think I like this so much</p>
-                        <a href="" id="reply-btn" class="text-xs ml-3">Reply</a>
+                        <a href="#" id="reply-btn" class="text-xs ml-3">Reply</a>
                         <a href="" class="text-xs text-red-500 ml-3">Delete</a>
                         <div class="flex my-3 hidden" id="reply">
                             <img src="https://img.freepik.com/premium-photo/japanese-girl-cherry-blossom-tree-landscape-anime-manga-illustration_691560-7776.jpg"
