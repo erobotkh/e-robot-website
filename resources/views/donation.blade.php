@@ -16,7 +16,11 @@
 </style>
 <div class="p-5">
     <div class="w-full grid place-content-center">
-        <div class=" "><img src="https://vendelux.com/wp-content/uploads/technology-events-2023-guide.png" alt="">
+        <div class=" ">
+            <div class="sm:grid sm:grid-cols-2">
+                <img src="./images/charity1.jpg" alt="" class="m-2">
+                <img src="./images/charity2.jpg" alt="" class="m-2">
+            </div>
             <div class="text-[#EB0100] font-xl p-2 text-center text-2xl font-bold sm:text-3xl">Our purpose
             </div>
         </div>
@@ -24,23 +28,21 @@
     </div>
 
     <div class="text-justify sm:text-xl m-3">
-        ipsum dolor sit amet, consectetur adipisicing elit. Fugiat accusamus veritatis, nesciunt deserunt
-        quibusdam amet vero nostrum blanditiis maxime nulla eligendi accusantium sapiente dignissimos saepe a
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro ipsam nihil a, veritatis veniam velit laboriosam
-        hic vero nemo, accusamus pariatur praesentium autem dicta voluptatibus sed assumenda reprehenderit. Dicta,
-        officia.
+        Welcome to "E-Robot"! We are thrilled to have you here as we embark on a mission to
+        make a transformative impact on the lives of young learners in rural Cambodia. Our vision is simple yet
+        profound: to bridge the educational gap between urban and rural areas by bringing the wonders of Science,
+        Technology, Engineering, and Mathematics (STEM) to every corner of our nation.
 
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro ipsam nihil a, veritatis veniam velit laboriosam
-        hic vero nemo, accusamus pariatur praesentium autem dicta voluptatibus sed assumenda reprehenderit. Dicta,
-        officia. Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro ipsam nihil a, veritatis veniam velit
-        laboriosam hic vero nemo, accusamus pariatur praesentium autem dicta voluptatibus sed assumenda reprehenderit.
-        Dicta, officia. Lorem ipsum dolor sit amet consectetur adipisicing
+        In the heart of Phnom Penh City, students have access to a world of educational opportunities. Many talented
+        minds are left behind due to limited resources and access.
+        That's where E-Robot comes in.
 
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro ipsam nihil a, veritatis veniam velit laboriosam
-        hic vero nemo, accusamus pariatur praesentium autem dicta voluptatibus sed assumenda reprehenderit. Dicta,
-        officia. Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro ipsam nihil a, veritatis veniam velit
-        laboriosam hic vero nemo, accusamus pariatur praesentium autem dicta voluptatibus sed assumenda reprehenderit.
-        Dicta, officia.
+        Our dedicated team of passionate individuals is committed to changing this narrative. We spend our weekends
+        traveling to rural areas, reaching out to eager students who dream of exploring the realms of robotics and STEM.
+        Our goal is to ignite their curiosity, nurture their creativity, and provide them with the tools they need to
+        succeed.
+
+        However, we can't achieve this alone. We need your support to continue this vision.
     </div>
     <div class="w-full sm:flex ">
         <div class="grid grid-cols-2 m-3 sm:w-1/2">
@@ -68,7 +70,7 @@
         <div class="sm:w-1/2 w-full">
             <h1 class="text-2xl font-bold text-center py-3">People who donated<h1>
                     <div class=" grid place-content-center py-3 h-96 overflow-y-scroll w-full">
-                        <table class="sm:w-[500px] w-[350px] mt-3 text-center">
+                        <table class="sm:w-[500px] w-[350px] mt-5 text-center sm:text-xl">
                             <hr>
                             <tr class="rounded-sm shadow-md shadow-[#B2B9B7] bg-[#fff]">
                                 <th class="p-2">Name</th>
