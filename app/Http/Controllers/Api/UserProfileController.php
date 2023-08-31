@@ -201,6 +201,39 @@ class UserProfileController extends Controller
         
 
         return $this->sendResponse($data, "Successfully");
+    }  public function showAnotherUserProfile($id)
+    {
+        $data = User::find($id)->user_profiles;
+        $user = User::where('id', $id)->first();
+        if($data==null){
+            $data['id']=0; 
+            $data['user_id'] =$user->id;
+            $data['first_name'] = $user->first_name;
+            $data['last_name'] = $user->last_name;
+            $data['bio']="";
+            $data['profile_image']="";
+            $data['cover_image']="";
+            $data['profile_image_url']="";
+            $data['cover_image_url']="";
+            $data['create_at']="";
+            $data['update_at']="";
+        }else{
+            $data['id']=$data->id; 
+            $data['user_id'] =$user->id;
+            $data['first_name'] = $user->first_name;
+            $data['last_name'] = $user->last_name;
+            $data['bio']=$data->bio;
+            $data['profile_image']=$data->profile_image;
+            $data['cover_image']=$data->cover_image;
+            $data['profile_image_url']=$data->profile_image_url;
+            $data['cover_image_url']=$data->cover_image_url;
+            $data['create_at']=$data->created_at;
+            $data['update_at']=$data->updated_at;
+        }
+        
+        
+
+        return $this->sendResponse($data, "Successfully");
     }
     public function showProfile($id)
     {

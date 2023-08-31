@@ -67,7 +67,7 @@ class PostContentController extends Controller
             'per_page' => $data->perPage(),
             'prev_page_url' => $data->previousPageUrl(),
             'to' => min($data->currentPage() * $data->perPage(), $data->total()),
-            "total" => $data->total()
+            "total" => $data->total(),
         ], "Successfully");
 
        
@@ -181,6 +181,31 @@ class PostContentController extends Controller
             'comments',
             'sub_comments'
         ])->where('user_id',Auth::id())->orderBy('updated_at', 'desc')->paginate(10);
+        return $this->success([
+            'post_content_data' => [
+                'post_content_list' => PostContentResource::collection($data)
+            ],
+
+            'current_page' => $data->currentPage(),
+            'first_page_url' => $data->url(1),
+            'from' => ($data->currentPage() - 1) * $data->perPage() + 1,
+            'last_page' => $data->lastPage(),
+            'last_page_url' => $data->url($data->lastPage()),
+            'next_page_url' => $data->nextPageUrl(),
+            'per_page' => $data->perPage(),
+            'prev_page_url' => $data->previousPageUrl(),
+            'to' => min($data->currentPage() * $data->perPage(), $data->total()),
+            "total" => $data->total()
+        ], "Successfully");
+
+    }
+    public function postContentOfAnotherUser($id)
+    {
+        $data = PostContent::withCount([
+            'likes',
+            'comments',
+            'sub_comments'
+        ])->where('user_id',$id)->orderBy('updated_at', 'desc')->paginate(10);
         return $this->success([
             'post_content_data' => [
                 'post_content_list' => PostContentResource::collection($data)

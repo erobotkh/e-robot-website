@@ -55,12 +55,10 @@ Route::get('socail/show-all',[SocailController::class,'show']);
 
 Route::post('member/store',[MemberController::class,'store']);
 Route::get('member/show-all',[MemberController::class,'show']);
-
 Route::post('member-position/store',[MemberPositionController::class,'store']);
 Route::get('member-position/show-all',[MemberPositionController::class,'show']);
 
 Route::post('socail-link/store',[SocailLinkController::class,'store']);
-
 Route::get('category/show', [CategoryController::class, 'show']);
 
 Route::middleware(['auth:api'])->group(function () {
@@ -68,17 +66,16 @@ Route::middleware(['auth:api'])->group(function () {
 
     Route::post('category/store', [CategoryController::class, 'store']);
     
-
     Route::post('post-content/store', [PostContentController::class, 'store']);
     Route::get('post-content/index', [PostContentController::class, 'index']);
     Route::post('post-content/show', [PostContentController::class, 'show']);
     Route::delete('post-content/{post_content_id}', [PostContentController::class, 'destroy']);
+    Route::get('post-content/show_post_of_user', [PostContentController::class, 'postContentOfUser']);
+    Route::get('post-content/show_post_of_another_user/{id}', [PostContentController::class, 'postContentOfAnotherUser']);
 
     Route::post('like/store', [LikeController::class, 'store']);
-
     Route::post('comment/store', [CommentController::class, 'store']);
     Route::delete('comment/{comment_id}', [CommentController::class, 'destroy']);
-
     Route::post('comment/sub-comment/store', [SubCommentController::class, 'store']);
     Route::post('comment/sub-comment/delete', [SubCommentController::class, 'destroy']);
 
@@ -88,5 +85,7 @@ Route::middleware(['auth:api'])->group(function () {
     Route::post('user-profile/edit-cover-image',[UserProfileController::class,'editUserCoverImage']);
     Route::post('user-profile/edit-bio',[UserProfileController::class,'editUserBio']);
     Route::get('user-profile/show-user-profile',[UserProfileController::class,'showUserProfile']);
-    Route::get('post-content/show_post_of_user', [PostContentController::class, 'postContentOfUser']);
+    Route::get('user-profile/show-another-user-profile/{id}',[UserProfileController::class,'showAnotherUserProfile']);
+
+    
 });
