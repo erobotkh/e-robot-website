@@ -19,6 +19,11 @@ class Member extends Model
         'member_position_id',
         'team_id'
     ];
+    protected $appends = ['profile_url'];
+
+    public function getProfileUrlAttribute() {
+        return env('DO_URL').$this->profile;
+    }
     public function member_position():HasOne{
         return $this->hasOne(MemberPosition::class);
     }
