@@ -6,7 +6,7 @@
   --colorContent:#7D7573;
   --font_title:36px;
   --font_subTitle:18px;
-  --font_text:13px;
+  --font_text:15px;
   --font_subContent:10px;
   --font_icon:13px;
   --headerHeight:10%;
@@ -73,7 +73,9 @@
 }
 .home_wrapper main.mainContainer .programSection .programContainer .programCard a .programObject img {
   width: 100%;
-  height: 100%;
+  aspect-ratio: 3/2;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 .home_wrapper main.mainContainer .programSection .programContainer .programCard a .programSubtitle h2 {
   font-size: var(--font_subTitle);
@@ -95,16 +97,13 @@
   margin-top: 50px;
   background-color: var(--bgColor);
   padding: 15px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 .home_wrapper main.mainContainer .videoSection .videoContainer {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-}
-.home_wrapper main.mainContainer .videoSection .videoContainer .video iframe {
-  width: 750px;
-  height: 315px;
 }
 .home_wrapper main.mainContainer .videoSection .videoContainer .articleContianer {
   width: 50%;
@@ -114,7 +113,7 @@
 .home_wrapper main.mainContainer .videoSection .videoContainer .articleContianer .videoSubtitle h2 {
   font-size: 24px;
   font-weight: var(--fontWeightTitle);
-  color: #DC2626;
+  color: rgba(220, 38, 38, 0.5019607843);
 }
 .home_wrapper main.mainContainer .videoSection .videoContainer .articleContianer .videoDate {
   font-size: 14px;
@@ -125,8 +124,11 @@
   color: red;
 }
 .home_wrapper main.mainContainer .videoSection .videoContainer .articleContianer .videoDetail {
-  text-align: justify;
   font-size: var(--font_text);
+  color: #7D7573;
+}
+.home_wrapper main.mainContainer .videoSection .videoContainer .articleContianer .videoDetail.vd2, .home_wrapper main.mainContainer .videoSection .videoContainer .articleContianer .videoDetail.vd3 {
+  display: none;
 }
 .home_wrapper main.mainContainer .videoSection .videoContainer .articleContianer .seeMorevideo {
   width: 100%;
@@ -180,6 +182,7 @@
 }
 .home_wrapper main.mainContainer .activitySection .activityContainer .activityImage .activitytext .activitySubtittle {
   font-size: 24px;
+  font-weight: 600;
 }
 .home_wrapper main.mainContainer .activitySection .activityContainer .activityImage .activitytext .activityDetail {
   font-size: var(--font_text);
@@ -244,7 +247,7 @@
   top: 65%;
   left: 50%;
   translate: -50% -50%;
-  padding: 10px 20px;
+  padding: 10px 20px 30px 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -298,7 +301,7 @@
 .home_wrapper main.mainContainer .aboutUsImpactAchievement .aboutImpactAchieveContainer .content .subtitleNumContainer {
   position: absolute;
   bottom: 5%;
-  font-size: 15px;
+  font-size: 18px;
   padding: 0 50px;
   opacity: 1;
 }
@@ -424,7 +427,7 @@ html {
   scroll-behavior: smooth;
 }
 
-@media (max-width: 885px) {
+@media (max-width: 1024px) {
   .home_wrapper main.mainContainer {
     width: 100%;
     height: 100%;
@@ -437,14 +440,31 @@ html {
   .home_wrapper main.mainContainer .programSection .programContainer .programCard {
     width: 100%;
   }
+  .home_wrapper main.mainContainer .videoSection {
+    width: 95%;
+    margin: 0 20px;
+  }
   .home_wrapper main.mainContainer .videoSection .videoContainer {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
   }
+  .home_wrapper main.mainContainer .videoSection .videoContainer .video {
+    width: 100%;
+  }
+  .home_wrapper main.mainContainer .videoSection .videoContainer .video iframe {
+    width: 100%;
+    height: 255px;
+  }
   .home_wrapper main.mainContainer .videoSection .videoContainer .articleContianer {
     width: 100%;
+  }
+  .home_wrapper main.mainContainer .videoSection .videoContainer .articleContianer .videoDetail {
+    display: none;
+  }
+  .home_wrapper main.mainContainer .videoSection .videoContainer .articleContianer .videoDetail.vd2 {
+    display: block;
   }
   .home_wrapper main.mainContainer .teamsSection .teamContainer {
     gap: 10px;
@@ -466,7 +486,7 @@ html {
     font-size: 24px;
   }
 }
-@media (max-width: 428px) {
+@media (max-width: 430px) {
   :root {
     --font_title:24px;
   }
@@ -476,7 +496,7 @@ html {
   }
   .home_wrapper main.mainContainer .slideShow {
     width: 100%;
-    height: 250px;
+    height: 200px;
     display: flex;
   }
   .home_wrapper main.mainContainer .programSection .programContainer {
@@ -501,6 +521,11 @@ html {
   .home_wrapper main.mainContainer .programSection .programContainer .programCard a .subtitleDetail {
     width: 70%;
   }
+  .home_wrapper main.mainContainer .videoSection {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
   .home_wrapper main.mainContainer .videoSection .videoContainer {
     width: 100%;
     display: flex;
@@ -508,8 +533,11 @@ html {
     align-items: center;
     justify-content: center;
   }
+  .home_wrapper main.mainContainer .videoSection .videoContainer .video {
+    width: 100%;
+  }
   .home_wrapper main.mainContainer .videoSection .videoContainer .video iframe {
-    width: 400px;
+    width: 100%;
     height: 255px;
   }
   .home_wrapper main.mainContainer .videoSection .videoContainer .articleContianer {
@@ -523,6 +551,13 @@ html {
   }
   .home_wrapper main.mainContainer .videoSection .videoContainer .articleContianer .videoDetail {
     text-align: justify;
+    display: none;
+  }
+  .home_wrapper main.mainContainer .videoSection .videoContainer .articleContianer .videoDetail.vd2 {
+    display: none;
+  }
+  .home_wrapper main.mainContainer .videoSection .videoContainer .articleContianer .videoDetail.vd3 {
+    display: block;
   }
   .home_wrapper main.mainContainer .videoSection .videoContainer .articleContianer .seeMorevideo {
     width: 100%;
@@ -534,6 +569,18 @@ html {
   }
   .home_wrapper main.mainContainer .activitySection .activityContainer .activityImage {
     width: 100%;
+  }
+  .home_wrapper main.mainContainer .activitySection .activityContainer .activityImage .activitytext {
+    width: 100%;
+    padding: 10px;
+    bottom: 0;
+    left: 0;
+  }
+  .home_wrapper main.mainContainer .activitySection .activityContainer .activityImage .activitytext .activitySubtittle {
+    font-size: 28px;
+  }
+  .home_wrapper main.mainContainer .activitySection .activityContainer .activityImage .activitytext .activityDetail {
+    font-size: 13px;
   }
   .home_wrapper main.mainContainer .teamsSection .teamContainer {
     display: grid;
