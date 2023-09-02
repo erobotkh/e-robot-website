@@ -1,8 +1,8 @@
 <!-- component -->
 <nav 
-class="z-0 relative" 
+class=" z-10  relative sticky top-0" 
 x-data="{open:false,menu:false, lokasi:false}">
-  <div class="relative z-10 bg-white shadow-xl">
+  <div class="relative bg-white shadow-xl ">
     <div class="max-w-7xl mx-auto px-2 sm:px-4 lg:px-8">
       <div class="relative flex items-center justify-end h-20">
         <div class="flex items-center justify-end  px-2 lg:px-0">
@@ -71,7 +71,7 @@ x-data="{open:false,menu:false, lokasi:false}">
             </form>
           </div> -->
         
-          <button class="px-4 py-2  bg-red-600 text-white font-bold hidden lg:inline-block"> <a href="/login"  style="font-family: 'Battambang', cursive;">Donate us</a></button>
+          <button class="px-4 py-2  bg-red-600 text-white font-bold hidden lg:inline-block"> <a href="/donate"  style="font-family: 'Battambang', cursive;">Donate us</a></button>
           <button class="px-4 py-2  text-red-600 font-bold hidden lg:inline-block "> 
             <a href="/login" class="flex flex-col justify-center items-center">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">

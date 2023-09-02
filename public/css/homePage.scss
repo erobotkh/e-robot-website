@@ -8,7 +8,7 @@
     // font
     --font_title:36px;
     --font_subTitle:18px;
-    --font_text:13px;
+    --font_text:15px;
     --font_subContent:10px;
     --font_icon:13px;
 
@@ -309,7 +309,9 @@
                                 width: 100px;
                                 img{
                                     width: 100%;
-                                    height: 100%;
+                                    aspect-ratio: 3/2;
+                                    object-fit: contain;
+                                    // mix-blend-mode:darken;
                                 }
                             }
                             .programSubtitle{
@@ -323,6 +325,7 @@
                             article.aboutProgram{
                                 font-size: 13px;
                                 color: var(--colorContent);
+
                             }
                         }
                         
@@ -344,6 +347,7 @@
             background-color: var(--bgColor);
 
             padding: 15px;
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
             
             .videoContainer{
                 width: 100%;
@@ -351,10 +355,7 @@
                 align-items: center;
                 justify-content: center;
                 .video{
-                    iframe{
-                        width:750px;
-                        height:315px;
-                    }
+                    
                 }
                 
                 .articleContianer{
@@ -366,7 +367,7 @@
                         h2{
                             font-size:24px;
                             font-weight: var(--fontWeightTitle);
-                            color: #DC2626;
+                            color: #dc262680;
 
 
                         }
@@ -378,14 +379,18 @@
                         .bx-time-five{
                             color: red;
                         }
-                        span{
-        
-                        }
+                        
                     }
                     .videoDetail{
                         
-                        text-align: justify;
+                        // text-align: justify;
                         font-size: var(--font_text);
+                        color: #7D7573;
+                        // display: flex;
+                        
+                        &.vd2,&.vd3{
+                            display: none;
+                        }
                     }
                     .seeMorevideo{
                         width: 100%;
@@ -443,6 +448,7 @@
 
                         .activitySubtittle{
                             font-size: 24px;
+                            font-weight: 600;
 
                         }
                         .activityDetail{
@@ -479,98 +485,6 @@
                 grid-template-columns: repeat(2,1fr);
                 
                 gap: 20px;
-
-                // .teamCard{
-                //     width: 100%;
-                //     height: 80vh;
-                //     border-radius: 10px;
-                //     background-color: var(--bgColor);
-                //     cursor: pointer;
-                //     a{
-                //         width: 100%;
-                //         text-decoration: none;
-                //         color: black;
-                //         .teamImage{
-                //             width: 100%;
-                //             height: 40%;
-                //             border-radius: 10px;
-                //             position: relative;
-
-                //             img{
-                //                 width: 100%;
-                //                 height: 100%;
-                //                 object-fit: cover;
-                //                 border-radius: 10px 10px 0 0;
-
-                //             }
-                //             .grayScreen{
-                //                 display: none;
-                                
-                //             }
-                            
-                //         }
-                //         .teamLeader{
-                //             width: 100%;
-                //             position: relative;
-                //             height: 13%;
-                //             .leader{
-                //                 width: 100px;
-                //                 height: 100px;
-                //                 position: absolute;
-                //                 background-color: white;
-
-                //                 border-radius: 50%;
-                //                 top: -30px;
-                //                 left: 5%;
-                //                 img{
-                //                     width: 100%;
-                //                     height: 100%;
-                //                     border-radius: 50%;
-                //                     border: 4px solid white;
-                //                 }
-                //             }
-                //             .teamPosition{
-                //                 padding-left: 33%;
-                //                 font-size: 18px;
-                //                 color: gray;
-                //                 padding-top: 10px;
-                //             }
-                //         }
-                //         .teamSubtitle{
-                //             padding:10px 30px;
-
-                //             h2{
-                //                 font-size: var(--font_subTitle);
-                //                 font-weight: 500;
-                //                 padding: 10px 0 5px 0;
-                //             }
-                //         }
-                        
-                //         article.aboutteam{
-                //             padding:0 30px;
-                //             font-size: 15px;
-                //             color: var(--colorContent);
-                //         }
-                //     }
-                    
-                // }
-                // .teamCard:hover{
-                //     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
-                //     a{
-                //         .teamImage{
-                //             .grayScreen{
-                //                 display: block;
-                //                 width: 100%;
-                //                 height: 100%;
-                //                 position: absolute; 
-                //                 top: 0;
-                //                 background-color:rgba(0, 0, 0, 0.591);
-                //                 border-radius: 10px;
-                                
-                //             }
-                //         }
-                //     }
-                // }
 
                 .teamCard{
                     width: 100%;
@@ -611,7 +525,7 @@
                             top: 65%;
                             left: 50%;
                             translate: -50% -50%;
-                            padding: 10px 20px;
+                            padding: 10px 20px 30px 20px;
                             display: flex;
                             flex-direction: column;
                             align-items: center;
@@ -682,7 +596,7 @@
                         position: absolute;
                         bottom: 5%;
                         
-                        font-size:15px;
+                        font-size:18px;
                         padding: 0 50px;
                         opacity: 1;
 
@@ -692,14 +606,7 @@
                     &.contentImg{
                         background-color: black;
                         border-radius:  5px 0 0 5px;
-                        // .subtitle{
-                        //     position: absolute;
-                        //     top: 50%;
-                        //     left: 50%;
-                        //     translate: -50% -50% ;
-                        //     color: #ffffffe4;
-                        //     font-size: var(--font_title);
-                        // }
+                        
                     }
                     &.contentBg1{
                         display: grid;
@@ -851,12 +758,13 @@ html{
 
 // tablet responsive
 
-@media (max-width: 885px) {
+@media (max-width: 1024px) {
     .home_wrapper{
         
         main.mainContainer{
             width: 100%;
             height: 100%;
+            
             
             // ----------------- program
             .programSection{
@@ -875,14 +783,32 @@ html{
  
             // ------------------ video
             .videoSection{
+                width: 95%;
+                margin:0 20px;
 
                 .videoContainer{
                     display: flex;
                     flex-direction: column;
                     align-items: center;
                     justify-content: center;
+                    .video{
+                        width: 100%;
+                        iframe{
+                            width:100%;
+                            height:255px;
+                        }
+                    }
                     .articleContianer{
                         width: 100%;
+                        .videoDetail{
+                        
+                            display: none;
+                            
+                            &.vd2{
+                                display: block;
+                            }
+                        }
+                        
                     }
                     
                 }
@@ -939,7 +865,7 @@ html{
     }
 }
 // mobie responsive
-@media (max-width: 428px) {
+@media (max-width: 430px) {
     :root{
         --font_title:24px;
 
@@ -950,7 +876,7 @@ html{
             height: var(--slideHeight);
             .slideShow{
                 width: 100%;
-                height: 250px;
+                height: 200px;
                 display: flex;
     
             }
@@ -988,7 +914,9 @@ html{
 
             // ------------------ video
             .videoSection{
-
+                width: 100%;
+                margin: 0;
+                padding:0 ;
                 .videoContainer{
                     width: 100%;
                     display: flex;
@@ -996,8 +924,9 @@ html{
                     align-items: center;
                     justify-content: center;
                     .video{
+                        width: 100%;
                         iframe{
-                            width:400px;
+                            width:100%;
                             height:255px;
                         }
                     }
@@ -1015,6 +944,14 @@ html{
                         .videoDetail{
                             
                             text-align: justify;
+                            display: none;
+                            
+                            &.vd2{
+                                display: none;
+                            }
+                            &.vd3{
+                                display: block;
+                            }
                         }
                         .seeMorevideo{
                             width: 100%;
@@ -1022,6 +959,7 @@ html{
                             justify-content: end;
                             
                         }
+                        
                     }
                 }
             }
@@ -1030,10 +968,26 @@ html{
                 .activityContainer{
                         display: block;
 
-                    .activityImage{
-                        width: 100%;
+                        .activityImage{
+                            width: 100%;
+                            
                         
-                    }
+                            .activitytext{
+                                width: 100%;
+                                padding: 10px;
+                                bottom: 0;
+                                left: 0;
+                                
+        
+                                .activitySubtittle{
+                                    font-size: 28px;
+        
+                                }
+                                .activityDetail{
+                                    font-size: 13px;
+                                }
+                            }
+                        }
                 }
             }
             //------------------- team
