@@ -9,6 +9,8 @@ use App\Models\MemberPosition;
 use App\Models\Socail;
 use App\Models\SocailLink;
 use App\Models\Team;
+use Illuminate\Support\Facades\DB;
+use App\Http\Resources\MemberResource;
 use Illuminate\Support\Facades\Storage;
 use Validator;
 
@@ -45,7 +47,9 @@ class MemberController extends Controller
      */
     public function index()
     {
-        //
+        // $data = MemberResource::collection(Member::all());
+
+        // return view('AdminModules.member', compact('data'));
     }
 
     /**
@@ -53,7 +57,7 @@ class MemberController extends Controller
      */
     public function create()
     {
-        //
+        return view('NiceAdmin.Member.create');
     }
 
     /**
@@ -61,6 +65,7 @@ class MemberController extends Controller
      */
     public function store(Request $request)
     {
+        // dd($request);
         $rule = [
             'name' => 'required',
             'bio' => 'nullable',
@@ -98,7 +103,7 @@ class MemberController extends Controller
             $value->team_name = $team->name;
             $member_position = MemberPosition::where('id', $value->member_position_id)->first();
             $value->member_position_title = $member_position->title;
-            $value->socail=Member::find($value->id)->socails()->get();
+            $value->socail = Member::find($value->id)->socails()->get();
         }
         return $this->sendResponse($data_member, "Successfully");
     }

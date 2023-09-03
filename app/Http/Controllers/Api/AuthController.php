@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Validator;
+
 class AuthController extends Controller
 {
     public function sendResponse($result, $message)
@@ -45,17 +46,17 @@ class AuthController extends Controller
             'password' => 'required',
             'c_password' => 'required|same:password',
         ];
-        $input     = $request->only('name', 'email','phone', 'password','c_password');
+        $input     = $request->only('name', 'email', 'phone', 'password', 'c_password');
         $validator = Validator::make($input, $rules);
 
         if ($validator->fails()) {
-            return $this->sendError("Resgister Fail.",$validator->messages());
+            return $this->sendError("Resgister Fail.", $validator->messages());
         }
         $name = $request->name;
         $email    = $request->email;
         $password = $request->password;
-        $phone= $request->phone;
-        $user     = User::create(['name' => $name, 'email' => $email,'phone'=>$phone ,'password' => Hash::make($password)]);
+        $phone = $request->phone;
+        $user     = User::create(['name' => $name, 'email' => $email, 'phone' => $phone, 'password' => Hash::make($password)]);
         return $this->sendResponse($user, "User register successfully");
     }
 
@@ -65,7 +66,7 @@ class AuthController extends Controller
             'email' => 'required',
             'password' => 'required'
         ]);
-        
+
         $user = User::where('email', $request['email'])->first();
         if (!isset($user)) {
             return $this->sendError('User does not exist with this details');
@@ -75,7 +76,7 @@ class AuthController extends Controller
         }
         $success['userid'] = $user->id;
         $success['token'] = $user->createToken('AuthToken')->accessToken;
-        
+
 
         return $this->sendResponse($success, "User login Successfully");
     }

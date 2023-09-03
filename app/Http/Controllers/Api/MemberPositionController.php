@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers\Api;
+
 use App\Http\Controllers\Controller;
 use App\Models\MemberPosition;
 use Illuminate\Http\Request;
@@ -40,5 +41,6 @@ class MemberPositionController extends Controller
         ]);
         $data = MemberPosition::create(['title' => $request->title]);
         return $this->sendResponse($data, "Successfully");
+        dd($data);
     }
 }

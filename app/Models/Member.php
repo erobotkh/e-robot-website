@@ -10,21 +10,24 @@ use Illuminate\Notifications\Notifiable;
 
 class Member extends Model
 {
-    use HasFactory,Notifiable;
-    protected $fillable=[
+    use HasFactory, Notifiable;
+    protected $fillable = [
         'name',
         'bio',
         'profile',
         'member_position_id',
         'team_id'
     ];
-    public function member_position():HasOne{
+    public function member_position(): HasOne
+    {
         return $this->hasOne(MemberPosition::class);
     }
-    public function socails():HasMany{
+    public function socails(): HasMany
+    {
         return $this->hasMany(Socail::class);
     }
-    public function team():HasOne{
+    public function team(): HasOne
+    {
         return $this->hasOne(Team::class);
     }
 }
