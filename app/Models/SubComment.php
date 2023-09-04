@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Notifications\Notifiable;
 
 class SubComment extends Model
@@ -15,4 +16,13 @@ class SubComment extends Model
         'sub_comment_text',
         'comment_id'
     ];
+    public function comment():BelongsTo{
+        return $this->belongsTo(Comment::class);
+    }
+    public function postcontent():BelongsTo{
+        return $this->belongsTo(PostContent::class);
+    }
+    public function user():BelongsTo{
+        return $this->belongsTo(User::class);
+    }
 }

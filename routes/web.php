@@ -17,7 +17,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
 Route::get('/home', function () {
     return view('home');
@@ -41,7 +41,9 @@ Route::get('/login', function () {
 Route::get('/register', function () {
     return view('user.register');
 });
-
+Route::get('/donate', function(){
+    return view('donation');
+});
 
 // Admin Route
 Route::get('/admin', function () {
@@ -95,4 +97,33 @@ Route::get('/pages-register', function () {
 
 Route::get('/pages-login', function () {
     return view('NiceAdmin.pages-login');
+});
+
+
+//about us 
+Route::get('about/mission-vision', function () {
+    return view('about.mission_vision');
+});
+Route::get('about/history', function () {
+    return view('about.history');
+});
+Route::get('about/team-leader', function () {
+    return view('about.team-leader');
+});
+Route::get('about/team-member', function () {
+    return view('about.team-member');
+});Route::get('about/department', function () {
+    return view('about.department');
+
+});
+
+
+//resoure
+
+Route::get('/resource', function () {
+    return view('resource.index');
+});
+
+Route::get('/resource/show', function () {
+    return view('resource.show');
 });

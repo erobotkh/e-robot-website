@@ -18,6 +18,7 @@ class CategoryController extends Controller
             return response()->json(['code'=>200,"message"=>"Create Successfully",'data'=>$data]);
         }
     }
+    
     public function show(){
         $data=Category::all();
         return response()->json(['code'=>200,'message'=>"Successfully",'data'=>$data]);

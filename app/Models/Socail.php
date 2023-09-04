@@ -17,6 +17,11 @@ class Socail extends Model
         'link',
         'member_id'
     ];
+    protected $appends = ['icon_url'];
+
+    public function getIconUrlAttribute() {
+        return env('DO_URL').$this->icon;
+    }
     public function member():BelongsTo{
         return $this->belongsTo(Member::class);
     }

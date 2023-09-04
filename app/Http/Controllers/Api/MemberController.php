@@ -67,18 +67,20 @@ class MemberController extends Controller
     {
         // dd($request);
         $rule = [
-            'name' => 'required',
+            'first_name' => 'required',
+            'last_name' => 'required',
             'bio' => 'nullable',
             'member_position_id' => 'required',
             'team_id' => 'required',
             'profile' => 'required|image|max:10240'
         ];
-        $input = $request->only('name', 'bio', 'profile', 'member_position_id', 'team_id');
+        $input = $request->only('first_name','last_name', 'bio', 'profile', 'member_position_id', 'team_id');
         $validator = Validator::make($input, $rule);
         if ($validator->fails()) {
             return $this->sendError("Fail", $validator->messages());
         }
-        $name = $request->name;
+        $first_name = $request->first_name;
+        $last_name=$request->last_name;
         $bio = $request->bio;
         $member_position_id = $request->member_position_id;
         $team_id = $request->team_id;
@@ -88,7 +90,7 @@ class MemberController extends Controller
             $profile,
             'public'
         );
-        $data = Member::create(['name' => $name, 'bio' => $bio, 'profile' => $url, 'member_position_id' => $member_position_id, 'team_id' => $team_id]);
+        $data = Member::create(['first_name' => $first_name,"last_name"=>$last_name, 'bio' => $bio, 'profile' => $url, 'member_position_id' => $member_position_id, 'team_id' => $team_id]);
         return $this->sendResponse($data, "Add Member Successfully");
     }
 

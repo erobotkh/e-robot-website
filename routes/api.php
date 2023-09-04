@@ -12,9 +12,11 @@ use App\Http\Controllers\Api\SocailController;
 use App\Http\Controllers\Api\SocailLinkController;
 use App\Http\Controllers\Api\SubCommentController;
 use App\Http\Controllers\Api\TeamController;
+use App\Http\Controllers\Api\UserProfileController;
 use App\Models\MemberPosition;
 use App\Models\PostContent;
 use App\Models\SubComment;
+use App\Models\UserProfile;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -29,7 +31,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-
+Route::post('verifyOtp', [AuthController::class, 'verifyOtp']);
+Route::post('sendOtp', [AuthController::class, 'sendOtp']);
+Route::post('sendOtp/forgot-password', [AuthController::class, 'sendOtpForgotPassword']);
+Route::post('verifyOtp/forgot-password', [AuthController::class, 'verifyOtpForgotPassword']);
+Route::post('forgot-password', [AuthController::class, 'editPassword']);
 Route::post('register', [AuthController::class, 'register']);
 Route::post('login', [AuthController::class, 'login']);
 
@@ -49,28 +55,40 @@ Route::get('socail/show-all',[SocailController::class,'show']);
 
 Route::post('member/store',[MemberController::class,'store']);
 Route::get('member/show-all',[MemberController::class,'show']);
-
 Route::post('member-position/store',[MemberPositionController::class,'store']);
 Route::get('member-position/show-all',[MemberPositionController::class,'show']);
 
 Route::post('socail-link/store',[SocailLinkController::class,'store']);
+Route::get('category/show', [CategoryController::class, 'show']);
+
+Route::get('user-profile/show-another-user-profile/{id}',[UserProfileController::class,'showAnotherUserProfile']);
+Route::get('post-content/show_post_of_another_user/{id}', [PostContentController::class, 'postContentOfAnotherUser']);
 
 Route::middleware(['auth:api'])->group(function () {
     Route::post('logout', [AuthController::class, 'logout']);
 
     Route::post('category/store', [CategoryController::class, 'store']);
-    Route::get('category/show', [CategoryController::class, 'show']);
-
+    
     Route::post('post-content/store', [PostContentController::class, 'store']);
     Route::get('post-content/index', [PostContentController::class, 'index']);
     Route::post('post-content/show', [PostContentController::class, 'show']);
     Route::delete('post-content/{post_content_id}', [PostContentController::class, 'destroy']);
+    Route::get('post-content/show_post_of_user', [PostContentController::class, 'postContentOfUser']);
+    
 
     Route::post('like/store', [LikeController::class, 'store']);
-
     Route::post('comment/store', [CommentController::class, 'store']);
     Route::delete('comment/{comment_id}', [CommentController::class, 'destroy']);
-
     Route::post('comment/sub-comment/store', [SubCommentController::class, 'store']);
     Route::post('comment/sub-comment/delete', [SubCommentController::class, 'destroy']);
+
+   
+    Route::post('user-profile/edit',[UserProfileController::class,'editUserProfile']);
+    Route::post('user-profile/edit-profile-image',[UserProfileController::class,'editUserProfileImage']);
+    Route::post('user-profile/edit-cover-image',[UserProfileController::class,'editUserCoverImage']);
+    Route::post('user-profile/edit-bio',[UserProfileController::class,'editUserBio']);
+    Route::get('user-profile/show-user-profile',[UserProfileController::class,'showUserProfile']);
+   
+
+    
 });

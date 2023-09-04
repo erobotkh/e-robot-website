@@ -1,25 +1,8 @@
-<!doctype html>
-<html>
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<style type="text/tailwindcss">
-    @layer utilities {
-    body{font-family: 'Open Sans','typography';}
-        }
-        .like-button.active svg path {   
-        fill: #B30F10;
-        }
-</style>
-
-<body>
+<x-layout>
     <div>
         <div class="p-10">
             <!-- Category1 -->
-            <div class="text-[33px] text-[#EB0100] font-bold py-5">Knowledge</div>
+            <div class="text-[33px] text-[#EB0100] font-bold py-5"  style="font-family: 'Battambang', cursive;">Knowledge</div>
             <div class="grid grid-cols-1 md:grid-cols-2 sm:grid-cols-1 gap-10 ">
 
                 <div
@@ -31,7 +14,7 @@
                                     class="rounded-t-md h-[280px] w-[800px] shadow-2 shadow-[#B2A9A7] hover:shadow-xl">
                             </div>
                             <div class="p-5">
-                                <h1 class="font-bold text-2xl ">This is the title</h1>
+                                <h1 class="font-bold text-2xl "  style="font-family: 'Battambang', cursive;">This is the title</h1>
                                 <p class="text-justify">Desc Lorem ipsum dolor sit amet consectetur adipisicing elit.
                                     Sunt
                                     nobisrem
@@ -92,7 +75,7 @@
                                     class="rounded-t-md h-[280px] w-[800px] shadow-2 shadow-[#B2A9A7] hover:shadow-xl">
                             </div>
                             <div class="p-5">
-                                <h1 class="font-bold text-2xl ">This is the title</h1>
+                                <h1 class="font-bold text-2xl "  style="font-family: 'Battambang', cursive;">This is the title</h1>
                                 <p class="text-justify">Desc Lorem ipsum dolor sit amet consectetur adipisicing elit.
                                     Sunt
                                     nobisrem
@@ -153,7 +136,7 @@
                                     class="rounded-t-md h-[280px] w-[800px] shadow-2 shadow-[#B2A9A7] hover:shadow-xl">
                             </div>
                             <div class="p-5">
-                                <h1 class="font-bold text-2xl ">This is the title</h1>
+                                <h1 class="font-bold text-2xl "  style="font-family: 'Battambang', cursive;">This is the title</h1>
                                 <p class="text-justify">Desc Lorem ipsum dolor sit amet consectetur adipisicing elit.
                                     Sunt
                                     nobisrem
@@ -214,7 +197,7 @@
                                     class="rounded-t-md h-[280px] w-[800px] shadow-2 shadow-[#B2A9A7] hover:shadow-xl">
                             </div>
                             <div class="p-5">
-                                <h1 class="font-bold text-2xl ">This is the title</h1>
+                                <h1 class="font-bold text-2xl "  style="font-family: 'Battambang', cursive;">This is the title</h1>
                                 <p class="text-justify">Desc Lorem ipsum dolor sit amet consectetur adipisicing elit.
                                     Sunt
                                     nobisrem
@@ -309,7 +292,7 @@
                                     class="rounded-t-md h-[280px] w-[800px] shadow-2 shadow-[#B2A9A7] hover:shadow-xl">
                             </div>
                             <div class="p-5">
-                                <h1 class="font-bold text-2xl ">This is the title</h1>
+                                <h1 class="font-bold text-2xl "  style="font-family: 'Battambang', cursive;">This is the title</h1>
                                 <p class="text-justify">Desc Lorem ipsum dolor sit amet consectetur adipisicing elit.
                                     Sunt
                                     nobisrem
@@ -405,7 +388,7 @@
                                     class="rounded-t-md h-[280px] w-[800px] shadow-2 shadow-[#B2A9A7] hover:shadow-xl">
                             </div>
                             <div class="p-5">
-                                <h1 class="font-bold text-2xl ">This is the title</h1>
+                                <h1 class="font-bold text-2xl "  style="font-family: 'Battambang', cursive;">This is the title</h1>
                                 <p class="text-justify">Desc Lorem ipsum dolor sit amet consectetur adipisicing elit.
                                     Sunt
                                     nobisrem
@@ -487,7 +470,7 @@
             </nav>
         </div>
     </div>
-</body>
+
 <script>
 let button = document.querySelector(".like-button");
 button.addEventListener("click", function(e) {
@@ -497,5 +480,4 @@ button.addEventListener("click", function(e) {
     generateClones(this);
 });
 </script>
-
-</html>
+</x-layout>

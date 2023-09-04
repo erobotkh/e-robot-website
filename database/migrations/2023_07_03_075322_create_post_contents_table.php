@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('post_contents', function (Blueprint $table) {
             $table->id();
             $table->string('title');
-            $table->string('discription')->nullable();
+            $table->text('discription')->nullable();
             $table->string('image_name');
             $table->foreignIdFor(Category::class)->constrained()->onDelete('cascade')->onUpdate('cascade');;
             $table->foreignIdFor(User::class)->constrained()->onDelete('cascade')->onUpdate('cascade');;
