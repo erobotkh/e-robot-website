@@ -9,6 +9,8 @@ use App\Models\MemberPosition;
 use App\Models\Socail;
 use App\Models\SocailLink;
 use App\Models\Team;
+use Illuminate\Support\Facades\DB;
+use App\Http\Resources\MemberResource;
 use Illuminate\Support\Facades\Storage;
 use Validator;
 
@@ -45,7 +47,6 @@ class MemberController extends Controller
      */
     public function index()
     {
-        //
     }
 
     /**
@@ -53,7 +54,6 @@ class MemberController extends Controller
      */
     public function create()
     {
-        //
     }
 
     /**
@@ -61,6 +61,7 @@ class MemberController extends Controller
      */
     public function store(Request $request)
     {
+        // dd($request);
         $rule = [
             'first_name' => 'required',
             'last_name' => 'required',
@@ -69,13 +70,13 @@ class MemberController extends Controller
             'team_id' => 'required',
             'profile' => 'required|image|max:10240'
         ];
-        $input = $request->only('first_name','last_name', 'bio', 'profile', 'member_position_id', 'team_id');
+        $input = $request->only('first_name', 'last_name', 'bio', 'profile', 'member_position_id', 'team_id');
         $validator = Validator::make($input, $rule);
         if ($validator->fails()) {
             return $this->sendError("Fail", $validator->messages());
         }
         $first_name = $request->first_name;
-        $last_name=$request->last_name;
+        $last_name = $request->last_name;
         $bio = $request->bio;
         $member_position_id = $request->member_position_id;
         $team_id = $request->team_id;
@@ -85,7 +86,7 @@ class MemberController extends Controller
             $profile,
             'public'
         );
-        $data = Member::create(['first_name' => $first_name,"last_name"=>$last_name, 'bio' => $bio, 'profile' => $url, 'member_position_id' => $member_position_id, 'team_id' => $team_id]);
+        $data = Member::create(['first_name' => $first_name, "last_name" => $last_name, 'bio' => $bio, 'profile' => $url, 'member_position_id' => $member_position_id, 'team_id' => $team_id]);
         return $this->sendResponse($data, "Add Member Successfully");
     }
 
@@ -100,7 +101,7 @@ class MemberController extends Controller
             $value->team_name = $team->name;
             $member_position = MemberPosition::where('id', $value->member_position_id)->first();
             $value->member_position_title = $member_position->title;
-            $value->socail=Member::find($value->id)->socails()->get();
+            $value->socail = Member::find($value->id)->socails()->get();
         }
         return $this->sendResponse($data_member, "Successfully");
     }

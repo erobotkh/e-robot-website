@@ -10,7 +10,6 @@ use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Http;
 use Validator;
-use Illuminate\Support\Str;
 
 class AuthController extends Controller
 {
@@ -49,29 +48,17 @@ class AuthController extends Controller
             'password' => 'required',
             'c_password' => 'required|same:password',
         ];
-        $input     = $request->only('first_name', 'last_name', 'phone', 'password', 'c_password');
+        $input     = $request->only('name', 'email', 'phone', 'password', 'c_password');
         $validator = Validator::make($input, $rules);
         if ($validator->fails()) {
             return $this->sendError("Resgister Fail.", $validator->messages());
         }
-        $first_name = $request->first_name;
-        $last_name = $request->last_name;
-        $password = Hash::make($request->password);
+        $name = $request->name;
+        $email    = $request->email;
+        $password = $request->password;
         $phone = $request->phone;
-
-        $user_db = User::where('phone', $phone)->first();
-
-        if ($user_db) {
-            return $this->sendError("Phone already exit.", $validator->messages());
-        } else {
-            Cache::put('user_' . $phone, [
-                'first_name' => $first_name,
-                'last_name' => $last_name,
-                'password' => $password,
-                'phone' => $phone,
-            ]);
-            return $this->sendResponse(["first_name" => $first_name, "last_name" => $last_name, "phone" => $phone], "Successfully");
-        }
+        $user     = User::create(['name' => $name, 'email' => $email, 'phone' => $phone, 'password' => Hash::make($password)]);
+        return $this->sendResponse($user, "User register successfully");
     }
 
     public function login(Request $request)
@@ -81,8 +68,7 @@ class AuthController extends Controller
             'password' => 'required'
         ]);
 
-        $user = User::where('phone', $request->phone)->first();
-
+        $user = User::where('email', $request['email'])->first();
         if (!isset($user)) {
             return $this->sendError('User does not exist with this details');
         }
@@ -255,7 +241,7 @@ class AuthController extends Controller
 
         if ($request->otp_code == $otpCode) {
             if ($checkUser) {
-                Cache::put($phone . '_isVerify', 1,60);
+                Cache::put($phone . '_isVerify', 1, 60);
                 return $this->sendResponse(["phone" => $phone], "Verify Successfully");
             }
             return $this->sendError("Verify Fail");
@@ -285,8 +271,8 @@ class AuthController extends Controller
             return $this->sendError("User not verify");
         }
         $user->password = $request->new_password;
-            $user->update();
-            $data = $user;
+        $user->update();
+        $data = $user;
 
         return $this->sendResponse($data, "Update Successfully");
     }

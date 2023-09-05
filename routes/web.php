@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\Api\TeamController;
+use App\Http\Controllers\MemberController;
+use App\Http\Controllers\PositionController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -48,20 +51,37 @@ Route::get('/admin', function () {
 });
 
 Route::get('/category', function () {
-    return view('AdminModules.category');
+    return view('AdminModules.Category.index');
 });
 
 Route::get('postContent/', function () {
-    return view('AdminModules.postContent');
+    return view('AdminModules.PostContent.index');
 });
 
 Route::get('/report', function () {
-    return view('AdminModules.report');
+    return view('AdminModules.Report.index');
 });
 
+
+Route::resource('member', MemberController::class);
+Route::resource('position', PositionController::class);
+Route::resource('team', TeamController::class);
+
+
+
+
 Route::get('/user', function () {
-    return view('AdminModules.user');
+    return view('AdminModules.User.index');
 });
+
+Route::get('/team', function () {
+    return view('AdminModules.Team.index');
+});
+
+Route::get('/position', function () {
+    return view('AdminModules.Position.index');
+});
+
 
 Route::get('/users-profile', function () {
     return view('NiceAdmin.users-profile');

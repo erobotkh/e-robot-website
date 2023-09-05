@@ -9,12 +9,20 @@ use Illuminate\Notifications\Notifiable;
 
 class Category extends Model
 {
-    use HasFactory,Notifiable;
-    protected $fillable=[
+    use HasFactory, Notifiable;
+    protected $fillable = [
         'category_name'
     ];
 
-    public function postcontents():HasMany{
+    public function postcontents(): HasMany
+    {
         return $this->hasMany(PostContent::class);
     }
 }
+
+
+// 1 category has many postContent
+// 1 post has many comments
+// Many to many (SubComment and Comment)
+
+// (PostContent, and Comment, and User)
