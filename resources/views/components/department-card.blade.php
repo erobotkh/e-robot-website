@@ -17,18 +17,18 @@
     </a>
 </div> -->
 
-<div class="departementSection w-full flex rounded-xl flex-col items-center justify-center p-[15px] rounded-sm">
+<div class="departementSection w-full rounded-sm">
     <div class="departementContainer w-full">
-        <div class="departementCard w-full h-[100vh] cursor-pointer relative shadow-xl ">
+        <div class="departementCard w-full lg:h-[80vh] md:h-[70vh] cursor-pointer relative shadow-xl ">
             <div class="w-full h-full">
-                <div class="departementImage w-full h-[55%] relative ">
+                <div class="departementImage w-full h-[65%] relative ">
                                 
-                    <img class="w-full h-full object-fit-cover" src="{{asset($image)}}" alt="">
+                    <img class="w-full h-full object-fit-contain" src="{{asset($image)}}" alt="">
                 </div>
                             
-                <div class="departementDetail  w-[70%] bg-white absolute top-[65%] translate-x-[-50%] translate-y-[-50%] left-[50%] pt-[10px] pl-[20px] pb-[30px] pr-[20px] flex flex-col items-center hover:rounded-md hover:shadow-md">
-                    <div class="departementSubtitle font-weight-[700] pb-[20px] text-[#DC2626] text-[28px]"  style="font-family: 'Battambang', cursive;">{{$department}}</div>
-                    <article class="aboutdepartement text-center">{{$description}}</article>
+                <div class="departementDetail  w-[80%] bg-white absolute top-[70%] translate-x-[-50%] translate-y-[-50%] left-[50%] p-[10px] flex flex-col items-center hover:rounded-md hover:shadow-md">
+                    <div class="departementSubtitle font-[700] pb-[10px] text-[#DC2626] lg:text-[28px] md:text-[22px] "  style="font-family: 'Battambang', cursive;">{{$department}}</div>
+                    <article class="aboutdepartement text-center lg:line-clamp-none md:line-clamp-4 lg:text-[16px] md:text-[14px]">{{$description}}</article>
                 </div>
                             
             </div>

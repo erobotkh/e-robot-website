@@ -63,11 +63,11 @@
                 <div class="programTitle"><h1 style="font-family: 'Battambang', cursive;">Our Programs</h1></div>
                 <div class="programContainer">
                     <div class="programCard">
-                        <a href="#">
+                        <a href="./list_content#programSection">
                             <div class="programObject"><img src="images/E-STEM_icon.png" alt=""></div>
                             <div class="subtitleDetail">
                                 <div class="programSubtitle"><h2  style="font-family: 'Battambang', cursive;">E-STEM</h2></div>
-                                <article class="aboutProgram">Our STEM (Science, Technology, Engineering, and Mathematics) program is designed to inspire and equip students with the skills and knowledge needed to excel in today's rapidly evolving technological world. </article>
+                                <article class="aboutProgram line-clamp-3">Our STEM (Science, Technology, Engineering, and Mathematics) program is designed to inspire and equip students with the skills and knowledge needed to excel in today's rapidly evolving technological world. </article>
                             </div>
                     
                         </a>
@@ -78,7 +78,7 @@
                             <div class="programObject"><img src="images/roboticObject.svg" alt=""></div>
                             <div class="subtitleDetail">
                                 <div class="programSubtitle"><h2  style="font-family: 'Battambang', cursive;">Robotic</h2></div>
-                                <article class="aboutProgram">Explore the design, programming, and application of robots to solve real-world challenges and shape the future of automation</article>
+                                <article class="aboutProgram line-clamp-3">Explore the design, programming, and application of robots to solve real-world challenges and shape the future of automation</article>
                             </div>
                     
                         </a>
@@ -89,7 +89,7 @@
                             <div class="programObject"><img src="images/Scratch_Logo.png" alt=""></div>
                             <div class="subtitleDetail">
                                 <div class="programSubtitle"><h2  style="font-family: 'Battambang', cursive;">Scratch</h2></div>
-                                <article class="aboutProgram">Scratch is a beginner-friendly programming platform that empowers kids and beginners to create interactive stories, games, and animations.</article>
+                                <article class="aboutProgram line-clamp-3">Scratch is a beginner-friendly programming platform that empowers kids and beginners to create interactive stories, games, and animations.</article>
                             </div>
                     
                         </a>
@@ -100,7 +100,7 @@
                             <div class="programObject"><img src="images/canva_logo.png" alt=""></div>
                             <div class="subtitleDetail">
                                 <div class="programSubtitle"><h2  style="font-family: 'Battambang', cursive;">Canva</h2></div>
-                                <article class="aboutProgram">An intuitive online design platform offering a wide range of tools and templates for creating stunning graphics, presentations, and visual content.</article>
+                                <article class="aboutProgram line-clamp-3">An intuitive online design platform offering a wide range of tools and templates for creating stunning graphics, presentations, and visual content.</article>
                             </div>
                     
                         </a>
@@ -113,7 +113,7 @@
                             <div class="programObject"><img src="images/Echarity_logo.png" alt=""></div>
                             <div class="subtitleDetail">
                                 <div class="programSubtitle"><h2  style="font-family: 'Battambang', cursive;">E-Charity</h2></div>
-                                <article class="aboutProgram">Organized for the purpose of collecting donations Book, Clothing and Budget for poor students in remote areas. The program's identity is to share love with everyone.</article>
+                                <article class="aboutProgram line-clamp-3">Organized for the purpose of collecting donations Book, Clothing and Budget for poor students in remote areas. The program's identity is to share love with everyone.</article>
                             </div>
                     
                         </a>
@@ -124,7 +124,7 @@
                             <div class="programObject"><img src="images/Sprout_of_Ideas_logo.jpg" alt=""></div>
                             <div class="subtitleDetail">
                                 <div class="programSubtitle"><h2  style="font-family: 'Battambang', cursive;">ពន្លកគំនិត-Sprout of Ideas</h2></div>
-                                <article class="aboutProgram">Cultivate creativity, inspire, create new stories, guide, explain, educate children to have good discipline and morality in life, encourage and encourage children to study hard without giving up.</article>
+                                <article class="aboutProgram line-clamp-3">Cultivate creativity, inspire, create new stories, guide, explain, educate children to have good discipline and morality in life, encourage and encourage children to study hard without giving up.</article>
                             </div>
                     
                         </a>
@@ -135,23 +135,12 @@
                             <div class="programObject"><img src="images/mobile-application_logo.jpg" alt=""></div>
                             <div class="subtitleDetail">
                                 <div class="programSubtitle"><h2 style="font-family: 'Battambang', cursive;">Moblie App</h2></div>
-                                <article class="aboutProgram">Unleash creativity and innovation by creating functional and attractive mobile apps. From concept to coding, learn to create user-friendly applications that complement the ever-evolving digital landscape.</article>
+                                <article class="aboutProgram line-clamp-3">Unleash creativity and innovation by creating functional and attractive mobile apps. From concept to coding, learn to create user-friendly applications that complement the ever-evolving digital landscape.</article>
                             </div>
                     
                         </a>
                         
                     </div>
-                    <!-- <div class="programCard">
-                        <a href="#">
-                            <div class="programObject"><img src="images/roboticObject.svg" alt=""></div>
-                            <div class="subtitleDetail">
-                                <div class="programSubtitle"><h2 style="font-family: 'Battambang', cursive;">Robotic</h2></div>
-                                <article class="aboutProgram">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio reiciendis quas et asperiores quasi odio ut autem eos hic impedit.</article>
-                            </div>
-                    
-                        </a>
-                        
-                    </div> -->
 
                     
                 </div>
@@ -181,7 +170,7 @@
                             </tr>
                             <tr >
                                 <td>
-                                    we started to get some projects related to robotics and we also continued with the work of sharing and developing a series of new technologies.
+                                    we started to get some projects related to robotics and we also continued with the work of sharing and developing a series of new technologies.<b style="color:#DC2626 ; font-size:18px;font-weight:600"> E-Robot</b> is a group that provides the opportunity for young people to participate in social work, and scientific work related to new technologies to study and research. Towards the creation of new specific achievements serving the proper development work of the human society.
                                 </td>
                             </tr>
                         </table>
@@ -194,12 +183,12 @@
                             </tr>
                             <tr  >
                                 <td class="pl-[35px]">
-                                    <b style="color: red; font-size:larger"><span style="color: black;">Robot</span></b> was created on September 8, 2018, by our team members in the form of free mutual instruction. And then we started to get some projects related to robotics and we also continued with the work of sharing and developing 
+                                    <b style="color: red; font-size:larger"><span style="color: black;">Robot</span></b> was created on September 8, 2018, by our team members in the form of free mutual instruction. And then we started to get some projects related to robotics and we also 
                                 </td>
                             </tr>
                             <tr >
                                 <td>
-                                    a series of new technologies.
+                                    continued with the work of sharing and developing a series of new technologies. <b style="color:#DC2626 ; font-size:18px;font-weight:600"> E-Robot</b> is a group that provides the opportunity for young people to participate in social work, and scientific work related to new technologies to study and research. Towards the creation of new specific achievements serving the proper development work of the human society.
                                 </td>
                             </tr>
                         </table>
@@ -212,12 +201,12 @@
                             </tr>
                             <tr  >
                                 <td class="pl-[35px]">
-                                    <b style="color: red; font-size:larger"><span style="color: black;">Robot</span></b> was created on September 8, 2018, by our team members in the from  
+                                    <b style="color: red; font-size:larger"><span style="color: black;">Robot</span></b> was created on September 8, 2018, by our team members in the from of free mutual
                                 </td>
                             </tr>
                             <tr >
                                 <td>
-                                    of free mutual instruction. And then we started to get some projects related to robotics and we also continued with the work of sharing and developing a series of new technologies.
+                                    instruction. And then we started to get some projects related to robotics and we also continued with the work of sharing and developing a series of new technologies.<b style="color:#DC2626 ; font-size:18px;font-weight:600"> E-Robot </b>is a group that provides the opportunity for young people to participate in social work, and scientific work related to new technologies to study and research. Towards the creation of new specific achievements serving the proper development work of the human society.
                                 </td>
                             </tr>
                         </table>
@@ -233,7 +222,7 @@
                         <img src="images/activity1.jpg" alt="">
                         <div class="activitytext">
                             <h2 class="activitySubtittle">New Coding and Robotics Training Program</h2>
-                            <article class="activityDetail">Saturday, June 10, 2023 Opening of a new training course on 3 coding skills - Scratch, Robotics and Graphic Design at Som Thom High School, Ratanakkiri Province</article>
+                            <article class="activityDeta line-clamp-3il">Saturday, June 10, 2023 Opening of a new training course on 3 coding skills - Scratch, Robotics and Graphic Design at Som Thom High School, Ratanakkiri Province</article>
                         </div>
                         
                     </div>
@@ -241,7 +230,7 @@
                         <img src="images/charity1.jpg" alt="">
                         <div class="activitytext">
                             <h2 class="activitySubtittle">Donation</h2>
-                            <article class="activityDetail">Our team brought some study materials, clothes and money from the donations of friends and relatives to distribute to the ethnic minority students of Padal Primary School, located in Padal Village, Sesan Commune, O'Yadao District, Ratanakkiri Province.</article>
+                            <article class="activityDeta line-clamp-3il">Our team brought some study materials, clothes and money from the donations of friends and relatives to distribute to the ethnic minority students of Padal Primary School, located in Padal Village, Sesan Commune, O'Yadao District, Ratanakkiri Province.</article>
                         </div>
                         
                     </div>
@@ -267,7 +256,7 @@
                             
                             <div class="teamDetail">
                                 <div class="teamSubtitle"  style="font-family: 'Battambang', cursive;">INNOVATION</div>
-                                <article class="aboutTeam">Fueled by Curiosity, Guided by Creativity: Pioneering the Path to a Brighter Future Through Unwavering Innovation and Unprecedented Ideas.</article>
+                                <article class="aboutTeam line-clamp-4">F line-clamp-3ueled by Curiosity, Guided by Creativity: Pioneering the Path to a Brighter Future Through Unwavering Innovation and Unprecedented Ideas.</article>
                             </div>
                             
                         </a>
@@ -282,7 +271,7 @@
                             
                             <div class="teamDetail">
                                 <div class="teamSubtitle"  style="font-family: 'Battambang', cursive;">SOCIAL ENGAGEMENT</div>
-                                <article class="aboutTeam">Connecting Hearts, Bridging Minds: Empowering Communities Through Meaningful Conversations, Collective Action, and Lasting Social Engagement for a Unified and Empathetic World</article>
+                                <article class="aboutTeam line-clamp-4">C line-clamp-3onnecting Hearts, Bridging Minds: Empowering Communities Through Meaningful Conversations, Collective Action, and Lasting Social Engagement for a Unified and Empathetic World</article>
                             </div>
                             
                         </a>
@@ -297,7 +286,7 @@
                             
                             <div class="teamDetail">
                                 <div class="teamSubtitle"  style="font-family: 'Battambang', cursive;">FINANCE</div>
-                                <article class="aboutTeam">Your Dreams, Your Wealth: Partnering in Prosperity, Delivering Financial Excellence.</article>
+                                <article class="aboutTeam line-clamp-4">Y line-clamp-3our Dreams, Your Wealth: Partnering in Prosperity, Delivering Financial Excellence.</article>
                             </div>
                             
                         </a>
@@ -312,7 +301,7 @@
                             
                             <div class="teamDetail">
                                 <div class="teamSubtitle"  style="font-family: 'Battambang', cursive;">PLANNIG & STRATEGY</div>
-                                <article class="aboutTeam">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio reiciendis quas et asperiores quasi odio ut autem eos hic impedit.</article>
+                                <article class="aboutTeam line-clamp-4">L line-clamp-3orem ipsum dolor sit amet, consectetur adipisicing elit. Optio reiciendis quas et asperiores quasi odio ut autem eos hic impedit.</article>
                             </div>
                             
                         </a>
@@ -327,7 +316,7 @@
                             
                             <div class="teamDetail">
                                 <div class="teamSubtitle"  style="font-family: 'Battambang', cursive;">HR & ADMIN</div>
-                                <article class="aboutTeam">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio reiciendis quas et asperiores quasi odio ut autem eos hic impedit.</article>
+                                <article class="aboutTeam line-clamp-4">L line-clamp-3orem ipsum dolor sit amet, consectetur adipisicing elit. Optio reiciendis quas et asperiores quasi odio ut autem eos hic impedit.</article>
                             </div>
                             
                         </a>
@@ -407,9 +396,9 @@
         </main>
 
         <!-- to top button -->
-        <a href="#" class="to_top">
+        <!-- <a href="#" class="to_top">
             <i class='bx bx-chevrons-up'></i>
-        </a>
+        </a> -->
 
     <script>
 
@@ -433,15 +422,15 @@
         }
         setInterval(function(){ slideNext()},5000);
         
-        // top up btn
-        const toTop = document.querySelector('.to_top');
-        window.addEventListener("scroll",()=>{
-            if(window.pageYOffset >100){
-                toTop.classList.add("active");
-            }else{
-                toTop.classList.remove("active");
-            }
-        })
+        // // top up btn
+        // const toTop = document.querySelector('.to_top');
+        // window.addEventListener("scroll",()=>{
+        //     if(window.pageYOffset >100){
+        //         toTop.classList.add("active");
+        //     }else{
+        //         toTop.classList.remove("active");
+        //     }
+        // })
 
         
     </script>

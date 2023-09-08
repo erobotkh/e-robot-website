@@ -1,13 +1,51 @@
+
+<!-- header top -->
+<div class="headerTop w-full  bg-red-700 flex items-center justify-between lg:px-5 md:px-2 lg:py-1 md:py-1 sm:py-3 ">
+  <div class="headerTop_left">
+    <div class="lg:flex md:flex items-center font-bold text-[#FFE17B] sm:flex-cols ">
+    
+      <div class="title text-sm  pr-1 lg:block md:block hidden"> <i class='bx bx-time-five '></i>OPERATION HOURS: </div>
+      <div class="title text-[15px]  pr-1 block lg:hidden md:hidden"> <i class='bx bx-time-five '>8:00-17:00 (Daily)</i></div>
+      <div class=" time text-sm  text-white lg:block md:block hidden"> 8:00 - 17:00 (Daily)</div>
+      
+    </div>
+  </div>
+  <div class="headerTop_right lg:w-[25%] md:w-[35%] h-full flex items-center justify-between text-white font-semibold">
+    <a href="/login" class="login flex items-center hover:bg-red-400 p-2 rounded hover:text-black">
+      <i class='bx bx-log-in  text-[20px]'></i>
+      <div  class="lg:block md:block hidden " >Login</div>
+
+
+    </a>
+    <a href="/register" class="register flex items-center hover:bg-red-400 p-2 rounded hover:text-black">
+      <i class='bx bx-user-circle text-[20px]'></i>
+      <div class="lg:block md:block hidden " >Register</div>
+    </a>
+
+    <select class="dropdown text-black p-2 rounded lg:px-4 md:px-2 cursor-pointer bg-red-500 hover:bg-red-400 hover:text-white lg:block md:block hidden">
+      <option value="English">English</option>
+      <option value="Khmer">Khmer</option>
+    </select>
+    <select class="dropdown text-black rounded text-[15px] cursor-pointer bg-red-500 hover:bg-red-400 hover:text-white block lg:hidden md:hidden">
+      <option value="English">English</option>
+      <option value="Khmer">Khmer</option>
+    </select>
+    
+  </div>
+</div>
+
+<!-- header content -->
 <!-- component -->
 <nav 
-class=" z-10  relative sticky top-0" 
-x-data="{open:false,menu:false, lokasi:false}">
-  <div class="relative bg-white shadow-xl ">
-    <div class="max-w-7xl mx-auto px-2 sm:px-4 lg:px-8">
+  class=" z-10  relative sticky top-0" 
+  x-data="{open:false,menu:false, lokasi:false}">                         
+  <div class="relative bg-white px-5" style="box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px; ">
+    
+    <div class="max-w-7xl mx-auto">
       <div class="relative flex items-center justify-end h-20">
-        <div class="flex items-center justify-end  px-2 lg:px-0">
+        <div class="flex items-center justify-end  ">
           <a class="flex-shrink-0" href="/home">
-            <img class="block lg:hidden h-12 w-16 " src="{{asset('./images/logo_erobot-removebg.png')}}" alt="Logo">
+            <img class="block lg:hidden h-14 w-auto " src="{{asset('./images/logo_erobot-removebg.png')}}" alt="Logo">
             <img class="hidden lg:block h-16 w-auto " src="{{asset('./images/logo_erobot-removebg.png')}}" alt="Logo">
           </a>
           <div class="hidden lg:block">
@@ -58,7 +96,7 @@ x-data="{open:false,menu:false, lokasi:false}">
             </div>
           </div>
         </div>
-        <div class="flex-1 flex justify-center px-2 lg:ml-6 lg:justify-end gap-3 h-full">
+        <div class="flex-1 flex justify-center lg:ml-6 lg:justify-end gap-3 h-full">
           <!-- <div class="max-w-lg w-full lg:max-w-xs">
             <label for="search" class="sr-only">Search </label>
             <form methode="get" action="#" class="relative z-50">
@@ -71,15 +109,15 @@ x-data="{open:false,menu:false, lokasi:false}">
             </form>
           </div> -->
         
-          <button class="px-4 py-2  bg-red-600 text-white font-bold hidden lg:inline-block"> <a href="/donate"  style="font-family: 'Battambang', cursive;">Donate us</a></button>
-          <button class="px-4 py-2  text-red-600 font-bold hidden lg:inline-block "> 
+          <button class="bg-red-500 text-white font-bold hidden lg:inline-block hover:bg-red-400 hover:scale-[0.98] hover:rounded hover:transition-[1s] transition-[1s]"> <a href="/donate" class="hover:text-white text-black px-4  flex items-center flex-col"  style="font-family: 'Battambang', cursive; "><img class="w-[50px] h-[40px] object-contain mix-blend-darken" src="/images/donate_logo.jpg" alt="">Donate us</a></button>
+          <!-- <button class="px-4 py-2  text-red-600 font-bold hidden lg:inline-block "> 
             <a href="/login" class="flex flex-col justify-center items-center">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z" />
               </svg>
               <span  style="font-family: 'Battambang', cursive;">Account</span>
             </a>
-          </button>
+          </button> -->
 
         </div>
         <div class="flex lg:hidden">
@@ -131,7 +169,7 @@ x-data="{open:false,menu:false, lokasi:false}">
 					</ul>
 				</li>
         <li>
-          <a href="/login" class="mt-1 block px-3 py-2 rounded-md text-red-600 font-semibold hover:bg-black f hover:text-white focus:outline-none focus:text-white focus:bg-black transition duration-150 ease-in-out"  style="font-family: 'Battambang', cursive;">Login </a>
+          <a href="/donate" class="mt-1 block px-3 py-2 rounded-md text-red-600 font-semibold hover:bg-black f hover:text-white focus:outline-none focus:text-white focus:bg-black transition duration-150 ease-in-out"  style="font-family: 'Battambang', cursive;">Donte Us</a>
         </li>
       </ul>
     </div>
