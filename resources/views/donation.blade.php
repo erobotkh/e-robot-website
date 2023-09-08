@@ -46,15 +46,15 @@
         However, we can't achieve this alone. We need your support to continue this vision.
     </div>
     <div class="w-full sm:flex ">
-        <div class="grid grid-cols-2 m-3 sm:w-1/2">
+        <div class="grid grid-cols-2 m-3 sm:w-1/2 h-full">
             <div class="bg-[#EBE0DD] p-3 text-center">
                 <img src="./images/QRDollar.jpg" alt="" class="rounded-2xl">
                 <div class="mt-2 font-bold sm:text-2xl text-xl">
                     <div>003231640</div>
                     <div>Sreymuch UNG</div>
                 </div>
-                <a href=""><button class="px-7 py-2 mt-1 ml-3 rounded-md bg-[#EB0100] font-bold text-white mt-3">Donate
-                        Now</button></a>
+                <!-- <a href=""><button class="px-7 py-2 mt-1 ml-3 rounded-md bg-[#EB0100] font-bold text-white mt-3">Donate
+                        Now</button></a> -->
             </div>
             <div class="bg-[#EBE0DD] p-3 text-center">
                 <img src="./images/QRDollar.jpg" alt="" class="rounded-2xl">
@@ -63,75 +63,86 @@
                     <div>Sreymuch UNG</div>
                 </div>
 
-                <a href=""><button class=" px-7 py-2 mt-1 ml-3 rounded-md bg-[#EB0100] font-bold text-white
+                <!-- <a href=""><button class=" px-7 py-2 mt-1 ml-3 rounded-md bg-[#EB0100] font-bold text-white
                     mt-3">Donate
-                        Now</button></a>
+                        Now</button></a> -->
             </div>
         </div>
-        <div class="sm:w-1/2 w-full">
-            <h1 class="text-2xl font-bold text-center py-3">People who donated<h1>
-                    <div class=" grid place-content-center py-3 h-96 overflow-y-scroll w-full">
-                        <table class="sm:w-[500px] w-[350px] mt-5 text-center sm:text-xl">
-                            <hr>
-                            <tr class="rounded-sm shadow-md shadow-[#B2B9B7] bg-[#fff]">
+        <div class="  sm:w-1/2 w-full h-full flex flex-col items-center">
+            <h1 class="text-2xl h-[10%] font-bold  py-3">People who donated<h1>
+                    <div class=" lg:h-[450px] md:h-[320px] sm:h-[400px] bg-red-400 overflow-y-scroll w-full">
+                        <table class="lg:w-[500px] md:w-auto h-full text-center sm:text-xl" style="box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;">
+                            <tr class="bg-[#ffff] " >
                                 <th class="p-2">Name</th>
-                                <th class="p-2">Amount of donation</th>
-                                <th class="p-2">Date of donation</th>
+                                <th class="p-2">Amount</th>
+                                <th class="p-2">Date</th>
                             </tr>
-                            <hr>
-                            <tr class="rounded-sm shadow-md shadow-[#B2B9B7] bg-[#fff]">
+                            <tr class="bg-[#fff]">
                                 <td class="p-2">Kimlang</td>
                                 <td class="p-2">20 $</td>
                                 <td class="p-2">17/03/2023</td>
                             </tr>
-                            <hr>
-                            <tr class="rounded-sm shadow-md shadow-[#B2B9B7] bg-[#fff]">
+                            <tr class="bg-[#fff]">
                                 <td class="p-2">Kimlong</td>
                                 <td class="p-2">20 $</td>
                                 <td class="p-2">17/03/2023</td>
                             </tr>
-                            <hr>
-                            <tr class="rounded-sm shadow-md shadow-[#B2B9B7] bg-[#fff]">
+                            <tr class="bg-[#fff]">
                                 <td class="p-2">Farrizart</td>
                                 <td class="p-2">20 $</td>
                                 <td class="p-2">17/03/2023</td>
                             </tr>
-                            <hr>
-                            <tr class="rounded-sm shadow-md shadow-[#B2B9B7] bg-[#fff]">
+                            <tr class="bg-[#fff]">
                                 <td class="p-2">TongMeng</td>
                                 <td class="p-2">20 $</td>
                                 <td class="p-2">17/03/2023</td>
                             </tr>
-                            <hr>
-                            <tr class="rounded-sm shadow-md shadow-[#B2B9B7] bg-[#fff]">
+                            <tr class="bg-[#fff]">
                                 <td class="p-2">Farrizart</td>
                                 <td class="p-2">20 $</td>
                                 <td class="p-2">17/03/2023</td>
                             </tr>
-                            <hr>
-                            <tr class="rounded-sm shadow-md shadow-[#B2B9B7] bg-[#fff]">
+                            <tr class="bg-[#fff]">
                                 <td class="p-2">TongMeng</td>
                                 <td class="p-2">20 $</td>
                                 <td class="p-2">17/03/2023</td>
                             </tr>
-                            <hr>
-                            <tr class="rounded-sm shadow-md shadow-[#B2B9B7] bg-[#fff]">
+                            <tr class="bg-[#fff]">
                                 <td class="p-2">Kimlang</td>
                                 <td class="p-2">20 $</td>
                                 <td class="p-2">17/03/2023</td>
                             </tr>
-                            <hr>
-                            <tr class="rounded-sm shadow-md shadow-[#B2B9B7] bg-[#fff]">
+                            <tr class="bg-[#fff]">
                                 <td class="p-2">Kimlong</td>
                                 <td class="p-2">20 $</td>
                                 <td class="p-2">17/03/2023</td>
                             </tr>
-                            <hr>
-                            <tr class="rounded-sm shadow-md shadow-[#B2B9B7] bg-[#fff]">
+                            <tr class="bg-[#fff]">
                                 <td class="p-2">Farrizart</td>
                                 <td class="p-2">20 $</td>
                                 <td class="p-2">17/03/2023</td>
                             </tr>
+                            <tr class="bg-[#fff]">
+                                <td class="p-2">TongMeng</td>
+                                <td class="p-2">20 $</td>
+                                <td class="p-2">17/03/2023</td>
+                            </tr>
+                            <tr class="bg-[#fff]">
+                                <td class="p-2">Kimlang</td>
+                                <td class="p-2">20 $</td>
+                                <td class="p-2">17/03/2023</td>
+                            </tr>
+                            <tr class="bg-[#fff]">
+                                <td class="p-2">Kimlong</td>
+                                <td class="p-2">20 $</td>
+                                <td class="p-2">17/03/2023</td>
+                            </tr>
+                            <tr class="bg-[#fff]">
+                                <td class="p-2">Farrizart</td>
+                                <td class="p-2">20 $</td>
+                                <td class="p-2">17/03/2023</td>
+                            </tr>
+                            
                         </table>
 
 

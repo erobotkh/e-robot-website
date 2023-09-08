@@ -27,6 +27,7 @@
     <link rel="icon" href="/images/logo_erobot-removebg.png">
     
     <title>E-robot</title>
+    <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
 </head>
 <body>
     @include('./partials/_nav-bar')
@@ -34,5 +35,26 @@
     {{$slot}}
    </main>
    @include('./partials/_footer')
+
+   <!-- to top button -->
+    <a href="#" class="to_top">
+        <i class='bx bx-chevrons-up'></i>
+    </a>
+
+   <script>
+        // top up btn
+        const toTop = document.querySelector('.to_top');
+        window.addEventListener("scroll",()=>{
+            if(window.pageYOffset >100){
+                toTop.classList.add("active");
+            }else{
+                toTop.classList.remove("active");
+            }
+        })
+
+        
+        
+        
+   </script>
 </body>
 </html>

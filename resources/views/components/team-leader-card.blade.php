@@ -1,6 +1,6 @@
 @props(['name', 'title', 'photo', 'facebook', 'telegram' , 'linkin'])
 
-<div class="w-full bg-white rounded-lg p-12 flex flex-col justify-center items-center shadow-xl border shadow-lg hover:shadow-xl cursor-pointer transition-all">
+<div class="w-full bg-white rounded-lg p-5 flex flex-col justify-center items-center shadow-xl border shadow-lg hover:shadow-xl cursor-pointer transition-all">
     <div class="mb-8">
         <img class="object-center object-cover rounded-full h-36 w-36" src="{{asset($photo)}}" alt="photo">
     </div>

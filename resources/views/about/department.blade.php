@@ -1,11 +1,11 @@
 <x-layout>
     <div class="p-10">
         <x-about-title title="Departments of E-robot"/>
-        <div class="w-full grid gap-[20px] md:grid-cols-2 sm:grid-cols-1   ">
+        <div class="w-full grid gap-[30px] md:grid-cols-2 sm:grid-cols-1   ">
             <x-department-card department="Innovation" image="images/inovation_cover.webp" description="We drive creativity and change by exploring new ideas, technologies, and approaches. We aim to continuously improve and transform our organization through inventive solutions that enhance our products, processes, and services."/>
             <x-department-card department="Social Engagement" image="images/social_engagement_cover.png" description="We build meaningful connections with our community and stakeholders. We strive to foster positive relationships, drive social impact, and amplify our organization's presence through purposeful engagement, communication, and outreach."/>
             <x-department-card department="Finance" image="images/finance.jpg" description="We ensure financial stability, transparency, and strategic resource allocation, driving our organization's growth and success while safeguarding its fiscal health."/>
-            <x-department-card department="Planning & Strategy" image="images/plannig_strategy_cover.jpg" description="We collaborate cohesively, leverage each member's strengths, and relentlessly pursue excellence in our collective efforts to achieve our shared goals. Together, we aim to exceed expectations, solve challenges, and drive success while fostering a supportive and inclusive team environment."/>
+            <x-department-card department="Planning & Strategy" image="images/plannig_strategy_cover.jpg" description="We collaborate cohesively, relentlessly pursue excellence in our collective efforts to achieve our shared goals. Together, we aim to exceed expectations, solve challenges, and drive success while fostering a supportive and inclusive team environment."/>
             <x-department-card department="HR & Admin" image="images/hr_admin_cover.jpg" description="We foster a supportive, inclusive, and efficient work environment. We aim to attract, develop, and retain top talent, while also providing seamless administrative support to enable our organization to thrive."/>
         </div>
 
