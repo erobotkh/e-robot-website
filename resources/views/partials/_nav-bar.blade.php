@@ -51,6 +51,7 @@
           <div class="hidden lg:block">
             <div class="flex" >
                 <a href="/home" class="uppercase ml-4 px-3 py-2 rounded-md  leading-5 text-red-600 font-bold hover:bg-black hover:text-white transition duration-150 ease-in-out cursor-pointer focus:outline-none focus:text-white focus:bg-black "  style="font-family: 'Battambang', cursive;"> Home </a>
+                <a href="/resource" class="uppercase ml-4 px-3 py-2 rounded-md  leading-5 text-red-600 font-bold hover:bg-black hover:text-white transition duration-150 ease-in-out cursor-pointer focus:outline-none focus:text-white focus:bg-black "  style="font-family: 'Battambang', cursive;"> Resources </a>
                 <a href="/list_content" class="uppercase ml-4 px-3 py-2 rounded-md  leading-5 text-red-600 font-bold hover:bg-black hover:text-white transition duration-150 ease-in-out cursor-pointer focus:outline-none focus:text-white focus:bg-black "  style="font-family: 'Battambang', cursive;"> Activity </a>
 
                 <div class="group relative ml-4  rounded-md  leading-5 text-red-600 font-bold transition duration-150 ease-in-out cursor-pointer focus:outline-none focus:text-white focus:bg-black ">
@@ -139,6 +140,9 @@
         </li>
         <li>
           <a href="/list_content" class="mt-1 block px-3 py-2 rounded-md text-red-600  font-semibold hover:bg-black f hover:text-white focus:outline-none focus:text-white focus:bg-black transition duration-150 ease-in-out"  style="font-family: 'Battambang', cursive;">Activity </a>
+        </li>
+        <li>
+          <a href="/resource" class="mt-1 block px-3 py-2 rounded-md text-red-600  font-semibold hover:bg-black f hover:text-white focus:outline-none focus:text-white focus:bg-black transition duration-150 ease-in-out"  style="font-family: 'Battambang', cursive;">Resource </a>
         </li>
         <li>
 					<button type="button" class="flex items-center w-full font-bold py-2 pr-2 text-base text-red-600 hover:text-white transition duration-75 rounded-lg group hover:bg-black" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
