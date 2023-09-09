@@ -28,21 +28,21 @@
 
 
           <li class="nav-item">
-              <a class="nav-link collapsed" href="{{ url('member') }}">
+              <a class="nav-link collapsed" href="{{ route('member.index') }}">
                   <i class="bi bi-person-square"></i>
                   <span>Member</span>
               </a>
           </li>
 
           <li class="nav-item">
-              <a class="nav-link collapsed" href="{{ url('position') }}">
+              <a class="nav-link collapsed" href="{{ route('position.index') }}">
                   <i class="bi bi-collection-fill"></i>
                   <span>Position</span>
               </a>
           </li>
 
           <li class="nav-item">
-              <a class="nav-link collapsed" href="{{ url('team') }}">
+              <a class="nav-link collapsed" href="{{ route('team.index') }}">
                   <i class="bi bi-people-fill"></i>
                   <span>Team</span>
               </a>

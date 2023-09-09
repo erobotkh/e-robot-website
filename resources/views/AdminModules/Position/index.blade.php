@@ -12,15 +12,29 @@
             <tr align="center" class="fw-bold">
                 <td>ID</td>
                 <td>Title</td>
+                <td>Action</td>
             </tr>
         </thead>
 
         <tbody>
-            @foreach ($position as $pos)
+            @foreach ($pos as $item)
                 <tr align="center" class="fw-bold">
+                    <td>{{ $item->id }}</td>
+                    <td>{{ $item->title }}</td>
+                    <td class="d-flex gap-2 justify-content-center">
+                        <div>
+                            <a href="{{ route('position.edit', $item->id) }}" class="btn btn-success"> Edit </a>
+                        </div>
+                        <div>
+                            <form action="{{ route('position.destroy', $item->id) }}" method="post">
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit" class="btn btn-danger"> Delete </button>
+                            </form>
+                        </div>
 
-                    <td>{{ $pos->id }}</td>
-                    <td>{{ $pos->title }}</td>
+                    </td>
+
 
                 </tr>
             @endforeach
@@ -28,8 +42,8 @@
 
         </tbody>
     </table>
-
-
-
+    {{-- @include('AdminModules.Position.edit') --}}
     @include('AdminModules.Position.create')
+    @include('AdminModules.Position.delete')
+
 </main>

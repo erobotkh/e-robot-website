@@ -7,13 +7,18 @@
         </div>
     </div>
     <div class="offcanvas-body">
-        <form action="{{ route('position.store') }}" method="post" class="form-group mt-4">
+        <form action="{{ route('position.store') }}" method="POST" enctype="multipart/form-data"
+            class="form-group mt-4">
             @csrf
 
             <div class="row gap-4">
                 <div>
                     <label for=""> Position Name:</label>
                     <input type="text" name="title" class="form-control" placeholder="Title Name">
+                </div> <br>
+                <div>
+                    <label for=""> Bio:</label>
+                    <input type="text" name="bio" class="form-control" placeholder="Bio">
                 </div> <br>
             </div>
 

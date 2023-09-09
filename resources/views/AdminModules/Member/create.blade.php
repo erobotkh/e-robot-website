@@ -7,13 +7,17 @@
         </div>
     </div>
     <div class="offcanvas-body">
-        <form action="{{ route('member.store') }}" method="post" class="form-group mt-4">
+        <form action="{{ route('member.store') }}" method="POST" enctype="multipart/form-data" class="form-group mt-4">
             @csrf
 
             <div class="row gap-4">
                 <div>
-                    <label for=""> Full Name:</label>
-                    <input type="text" name="name" class="form-control" placeholder="Input Name">
+                    <label for=""> First Name:</label>
+                    <input type="text" name="first_name" class="form-control" placeholder="Input First Name">
+                </div>
+                <div>
+                    <label for=""> Last Name:</label>
+                    <input type="text" name="last_name" class="form-control" placeholder="Input Name">
                 </div>
                 <div>
                     <label for="">Bio: </label>
@@ -26,22 +30,32 @@
                 <div>
                     <label for="">Position:</label>
                     <select class="custom-select w-100 p-2" name="member_position_id">
+                        @php
+                            $team = DB::table('member_positions')->get();
+                        @endphp
+
+                        @foreach ($team as $teams)
+                            <option value="{{ $teams->id }}">{{ $teams->title }}</option>
+                        @endforeach
 
                     </select>
-                    {{-- <input type="text" name="member_position_id" class="form-control" placeholder="Input position"> --}}
-
                 </div>
                 <div>
                     <label for="">From Team:</label>
                     <select class="custom-select w-100 p-2" name="team_id">
+                        @php
+                            $team = DB::table('teams')->get();
+                        @endphp
+
+                        @foreach ($team as $teams)
+                            <option value="{{ $teams->id }}">{{ $teams->name }}</option>
+                        @endforeach
 
                     </select>
-
-                    {{-- <input type="text" name="team_id" class="form-control" placeholder="Input team"> <br><br> --}}
-                </div> <br><br>
+                </div> <br>
             </div>
 
-            <button type="submit" class="btn btn-primary"> Submit </button>
+            <button type="submit" class="btn btn-outline-success"> Add </button>
         </form>
     </div>
 </div>
