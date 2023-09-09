@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Http;
 use Validator;
+use Illuminate\Support\Str;
 
 class AuthController extends Controller
 {
@@ -48,17 +49,29 @@ class AuthController extends Controller
             'password' => 'required',
             'c_password' => 'required|same:password',
         ];
-        $input     = $request->only('name', 'email', 'phone', 'password', 'c_password');
+        $input     = $request->only('first_name', 'last_name', 'phone', 'password', 'c_password');
         $validator = Validator::make($input, $rules);
         if ($validator->fails()) {
             return $this->sendError("Resgister Fail.", $validator->messages());
         }
-        $name = $request->name;
-        $email    = $request->email;
-        $password = $request->password;
+        $first_name = $request->first_name;
+        $last_name = $request->last_name;
+        $password = Hash::make($request->password);
         $phone = $request->phone;
-        $user     = User::create(['name' => $name, 'email' => $email, 'phone' => $phone, 'password' => Hash::make($password)]);
-        return $this->sendResponse($user, "User register successfully");
+
+        $user_db = User::where('phone', $phone)->first();
+
+        if ($user_db) {
+            return $this->sendError("Phone already exit.", $validator->messages());
+        } else {
+            Cache::put('user_' . $phone, [
+                'first_name' => $first_name,
+                'last_name' => $last_name,
+                'password' => $password,
+                'phone' => $phone,
+            ]);
+            return $this->sendResponse(["first_name" => $first_name, "last_name" => $last_name, "phone" => $phone], "Successfully");
+        }
     }
 
     public function login(Request $request)
@@ -68,7 +81,7 @@ class AuthController extends Controller
             'password' => 'required'
         ]);
 
-        $user = User::where('email', $request['email'])->first();
+        $user = User::where('phone', $request->phone)->first();
         if (!isset($user)) {
             return $this->sendError('User does not exist with this details');
         }
