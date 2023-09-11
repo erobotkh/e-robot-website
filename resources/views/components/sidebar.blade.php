@@ -50,6 +50,22 @@
 
 
           <li class="nav-item">
+              <a class="nav-link collapsed" href="{{ url('donation') }}">
+                  <i class="bi bi-person-check-fill"></i>
+                  <span>Donation</span>
+              </a>
+          </li>
+
+
+          <li class="nav-item">
+              <a class="nav-link collapsed" href="{{ url('reference') }}">
+                  <i class="bi bi-person-check-fill"></i>
+                  <span>Resource</span>
+              </a>
+          </li>
+
+
+          <li class="nav-item">
               <a class="nav-link collapsed" href="{{ url('user') }}">
                   <i class="bi bi-person-check-fill"></i>
                   <span>User</span>
