@@ -13,8 +13,8 @@ class TeamController extends Controller
      */
     public function index()
     {
-        $data = DB::table('teams')->orderBy('id', 'desc')->get();
-        return view('AdminModules.Team.index', compact('data'));
+        $team = DB::table('teams')->orderBy('id', 'desc')->get();
+        return view('AdminModules.Team.index', compact('team'));
     }
 
     /**
@@ -35,8 +35,8 @@ class TeamController extends Controller
             'bio' => 'required'
         ]);
 
-        $data = Team::create($request->post());
-        return redirect()->route('team.index', compact('data'));
+        Team::create($request->post());
+        return redirect()->route('team.index');
     }
 
     /**
@@ -52,7 +52,8 @@ class TeamController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $team = DB::table('teams')->find($id);
+        return view('AdminModules.Team.edit', compact('team'));
     }
 
     /**
@@ -60,7 +61,8 @@ class TeamController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        Team::find($id)->update($request->all());
+        return redirect()->route('team.index');
     }
 
     /**
@@ -68,6 +70,7 @@ class TeamController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $data = DB::table('teams')->delete($id);
+        return redirect()->route('team.index', compact('data'));
     }
 }

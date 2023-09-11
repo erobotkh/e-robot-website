@@ -13,8 +13,8 @@ class PositionController extends Controller
      */
     public function index()
     {
-        $position = DB::table('member_positions')->orderBy('id', 'desc')->get();
-        return view('AdminModules.Position.index', compact('position'));
+        $pos = DB::table('member_positions')->orderBy('id', 'desc')->get();
+        return view('AdminModules.Position.index', compact('pos'));
     }
 
     /**
@@ -34,8 +34,8 @@ class PositionController extends Controller
             'title' => 'required',
         ]);
 
-        $position = MemberPosition::create($request->post());
-        return redirect()->route('position.index', compact('position'));
+        MemberPosition::create($request->post());
+        return redirect()->route('position.index');
     }
 
     /**
@@ -49,9 +49,10 @@ class PositionController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit($id)
     {
-        //
+        $pos = DB::table('member_positions')->find($id);
+        return view('AdminModules.Position.edit', compact('pos'));
     }
 
     /**
@@ -59,14 +60,21 @@ class PositionController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        MemberPosition::find($id)->update($request->all());
+        return redirect()->route('position.index');
     }
 
+    public function delete($id)
+    {
+        $pos = DB::table('positions')->find($id);
+        return view('AdminModules.Position.delete', compact('pos'));
+    }
     /**
      * Remove the specified resource from storage.
      */
     public function destroy(string $id)
     {
-        //
+        DB::table('member_positions')->delete($id);
+        return redirect()->route('position.index');
     }
 }

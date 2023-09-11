@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\Api\TeamController;
+use App\Http\Controllers\TeamController;
 use App\Http\Controllers\MemberController;
 use App\Http\Controllers\PositionController;
 use Illuminate\Support\Facades\Route;
@@ -41,7 +41,7 @@ Route::get('/login', function () {
 Route::get('/register', function () {
     return view('user.register');
 });
-Route::get('/donate', function(){
+Route::get('/donate', function () {
     return view('donation');
 });
 
@@ -66,21 +66,17 @@ Route::get('/report', function () {
 Route::resource('member', MemberController::class);
 Route::resource('position', PositionController::class);
 Route::resource('team', TeamController::class);
+Route::get('/delete', [PositionController::class], 'delete');
 
-
+Route::get('/delete', function () {
+    return view('AdminModules.Member.delete');
+});
 
 
 Route::get('/user', function () {
     return view('AdminModules.User.index');
 });
 
-Route::get('/team', function () {
-    return view('AdminModules.Team.index');
-});
-
-Route::get('/position', function () {
-    return view('AdminModules.Position.index');
-});
 
 
 Route::get('/users-profile', function () {
@@ -112,9 +108,9 @@ Route::get('about/team-leader', function () {
 });
 Route::get('about/team-member', function () {
     return view('about.team-member');
-});Route::get('about/department', function () {
+});
+Route::get('about/department', function () {
     return view('about.department');
-
 });
 
 

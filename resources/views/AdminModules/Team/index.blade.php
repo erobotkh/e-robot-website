@@ -13,22 +13,37 @@
                 <td>ID</td>
                 <td>Team</td>
                 <td>Bio</td>
+                <td>Action</td>
             </tr>
         </thead>
 
-        {{-- <tbody>
-            @foreach ($data as $teams)
+        <tbody>
+            @foreach ($team as $item)
                 <tr align="center" class="fw-bold">
 
-                    <td>{{ $teams->id }}</td>
-                    <td>{{ $teams->team }}</td>
-                    <td>{{ $teams->bio }}</td>
+                    <td>{{ $item->id }}</td>
+                    <td>{{ $item->name }}</td>
+                    <td>{{ $item->bio }}</td>
+                    <td class="d-flex gap-2 justify-content-center">
+                        <div>
+                            <a href="{{ route('team.edit', $item->id) }}" class="btn btn-success"> Edit </a>
+                        </div>
+                        <div>
+                            <form action="{{ route('team.destroy', $item->id) }}" method="post">
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit" class="btn btn-danger"> Delete </button>
+                            </form>
+                        </div>
+
+                    </td>
+
 
                 </tr>
             @endforeach
 
 
-        </tbody> --}}
+        </tbody>
     </table>
 
 

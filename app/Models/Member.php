@@ -10,8 +10,8 @@ use Illuminate\Notifications\Notifiable;
 
 class Member extends Model
 {
-    use HasFactory,Notifiable;
-    protected $fillable=[
+    use HasFactory, Notifiable;
+    protected $fillable = [
         'first_name',
         'last_name',
         'bio',
@@ -21,10 +21,12 @@ class Member extends Model
     ];
     protected $appends = ['profile_url'];
 
-    public function getProfileUrlAttribute() {
-        return env('DO_URL').$this->profile;
+    public function getProfileUrlAttribute()
+    {
+        return env('DO_URL') . $this->profile;
     }
-    public function member_position():HasOne{
+    public function member_position(): HasOne
+    {
         return $this->hasOne(MemberPosition::class);
     }
     public function socails(): HasMany
