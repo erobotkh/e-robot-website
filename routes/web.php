@@ -77,6 +77,15 @@ Route::get('/user', function () {
     return view('AdminModules.User.index');
 });
 
+Route::get('/reference', function () {
+    return view('AdminModules.Report.index');
+});
+
+
+Route::get('/donation', function () {
+    return view('AdminModules.Report.index');
+});
+
 
 
 Route::get('/users-profile', function () {
