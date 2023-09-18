@@ -7,7 +7,7 @@
         </div>
     </div>
     <div class="offcanvas-body">
-        <form action="{{ route('team.store') }}" method="post" class="form-group mt-4">
+        <form action="{{ route('team.store') }}" method="post" enctype="multipart/form-data" class="form-group mt-4">
             @csrf
 
             <div class="row gap-4">

@@ -1,4 +1,4 @@
-<div class="offcanvas w-25 offcanvas-end" tabindex="-1" id="deletePosition-{{ $item->id }}"
+<div class="offcanvas w-25 offcanvas-end" tabindex="-1" id="deletePosition-{{ $pos->id }}"
     aria-labelledby="deletePositionLabel">
     <div class="offcanvas-header">
         <h3 class="offcanvas-title fw-bold" id="deletePositionLabel">Delete Position</h3>
@@ -8,7 +8,7 @@
         </div>
     </div>
     <div class="offcanvas-body">
-        <form action="{{ route('position.destroy', $item->id) }}" method="POST" enctype="multipart/form-data"
+        <form action="{{ route('position.destroy', $pos->id) }}" method="POST" enctype="multipart/form-data"
             class="form-group mt-4">
             @csrf
             @method('DELETE')
@@ -16,11 +16,11 @@
             <div class="row gap-4">
                 <div>
                     <label for=""> ID:</label>
-                    <input type="text" class="form-control" value="{{ $item->id }}" readonly>
+                    <input type="text" class="form-control" value="{{ $pos->id }}" readonly>
                 </div>
                 <div>
                     <label for=""> Title:</label>
-                    <input type="text" name="title" class="form-control" value="{{ $item->title }}">
+                    <input type="text" name="title" class="form-control" value="{{ $pos->title }}">
                 </div>
             </div><br><br>
 

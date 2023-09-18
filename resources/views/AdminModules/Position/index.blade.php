@@ -44,6 +44,6 @@
     </table>
     {{-- @include('AdminModules.Position.edit') --}}
     @include('AdminModules.Position.create')
-    @include('AdminModules.Position.delete')
+    {{-- @include('AdminModules.Position.delete') --}}
 
 </main>
