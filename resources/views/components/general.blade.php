@@ -46,6 +46,9 @@
     <!-- Template Main JS File -->
     <script src="assets/js/main.js"></script>
 
+    <!-- tailwind css -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
 
 </body>
 

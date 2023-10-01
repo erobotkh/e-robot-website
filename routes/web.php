@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\ResourceController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -79,6 +79,12 @@ Route::get('/pages-login', function () {
     return view('NiceAdmin.pages-login');
 });
 
+Route::get('/resource',[ResourceController::class,'index'])->name('resource.index');
+Route::get('/resource/create',[ResourceController::class,'create'])->name('resource.create');
+Route::post('/resource', [ResourceController::class, 'store'])->name('resource.store');
+Route::get('/resource/{resource}/edit', [ResourceController::class, 'edit'])->name('resource.edit');
+Route::put('/resource/{resource}', [ResourceController::class, 'update'])->name('resource.update');
+Route::delete('/resource/{resource}', [ResourceController::class,'destroy'])->name('resource.delete');
 
 //about us 
 Route::get('about/mission-vision', function () {
@@ -100,10 +106,8 @@ Route::get('about/team-member', function () {
 
 //resoure
 
-Route::get('/resource', function () {
-    return view('resource.index');
-});
 
 Route::get('/resource/show', function () {
     return view('resource.show');
 });
+
