@@ -14,6 +14,7 @@
         .like-button.active svg path {   
         fill: #B30F10;
         }
+       
 </style>
 <div class="p-5">
     <div class="w-full grid place-content-center">
@@ -22,13 +23,13 @@
                 <img src="./images/charity1.jpg" alt="" class="m-2">
                 <img src="./images/charity2.jpg" alt="" class="m-2">
             </div>
-            <div class="text-[#EB0100] font-xl p-2 text-center text-2xl font-bold sm:text-3xl">Our purpose
+            <div class="text-[#EB0100] font-xl p-2 text-center text-2xl font-bold">OUR PURPOSE
             </div>
         </div>
 
     </div>
 
-    <div class="text-justify sm:text-xl m-3">
+    <div class="text-justify text-lg font-semibold m-3">
         Welcome to "E-Robot"! We are thrilled to have you here as we embark on a mission to
         make a transformative impact on the lives of young learners in rural Cambodia. Our vision is simple yet
         profound: to bridge the educational gap between urban and rural areas by bringing the wonders of Science,
@@ -45,16 +46,16 @@
 
         However, we can't achieve this alone. We need your support to continue this vision.
     </div>
-    <div class="w-full sm:flex ">
-        <div class="grid grid-cols-2 m-3 sm:w-1/2 h-full">
+    <div class="grid lg:grid-cols-2 md:grid-cols-3 sm:grid-cols-1 gap:0 md:gap-5 ">
+        <!-- <div class="grid grid-cols-2 m-3 sm:w-1/2 h-full">
             <div class="bg-[#EBE0DD] p-3 text-center">
                 <img src="./images/QRDollar.jpg" alt="" class="rounded-2xl">
                 <div class="mt-2 font-bold sm:text-2xl text-xl">
                     <div>003231640</div>
                     <div>Sreymuch UNG</div>
                 </div>
-                <!-- <a href=""><button class="px-7 py-2 mt-1 ml-3 rounded-md bg-[#EB0100] font-bold text-white mt-3">Donate
-                        Now</button></a> -->
+                // <a href=""><button class="px-7 py-2 mt-1 ml-3 rounded-md bg-[#EB0100] font-bold text-white mt-3">Donate
+                        Now</button></a>
             </div>
             <div class="bg-[#EBE0DD] p-3 text-center">
                 <img src="./images/QRDollar.jpg" alt="" class="rounded-2xl">
@@ -63,15 +64,60 @@
                     <div>Sreymuch UNG</div>
                 </div>
 
-                <!-- <a href=""><button class=" px-7 py-2 mt-1 ml-3 rounded-md bg-[#EB0100] font-bold text-white
+                // <a href=""><button class=" px-7 py-2 mt-1 ml-3 rounded-md bg-[#EB0100] font-bold text-white
                     mt-3">Donate
-                        Now</button></a> -->
+                        Now</button></a>
+            </div>
+        </div> -->
+
+        <div class="card w-full lg:col-span-1 sm:col-span-1 md:col-span-2">
+            <h1 class="text-center m-5 font-bold text-2xl text-red-700">DONATE US</h1>
+            <div class="dollar1 grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 rounded-lg hover:scale-[1.05] hover:transition-[3s] transition-[3s] relative" style="box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;">
+                <div class="qrCode p-2 pr-0 w-auto "><img class="rounded-lg w-[100%]" src="/images/QRDollar.jpg" alt=""></div>
+                <div class="">
+                    <div class="finanaceDetail font-semibold text-[#0d3d54] pt-3  sm:pl-3 gap-2 ">
+                        <div id="switch"class=" flex items-center justify-end absolute top-1 right-2 text-[13px]">
+                            <div id="" class="accDollar border border-1 px-2 cursor-pointer bg-red-200">US($)</div>
+                            <div id="" class=" accKhmer border border-1 px-2 cursor-pointer">KH(៛)</div>
+                        </div>
+                        <h1 class="text-center  font-bold text-[20px] pb-3 pt-5 recipient">Recipient Informations</h1>
+                        <div class="account_number text-[15px] ">Account type: <span class=" pl-2 text-[16px] font-bold"> Dollar( $ ) </span></div>
+                        <div class="account_number text-[15px]">Account number:<span class=" pl-2 text-[16px] font-bold"> 003231640 </span></div>
+                        <div class="account_name text-[15px]">Recipient name:<span class=" pl-2 text-[16px] font-bold"> Sreymuch UNG </span></div>
+                        <div class="position text-[15px]">Position: <span class=" pl-2 text-[16px] font-bold">Finance</span></div>
+                    </div>
+                    <div class="thanks h-[130px] flex items-center justify-evenly">
+                        <span class="text-red-600 font-semibold text-2xl">Thank You!</span>
+                        <span class="h-full"><img class="h-full" src="/images/photo_members/sticker-e-robot.png" alt=""></span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="reil grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 rounded-lg hover:scale-[1.05] hover:transition-[3s] transition-[3s] relative" style="box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;">
+                <div class="qrCode p-2 pr-0w-auto  "><img class="rounded-lg w-[100%]" src="/images/QRReil.jpg" alt=""></div>
+                <div class="">
+                    <div class="finanaceDetail font-semibold text-[#0d3d54] pt-3 pl-0 sm:pl-3  sm:px-5 gap-2 ">
+                        <div id="switch"class=" flex items-center justify-end absolute top-1 right-1 text-[13px]">
+                            <div id="" class="accDollar border border-1 px-2 cursor-pointer">US($)</div>
+                            <div id="" class=" accKhmer border border-1 px-2 cursor-pointer bg-red-200">KH(៛)</div>
+                        </div>
+                        <h1 class="text-center font-bold text-[20px] pb-3 pt-5 recipient">Recipient Informations</h1>
+                        <div class="account_number text-[15px] lg:pt-0 sm:pt-0 md:pt-5">Account type: <span class=" pl-2 text-[16px] font-bold"> Reil( ៛ ) </span></div>
+                        <div class="account_number text-[15px]">Account number:<span class=" pl-2 text-[16px] font-bold"> 003231640 </span></div>
+                        <div class="account_name text-[15px]">Recipient name:<span class=" pl-2 text-[16px] font-bold"> Sreymuch UNG </span></div>
+                        <div class="position text-[15px]">Position: <span class=" pl-2 text-[16px] font-bold">Finance</span></div>
+                    </div>
+                    <div class="thanks h-[130px] flex items-center justify-evenly ">
+                        <span class="text-red-600 font-semibold text-2xl">Thank You!</span>
+                        <span class="h-full"><img class="h-full" src="/images/photo_members/sticker-e-robot.png" alt=""></span>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="  sm:w-1/2 w-full h-full flex flex-col items-center">
-            <h1 class="text-2xl h-[10%] font-bold  py-3">People who donated<h1>
-                    <div class=" lg:h-[450px] md:h-[320px] sm:h-[400px] bg-red-400 overflow-y-scroll w-full">
-                        <table class="lg:w-[500px] md:w-auto h-full text-center sm:text-xl" style="box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;">
+        <div class=" w-full  flex flex-col items-center">
+            <h1 class="  mt-5 font-bold text-3xl text-red-700">Donater<h1>
+                    <div class="h-[65vh] flex justify-center  overflow-y-scroll w-full">
+                        <table class="lg:w-[500px] md:w-auto text-center  text-[15px]" style="box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;">
                             <tr class="bg-[#ffff] " >
                                 <th class="p-2">Name</th>
                                 <th class="p-2">Amount</th>
@@ -143,13 +189,30 @@
                                 <td class="p-2">17/03/2023</td>
                             </tr>
                             
+                            
                         </table>
 
 
                     </div>
         </div>
     </div>
+    <article class=" w-full text-center pt-[30px] pb-[100px] text-xl text-red-500"><em>" Every donation, big or small, is a step toward a better world."</em></article>
+
 </x-layout>
 
+<script>
+    $(document).ready(function(){
+        $('.reil').hide();
 
+        
+        $('.accKhmer').click(()=>{
+            $('.reil').show();
+            $('.dollar1').hide();
+        })
+        $('.accDollar').click(()=>{
+            $('.dollar1').show();
+            $('.reil').hide();
+        })
+    })
+</script>
 <!-- </html> -->

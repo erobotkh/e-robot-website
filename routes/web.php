@@ -1,8 +1,12 @@
 <?php
 
+use App\Http\Controllers\ActivityCmtSubController;
+use App\Http\Controllers\DetailContent;
 use App\Http\Controllers\TeamController;
 use App\Http\Controllers\MemberController;
 use App\Http\Controllers\PositionController;
+use App\Http\Controllers\ViewActivityController;
+use App\Models\PostContent;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -27,12 +31,8 @@ Route::get('/home', function () {
 Route::get('/post_content', function () {
     return view('post_content');
 });
-Route::get('/list_content', function () {
-    return view('list_content');
-});
-Route::get('/detail_content', function () {
-    return view('detail_content');
-});
+
+
 
 Route::get('/login', function () {
     return view('user.login');
@@ -105,7 +105,7 @@ Route::get('/pages-login', function () {
 });
 
 
-//about us 
+//about us
 Route::get('about/mission-vision', function () {
     return view('about.mission_vision');
 });
@@ -132,3 +132,22 @@ Route::get('/resource', function () {
 Route::get('/resource/show', function () {
     return view('resource.show');
 });
+
+// view post content
+Route::controller(ViewActivityController::class)->group(function(){
+    Route::get('/list_content','index')->name('listContent');
+
+});
+
+// view detail post content
+// Route::controller(ViewActivityController::class)->group(function(){
+//     Route::get('/detail_content/{id}','show')->name('detailContent');
+
+// });
+Route::controller(ViewActivityController::class)->group(function(){
+    Route::get('/detail_content/{id}/{category_id}','show')->name('detailContent');
+
+});
+
+
+

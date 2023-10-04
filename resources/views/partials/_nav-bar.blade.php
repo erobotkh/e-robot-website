@@ -1,6 +1,75 @@
+<style>
+    .menu:hover{
+        color: black;
+        border-bottom: 3px solid red ;
+    }
+    .vodiapicker{
+      display: none; 
+    }
+
+    #a img, .btn-select img{
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    #a li{
+      list-style: none;
+    }
+
+    #a li:hover{
+      transform: scale(0.9);
+      cursor: pointer;
+    }
+
+    /* #a li img{
+      margin: 5px;
+    } */
+
+   
+
+    /* item list */
+
+    .b{
+      display: none;
+      max-width: 350px;
+      box-shadow: 0 6px 12px rgba(0,0,0,.175);
+      border: 1px solid rgba(0,0,0,.15);
+      
+    }
+
+    .open{
+      display: show !important;
+    }
+
+    .btn-select{
+      /* width: 100%;
+      height: 100%; */
+      max-width: 350px;
+      border-radius: 50%;
+      background-color: #fff;
+      border: 1px solid #ccc;
+      margin-top: 10px;
+
+    
+    }
+    .btn-select li{
+      list-style: none; 
+    }
+    .btn-select:hover{
+      border: 1px solid transparent;  
+    }
+    .btn-select:focus{
+      outline:none;
+    }
+    
+
+
+</style>
 
 <!-- header top -->
-<div class="headerTop w-full  bg-red-700 flex items-center justify-between lg:px-5 md:px-2 lg:py-1 md:py-1 sm:py-3 ">
+<div class="headerTop w-full  bg-red-600 flex items-center justify-between lg:px-5 md:px-2 lg:py-1 md:py-1 sm:py-3 ">
   <div class="headerTop_left">
     <div class="lg:flex md:flex items-center font-bold text-[#FFE17B] sm:flex-cols ">
     
@@ -10,38 +79,51 @@
       
     </div>
   </div>
-  <div class="headerTop_right lg:w-[25%] md:w-[35%] h-full flex items-center justify-between text-white font-semibold">
-    <a href="/login" class="login flex items-center hover:bg-red-400 p-2 rounded hover:text-black">
+  <div class="headerTop_right lg:w-[250px] md:w-[28%] h-full flex items-center justify-between text-white font-semibold">
+    <a href="/login" class="login flex items-center  p-2 rounded hover:text-red-500">
       <i class='bx bx-log-in  text-[20px]'></i>
       <div  class="lg:block md:block hidden " >Login</div>
 
-
     </a>
-    <a href="/register" class="register flex items-center hover:bg-red-400 p-2 rounded hover:text-black">
+    <a href="/register" class="register flex items-center  p-2 rounded hover:text-red-500">
       <i class='bx bx-user-circle text-[20px]'></i>
       <div class="lg:block md:block hidden " >Register</div>
     </a>
 
-    <select class="dropdown text-black p-2 rounded lg:px-4 md:px-2 cursor-pointer bg-red-500 hover:bg-red-400 hover:text-white lg:block md:block hidden">
-      <option value="English">English</option>
-      <option value="Khmer">Khmer</option>
+    <!-- <select class="dropdown text-black p-2 rounded lg:px-4 md:px-2 cursor-pointer bg-red-500  hover:text-white lg:block md:block hidden">
+      <option value="English"><div class="w-[50px] h-[50px]" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Flag_of_the_United_Kingdom_%281-2%29.svg/1200px-Flag_of_the_United_Kingdom_%281-2%29.svg.png');" ></div></option>
+      <option value="Khmer"><div class="w-[50px] h-[50px]" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Flag_of_the_United_Kingdom_%281-2%29.svg/1200px-Flag_of_the_United_Kingdom_%281-2%29.svg.png');" ></div></option>
     </select>
-    <select class="dropdown text-black rounded text-[15px] cursor-pointer bg-red-500 hover:bg-red-400 hover:text-white block lg:hidden md:hidden">
-      <option value="English">English</option>
-      <option value="Khmer">Khmer</option>
+    <select class="dropdown text-black rounded text-[15px] cursor-pointer bg-red-500  hover:text-white block lg:hidden md:hidden">
+      <option value="English"><div class="w-[50px] h-[50px]" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Flag_of_the_United_Kingdom_%281-2%29.svg/1200px-Flag_of_the_United_Kingdom_%281-2%29.svg.png');" ></div></option>
+      <option value="Khmer"><div class="w-[50px] h-[50px]" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Flag_of_the_United_Kingdom_%281-2%29.svg/1200px-Flag_of_the_United_Kingdom_%281-2%29.svg.png');" ></div></option>
+    </select> -->
+
+    <select class="vodiapicker">
+            <option value="en" class="test" data-thumbnail="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Flag_of_the_United_Kingdom_%281-2%29.svg/1200px-Flag_of_the_United_Kingdom_%281-2%29.svg.png"></option>
+            <option value="kh" data-thumbnail="https://mfaic.gov.kh/images/uploads/EPY5PP9DX8H2/1.png"></option>
     </select>
+
+    <div class="lang-select top-3 right-2">
+      <button class="btn-select" value=""></button>
+      <div class="b absolute z-20">
+        <ul id="a" ></ul>
+      </div>
+    </div>
+    
     
   </div>
 </div>
 
+
 <!-- header content -->
 <!-- component -->
 <nav 
-  class=" z-10  relative sticky top-0" 
+  class=" z-10  relative sticky top-0 w-full" 
   x-data="{open:false,menu:false, lokasi:false}">                         
   <div class="relative bg-white px-5" style="box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px; ">
     
-    <div class="max-w-7xl mx-auto">
+    <div class="max-w-[1600px] mx-auto">
       <div class="relative flex items-center justify-end h-20">
         <div class="flex items-center justify-end  ">
           <a class="flex-shrink-0" href="/home">
@@ -50,11 +132,11 @@
           </a>
           <div class="hidden lg:block">
             <div class="flex" >
-                <a href="/home" class="uppercase ml-4 px-3 py-2 rounded-md  leading-5 text-red-600 font-bold hover:bg-black hover:text-white transition duration-150 ease-in-out cursor-pointer focus:outline-none focus:text-white focus:bg-black "  style="font-family: 'Battambang', cursive;"> Home </a>
-                <a href="/resource" class="uppercase ml-4 px-3 py-2 rounded-md  leading-5 text-red-600 font-bold hover:bg-black hover:text-white transition duration-150 ease-in-out cursor-pointer focus:outline-none focus:text-white focus:bg-black "  style="font-family: 'Battambang', cursive;"> Resources </a>
-                <a href="/list_content" class="uppercase ml-4 px-3 py-2 rounded-md  leading-5 text-red-600 font-bold hover:bg-black hover:text-white transition duration-150 ease-in-out cursor-pointer focus:outline-none focus:text-white focus:bg-black "  style="font-family: 'Battambang', cursive;"> Activity </a>
+                <a href="/home" class="menu border border-[3px] border-white  uppercase ml-4 px-3 py-2   leading-5 text-red-600 font-bold  hover:text-white transition duration-150 ease-in-out cursor-pointer focus:outline-none focus:text-white focus:bg-red-400 "  style="font-family: 'Battambang', cursive;"> Home </a>
+                <a href="/resource" class="menu border border-[3px] border-white  uppercase ml-4 px-3 py-2   leading-5 text-red-600 font-bold  hover:text-white transition duration-150 ease-in-out cursor-pointer focus:outline-none focus:text-white focus:bg-red-400 "  style="font-family: 'Battambang', cursive;"> Resources </a>
+                <a href="/list_content" class="menu border border-[3px] border-white  uppercase ml-4 px-3 py-2   leading-5 text-red-600 font-bold  hover:text-white transition duration-150 ease-in-out cursor-pointer focus:outline-none focus:text-white focus:bg-red-300 "  style="font-family: 'Battambang', cursive;"> Activity </a>
 
-                <div class="group relative ml-4  rounded-md  leading-5 text-red-600 font-bold transition duration-150 ease-in-out cursor-pointer focus:outline-none focus:text-white focus:bg-black ">
+                <div class="group relative ml-4 border border-[3px] border-white rounded-md  leading-5 text-red-600 font-bold transition duration-150 ease-in-out cursor-pointer focus:outline-none focus:text-white focus:bg-blue-500 ">
                     <button
                         class="outline-none focus:outline-none px-3 rounded-sm flex items-center"
                     >
@@ -80,7 +162,7 @@
                             <li class="rounded-sm px-3 py-2 text-xs font-semibold hover:bg-black hover:text-white">History</li>
                         </a>
                         <a href="/about/mission-vision">
-                            <li class="rounded-sm px-3 py-2 text-xs font-semibold hover:bg-black hover:text-white">Mission and Vision</li>
+                            <li class="rounded-sm px-3 py-2 text-xs font-semibold hover:bg-black hover:text-white">Mission, Vision and Value</li>
                         </a>
                         <a href="/about/team-leader">
                             <li class="rounded-sm px-3 py-2 text-xs font-semibold hover:bg-black hover:text-white">Team</li>
@@ -97,7 +179,7 @@
             </div>
           </div>
         </div>
-        <div class="flex-1 flex justify-center lg:ml-6 lg:justify-end gap-3 h-full">
+        <div class="flex-1 flex justify-center lg:ml-6 lg:justify-end gap-3 rounded">
           <!-- <div class="max-w-lg w-full lg:max-w-xs">
             <label for="search" class="sr-only">Search </label>
             <form methode="get" action="#" class="relative z-50">
@@ -110,7 +192,7 @@
             </form>
           </div> -->
         
-          <button class="bg-red-500 text-white font-bold hidden lg:inline-block hover:bg-red-400 hover:scale-[0.98] hover:rounded hover:transition-[1s] transition-[1s]"> <a href="/donate" class="hover:text-white text-black px-4  flex items-center flex-col"  style="font-family: 'Battambang', cursive; "><img class="w-[50px] h-[40px] object-contain mix-blend-darken" src="/images/donate_logo.jpg" alt="">Donate us</a></button>
+          <button class="bg-red-600 font-bold hidden lg:inline-block rounded-lg hover:bg-red-500 hover:scale-[0.98] hover:rounded-lg hover:transition-[1s] transition-[1s]" style="box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;"> <a href="/donate" class="hover:text-white text-white px-6 py-4 flex items-center flex-col rounded-lg"  style="font-family: 'Battambang', cursive; box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;">Donate</a></button>
           <!-- <button class="px-4 py-2  text-red-600 font-bold hidden lg:inline-block "> 
             <a href="/login" class="flex flex-col justify-center items-center">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
@@ -156,7 +238,7 @@
 						</li>
             <li>
 							<a href="/about/mission-vision"
-								class="flex items-center w-full p-2 text-base transition duration-75 rounded-lg group hover:bg-black pl-11">Mission and Vision</a>
+								class="flex items-center w-full p-2 text-base transition duration-75 rounded-lg group hover:bg-black pl-11">Mission, Vision and Value</a>
 						</li>
 						<li>
 							<a href="/about/team-leader"
@@ -179,3 +261,59 @@
     </div>
   </div>
 </nav>
+
+
+<script>
+  //test for getting url value from attr
+// var img1 = $('.test').attr("data-thumbnail");
+// console.log(img1);
+
+//test for iterating over child elements
+var langArray = [];
+$('.vodiapicker option').each(function(){
+  var img = $(this).attr("data-thumbnail");
+  var text = this.innerText;
+  var value = $(this).val();
+  var item = '<li><img src="'+ img +'" alt="" value="'+value+'"/><span>'+ text +'</span></li>';
+  langArray.push(item);
+})
+
+$('#a').html(langArray);
+
+//Set the button value to the first el of the array
+$('.btn-select').html(langArray[0]);
+$('.btn-select').attr('value', 'en');
+
+//change button stuff on click
+$('#a li').click(function(){
+   var img = $(this).find('img').attr("src");
+   var value = $(this).find('img').attr('value');
+   var text = this.innerText;
+   var item = '<li><img src="'+ img +'" alt="" /><span>'+ text +'</span></li>';
+  $('.btn-select').html(item);
+  $('.btn-select').attr('value', value);
+  $(".b").toggle();
+  //console.log(value);
+});
+
+$(".btn-select").click(function(){
+        $(".b").toggle();
+    });
+
+//check local storage for the lang
+var sessionLang = localStorage.getItem('lang');
+if (sessionLang){
+  //find an item with value of sessionLang
+  var langIndex = langArray.indexOf(sessionLang);
+  $('.btn-select').html(langArray[langIndex]);
+  $('.btn-select').attr('value', sessionLang);
+} else {
+   var langIndex = langArray.indexOf('ch');
+  console.log(langIndex);
+  $('.btn-select').html(langArray[langIndex]);
+  //$('.btn-select').attr('value', 'en');
+}
+
+
+
+</script>

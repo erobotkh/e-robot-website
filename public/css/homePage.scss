@@ -19,7 +19,7 @@
     --homeCardheight:150px;
     --logoHeight:70px;
     --slideHeight:90%;
-    
+
     --fontWeightTitle:700;
 
 
@@ -65,7 +65,7 @@
     //                     font-weight: 700;
     //                     text-decoration: none;
     //                     color: black;
-    //                 }    
+    //                 }
     //             }
     //             li:hover{
     //                 padding: 10px 15px;
@@ -141,10 +141,10 @@
     //                     overflow-y: scroll;
     //                     overflow-x: hidden;
     //                     display: none;
-                        
+
     //                     ul{
     //                         display: block;
-    //                         width: 100%; 
+    //                         width: 100%;
     //                         li.notificationContent{
     //                             width: 100%;
     //                             font-size: 15px;
@@ -154,7 +154,7 @@
     //                                 text-decoration: none;
     //                                 .notificationTitle{
     //                                     width: 100%;
-    
+
     //                                 }
     //                                 .notificationDate{
     //                                     width: 100%;
@@ -162,8 +162,8 @@
     //                                     color: gray;
     //                                 }
     //                             }
-                                
-                                
+
+
     //                         }
 
     //                     }
@@ -175,19 +175,19 @@
     //                             }
     //                         }
     //                     }
-                        
+
     //                 }
     //                 .showNoti{
     //                     display: block;
     //                     transition: 1s;
 
     //                 }
-                    
-                    
+
+
     //             }
     //             .profileSection{
     //                 position: relative;
-                
+
     //                 .profileContainer{
     //                     width: 250px;
     //                     height: 35vh;
@@ -197,10 +197,10 @@
     //                     right: 20px;
     //                     border-radius: 5px;
     //                     display: none;
-                        
+
     //                     .personalInfo{
 
-                            
+
     //                         border-radius: 10px;
     //                         a{
     //                             display: flex;
@@ -216,13 +216,13 @@
 
     //                                 img{
     //                                     height: 50px;
-                                        
+
     //                                 }
-                                    
+
     //                             }
     //                         }
-                            
-                            
+
+
     //                     }
     //                     .loginOrlogout{
     //                         width: 100%;
@@ -235,13 +235,13 @@
 
     //                     }
     //                 }
-                    
+
     //                     .personalInfo:hover{
     //                         background-color: #eb00002f;
     //                         a{
     //                             .subtitle{
     //                                 color: white;
-                            
+
     //                             }
     //                         }
     //                     }
@@ -249,13 +249,13 @@
     //                         background-color: #eb000066;
     //                         color: white;
     //                     }
-                        
-                    
+
+
     //                 .showProfile{
     //                     display: block;
     //                 }
     //             }
-                
+
     //         }
     //     }
     // }
@@ -289,7 +289,7 @@
                         color: #DC2626;
 
                     }
-                
+
                 }
                 .programContainer{
                     display: grid;
@@ -330,7 +330,7 @@
 
                             }
                         }
-                        
+
                     }
                     .programCard:hover{
                         transform: scale(0.99);
@@ -344,23 +344,23 @@
             width: 100%;
             display: flex;
             flex-direction: column;
-        
+
             margin-top: 50px;
 
             background-color: var(--bgColor);
 
             padding: 15px;
             box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-            
+
             .videoContainer{
                 width: 100%;
                 display: flex;
                 align-items: center;
                 justify-content: center;
                 .video{
-                    
+
                 }
-                
+
                 .articleContianer{
                     width: 50%;
                     align-self: self-start;
@@ -382,15 +382,15 @@
                         .bx-time-five{
                             color: red;
                         }
-                        
+
                     }
                     .videoDetail{
-                        
+
                         // text-align: justify;
                         font-size: var(--font_text);
                         color: #7D7573;
                         // display: flex;
-                        
+
                         &.vd2,&.vd3{
                             display: none;
                         }
@@ -428,7 +428,7 @@
                 width: 100%;
                 width: 100%;
                     display: flex;
-                    align-items: center;        
+                    align-items: center;
                     justify-content: center;
                 .activityImage{
                     width: 50%;
@@ -486,7 +486,7 @@
                 width: 100%;
                 display: grid;
                 grid-template-columns: repeat(2,1fr);
-                
+
                 gap: 20px;
 
                 .teamCard{
@@ -506,7 +506,7 @@
                             width: 100%;
                             height: 55%;
                             position: relative;
-                            
+
                             img{
                                 width: 100%;
                                 height: 100%;
@@ -516,14 +516,14 @@
                             }
                             .grayScreen{
                                 display: none;
-                                                
+
                             }
                         }
                         .teamDetail{
                             width: 60%;
                             // height: 40%;
                             background-color: white;
-
+                            background-color: #0d3d54f7;
                             position: absolute;
                             top: 70%;
                             left: 50%;
@@ -532,7 +532,7 @@
                             display: flex;
                             flex-direction: column;
                             align-items: center;
-                            
+
                             .teamSubtitle{
                                 font-size: 28px;
                                 font-weight: 700;
@@ -545,7 +545,7 @@
                         }
                     }
                     &.teamCard:hover{
-                        
+
                         box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
                         a{
                             .teamImage{
@@ -553,11 +553,11 @@
                                     display: block;
                                     width: 100%;
                                     height: 100%;
-                                    position: absolute; 
-                                    top: 0;                                       
+                                    position: absolute;
+                                    top: 0;
                                     background-color:rgba(0, 0, 0, 0.300);
                                     border-radius: 5px 5px 0 0;
-                                            
+
                                 }
                             }
                             .teamDetail{
@@ -569,14 +569,14 @@
                 }
 
             }
-        
+
         }
         // ------------------ about, impact, achievement
         .aboutUsImpactAchievement{
             padding: 20px ;
-            
+
             .aboutImpactAchieveContainer{
-                
+
                 display: flex;
                 border: 1px solid #DC2626;
                 border-radius: 5px;
@@ -587,7 +587,7 @@
                     width: 50%;
                     height: 60vh;
                     color: white;
-                    
+
                     img{
                         width: 100%;
                         height: 100%;
@@ -598,18 +598,18 @@
                     .subtitleNumContainer{
                         position: absolute;
                         bottom: 5%;
-                        
+
                         font-size:18px;
                         padding: 0 50px;
                         opacity: 1;
 
                     }
-                    
-                    
+
+
                     &.contentImg{
                         background-color: black;
                         border-radius:  5px 0 0 5px;
-                        
+
                     }
                     &.contentBg1{
                         display: grid;
@@ -637,15 +637,15 @@
                             grid-column: 1/ span 3;
                             background-color: #DC2626;
                             border: 2px solid white;
-                            display: flex;                            
+                            display: flex;
                             align-items: center;
                             justify-content: center;
                             font-size: var(--font_title);
                         }
-                        
+
                     }
                 }
-                
+
             }
         }
         // ------------------ partner
@@ -666,21 +666,21 @@
                 align-items: center;
                 justify-content: center;
                 gap: 20px;
-                
+
                 .partner{
                     width: 15%;
-    
+
                     img{
                         width: 100%;
                         aspect-ratio: 3/2;
                         object-fit: contain;
                         mix-blend-mode:darken;
-    
+
                     }
-    
+
                 }
             }
-            
+
         }
         // ------------------ sponsor
         .sponsorSection{
@@ -701,18 +701,18 @@
                 gap: 20px;
                 .sponsor{
                     width: 15%;
-    
+
                     img{
                         width: 100%;
                         aspect-ratio: 3/2;
                         object-fit: contain;
                         mix-blend-mode:darken;
-    
+
                     }
-    
+
                 }
             }
-            
+
         }
 
     }
@@ -756,27 +756,27 @@ html{
 // tablet responsive
 @media (max-width: 834px) {
     .home_wrapper{
-        
+
         main.mainContainer{
             width: 100%;
             height: 100%;
-            
-            
+
+
             // ----------------- program
             .programSection{
-                
+
                     .programContainer{
                         display: grid;
                         grid-template-columns: repeat(3,auto);
                         gap: 20px;
-    
+
                         .programCard{
                             width: 100%;
                         }
                     }
             }
 
- 
+
             // ------------------ video
             .videoSection{
                 width: 98%;
@@ -797,16 +797,16 @@ html{
                     .articleContianer{
                         width: 100%;
                         .videoDetail{
-                        
+
                             display: none;
-                            
+
                             &.vd2{
                                 display: block;
                             }
                         }
-                        
+
                     }
-                    
+
                 }
             }
             // ------------------ activity
@@ -818,11 +818,11 @@ html{
                                 padding: 10px;
                                 bottom: 5px;
                                 left: 10px;
-                                
-        
+
+
                                 .activitySubtittle{
                                     font-size: 20px;
-        
+
                                 }
                                 .activityDetail{
                                     font-size: 13px;
@@ -831,7 +831,7 @@ html{
                         }
                 }
             }
-    
+
             //------------------- team
             .teamsSection{
                 .teamContainer{
@@ -839,7 +839,7 @@ html{
                     .teamCard{
                         height: 70vh;
                         a{
-                            .teamDetail{ 
+                            .teamDetail{
                                 .teamSubtitle{
                                     font-size: 16px;
                                 }
@@ -849,11 +849,11 @@ html{
                                 }
                             }
                         }
-                        
+
                     }
 
                 }
-            
+
             }
 
             // ------------------ about, impact, achievement
@@ -870,18 +870,18 @@ html{
                                 }
                             }
                             .achievmentTitle{
-                                font-size: 24px; 
+                                font-size: 24px;
                             }
-                            
+
                         }
                     }
-                    
+
                 }
             }
 
         }
-        
-        
+
+
     }
 }
 // mobie responsive
@@ -898,16 +898,16 @@ html{
                 width: 100%;
                 height: 200px;
                 display: flex;
-    
+
             }
             // ------------------ program
             .programSection{
-                
+
                     .programContainer{
                         display: grid;
                         grid-template-columns: repeat(1,auto);
                         gap: 20px;
-    
+
                         .programCard{
                             width: 100%;
                             // height: 35vh;
@@ -924,10 +924,10 @@ html{
                                 }
                                 .subtitleDetail{
                                     width: 70%;
-                                
+
                                 }
                             }
-                            
+
                         }
                     }
             }
@@ -952,20 +952,20 @@ html{
                     }
                     .articleContianer{
                         width: 100%;
-                        
+
                         padding: 10px 30px;
-                        
+
                         .videoDate{
                             font-size: 14px;
                             color: var(--colorContent);
                             padding-bottom: 10px;
-                            
+
                         }
                         .videoDetail{
-                            
+
                             text-align: justify;
                             display: none;
-                            
+
                             &.vd2{
                                 display: none;
                             }
@@ -977,9 +977,9 @@ html{
                             width: 100%;
                             display: flex;
                             justify-content: end;
-                            
+
                         }
-                        
+
                     }
                 }
             }
@@ -990,18 +990,18 @@ html{
 
                         .activityImage{
                             width: 100%;
-                            
-                        
+
+
                             .activitytext{
                                 width: 100%;
                                 padding: 10px;
                                 bottom: 0;
                                 left: 0;
-                                
-        
+
+
                                 .activitySubtittle{
                                     font-size: 20px;
-        
+
                                 }
                                 .activityDetail{
                                     font-size: 13px;
@@ -1014,14 +1014,14 @@ html{
             .teamsSection{
                 .teamContainer{
                     display: grid;
-                    grid-template-columns: repeat(1,auto);                    
+                    grid-template-columns: repeat(1,auto);
                     gap: 10px;
                 }
-            
+
             }
             // ------------------ about, impact, achievement
             .aboutUsImpactAchievement{
-                padding: 15px ;    
+                padding: 15px ;
                 .aboutImpactAchieveContainer{
                     display: block;
                     .content{
@@ -1030,13 +1030,13 @@ html{
                             border-radius:  5px 5px 0 0;
                         }
                         &.contentImg{
-                            border-radius:  5px 5px 0 0;                            
+                            border-radius:  5px 5px 0 0;
                         }
                         &.contentBg1{
                             border-radius:  5px ;
                             .contentContainer{
                                 border-radius:  5px;
-                                
+
                                 .num{
                                     font-size: 28px;
                                     color: #DC2626;
@@ -1046,15 +1046,15 @@ html{
                                     color:#A8A196;
                                 }
                             }
-                            
-                            
+
+
                         }
                     }
-                    
+
                 }
             }
 
-        }    
+        }
 
     }
 }
