@@ -3,11 +3,11 @@
         <div class="mt-4 p-2 w-full">
             <h1 class="text-4xl font-bold text-center text-red-600" style="font-family: 'Battambang', cursive;">Mission</h1>
             <div class="w-[50%] sm:w-[40%] my-8 mx-auto cursor-pointer hover:w-[45%] transition-all duration-300 ease-in-out">
-                <img class="object-fit" src={{asset('./images/mission-erobot.png')}} alt="mission-logo">
+                <img class="object-fit" src="{{asset('./images/mission-erobot.png')}}" alt="mission-logo">
             </div>
             <div>
                 <p class="text-center text-xl" style="font-family: 'Battambang', cursive;">
-                    កាត់បន្ថយគម្លាតទទួលបានឱកាសក្នុងការអប់រំតាមរយៈ STEM  និងរួមគ្នាបង្កើតបច្ចេកវិទ្យាថ្មីៗ។
+                    Reduce the gap, access educational opportunities through STEM and jointly develop new technologies
                 </p>
             </div>
         </div>
@@ -15,11 +15,11 @@
         <div class="mt-4 p-2 w-full">
             <h1 class="text-4xl font-bold text-center text-red-600" style="font-family: 'Battambang', cursive;">Vision</h1>
             <div class="w-[50%] sm:w-[40%] my-8 mx-auto cursor-pointer hover:w-[45%] transition-all duration-300 ease-in-out ">
-                <img class="object-fit" src={{asset('./images/vision-erobot.png')}} alt="vision-logo">
+                <img class="object-fit" src="{{asset('./images/vision-erobot.png')}}" alt="vision-logo">
             </div>
             <div>
                 <p class="text-center text-xl" style="font-family: 'Battambang', cursive;">
-                    កសាងឧត្តមភាពនៃកម្ពុជា ក្នុងវិស័យនៃបច្ចេកវិទ្យា។ 
+                    Build the excellence of Cambodia in the field of technology 
                 </p>
             </div>
         </div>
@@ -27,11 +27,11 @@
         <div class="mt-4 p-2 w-full">
             <h1 class="text-4xl font-bold text-center text-red-600" style="font-family: 'Battambang', cursive;">Values</h1>
             <div class="w-[50%] sm:w-[40%] my-8 mx-auto cursor-pointer hover:w-[45%] transition-all duration-300 ease-in-out ">
-                <img class="object-fit" src={{asset('./images/value-erobot.png')}} alt="vision-logo">
+                <img class="object-fit" src="{{asset('./images/value-erobot.png')}}" alt="vision-logo">
             </div>
             <div>
                 <p class="text-center text-xl" style="font-family: 'Battambang', cursive;">
-                    ភាពជាមនុស្ស ត្រឹមត្រូវ ការអប់រំត្រឹមត្រូវ និងភាពឆ្នៃប្រឌិតបង្កើតថ្មីក្នុងគោលបំណងវិជ្ជមាន។
+                    The right person, the right education and the creativity for a positive purpose 
                 </p>
             </div>
         </div>

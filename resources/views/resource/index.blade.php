@@ -17,6 +17,6 @@
         <x-resource-card title="Title" image="https://i0.wp.com/first.global/wp-content/uploads/2020/06/Autodesk-Tinkercad.png?w=300&ssl=1" description="SOLIDWORKS has a desktop product and the 3DEXPERIENCE platform—a cloud-based portfolio of integrated tools and apps." link="/resource/show" />
     </div>
 
-   
+
 </div>
 </x-layout>
