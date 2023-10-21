@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\member;
+use App\Models\Member;
 use App\Models\MemberPosition;
 use App\Models\Socail;
 use App\Models\Team;
