@@ -13,6 +13,16 @@ class HomeController extends Controller
     public function index()
     {
         $achievment = achievment::OrderBy('id','desc')->first();
+        if(empty($achievment)) {
+            $achievment = new achievment();
+            $achievment->num_intership=0;
+            $achievment->num_member=0;
+            $achievment->num_intership=0;
+            $achievment->num_province=0;
+            $achievment->num_social_impact= 0;
+            $achievment->num_student= 0;
+            $achievment->num_project= 0;
+        }
 
         return view("home", compact("achievment"));
     }
