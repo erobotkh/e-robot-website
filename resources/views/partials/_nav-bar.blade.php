@@ -4,7 +4,7 @@
         border-bottom: 3px solid red ;
     }
     .vodiapicker{
-      display: none; 
+      display: none;
     }
 
     #a img, .btn-select img{
@@ -27,7 +27,7 @@
       margin: 5px;
     } */
 
-   
+
 
     /* item list */
 
@@ -36,7 +36,7 @@
       max-width: 350px;
       box-shadow: 0 6px 12px rgba(0,0,0,.175);
       border: 1px solid rgba(0,0,0,.15);
-      
+
     }
 
     .open{
@@ -52,18 +52,18 @@
       border: 1px solid #ccc;
       margin-top: 10px;
 
-    
+
     }
     .btn-select li{
-      list-style: none; 
+      list-style: none;
     }
     .btn-select:hover{
-      border: 1px solid transparent;  
+      border: 1px solid transparent;
     }
     .btn-select:focus{
       outline:none;
     }
-    
+
 
 
 </style>
@@ -72,11 +72,16 @@
 <div class="headerTop w-full  bg-red-600 flex items-center justify-between lg:px-5 md:px-2 lg:py-1 md:py-1 sm:py-3 ">
   <div class="headerTop_left">
     <div class="lg:flex md:flex items-center font-bold text-[#FFE17B] sm:flex-cols ">
+<<<<<<< HEAD
     
       <div class="title text-sm  pr-1 md:flex items-center gap-2 hidden"> <i class='bx bx-time-five '></i>OPERATION HOURS: </div>
+=======
+
+      <div class="title text-sm  pr-1 lg:block md:block hidden"> <i class='bx bx-time-five '></i>OPERATION HOURS: </div>
+>>>>>>> 8c8d84e0fd8d4a238ff07c18dfee244980fe9ac9
       <div class="title text-[15px]  pr-1 block lg:hidden md:hidden"> <i class='bx bx-time-five '>8:00-17:00 (Daily)</i></div>
       <div class=" time text-sm  text-white lg:block md:block hidden"> 8:00 - 17:00 (Daily)</div>
-      
+
     </div>
   </div>
   <div class="headerTop_right lg:w-[250px] md:w-[28%] h-full flex items-center justify-between text-white font-semibold">
@@ -126,19 +131,19 @@
         <ul id="a" ></ul>
       </div>
     </div>
-    
-    
+
+
   </div>
 </div>
 
 
 <!-- header content -->
 <!-- component -->
-<nav 
-  class=" z-10  relative sticky top-0 w-full" 
-  x-data="{open:false,menu:false, lokasi:false}">                         
+<nav
+  class=" z-10  relative sticky top-0 w-full"
+  x-data="{open:false,menu:false, lokasi:false}">
   <div class="relative bg-white px-5" style="box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px; ">
-    
+
     <div class="max-w-[1600px] mx-auto">
       <div class="relative flex items-center justify-end h-20">
         <div class="flex items-center justify-end  ">
@@ -171,7 +176,7 @@
                         </span>
                     </button>
                     <ul
-                        class="bg-white rounded-sm transform scale-0 group-hover:scale-100 absolute 
+                        class="bg-white rounded-sm transform scale-0 group-hover:scale-100 absolute
                     transition duration-150 ease-in-out  left-[10px] origin-top min-w-[200px] shadow-xl"
                     >
                         <a href="/about/history">
@@ -207,9 +212,9 @@
               <input type="text" name="s" id="s" class="block w-full pl-10 pr-3 py-2   rounded-md leading-5  text-gray-300 placeholder-gray-400 focus:outline-none focus:bg-white focus sm: transition duration-150 ease-in-out border" placeholder="Search">
             </form>
           </div> -->
-        
-          <button class="bg-red-600 font-bold hidden lg:inline-block rounded-lg hover:bg-red-500 hover:scale-[0.98] hover:rounded-lg hover:transition-[1s] transition-[1s]" style="box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;"> <a href="/donate" class="hover:text-white text-white px-6 py-4 flex items-center flex-col rounded-lg"  style="font-family: 'Battambang', cursive; box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;">Donate</a></button>
-          <!-- <button class="px-4 py-2  text-red-600 font-bold hidden lg:inline-block "> 
+
+          <button class="bg-red-600 font-bold hidden lg:inline-block rounded-lg hover:bg-red-500 hover:scale-[0.98] hover:rounded-lg hover:transition-[1s] transition-[1s]" style="box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;"> <a href="{{route('donation_view')}}" class="hover:text-white text-white px-6 py-4 flex items-center flex-col rounded-lg"  style="font-family: 'Battambang', cursive; box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;">Donate</a></button>
+          <!-- <button class="px-4 py-2  text-red-600 font-bold hidden lg:inline-block ">
             <a href="/login" class="flex flex-col justify-center items-center">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z" />
@@ -271,7 +276,7 @@
 					</ul>
 				</li>
         <li>
-          <a href="/donate" class="mt-1 block px-3 py-2 rounded-md text-red-600 font-semibold hover:bg-black f hover:text-white focus:outline-none focus:text-white focus:bg-black transition duration-150 ease-in-out"  style="font-family: 'Battambang', cursive;">Donte Us</a>
+          <a href="{{route('donation_view')}}" class="mt-1 block px-3 py-2 rounded-md text-red-600 font-semibold hover:bg-black f hover:text-white focus:outline-none focus:text-white focus:bg-black transition duration-150 ease-in-out"  style="font-family: 'Battambang', cursive;">Donte</a>
         </li>
       </ul>
     </div>

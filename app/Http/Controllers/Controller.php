@@ -32,4 +32,5 @@ class Controller extends BaseController
     {
         return $this->success($this->service->getList());
     }
+    
 }
