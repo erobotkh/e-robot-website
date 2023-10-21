@@ -5,7 +5,7 @@
             <div class="top_section flex items-center justify-between py-2"
                 style="border-bottom:rgba(128, 128, 128, 0.308) solid 1px ">
                 <div class="profile_section flex items-center justify-center ">
-                    <div class="back-icon mr-5">
+                    <div class="back-icon mr-2">
                         <a href="/list_content#{{$detailContent->id}}">
                             <i class='bx bx-chevron-left text-5xl'></i>
                         </a>
@@ -20,7 +20,7 @@
                     <div class="user_name text-xl font-[600]">{{$detailContent->last_name.' '.$detailContent->first_name}} </div>
                 </div>
 
-                <div class="create_at text-gray-400 font-[500]">Posted on: {{ date('d-M-Y', strtotime($detailContent->updated_at)) }}</div>
+                <div class="create_at text-gray-400 text-sm font-[500]">Posted on: {{ date('d-M-Y', strtotime($detailContent->updated_at)) }}</div>
             </div>
             <div class="title text-2xl font-bold pt-8 pb-5 ">
                 <h2>{{$detailContent->title}}</h2>
@@ -34,21 +34,20 @@
             </article>
             <div class="activity-like-comment  w-full rounded-b flex items-center justify-between pb-2"
                 style="border-bottom:rgba(128, 128, 128, 0.308) solid 1px ">
-                <button
+                {{-- <button
                     class="px-2 py-1 border border-white flex items-center justify-between text-white bg-[#EB0100] flex rounded-md  hover:bg-white hover:text-[#EB0100] hover:border-solid hover:border-red-500">
                     <i class='bx bxs-like text-md'></i>
                     Like
-                </button>
+                </button> --}}
 
-                <p class="text-[#EB0100] font-semibold"> {{$detailContent->like_count}} likes . {{$detailContent->comment_count+$detailContent->sub_comment_count}} comments</p>
+                <p class="text-[#EB0100] font-semibold"> {{$detailContent->like_count}} likes . {{$detailContent->comment_count}} comments</p>
 
             </div>
             {{-- comment section --}}
             <div>
                 {{-- comment --}}
                 @foreach ($comments as $data)
-                    <x-activity-comment comments="{{$data->comment_text}}" firstname='{{$data->first_name}}' lastname='{{$data->last_name}}' date='{{$data->updated_at}}'
-                        sub_comment='{{$data->sub_comment_text}}'></x-activity-comment>
+                    <x-activity-comment comments="{{$data->comment_text}}" firstname='{{$data->first_name}}' lastname='{{$data->last_name}}' date='{{$data->updated_at}}'></x-activity-comment>
                 @endforeach
 
             </div>

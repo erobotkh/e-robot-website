@@ -1,20 +1,13 @@
-<!-- <!doctype html>
-<html>
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.tailwindcss.com"></script>
-</head> -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 <x-layout>
 <style type="text/tailwindcss">
     @layer utilities {
     body{font-family: 'Open Sans','typography';}
         }
-        .like-button.active svg path {   
+        .like-button.active svg path {
         fill: #B30F10;
         }
-       
+
 </style>
 <div class="p-5">
     <div class="w-full grid place-content-center">
@@ -29,7 +22,7 @@
 
     </div>
 
-    <div class="text-justify text-lg font-semibold m-3">
+    <div class="text-justify lg:text-lg font-semibold  sm:text-sm md:text-lg">
         Welcome to "E-Robot"! We are thrilled to have you here as we embark on a mission to
         make a transformative impact on the lives of young learners in rural Cambodia. Our vision is simple yet
         profound: to bridge the educational gap between urban and rural areas by bringing the wonders of Science,
@@ -46,7 +39,7 @@
 
         However, we can't achieve this alone. We need your support to continue this vision.
     </div>
-    <div class="grid lg:grid-cols-2 md:grid-cols-3 sm:grid-cols-1 gap:0 md:gap-5 ">
+    <div class="grid lg:grid-cols-2 md:grid-cols-1 sm:grid-cols-1 gap:0 md:gap-5 ">
         <!-- <div class="grid grid-cols-2 m-3 sm:w-1/2 h-full">
             <div class="bg-[#EBE0DD] p-3 text-center">
                 <img src="./images/QRDollar.jpg" alt="" class="rounded-2xl">
@@ -70,9 +63,9 @@
             </div>
         </div> -->
 
-        <div class="card w-full lg:col-span-1 sm:col-span-1 md:col-span-2">
+        <div class="card w-full border-0 ">
             <h1 class="text-center m-5 font-bold text-2xl text-red-700">DONATE US</h1>
-            <div class="dollar1 grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 rounded-lg hover:scale-[1.05] hover:transition-[3s] transition-[3s] relative" style="box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;">
+            {{-- <div class="dollar1 grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 rounded-lg hover:scale-[1.05] hover:transition-[3s] transition-[3s] relative" style="box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;">
                 <div class="qrCode p-2 pr-0 w-auto "><img class="rounded-lg w-[100%]" src="/images/QRDollar.jpg" alt=""></div>
                 <div class="">
                     <div class="finanaceDetail font-semibold text-[#0d3d54] pt-3  sm:pl-3 gap-2 ">
@@ -80,11 +73,14 @@
                             <div id="" class="accDollar border border-1 px-2 cursor-pointer bg-red-200">US($)</div>
                             <div id="" class=" accKhmer border border-1 px-2 cursor-pointer">KH(៛)</div>
                         </div>
-                        <h1 class="text-center  font-bold text-[20px] pb-3 pt-5 recipient">Recipient Informations</h1>
-                        <div class="account_number text-[15px] ">Account type: <span class=" pl-2 text-[16px] font-bold"> Dollar( $ ) </span></div>
-                        <div class="account_number text-[15px]">Account number:<span class=" pl-2 text-[16px] font-bold"> 003231640 </span></div>
-                        <div class="account_name text-[15px]">Recipient name:<span class=" pl-2 text-[16px] font-bold"> Sreymuch UNG </span></div>
-                        <div class="position text-[15px]">Position: <span class=" pl-2 text-[16px] font-bold">Finance</span></div>
+                        <div class="">
+                            <h1 class="text-center  font-bold text-[20px] pb-3 pt-5 recipient">Recipient Informations</h1>
+                            <div class="account_number text-[15px] ">Account type: <span class=" pl-2 text-[16px] font-bold"> Dollar( $ ) </span></div>
+                            <div class="account_number text-[15px]">Account number:<span class=" pl-2 text-[16px] font-bold"> 003231640 </span></div>
+                            <div class="account_name text-[15px]">Recipient name:<span class=" pl-2 text-[16px] font-bold"> Sreymuch UNG </span></div>
+                            <div class="position text-[15px]">Position: <span class=" pl-2 text-[16px] font-bold">Finance</span></div>
+                        </div>
+
                     </div>
                     <div class="thanks h-[130px] flex items-center justify-evenly">
                         <span class="text-red-600 font-semibold text-2xl">Thank You!</span>
@@ -92,7 +88,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="reil grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 rounded-lg hover:scale-[1.05] hover:transition-[3s] transition-[3s] relative" style="box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;">
                 <div class="qrCode p-2 pr-0w-auto  "><img class="rounded-lg w-[100%]" src="/images/QRReil.jpg" alt=""></div>
                 <div class="">
@@ -112,84 +108,34 @@
                         <span class="h-full"><img class="h-full" src="/images/photo_members/sticker-e-robot.png" alt=""></span>
                     </div>
                 </div>
-            </div>
+            </div> --}}
+            {{-- @props(['acc_type','qr_code','acc_num','recipient_name','recipient_position']) --}}
+            @foreach ($info as $data)
+                <x-donation-card acc_type='{{$data->acc_type}}' qr_code='/images/{{$data->qr_code}}' acc_num='{{$data->acc_number}}' recipient_name='{{$data->recipient_name}}' recipient_position='{{$data->recipient_position}}' currency_symbol='{{$data->currency_symbol}}'></x-donation-card>
+            @endforeach
         </div>
-        <div class=" w-full  flex flex-col items-center">
-            <h1 class="  mt-5 font-bold text-3xl text-red-700">Donater<h1>
-                    <div class="h-[65vh] flex justify-center  overflow-y-scroll w-full">
-                        <table class="lg:w-[500px] md:w-auto text-center  text-[15px]" style="box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;">
-                            <tr class="bg-[#ffff] " >
-                                <th class="p-2">Name</th>
-                                <th class="p-2">Amount</th>
-                                <th class="p-2">Date</th>
-                            </tr>
-                            <tr class="bg-[#fff]">
-                                <td class="p-2">Kimlang</td>
-                                <td class="p-2">20 $</td>
-                                <td class="p-2">17/03/2023</td>
-                            </tr>
-                            <tr class="bg-[#fff]">
-                                <td class="p-2">Kimlong</td>
-                                <td class="p-2">20 $</td>
-                                <td class="p-2">17/03/2023</td>
-                            </tr>
-                            <tr class="bg-[#fff]">
-                                <td class="p-2">Farrizart</td>
-                                <td class="p-2">20 $</td>
-                                <td class="p-2">17/03/2023</td>
-                            </tr>
-                            <tr class="bg-[#fff]">
-                                <td class="p-2">TongMeng</td>
-                                <td class="p-2">20 $</td>
-                                <td class="p-2">17/03/2023</td>
-                            </tr>
-                            <tr class="bg-[#fff]">
-                                <td class="p-2">Farrizart</td>
-                                <td class="p-2">20 $</td>
-                                <td class="p-2">17/03/2023</td>
-                            </tr>
-                            <tr class="bg-[#fff]">
-                                <td class="p-2">TongMeng</td>
-                                <td class="p-2">20 $</td>
-                                <td class="p-2">17/03/2023</td>
-                            </tr>
-                            <tr class="bg-[#fff]">
-                                <td class="p-2">Kimlang</td>
-                                <td class="p-2">20 $</td>
-                                <td class="p-2">17/03/2023</td>
-                            </tr>
-                            <tr class="bg-[#fff]">
-                                <td class="p-2">Kimlong</td>
-                                <td class="p-2">20 $</td>
-                                <td class="p-2">17/03/2023</td>
-                            </tr>
-                            <tr class="bg-[#fff]">
-                                <td class="p-2">Farrizart</td>
-                                <td class="p-2">20 $</td>
-                                <td class="p-2">17/03/2023</td>
-                            </tr>
-                            <tr class="bg-[#fff]">
-                                <td class="p-2">TongMeng</td>
-                                <td class="p-2">20 $</td>
-                                <td class="p-2">17/03/2023</td>
-                            </tr>
-                            <tr class="bg-[#fff]">
-                                <td class="p-2">Kimlang</td>
-                                <td class="p-2">20 $</td>
-                                <td class="p-2">17/03/2023</td>
-                            </tr>
-                            <tr class="bg-[#fff]">
-                                <td class="p-2">Kimlong</td>
-                                <td class="p-2">20 $</td>
-                                <td class="p-2">17/03/2023</td>
-                            </tr>
-                            <tr class="bg-[#fff]">
-                                <td class="p-2">Farrizart</td>
-                                <td class="p-2">20 $</td>
-                                <td class="p-2">17/03/2023</td>
-                            </tr>
-                            
-                            
+        <div class="  flex flex-col items-center ">
+            <h1 class="  mt-5 font-bold text-3xl text-red-700 w-full text-center">Donator<h1>
+                    <div class="flex justify-center  md:w-[500px] sm:w-[380px]">
+                        <table class="lg:w-[500px] md:w-[500px] sm:w-[380px] text-center text-[15px]  mt-[30px]  table">
+
+                            <th class="p-2 w-[60%]">Name</th>
+                            <th class="p-2 w-[40%]">Date</th>
+                        </table>
+                    </div>
+
+                    <div class="h-[60vh] flex justify-center  overflow-y-scroll md:w-[500px] sm:w-[380px] ">
+                        <table class="lg:w-[500px] md:w-[500px] sm:w-[380px] text-center text-[15px]  table table-striped" style="box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;">
+                            @foreach ($donator as $data)
+                                <tr class="bg-[#fff]">
+                                    <td class="p-2 w-[60%]">{{$data->name}}</td>
+                                    <td class="p-2 w-[40%]">{{$data->updated_at}}</td>
+                                </tr>
+                            @endforeach
+
+
+
+
                         </table>
 
 
@@ -202,15 +148,15 @@
 
 <script>
     $(document).ready(function(){
+
         $('.reil').hide();
 
-        
-        $('.accKhmer').click(()=>{
+        $('.reil_btn').click(()=>{
             $('.reil').show();
-            $('.dollar1').hide();
+            $('.dollar').hide();
         })
-        $('.accDollar').click(()=>{
-            $('.dollar1').show();
+        $('.dollar_btn').click(()=>{
+            $('.dollar').show();
             $('.reil').hide();
         })
     })

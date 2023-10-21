@@ -2,10 +2,13 @@
 
 use App\Http\Controllers\ActivityCmtSubController;
 use App\Http\Controllers\DetailContent;
+use App\Http\Controllers\DonationController;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\TeamController;
 use App\Http\Controllers\MemberController;
 use App\Http\Controllers\PositionController;
 use App\Http\Controllers\ViewActivityController;
+use App\Http\Controllers\viewMembersController;
 use App\Models\PostContent;
 use Illuminate\Support\Facades\Route;
 
@@ -20,12 +23,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-});
-Route::get('/home', function () {
-    return view('home');
-});
+// Route::get('/', function () {
+//     return view('home');
+// });
+// Route::get('/home', function () {
+//     return view('home');
+// });
 
 
 Route::get('/post_content', function () {
@@ -41,9 +44,9 @@ Route::get('/login', function () {
 Route::get('/register', function () {
     return view('user.register');
 });
-Route::get('/donate', function () {
-    return view('donation');
-});
+// Route::get('/donate', function () {
+//     return view('donation');
+// });
 
 // Admin Route
 Route::get('/admin', function () {
@@ -82,7 +85,7 @@ Route::get('/reference', function () {
 });
 
 
-Route::get('/donation', function () {
+Route::get('/admin/donation', function () {
     return view('AdminModules.Report.index');
 });
 
@@ -112,9 +115,9 @@ Route::get('about/mission-vision', function () {
 Route::get('about/history', function () {
     return view('about.history');
 });
-Route::get('about/team-leader', function () {
-    return view('about.team-leader');
-});
+// Route::get('about/team-leader', function () {
+//     return view('about.team-leader');
+// });
 Route::get('about/team-member', function () {
     return view('about.team-member');
 });
@@ -144,10 +147,29 @@ Route::controller(ViewActivityController::class)->group(function(){
 //     Route::get('/detail_content/{id}','show')->name('detailContent');
 
 // });
+
+Route::controller(HomeController::class)->group(function(){
+    Route::get('/','index')->name('achievement');
+    Route::get('/home','index');
+
+});
 Route::controller(ViewActivityController::class)->group(function(){
     Route::get('/detail_content/{id}/{category_id}','show')->name('detailContent');
 
 });
+
+Route::controller(DonationController::class)->group(function(){
+    Route::get('/donation','index')->name('donation_view');
+
+});
+
+
+Route::controller(viewMembersController::class)->group(function(){
+    Route::get('about/team-leader','show')->name('about/team-leader');
+
+});
+
+
 
 
 
