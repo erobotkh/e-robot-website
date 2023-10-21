@@ -105,6 +105,7 @@ class AuthController extends Controller
     }
     public function sendOtp(Request $request)
     {
+      
         $rules = [
             'phone' => 'required'
         ];

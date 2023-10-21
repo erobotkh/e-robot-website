@@ -8,7 +8,11 @@ use App\Http\Controllers\TeamController;
 use App\Http\Controllers\MemberController;
 use App\Http\Controllers\PositionController;
 use App\Http\Controllers\ViewActivityController;
+<<<<<<< HEAD
+use App\Http\Controllers\AuthController;
+=======
 use App\Http\Controllers\viewMembersController;
+>>>>>>> 8c8d84e0fd8d4a238ff07c18dfee244980fe9ac9
 use App\Models\PostContent;
 use Illuminate\Support\Facades\Route;
 
@@ -23,12 +27,21 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+<<<<<<< HEAD
+Route::get('/', function () {
+    return view('home');
+})->name('home');
+Route::get('/home', function () {
+    return view('home');
+});
+=======
 // Route::get('/', function () {
 //     return view('home');
 // });
 // Route::get('/home', function () {
 //     return view('home');
 // });
+>>>>>>> 8c8d84e0fd8d4a238ff07c18dfee244980fe9ac9
 
 
 Route::get('/post_content', function () {
@@ -37,16 +50,19 @@ Route::get('/post_content', function () {
 
 
 
-Route::get('/login', function () {
-    return view('user.login');
-});
 
+<<<<<<< HEAD
+Route::get('/donate', function () {
+    return view('donation');
+});
+=======
 Route::get('/register', function () {
     return view('user.register');
 });
 // Route::get('/donate', function () {
 //     return view('donation');
 // });
+>>>>>>> 8c8d84e0fd8d4a238ff07c18dfee244980fe9ac9
 
 // Admin Route
 Route::get('/admin', function () {
@@ -172,4 +188,30 @@ Route::controller(viewMembersController::class)->group(function(){
 
 
 
+//register
+Route::get('/register', function () {
+    return view('user.register');
+})->name('user.registerForm');
+Route::post('/users/register', [AuthController::class, 'register'])->name('user.register');
 
+//login
+Route::get('/login', function () {
+    return view('user.login');
+})->name('user.loginForm');
+Route::post('/users/login', [AuthController::class, 'login'])->name('user.login');
+
+//send otp
+Route::get('/send_otp', function () {
+    return view('user.send_otp');
+})->name('user.sendOtpForm');
+Route::post('/users/send_otp', [AuthController::class, 'sendOtp'])->name('user.sendOtp');
+
+//verify otp
+Route::get('/verify_otp', function () {
+    return view('user.verify_otp');
+})->name('user.verify_otpForm');
+
+Route::post('/users/verify_otp', [AuthController::class, 'verifyOtp'])->name('user.verifyOtp');
+
+//logout
+Route::post('/users/logout', [AuthController::class,'logout'])->name('user.logout');
