@@ -1,5 +1,5 @@
 <x-login-register-layout>
-<div class="my-4">
+<div class="min-h-screen flex justify-center items-center">
       @if(session()->has('message'))
           <div class="text-center bg-red-600 p-3 text-white shadow-xl">{{session('message')}}</div>
       @endif
