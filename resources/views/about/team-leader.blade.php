@@ -108,7 +108,9 @@
 
                     @if ($item->title === 'member')
                         <?php
-                            $fb_link = $telegram_link = $linkin_link = '#';
+                            $fb_link ='https://web.facebook.com/profile.php?id=100094879493602';
+                            $telegram_link ='https://t.me/erobot_generalknowledge';
+                            $linkin_link = 'https://www.linkedin.com/company/erobotkh';
                         ?>
                         @foreach ($social_member as $social)
                             @if ($social->member_id === $item->id)

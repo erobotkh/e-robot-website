@@ -49,6 +49,14 @@ class viewMembersController extends Controller
         ->join('socails', 'member_id','=','members.id')
         ->get();
 
+        if(empty($data_member)){
+            $data_member = new Member();
+        }
+
+        if(empty($social_member)){
+            $social_member = new Member();
+        }
+
         // foreach ($data_member as $value) {
         //     $team = Team::where('id', $value->team_id)->first();
         //     $value->team_name = $team->name;

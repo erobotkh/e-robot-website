@@ -16,6 +16,13 @@ class DonationController extends Controller
         $info = Donation::select('*')->get();
         $donator = Donator::orderBy('id', 'DESC')->get();
 
+        if(empty($donator)){
+            $donator = new Donator();
+        }
+        if(empty($info)){
+            $info = new Donation();
+        }
+
         return view('donation',compact('info','donator'));
     }
 

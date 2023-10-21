@@ -41,6 +41,13 @@ class ViewActivityController extends Controller
         $category = Category::select('categories.id as c_id', 'categories.category_name as c_name')->get();
 
 
+        if(empty($viewActivity)){
+            $viewActivity = new PostContent();
+        }
+        if(empty($category)){
+            $category = new Category();
+        }
+
         // use compact() for push data from function index to viewProdcut file
         return view('list_content', compact('viewActivity','category'));
     }
@@ -94,7 +101,7 @@ class ViewActivityController extends Controller
         //     ->join('categories', 'post_contents.category_id', '=', 'categories.id')
         //     ->take(3)
         // ->get();
-        
+
         // $categoryId = PostContent::select('post_contents.category_id')
         // ->where('post_contents.id', $postId)->take(1)
         // ->first();
@@ -120,6 +127,15 @@ class ViewActivityController extends Controller
         //     ->where('pc.id', $postId)
         // ->get();
 
+        if(empty($detailContent)){
+            $detailContent = new PostContent();
+        }
+        if(empty($comments)){
+            $comments = new Comment();
+        }
+        if(empty($thumbnail)){
+            $thumbnail = new PostContent();
+        }
 
         return view('detail_content',compact('detailContent','comments','thumbnail'));
     }
