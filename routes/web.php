@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ActivityCmtSubController;
+use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\DetailContent;
 use App\Http\Controllers\DonationController;
 use App\Http\Controllers\HomeController;
@@ -8,11 +9,7 @@ use App\Http\Controllers\TeamController;
 use App\Http\Controllers\MemberController;
 use App\Http\Controllers\PositionController;
 use App\Http\Controllers\ViewActivityController;
-<<<<<<< HEAD
 use App\Http\Controllers\AuthController;
-=======
-use App\Http\Controllers\viewMembersController;
->>>>>>> 8c8d84e0fd8d4a238ff07c18dfee244980fe9ac9
 use App\Models\PostContent;
 use Illuminate\Support\Facades\Route;
 
@@ -27,21 +24,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-<<<<<<< HEAD
 Route::get('/', function () {
     return view('home');
 })->name('home');
 Route::get('/home', function () {
     return view('home');
 });
-=======
-// Route::get('/', function () {
-//     return view('home');
-// });
-// Route::get('/home', function () {
-//     return view('home');
-// });
->>>>>>> 8c8d84e0fd8d4a238ff07c18dfee244980fe9ac9
 
 
 Route::get('/post_content', function () {
@@ -49,28 +37,13 @@ Route::get('/post_content', function () {
 });
 
 
-
-
-<<<<<<< HEAD
 Route::get('/donate', function () {
     return view('donation');
 });
-=======
-Route::get('/register', function () {
-    return view('user.register');
-});
-// Route::get('/donate', function () {
-//     return view('donation');
-// });
->>>>>>> 8c8d84e0fd8d4a238ff07c18dfee244980fe9ac9
 
 // Admin Route
 Route::get('/admin', function () {
     return view('NiceAdmin.index');
-});
-
-Route::get('/category', function () {
-    return view('AdminModules.Category.index');
 });
 
 Route::get('postContent/', function () {
@@ -85,6 +58,7 @@ Route::get('/report', function () {
 Route::resource('member', MemberController::class);
 Route::resource('position', PositionController::class);
 Route::resource('team', TeamController::class);
+Route::resource('category', CategoryController::class);
 Route::get('/delete', [PositionController::class], 'delete');
 
 Route::get('/delete', function () {
@@ -153,9 +127,8 @@ Route::get('/resource/show', function () {
 });
 
 // view post content
-Route::controller(ViewActivityController::class)->group(function(){
-    Route::get('/list_content','index')->name('listContent');
-
+Route::controller(ViewActivityController::class)->group(function () {
+    Route::get('/list_content', 'index')->name('listContent');
 });
 
 // view detail post content
@@ -164,25 +137,21 @@ Route::controller(ViewActivityController::class)->group(function(){
 
 // });
 
-Route::controller(HomeController::class)->group(function(){
-    Route::get('/','index')->name('achievement');
-    Route::get('/home','index');
-
+Route::controller(HomeController::class)->group(function () {
+    Route::get('/', 'index')->name('achievement');
+    Route::get('/home', 'index');
 });
-Route::controller(ViewActivityController::class)->group(function(){
-    Route::get('/detail_content/{id}/{category_id}','show')->name('detailContent');
-
+Route::controller(ViewActivityController::class)->group(function () {
+    Route::get('/detail_content/{id}/{category_id}', 'show')->name('detailContent');
 });
 
-Route::controller(DonationController::class)->group(function(){
-    Route::get('/donation','index')->name('donation_view');
-
+Route::controller(DonationController::class)->group(function () {
+    Route::get('/donation', 'index')->name('donation_view');
 });
 
 
-Route::controller(viewMembersController::class)->group(function(){
-    Route::get('about/team-leader','show')->name('about/team-leader');
-
+Route::controller(viewMembersController::class)->group(function () {
+    Route::get('about/team-leader', 'show')->name('about/team-leader');
 });
 
 
@@ -214,4 +183,4 @@ Route::get('/verify_otp', function () {
 Route::post('/users/verify_otp', [AuthController::class, 'verifyOtp'])->name('user.verifyOtp');
 
 //logout
-Route::post('/users/logout', [AuthController::class,'logout'])->name('user.logout');
+Route::post('/users/logout', [AuthController::class, 'logout'])->name('user.logout');
