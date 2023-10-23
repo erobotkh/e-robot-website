@@ -72,13 +72,8 @@
 <div class="headerTop w-full  bg-red-600 flex items-center justify-between lg:px-5 md:px-2 lg:py-1 md:py-1 sm:py-3 ">
   <div class="headerTop_left">
     <div class="lg:flex md:flex items-center font-bold text-[#FFE17B] sm:flex-cols ">
-<<<<<<< HEAD
-    
-      <div class="title text-sm  pr-1 md:flex items-center gap-2 hidden"> <i class='bx bx-time-five '></i>OPERATION HOURS: </div>
-=======
 
       <div class="title text-sm  pr-1 lg:block md:block hidden"> <i class='bx bx-time-five '></i>OPERATION HOURS: </div>
->>>>>>> 8c8d84e0fd8d4a238ff07c18dfee244980fe9ac9
       <div class="title text-[15px]  pr-1 block lg:hidden md:hidden"> <i class='bx bx-time-five '>8:00-17:00 (Daily)</i></div>
       <div class=" time text-sm  text-white lg:block md:block hidden"> 8:00 - 17:00 (Daily)</div>
 

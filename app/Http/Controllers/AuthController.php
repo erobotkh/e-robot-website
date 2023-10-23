@@ -127,7 +127,7 @@ class AuthController extends Controller
             'Content-Type' => 'application/json',
         ])->post('https://cloudapi.plasgate.com/rest/send?private_key=' . config('plasgate.private_key'), [
             "sender" => "SMS Info",
-            "to"  => "855" . 86961256,
+            "to"  => "855" . 964138003,
             "content" => '" ' . $otpCode . ' "' . ' is your verification code.'
         ]);
       

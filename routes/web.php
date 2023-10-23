@@ -8,11 +8,8 @@ use App\Http\Controllers\TeamController;
 use App\Http\Controllers\MemberController;
 use App\Http\Controllers\PositionController;
 use App\Http\Controllers\ViewActivityController;
-<<<<<<< HEAD
 use App\Http\Controllers\AuthController;
-=======
 use App\Http\Controllers\viewMembersController;
->>>>>>> 8c8d84e0fd8d4a238ff07c18dfee244980fe9ac9
 use App\Models\PostContent;
 use Illuminate\Support\Facades\Route;
 
@@ -27,21 +24,18 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-<<<<<<< HEAD
 Route::get('/', function () {
     return view('home');
 })->name('home');
 Route::get('/home', function () {
     return view('home');
 });
-=======
 // Route::get('/', function () {
 //     return view('home');
 // });
 // Route::get('/home', function () {
 //     return view('home');
 // });
->>>>>>> 8c8d84e0fd8d4a238ff07c18dfee244980fe9ac9
 
 
 Route::get('/post_content', function () {
@@ -51,18 +45,15 @@ Route::get('/post_content', function () {
 
 
 
-<<<<<<< HEAD
 Route::get('/donate', function () {
     return view('donation');
 });
-=======
 Route::get('/register', function () {
     return view('user.register');
 });
 // Route::get('/donate', function () {
 //     return view('donation');
 // });
->>>>>>> 8c8d84e0fd8d4a238ff07c18dfee244980fe9ac9
 
 // Admin Route
 Route::get('/admin', function () {
