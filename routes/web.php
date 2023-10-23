@@ -11,6 +11,8 @@ use App\Http\Controllers\PositionController;
 use App\Http\Controllers\ViewActivityController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\PostContentController;
+use App\Http\Controllers\viewMembersController;
+use App\Models\PostContent;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -32,14 +34,14 @@ Route::get('/home', function () {
 });
 
 
-Route::get('/post_content', function () {
-    return view('post_content');
-});
-
 
 Route::get('/donate', function () {
     return view('donation');
 });
+Route::get('/register', function () {
+    return view('user.register');
+});
+
 
 // Admin Route
 Route::get('/admin', function () {
