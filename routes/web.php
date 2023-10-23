@@ -10,7 +10,7 @@ use App\Http\Controllers\MemberController;
 use App\Http\Controllers\PositionController;
 use App\Http\Controllers\ViewActivityController;
 use App\Http\Controllers\AuthController;
-use App\Models\PostContent;
+use App\Http\Controllers\PostContentController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -59,6 +59,8 @@ Route::resource('member', MemberController::class);
 Route::resource('position', PositionController::class);
 Route::resource('team', TeamController::class);
 Route::resource('category', CategoryController::class);
+Route::resource('postContent', PostContentController::class);
+
 Route::get('/delete', [PositionController::class], 'delete');
 
 Route::get('/delete', function () {
