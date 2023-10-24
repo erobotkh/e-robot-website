@@ -49,8 +49,6 @@ Route::get('/post_content', function () {
 });
 
 
-
-
 <<<<<<< HEAD
 Route::get('/donate', function () {
     return view('donation');
