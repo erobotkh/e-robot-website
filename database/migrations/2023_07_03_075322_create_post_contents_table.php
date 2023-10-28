@@ -19,7 +19,7 @@ return new class extends Migration
             $table->text('discription')->nullable();
             $table->string('image_name');
             $table->foreignIdFor(Category::class)->constrained()->onDelete('cascade')->onUpdate('cascade');;
-            $table->foreignIdFor(User::class)->constrained()->onDelete('cascade')->onUpdate('cascade');;
+            $table->foreignIdFor(User::class)->nullable()->constrained()->onDelete('cascade')->onUpdate('cascade');
             $table->timestamps();
         });
     }

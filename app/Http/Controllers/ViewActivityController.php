@@ -31,25 +31,25 @@ class ViewActivityController extends Controller
                 DB::raw('IFNULL(cm.comment_count, 0) as comment_count'),
                 // DB::raw('IFNULL(sbcm.sub_comment_count, 0) as sub_comment_count'),
             )
-        ->get();
+            ->get();
 
         $category = PostContent::select('post_contents.category_id', 'categories.id AS c_id', 'categories.category_name as c_name')
-                ->join('categories', 'post_contents.category_id', '=', 'categories.id')
-                ->groupBy('post_contents.category_id')
-        ->get();
+            ->join('categories', 'post_contents.category_id', '=', 'categories.id')
+            ->groupBy('post_contents.category_id')
+            ->get();
 
         $category = Category::select('categories.id as c_id', 'categories.category_name as c_name')->get();
 
 
-        if(empty($viewActivity)){
+        if (empty($viewActivity)) {
             $viewActivity = new PostContent();
         }
-        if(empty($category)){
+        if (empty($category)) {
             $category = new Category();
         }
 
         // use compact() for push data from function index to viewProdcut file
-        return view('list_content', compact('viewActivity','category'));
+        return view('list_content', compact('viewActivity', 'category'));
     }
 
     /**
@@ -66,36 +66,38 @@ class ViewActivityController extends Controller
     public function store(Request $request)
     {
         //
-        return ;
+        return;
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(PostContent $PostContent,$postId,$category_id)
+    public function show(PostContent $PostContent, $postId, $category_id)
     {
         // $category_id =$_GET['category_id'];
 
         $detailContent = DB::table('post_contents as pc')
             ->leftJoin('users', 'pc.user_id', '=', 'users.id')
-            ->leftJoin('user_profiles as uspf','users.id','=','uspf.user_id')
+            ->leftJoin('user_profiles as uspf', 'users.id', '=', 'uspf.user_id')
             ->leftJoin(DB::raw('(SELECT post_content_id, COUNT(*) as like_count FROM likes GROUP BY post_content_id) as lk'), 'pc.id', '=', 'lk.post_content_id')
             ->leftJoin(DB::raw('(SELECT post_content_id, COUNT(*) as comment_count FROM comments GROUP BY post_content_id) as cm'), 'pc.id', '=', 'cm.post_content_id')
             ->leftJoin(DB::raw('(SELECT post_content_id, COUNT(*) as sub_comment_count FROM sub_comments GROUP BY post_content_id) as sbcm'), 'pc.id', '=', 'sbcm.post_content_id')
             ->select(
-            'pc.*',
-            DB::raw('IFNULL(lk.like_count, 0) as like_count'),
-            DB::raw('IFNULL(cm.comment_count, 0) as comment_count'),
-            DB::raw('IFNULL(sbcm.sub_comment_count, 0) as sub_comment_count'),
-            'first_name','last_name','profile_image'
-        )->where('pc.id',$postId)->first();
+                'pc.*',
+                DB::raw('IFNULL(lk.like_count, 0) as like_count'),
+                DB::raw('IFNULL(cm.comment_count, 0) as comment_count'),
+                DB::raw('IFNULL(sbcm.sub_comment_count, 0) as sub_comment_count'),
+                'first_name',
+                'last_name',
+                'profile_image'
+            )->where('pc.id', $postId)->first();
 
         $comments = DB::table('post_contents as pc')
             ->leftJoin('comments as cm', 'pc.id', '=', 'cm.post_content_id')
             ->leftJoin('users', 'users.id', '=', 'cm.user_id')
-            ->select('cm.*','users.first_name','users.last_name')
+            ->select('cm.*', 'users.first_name', 'users.last_name')
             ->where('pc.id', $postId)
-        ->get();
+            ->get();
 
         // $thumbnail = PostContent::select('post_contents.*', 'categories.id AS c_id', 'categories.category_name as c_name')
         //     ->join('categories', 'post_contents.category_id', '=', 'categories.id')
@@ -108,11 +110,11 @@ class ViewActivityController extends Controller
         // echo $category_id;
 
         $thumbnail = PostContent::select('post_contents.id', 'post_contents.title', 'categories.id AS c_id', 'categories.category_name AS c_name')
-        ->join('categories', 'post_contents.category_id', '=', 'categories.id')
-        ->where('post_contents.category_id',$category_id)
-        ->orderBy('post_contents.id')
-        ->limit(3)
-        ->get();
+            ->join('categories', 'post_contents.category_id', '=', 'categories.id')
+            ->where('post_contents.category_id', $category_id)
+            ->orderBy('post_contents.id')
+            ->limit(3)
+            ->get();
 
 
 
@@ -127,17 +129,17 @@ class ViewActivityController extends Controller
         //     ->where('pc.id', $postId)
         // ->get();
 
-        if(empty($detailContent)){
+        if (empty($detailContent)) {
             $detailContent = new PostContent();
         }
-        if(empty($comments)){
+        if (empty($comments)) {
             $comments = new Comment();
         }
-        if(empty($thumbnail)){
+        if (empty($thumbnail)) {
             $thumbnail = new PostContent();
         }
 
-        return view('detail_content',compact('detailContent','comments','thumbnail'));
+        return view('detail_content', compact('detailContent', 'comments', 'thumbnail'));
     }
 
     /**
