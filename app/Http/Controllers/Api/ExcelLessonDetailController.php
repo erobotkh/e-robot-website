@@ -3,10 +3,11 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
-use App\Models\Team;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Storage;
-class TeamController extends Controller
+use Excel;
+use App\Imports\LessonDetailImportClass;
+
+class ExcelLessonDetailController extends Controller
 {
     public function sendResponse($result, $message)
     {
@@ -34,24 +35,23 @@ class TeamController extends Controller
 
         return response()->json($response, $code);
     }
-    public function store(Request $request){
-        $this->validate($request,[
-            'name'=>'required',
-            'cover'=>'required|image|max:10240',
-            'bio'=>'required'
+    public function import(Request $request)
+    {
+        // Validate the uploaded file
+        $request->validate([
+            'file' => 'required|mimes:xlsx,xls',
         ]);
-        $image_file = $request->cover;
-        $url = Storage::disk('do')->putFile(
-            "erobot/team",
-            $image_file,
-            'public'
-        );
-        $data=Team::create(['name'=>$request->name,'cover'=>$url,'bio'=>$request->bio]);
-        return $this->sendResponse($data,"Successfully");
+ 
+        // Get the uploaded file
+        $file = $request->file('file');
+ 
+        // Process the Excel file
+        $data=Excel::import(new LessonDetailImportClass, $file);
+ 
+        if($data){
+            return $this->sendResponse($data, 'Create Success!');
+        }else{
+            return $this->sendError("Create Faild.");
+        }
     }
-    public function show(){
-        $data=Team::all();
-        return $this->sendResponse($data,"Successfully");
-    }
-    
 }

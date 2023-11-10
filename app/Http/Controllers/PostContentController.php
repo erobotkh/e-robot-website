@@ -22,7 +22,7 @@ class PostContentController extends Controller
     {
         $postContent = new PostContent;
         $postContent->title = $request->input('title');
-        $postContent->discription = $request->input('discription');
+        $postContent->description = $request->input('description');
         $postContent->category_id = $request->input('category_id');
 
         if ($request->hasFile('image_name')) {

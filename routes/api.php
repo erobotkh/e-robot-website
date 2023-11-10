@@ -13,6 +13,10 @@ use App\Http\Controllers\Api\SocailLinkController;
 use App\Http\Controllers\Api\SubCommentController;
 use App\Http\Controllers\Api\TeamController;
 use App\Http\Controllers\Api\UserProfileController;
+use App\Http\Controllers\Api\EducationController;
+use App\Http\Controllers\Api\ExcelLessonDetailController;
+use App\Http\Controllers\Api\DonationController;
+use App\Http\Controllers\Api\AchievmentController;
 use App\Models\MemberPosition;
 use App\Models\PostContent;
 use App\Models\SubComment;
@@ -50,11 +54,13 @@ Route::post('comment/sub-comment', [SubCommentController::class, 'show']);
 Route::post('team/store',[TeamController::class,'store']);
 Route::get('team/show-all',[TeamController::class,'show']);
 
+
 Route::post('socail/store',[SocailController::class,'store']);
 Route::get('socail/show-all',[SocailController::class,'show']);
 
 Route::post('member/store',[MemberController::class,'store']);
 Route::get('member/show-all',[MemberController::class,'show']);
+Route::get('member/show/{id}',[MemberController::class,'showLeader']);
 Route::post('member-position/store',[MemberPositionController::class,'store']);
 Route::get('member-position/show-all',[MemberPositionController::class,'show']);
 
@@ -63,6 +69,11 @@ Route::get('category/show', [CategoryController::class, 'show']);
 
 Route::get('user-profile/show-another-user-profile/{id}',[UserProfileController::class,'showAnotherUserProfile']);
 Route::get('post-content/show_post_of_another_user/{id}', [PostContentController::class, 'postContentOfAnotherUser']);
+
+Route::get('donation/show',[DonationController::class,'showInfo']);
+Route::get('donator/show',[DonationController::class,'showDonator']);
+
+Route::get('achievment/show',[AchievmentController::class,'showInfo']);
 
 Route::middleware(['auth:api'])->group(function () {
     Route::post('logout', [AuthController::class, 'logout']);
@@ -88,7 +99,18 @@ Route::middleware(['auth:api'])->group(function () {
     Route::post('user-profile/edit-cover-image',[UserProfileController::class,'editUserCoverImage']);
     Route::post('user-profile/edit-bio',[UserProfileController::class,'editUserBio']);
     Route::get('user-profile/show-user-profile',[UserProfileController::class,'showUserProfile']);
-   
-
     
+
+    Route::post('education/create',[EducationController::class,'createEducation']);
+    Route::get('education/show',[EducationController::class,'showEducation']);
+    Route::post('subject/create',[EducationController::class,'createSubject']);
+    Route::get('subject/show',[EducationController::class,'showSubject']);
+    Route::post('lesson/create',[EducationController::class,'createLesson']);
+    Route::get('lesson/show',[EducationController::class,'showLesson']);
+    Route::post('lessonDetail/create',[EducationController::class,'createLessonDetail']);
+    Route::get('lessonDetail/show',[EducationController::class,'showLessonDetail']);
+    
+    Route::post('lessonDetail/import',[ExcelLessonDetailController::class,'import']);
+
+   
 });

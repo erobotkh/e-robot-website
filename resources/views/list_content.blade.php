@@ -46,7 +46,7 @@
                         @if ($item->c_id == $data->category_id)
                             <x-activity-card category="{{$item->c_name}} {{$item->c_name.$data->id }}" post_cate_id="{{$data->category_id}}"  post_id="{{$data->id}}" banner="./images/workshop.jpg"
                                 like="{{ $data->like_count }}" comment="{{ $data->comment_count }}"
-                                title="{{ $data->title }}" description="{{ $data->discription }}" ></x-activity-card>
+                                title="{{ $data->title }}" description="{{ $data->description }}" ></x-activity-card>
 
                         @endif
 

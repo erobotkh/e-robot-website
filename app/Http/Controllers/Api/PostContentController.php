@@ -101,7 +101,7 @@ class PostContentController extends Controller
         }
 
         $title = $request->title;
-        $discription = $request->discription;
+        $description = $request->description;
         $category_id = $request->category_id;
         $user_id = Auth::id();
         $image_file = $request->image_file;
@@ -110,7 +110,7 @@ class PostContentController extends Controller
             $image_file,
             'public'
         );
-        $data = PostContent::create(['title' => $title, 'discription' => $discription, 'image_name' => $url, 'category_id' => $category_id, 'user_id' => $user_id]);
+        $data = PostContent::create(['title' => $title, 'description' => $description, 'image_name' => $url, 'category_id' => $category_id, 'user_id' => $user_id]);
         return $this->sendResponse($data, "Post Successfully");
     }
 

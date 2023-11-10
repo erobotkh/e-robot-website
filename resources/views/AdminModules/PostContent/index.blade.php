@@ -28,7 +28,7 @@
                     <td><img style="width: 50px; height: 50px" src="{{ 'images/' . $item->image_name }}" alt="">
                     </td>
 
-                    <td>{{ $item->discription }}</td>
+                    <td>{{ $item->description }}</td>
                     <td class="d-flex gap-2 justify-content-center">
                         <div>
                             <a href="{{ route('postContent.edit', $item->id) }}" class="btn btn-success"> Edit </a>

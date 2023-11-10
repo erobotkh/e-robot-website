@@ -19,7 +19,7 @@ class PostContentFactory extends Factory
         return [
 
             'title'=>fake()->sentence(),
-            'discription'=>fake()->paragraphs(),
+            'description'=>fake()->paragraphs(),
             'image_name'=>fake()->imageUrl(640, 480, 'animals', true),
             'category_id'=>fake()->randomDigitNotNull(),
             'user_id'=>fake()->randomDigitNotNull()

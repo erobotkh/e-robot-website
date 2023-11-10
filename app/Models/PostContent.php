@@ -13,7 +13,7 @@ class PostContent extends Model
     use HasFactory,Notifiable;
     protected $fillable=[
         'title',
-        'discription',
+        'description',
         'image_name',
         'category_id',
         'user_id'

@@ -12,8 +12,14 @@ class Team extends Model
     use HasFactory,Notifiable;
     protected $fillable=[
         'name',
+        'cover',
         'bio'
     ];
+    protected $appends = ['cover_path'];
+
+    public function getCoverPathAttribute() {
+        return env('DO_URL').$this->cover;
+    }
     public function member():BelongsTo{
         return $this->belongsTo(Member::class);
     }
