@@ -32,14 +32,13 @@ Route::get('/', function () {
 Route::get('/home', function () {
     return view('home');
 });
-=======
+
 // Route::get('/', function () {
 //     return view('home');
 // });
 // Route::get('/home', function () {
 //     return view('home');
 // });
->>>>>>> 8c8d84e0fd8d4a238ff07c18dfee244980fe9ac9
 
 
 Route::get('/post_content', function () {
