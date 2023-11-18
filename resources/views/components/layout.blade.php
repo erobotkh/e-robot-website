@@ -36,6 +36,12 @@
 
 </style>
 <body>
+    @if(session()->has('error'))
+        <div class="text-xs text-red-600 text-center w-full py-3">{{session('error')}}</div>
+    @endif
+    @if(session()->has('success'))
+        <div class="text-xs text-red-600 text-center w-full py-3">{{session('success')}}</div>
+    @endif
     @include('./partials/_nav-bar')
    <main>
     {{$slot}}

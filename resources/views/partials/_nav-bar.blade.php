@@ -80,15 +80,31 @@
     </div>
   </div>
   <div class="headerTop_right lg:w-[250px] md:w-[28%] h-full flex items-center justify-between text-white font-semibold">
-    <a href="/login" class="login flex items-center  p-2 rounded hover:text-red-500">
-      <i class='bx bx-log-in  text-[20px]'></i>
-      <div  class="lg:block md:block hidden " >Login</div>
+    
 
+    @auth
+      <a href="/profile" class="login flex items-center gap-2  p-2 rounded hover:text-yellow-200">
+        <i class='bx bx-user-circle  text-[20px]'></i>
+        <div  class="lg:block md:block hidden " >Profile</div>
+      </a>
+   
+
+      <form class="inline" method="POST" action="{{route('user.logout')}}">
+        @csrf
+        <button type="submit" class=" hover:text-yellow-200 text-white">
+          <i class="fa-solid fa-door-closed"></i> Logout
+        </button>
+      </form>
+    @else
+    <a href="/login" class="login flex items-center gap-2 p-2 rounded hover:text-yellow-200">
+      <i class='bx bx-log-in  text-[20px]'></i>
+      <div  class="lg:block md:block hidden" >Login</div>
     </a>
-    <a href="/register" class="register flex items-center  p-2 rounded hover:text-red-500">
+    <a href="/register" class="register flex items-center gap-2 p-2 rounded hover:text-yellow-200">
       <i class='bx bx-user-circle text-[20px]'></i>
       <div class="lg:block md:block hidden " >Register</div>
     </a>
+    @endauth
 
     <!-- <select class="dropdown text-black p-2 rounded lg:px-4 md:px-2 cursor-pointer bg-red-500  hover:text-white lg:block md:block hidden">
       <option value="English"><div class="w-[50px] h-[50px]" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Flag_of_the_United_Kingdom_%281-2%29.svg/1200px-Flag_of_the_United_Kingdom_%281-2%29.svg.png');" ></div></option>

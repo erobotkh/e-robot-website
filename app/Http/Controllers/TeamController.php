@@ -32,7 +32,6 @@ class TeamController extends Controller
     {
         $request->validate([
             'name' => 'required',
-            'bio' => 'required'
         ]);
 
         Team::create($request->post());

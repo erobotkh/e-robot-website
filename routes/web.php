@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ActivityCmtSubController;
 use App\Http\Controllers\DepartementController;
+use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\DetailContent;
 use App\Http\Controllers\DonationController;
 use App\Http\Controllers\DonatorController;
@@ -11,6 +12,8 @@ use App\Http\Controllers\TeamController;
 use App\Http\Controllers\MemberController;
 use App\Http\Controllers\PositionController;
 use App\Http\Controllers\ViewActivityController;
+use App\Http\Controllers\AuthController;
+use App\Http\Controllers\PostContentController;
 use App\Http\Controllers\viewMembersController;
 use App\Models\PostContent;
 use Illuminate\Support\Facades\Route;
@@ -26,6 +29,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/', function () {
+    return view('home');
+})->name('home');
+Route::get('/home', function () {
+    return view('home');
+});
+
 // Route::get('/', function () {
 //     return view('home');
 // });
@@ -40,24 +50,18 @@ Route::get('/post_content', function () {
 
 
 
-Route::get('/login', function () {
-    return view('user.login');
-});
 
+Route::get('/donate', function () {
+    return view('donation');
+});
 Route::get('/register', function () {
     return view('user.register');
 });
-// Route::get('/donate', function () {
-//     return view('donation');
-// });
+
 
 // Admin Route
 Route::get('/admin', function () {
     return view('NiceAdmin.index');
-});
-
-Route::get('/category', function () {
-    return view('AdminModules.Category.index');
 });
 
 Route::get('postContent/', function () {
@@ -72,6 +76,9 @@ Route::get('/report', function () {
 Route::resource('member', MemberController::class);
 Route::resource('position', PositionController::class);
 Route::resource('team', TeamController::class);
+Route::resource('category', CategoryController::class);
+Route::resource('postContent', PostContentController::class);
+
 Route::get('/delete', [PositionController::class], 'delete');
 
 Route::get('/delete', function () {
@@ -141,20 +148,17 @@ Route::get('/resource/show', function () {
 });
 
 // view post content
-Route::controller(ViewActivityController::class)->group(function(){
-    Route::get('/list_content','index')->name('listContent');
-
+Route::controller(ViewActivityController::class)->group(function () {
+    Route::get('/list_content', 'index')->name('listContent');
 });
 
 
-Route::controller(HomeController::class)->group(function(){
-    Route::get('/','index')->name('achievement');
-    Route::get('/home','index');
-
+Route::controller(HomeController::class)->group(function () {
+    Route::get('/', 'index')->name('achievement');
+    Route::get('/home', 'index');
 });
-Route::controller(ViewActivityController::class)->group(function(){
-    Route::get('/detail_content/{id}/{category_id}','show')->name('detailContent');
-
+Route::controller(ViewActivityController::class)->group(function () {
+    Route::get('/detail_content/{id}/{category_id}', 'show')->name('detailContent');
 });
 
 Route::controller(DonationController::class)->group(function(){
@@ -167,9 +171,8 @@ Route::controller(DonationController::class)->group(function(){
 });
 
 
-Route::controller(viewMembersController::class)->group(function(){
-    Route::get('about/team-leader','show')->name('about/team-leader');
-
+Route::controller(viewMembersController::class)->group(function () {
+    Route::get('about/team-leader', 'show')->name('about/team-leader');
 });
 
 Route::controller(DepartementController::class)->group(function(){
@@ -192,4 +195,30 @@ Route::controller(DonatorController::class)->group(function(){
 
 
 
+//register
+Route::get('/register', function () {
+    return view('user.register');
+})->name('user.registerForm');
+Route::post('/users/register', [AuthController::class, 'register'])->name('user.register');
 
+//login
+Route::get('/login', function () {
+    return view('user.login');
+})->name('user.loginForm');
+Route::post('/users/login', [AuthController::class, 'login'])->name('user.login');
+
+//send otp
+Route::get('/send_otp', function () {
+    return view('user.send_otp');
+})->name('user.sendOtpForm');
+Route::post('/users/send_otp', [AuthController::class, 'sendOtp'])->name('user.sendOtp');
+
+//verify otp
+Route::get('/verify_otp', function () {
+    return view('user.verify_otp');
+})->name('user.verify_otpForm');
+
+Route::post('/users/verify_otp', [AuthController::class, 'verifyOtp'])->name('user.verifyOtp');
+
+//logout
+Route::post('/users/logout', [AuthController::class, 'logout'])->name('user.logout');
