@@ -1,6 +1,6 @@
 {{-- @props(['comments','firstname','lastname','date','sub_comment','sub_profile','sub_name','sub_date']) --}}
 @props(['comments','firstname','lastname','date','sub_comment','profile'])
-
+@if (!@empty($comments))
 <div class=" py-2 px-3 rounded-md my-3 " >
     <div class="flex items-center ">
         {{-- <img src=" https://img.freepik.com/premium-photo/japanese-girl-cherry-blossom-tree-landscape-anime-manga-illustration_691560-7776.jpg"
@@ -34,3 +34,7 @@
 
 
 </div>
+
+
+@endif
+

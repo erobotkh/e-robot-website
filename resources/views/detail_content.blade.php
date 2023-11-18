@@ -29,7 +29,7 @@
 
             </div>
             <article class="description font-semibold text-md text-justify pb-[5vh]">
-                {{$detailContent->description}}
+                {{$detailContent->discription}}
             </article>
             <div class="activity-like-comment  w-full rounded-b flex items-center justify-between pb-2"
                 style="border-bottom:rgba(128, 128, 128, 0.308) solid 1px ">
