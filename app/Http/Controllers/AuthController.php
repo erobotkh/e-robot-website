@@ -90,7 +90,7 @@ class AuthController extends Controller
         }
         
         Auth::login($user);
-        return redirect()->route('home')->with('success', "User login Successfully");
+        return redirect('/')->with('success', "User login Successfully");
 
     }
 
