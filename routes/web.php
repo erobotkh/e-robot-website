@@ -12,6 +12,7 @@ use App\Http\Controllers\ViewActivityController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\PostContentController;
 use App\Http\Controllers\viewMembersController;
+use App\Http\Controllers\ResourceController;
 use App\Models\PostContent;
 use Illuminate\Support\Facades\Route;
 
@@ -32,14 +33,14 @@ Route::get('/', function () {
 Route::get('/home', function () {
     return view('home');
 });
-=======
+
 // Route::get('/', function () {
 //     return view('home');
 // });
 // Route::get('/home', function () {
 //     return view('home');
 // });
->>>>>>> 8c8d84e0fd8d4a238ff07c18dfee244980fe9ac9
+
 
 
 Route::get('/post_content', function () {
@@ -76,6 +77,7 @@ Route::resource('position', PositionController::class);
 Route::resource('team', TeamController::class);
 Route::resource('category', CategoryController::class);
 Route::resource('postContent', PostContentController::class);
+// Route::resource('admin/resource', ResourceController::class);
 
 Route::get('/delete', [PositionController::class], 'delete');
 
@@ -136,13 +138,13 @@ Route::get('about/department', function () {
 
 //resoure
 
-Route::get('/resource', function () {
-    return view('resource.index');
-});
+// Route::get('/resource', function () {
+//     return view('resource.index');
+// });
 
-Route::get('/resource/show', function () {
-    return view('resource.show');
-});
+// Route::get('/resource/show', function () {
+//     return view('resource.show');
+// });
 
 // view post content
 Route::controller(ViewActivityController::class)->group(function () {
@@ -202,3 +204,15 @@ Route::post('/users/verify_otp', [AuthController::class, 'verifyOtp'])->name('us
 
 //logout
 Route::post('/users/logout', [AuthController::class, 'logout'])->name('user.logout');
+
+
+// resource admin
+
+Route::get('/admin/resource', [ResourceController::class, 'index'])->name('admin.resource.index');
+Route::get('/admin/resource/{resource}/show', [ResourceController::class, 'show'])->name('admin.resource.show');
+Route::get('/admin/resource/create', [ResourceController::class, 'create'])->name('admin.resource.create');
+Route::post('/admin/resource/store', [ResourceController::class, 'store'])->name('admin.resource.store');
+Route::get('/admin/resource/{resource}/edit', [ResourceController::class, 'edit'])->name('admin.resource.edit');
+Route::put('/admin/resource/{resource}/update', [ResourceController::class, 'update'])->name('admin.resource.update');
+Route::delete('/admin/resource/{resource}/delete', [ResourceController::class, 'destroy'])->name('admin.resource.delete');
+Route::post('/admin/resource/uploadImage', [ResourceController::class,'uploadCkEditor'])->name('admin.resource.uploadCkEditor.image');

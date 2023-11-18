@@ -46,6 +46,21 @@
     <!-- Template Main JS File -->
     <script src="assets/js/main.js"></script>
 
+    <!-- ck editor -->
+  
+    <link href="{{ asset('metronic/dist/assets/plugins/global/plugins.bundle.css') }}"
+        rel="stylesheet" type="text/css" />
+    <link href="{{ asset('metronic/dist/assets/css/style.bundle.css') }}" rel="stylesheet"
+        type="text/css" />
+    <link href="{{ asset('metronic/dist/assets/css/custom.css') }}" rel="stylesheet"
+        type="text/css">
+
+    <script src="{{ asset('metronic/dist/assets/plugins/global/plugins.bundle.js') }}">
+    </script>
+    <script src="{{ asset('metronic/dist/assets/js/scripts.bundle.js') }}"></script>
+    <script src="{{ asset('metronic/dist/assets/plugins/global/plugins.bundle.js') }}">
+    </script>
+
 
 </body>
 
