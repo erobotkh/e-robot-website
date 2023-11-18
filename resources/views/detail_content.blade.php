@@ -13,8 +13,7 @@
                     <div class="user_profile mr-3">
                         <a href="#">
                             <img class="border rounded-[50%] border-red-300 w-[45px] h-[45px] object-contain"
-                                src="{{ asset('./images/photo_members/sticker-e-robot.png') }}" alt="">
-
+                                src="{{ asset($detailContent->profile_image) }}" alt="">
                         </a>
                     </div>
                     <div class="user_name text-xl font-[600]">{{$detailContent->last_name.' '.$detailContent->first_name}} </div>
@@ -26,7 +25,7 @@
                 <h2>{{$detailContent->title}}</h2>
             </div>
             <div class="image mb-8">
-                <img class="w-full h-[80vh] object-cover" src="{{ asset('./images/workshop.jpg') }}" alt="">
+                <img class="w-full h-[80vh] object-cover" src="{{ asset($detailContent->image_name) }}" alt="">
 
             </div>
             <article class="description font-semibold text-md text-justify pb-[5vh]">
@@ -47,7 +46,7 @@
             <div>
                 {{-- comment --}}
                 @foreach ($comments as $data)
-                    <x-activity-comment comments="{{$data->comment_text}}" firstname='{{$data->first_name}}' lastname='{{$data->last_name}}' date='{{$data->updated_at}}'></x-activity-comment>
+                    <x-activity-comment comments="{{$data->comment_text}}" firstname='{{$data->first_name}}' lastname='{{$data->last_name}}' date='{{$data->updated_at}}' profile='{{$data->profile}}'></x-activity-comment>
                 @endforeach
 
             </div>
@@ -58,7 +57,7 @@
         <div class="post_thumbnail w-[20vw] mt-[7vh] rounded sticky top-0">
             <h2 class="text-center text-xl font-bold bg-red-600 text-white py-2 rounded mb-1">Related Post</h2>
             @foreach ($thumbnail as $item)
-                <x-activit-thumbnail post_id='{{$item->id}}'  banner='./images/workshop.jpg' post_cate_id='{{$detailContent->category_id}}' title='{{$item->title}}' ca='{{$item->c_name}}'></x-activit-thumbnail>
+                <x-activit-thumbnail post_id='{{$item->id}}'  banner='{{$item->image_name}}' post_cate_id='{{$detailContent->category_id}}' title='{{$item->title}}' ca='{{$item->c_name}}'></x-activit-thumbnail>
             @endforeach
         </div>
 

@@ -18,4 +18,10 @@ class Donation extends Model
         'recipient_name',
         'recipient_position',
     ];
+    protected $appends = ['qr_code_url'];
+
+    public function getQrCodeUrlAttribute()
+    {
+        return env('DO_URL') . $this->qr_code;
+    }
 }

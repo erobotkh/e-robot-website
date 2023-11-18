@@ -12,9 +12,9 @@ class DonatorController extends Controller
      */
     public function index()
     {
-        $donator = Donator::select('*')->orderBy('id', 'DESC')->get();
+        // $donator = Donator::select('*')->orderBy('id', 'DESC')->get();
 
-        return view('donation',compact('donator'));
+        // return view('donation',compact('donator'));
     }
 
     /**
@@ -22,7 +22,8 @@ class DonatorController extends Controller
      */
     public function create()
     {
-        //
+
+        // return view("AdminModules.DonationCard.store");
     }
 
     /**
@@ -30,7 +31,9 @@ class DonatorController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, [
+            "name"=> "",
+        ]);
     }
 
     /**

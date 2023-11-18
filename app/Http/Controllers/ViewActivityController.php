@@ -93,7 +93,8 @@ class ViewActivityController extends Controller
         $comments = DB::table('post_contents as pc')
             ->leftJoin('comments as cm', 'pc.id', '=', 'cm.post_content_id')
             ->leftJoin('users', 'users.id', '=', 'cm.user_id')
-            ->select('cm.*','users.first_name','users.last_name')
+            ->leftjoin('user_profiles','user_profiles.user_id','=','pc.user_id')
+            ->select('cm.*','users.first_name','users.last_name','user_profiles.profile_image as profile')
             ->where('pc.id', $postId)
         ->get();
 
@@ -107,7 +108,7 @@ class ViewActivityController extends Controller
         // ->first();
         // echo $category_id;
 
-        $thumbnail = PostContent::select('post_contents.id', 'post_contents.title', 'categories.id AS c_id', 'categories.category_name AS c_name')
+        $thumbnail = PostContent::select('post_contents.id', 'post_contents.image_name','post_contents.title', 'categories.id AS c_id', 'categories.category_name AS c_name')
         ->join('categories', 'post_contents.category_id', '=', 'categories.id')
         ->where('post_contents.category_id',$category_id)
         ->orderBy('post_contents.id')

@@ -24,241 +24,31 @@
 
 
 }
+.image_bg{
+    width: 100vh;
+    height: 100vh;
+
+    background-image: url('../assets/img/logo-bg.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    // object-fit: contain;
+    position: absolute;
+
+    top: 50%;
+    right: 25vw;
+    // translate: -10% 0%;
+    z-index: -1;
+    opacity: 0.2;
+
+
+}
 .home_wrapper{
     width: 100%;
     height: 100%;
+    min-width: 390px;
     background-color: var(--bgDefualt);
     font-family: 'Open Sans', sans-serif;
-    // header.header{
-    //     width: 100%;
-    //     height: var(--headerHeight);
-    //     background-color: var(--bgColor);
-    //     box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
-    //     display: flex;
-    //     align-items: center;
-    //     justify-content: space-between;
-    //     padding: 0 20px;
-    //     position: sticky;
-    //     top: 0;
-    //     left: 0;
-    //     z-index: 8;
-    //     .header__logo{
-    //         img{
-    //             width: var(--logoHeight);
-    //             object-fit: cover;
-    //         }
-    //     }
-    //     .header__menu{
-    //         ul{
-    //             display: flex;
-    //             align-items: center;
-    //             justify-content: center;
 
-    //             li{
-    //                 list-style-type: none;
-    //                 padding: 3px 15px;
-    //                 border-right: 1px solid gray;
-    //                 transition:0.5s;
-
-    //                 a{
-    //                     font-size: var(--font_title);
-    //                     font-weight: 700;
-    //                     text-decoration: none;
-    //                     color: black;
-    //                 }
-    //             }
-    //             li:hover{
-    //                 padding: 10px 15px;
-    //                 transition: 0.5s;
-    //                 a{
-    //                     color: var(--bgForcus)
-    //                 }
-    //                 a:after{
-    //                     display: none;
-    //                 }
-    //             }
-    //             .active{
-    //                 a{
-    //                     color: var(--bgForcus);
-    //                 }
-    //                 a:after{
-    //                     display: block;
-    //                     content: '';
-    //                     width: 100%;
-    //                     height: 2px;
-    //                     border-radius: 10px;
-    //                     background-color: var(--bgForcus);
-    //                 }
-    //             }
-    //             .about{
-    //                 border: none;
-    //             }
-    //         }
-    //     }
-    //     .header__manageAccount{
-    //         ul{
-    //             display: flex;
-    //             align-items: center;
-    //             justify-content: center;
-    //             li{
-    //                 font-size: var(--font_subTitle);
-    //                 list-style-type: none;
-    //                 padding: 10px;
-    //                 a{
-    //                     color: black;
-    //                 }
-    //                 img{
-    //                     height: 30px;
-    //                     border-radius: 50%;
-    //                     box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
-    //                 }
-    //             }
-    //             li:hover{
-    //                 color: var(--bgForcus);
-    //                 cursor: pointer;
-    //                 a{
-    //                     color: var(--bgForcus);
-    //                 }
-    //                 .headerNotificationContainer{
-    //                     a{
-    //                         color: black;
-    //                     }
-    //                 }
-    //             }
-
-    //             .headerNotification{
-    //                 position: relative;
-
-    //                 .headerNotificationContainer{
-    //                     width: 300px;
-    //                     height: 85vh;
-    //                     background-color: var(--bgColor);
-    //                     box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
-    //                     position: absolute;
-    //                     right: 0;
-    //                     border-radius: 5px;
-    //                     overflow: scroll;
-    //                     overflow-y: scroll;
-    //                     overflow-x: hidden;
-    //                     display: none;
-
-    //                     ul{
-    //                         display: block;
-    //                         width: 100%;
-    //                         li.notificationContent{
-    //                             width: 100%;
-    //                             font-size: 15px;
-    //                             padding: 10px;
-    //                             border-bottom: 1px solid rgba(128, 128, 128, 0.566);
-    //                             a{
-    //                                 text-decoration: none;
-    //                                 .notificationTitle{
-    //                                     width: 100%;
-
-    //                                 }
-    //                                 .notificationDate{
-    //                                     width: 100%;
-    //                                     font-size: 13px;
-    //                                     color: gray;
-    //                                 }
-    //                             }
-
-
-    //                         }
-
-    //                     }
-    //                     &.headerNotificationContainer:hover{
-    //                         color: black;
-    //                         li:hover{
-    //                             a{
-    //                                 color: var(--bgForcus);
-    //                             }
-    //                         }
-    //                     }
-
-    //                 }
-    //                 .showNoti{
-    //                     display: block;
-    //                     transition: 1s;
-
-    //                 }
-
-
-    //             }
-    //             .profileSection{
-    //                 position: relative;
-
-    //                 .profileContainer{
-    //                     width: 250px;
-    //                     height: 35vh;
-    //                     background-color: var(--bgColor);
-    //                     box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
-    //                     position: absolute;
-    //                     right: 20px;
-    //                     border-radius: 5px;
-    //                     display: none;
-
-    //                     .personalInfo{
-
-
-    //                         border-radius: 10px;
-    //                         a{
-    //                             display: flex;
-    //                             align-items: center;
-    //                             padding: 10px 20px;
-    //                             background-color: #eb000066;
-    //                             text-decoration: none;
-    //                             color: black;
-    //                             border-radius: 10px 10px 0 0;
-
-    //                             .profileImage{
-    //                                 padding-right: 30px;
-
-    //                                 img{
-    //                                     height: 50px;
-
-    //                                 }
-
-    //                             }
-    //                         }
-
-
-    //                     }
-    //                     .loginOrlogout{
-    //                         width: 100%;
-    //                         position: absolute;
-    //                         bottom: 20px;
-    //                         align-self: self-end;
-    //                         font-size: 20px;
-    //                         padding: 10px 20px;
-    //                         color: black;
-
-    //                     }
-    //                 }
-
-    //                     .personalInfo:hover{
-    //                         background-color: #eb00002f;
-    //                         a{
-    //                             .subtitle{
-    //                                 color: white;
-
-    //                             }
-    //                         }
-    //                     }
-    //                     .loginOrlogout:hover{
-    //                         background-color: #eb000066;
-    //                         color: white;
-    //                     }
-
-
-    //                 .showProfile{
-    //                     display: block;
-    //                 }
-    //             }
-
-    //         }
-    //     }
-    // }
     main.mainContainer{
         width: 100%;
         height: var(--slideHeight);
@@ -390,7 +180,15 @@
                         font-size: var(--font_text);
                         color: #7D7573;
                         // display: flex;
-
+                        text-align: justify;
+                        p::first-letter {
+                            font-size: 3em; /* You can adjust the font size as needed */
+                            line-height: 0.95; /* Adjust the line height to make it span two rows */
+                            float: left; /* Ensures the text wraps around the first letter */
+                            margin-right: 5px; /* Adds some space between the first letter and the text */
+                            color: #DC2626;
+                            font-weight: 600;
+                        }
                         &.vd2,&.vd3{
                             display: none;
                         }
@@ -523,7 +321,7 @@
                             width: 60%;
                             // height: 40%;
                             background-color: white;
-                            
+
                             position: absolute;
                             top: 70%;
                             left: 50%;
@@ -813,6 +611,7 @@ html{
             .activitySection{
                 .activityContainer{
                         .activityImage{
+                            height: 50vh;
                             .activitytext{
                                 width: 98%;
                                 padding: 10px;
@@ -837,7 +636,7 @@ html{
                 .teamContainer{
                     gap: 10px;
                     .teamCard{
-                        height: 70vh;
+                        height: 50vh;
                         a{
                             .teamDetail{
                                 .teamSubtitle{
@@ -860,6 +659,8 @@ html{
             .aboutUsImpactAchievement{
                 .aboutImpactAchieveContainer{
                     .content{
+                        height: 50vh;
+
                         &.contentBg1{
                             .contentContainer{
                                 .num{
@@ -990,7 +791,7 @@ html{
 
                         .activityImage{
                             width: 100%;
-
+                            height: 50vh;
 
                             .activitytext{
                                 width: 100%;
@@ -1026,6 +827,7 @@ html{
                     display: block;
                     .content{
                         width: 100%;
+                        height: 35vh;
                         img{
                             border-radius:  5px 5px 0 0;
                         }

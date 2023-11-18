@@ -170,7 +170,7 @@
                         <!-- <a href="/about/team-member">
                             <li class="rounded-sm px-3 py-2 text-xs font-semibold hover:bg-black hover:text-white">Team Member</li>
                         </a> -->
-                        <a href="/about/department">
+                        <a href="/about/departement">
                             <li class="rounded-sm px-3 py-2 text-xs font-semibold hover:bg-black hover:text-white">Department</li>
                         </a>
                     </ul>

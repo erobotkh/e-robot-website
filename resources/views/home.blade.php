@@ -16,8 +16,8 @@
                         <a href="./list_content#programSection">
                             <div class="programObject"><img src="images/E-STEM_icon.png" alt=""></div>
                             <div class="subtitleDetail">
-                                <div class="programSubtitle"><h2  style="font-family: 'Battambang', cursive;">E-STEM</h2></div>
-                                <article class="aboutProgram line-clamp-4 ">Our STEM (Science, Technology, Engineering, and Mathematics) program is designed to inspire and equip students with the skills and knowledge needed to excel in today's rapidly evolving technological world. </article>
+                                <div class="programSubtitle"><h2  style="font-family: 'Battambang', cursive;">STEM FOR US</h2></div>
+                                <article class="aboutProgram line-clamp-4 ">STEM FOR US(Science, Technology, Engineering, and Mathematics) program is designed to inspire and equip students with the skills and knowledge needed to excel in today's rapidly evolving technological world. </article>
                             </div>
 
                         </a>
@@ -107,59 +107,20 @@
                             <i class='bx bx-time-five'></i>
                             <span>Sep 8 2018</span>
                         </div>
-                        <table class="videoDetail vd1 ">
-                            <tr class="relative">
-                                <td rowspan="2" class="absolute top-[-17px]">
-                                    <b style="color: #DC2626; font-size:56px; font-weight:500">E</b>
-                                </td>
-                            </tr>
-                            <tr  >
-                                <td class="pl-[35px]">
-                                    <b style="color: red; font-size:larger"><span style="color: black;">Robot</span></b> was created on September 8, 2018, by our team members in the form of free mutual instruction.
-                                </td>
-                            </tr>
-                            <tr >
-                                <td>
-                                    we started to get some projects related to robotics and we also continued with the work of sharing and developing a series of new technologies.<b style="color:#DC2626 ; font-size:18px;font-weight:600"> E-Robot</b> is a group that provides the opportunity for young people to participate in social work, and scientific work related to new technologies to study and research. Towards the creation of new specific achievements serving the proper development work of the human society.
-                                </td>
-                            </tr>
-                        </table>
+                        <div class="videoDetail vd1">
+                            <p class="e-description">E<span style="font-weight: 600; color:black">-Robot</span> was created on September 8, 2018, by our team members in the form of free mutual instruction. we started to get some projects related to robotics and we also continued with the work of sharing and developing a series of new technologies. <span style="font-weight: 700; color:black"> E-Robot </span> is a group that provides the opportunity for young people to participate in social work, and scientific work related to new technologies to study and research. Towards the creation of new specific achievements serving the proper development work of the human society.</p>
+                        </div>
 
-                        <table class="videoDetail vd2">
-                            <tr class="relative">
-                                <td rowspan="2" class="absolute top-[-17px]">
-                                    <b style="color: #DC2626; font-size:56px; font-weight:500">E</b>
-                                </td>
-                            </tr>
-                            <tr  >
-                                <td class="pl-[35px]">
-                                    <b style="color: red; font-size:larger"><span style="color: black;">Robot</span></b> was created on September 8, 2018, by our team members in the form of free mutual instruction. And then we started to get some projects related to robotics and we also
-                                </td>
-                            </tr>
-                            <tr >
-                                <td>
-                                    continued with the work of sharing and developing a series of new technologies. <b style="color:#DC2626 ; font-size:18px;font-weight:600"> E-Robot</b> is a group that provides the opportunity for young people to participate in social work, and scientific work related to new technologies to study and research. Towards the creation of new specific achievements serving the proper development work of the human society.
-                                </td>
-                            </tr>
-                        </table>
 
-                        <table class="videoDetail vd3">
-                            <tr class="relative">
-                                <td rowspan="2" class="absolute top-[-17px]">
-                                    <b style="color: #DC2626; font-size:56px; font-weight:500">E</b>
-                                </td>
-                            </tr>
-                            <tr  >
-                                <td class="pl-[35px]">
-                                    <b style="color: red; font-size:larger"><span style="color: black;">Robot</span></b> was created on September 8, 2018, by our team members in the from of free mutual
-                                </td>
-                            </tr>
-                            <tr >
-                                <td>
-                                    instruction. And then we started to get some projects related to robotics and we also continued with the work of sharing and developing a series of new technologies.<b style="color:#DC2626 ; font-size:18px;font-weight:600"> E-Robot </b>is a group that provides the opportunity for young people to participate in social work, and scientific work related to new technologies to study and research. Towards the creation of new specific achievements serving the proper development work of the human society.
-                                </td>
-                            </tr>
-                        </table>
+                        <div class="videoDetail vd2">
+                            <p class="e-description">E<span style="font-weight: 600; color:black">-Robot</span> was created on September 8, 2018, by our team members in the form of free mutual instruction. we started to get some projects related to robotics and we also continued with the work of sharing and developing a series of new technologies. <span style="font-weight: 700; color:black"> E-Robot </span> is a group that provides the opportunity for young people to participate in social work, and scientific work related to new technologies to study and research. Towards the creation of new specific achievements serving the proper development work of the human society.</p>
+
+                        </div>
+
+                        <div class="videoDetail vd3">
+                            <p class="e-description">E<span style="font-weight: 600; color:black">-Robot</span> was created on September 8, 2018, by our team members in the form of free mutual instruction. we started to get some projects related to robotics and we also continued with the work of sharing and developing a series of new technologies. <span style="font-weight: 700; color:black"> E-Robot </span> is a group that provides the opportunity for young people to participate in social work, and scientific work related to new technologies to study and research. Towards the creation of new specific achievements serving the proper development work of the human society.</p>
+
+                        </div>
 
                     </div>
 
@@ -284,36 +245,6 @@
                         </div>
                     </div>
 
-                    {{-- <div class="content contentBg1">
-                        <div class="socailImpact contentContainer">
-                            <div class="num">2M</div>
-                            <div class="subtitle">Socail Impact</div>
-                        </div>
-                        <div class="province contentContainer">
-                            <div class="num">3</div>
-                            <div class="subtitle">Provinces</div>
-                        </div>
-                        <div class="province contentContainer">
-                            <div class="num">50+</div>
-                            <div class="subtitle">Projects</div>
-                        </div>
-                        <div class="achievmentTitle"  style="font-family: 'Battambang', cursive;">
-                            Achievments
-                        </div>
-                        <div class="student contentContainer">
-                            <div class="num">500+</div>
-                            <div class="subtitle">Students</div>
-                        </div>
-                        <div class="member contentContainer">
-                            <div class="num">40</div>
-                            <div class="subtitle">Members</div>
-                        </div>
-                        <div class="province contentContainer">
-                            <div class="num">100+</div>
-                            <div class="subtitle">Volunteers</div>
-                        </div>
-                    </div> --}}
-
                     <x-achievment num_social='{{$achievment->num_social_impact}}' num_province='{{$achievment->num_province}}' num_project='{{$achievment->num_project}}' num_student='{{$achievment->num_student}}' num_member='{{$achievment->num_member}}' num_intership='{{$achievment->num_intership}}'></x-achievment>
 
 
@@ -344,10 +275,6 @@
 
         </main>
 
-        <!-- to top button -->
-        <!-- <a href="#" class="to_top">
-            <i class='bx bx-chevrons-up'></i>
-        </a> -->
 
 
 </x-layout>

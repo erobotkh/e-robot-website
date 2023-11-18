@@ -1,9 +1,12 @@
 <?php
 
 use App\Http\Controllers\ActivityCmtSubController;
+use App\Http\Controllers\DepartementController;
 use App\Http\Controllers\DetailContent;
 use App\Http\Controllers\DonationController;
+use App\Http\Controllers\DonatorController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\inputImageController;
 use App\Http\Controllers\TeamController;
 use App\Http\Controllers\MemberController;
 use App\Http\Controllers\PositionController;
@@ -85,9 +88,10 @@ Route::get('/reference', function () {
 });
 
 
-Route::get('/admin/donation', function () {
-    return view('AdminModules.Report.index');
-});
+
+// Route::get('/admin/donation', function () {
+//     return view('AdminModules.Report.index');
+// });
 
 
 
@@ -121,9 +125,9 @@ Route::get('about/history', function () {
 Route::get('about/team-member', function () {
     return view('about.team-member');
 });
-Route::get('about/department', function () {
-    return view('about.department');
-});
+// Route::get('about/department', function () {
+//     return view('about.department');
+// });
 
 
 //resoure
@@ -142,11 +146,6 @@ Route::controller(ViewActivityController::class)->group(function(){
 
 });
 
-// view detail post content
-// Route::controller(ViewActivityController::class)->group(function(){
-//     Route::get('/detail_content/{id}','show')->name('detailContent');
-
-// });
 
 Route::controller(HomeController::class)->group(function(){
     Route::get('/','index')->name('achievement');
@@ -160,6 +159,10 @@ Route::controller(ViewActivityController::class)->group(function(){
 
 Route::controller(DonationController::class)->group(function(){
     Route::get('/donation','index')->name('donation_view');
+    // Route::get('/admin/donation','create')->name('goTodonationCard');
+    Route::post('/admin/donation','store')->name('storeDonationCard');
+    Route::get('/admin/donation','show')->name('showDonationCard');
+    Route::delete('/admin/donation/remove','delete')->name('deleteDonationCard');
 
 });
 
@@ -168,6 +171,23 @@ Route::controller(viewMembersController::class)->group(function(){
     Route::get('about/team-leader','show')->name('about/team-leader');
 
 });
+
+Route::controller(DepartementController::class)->group(function(){
+    Route::get('about/departement','show')->name('about/departement');
+
+});
+
+// admin side
+// donator
+Route::controller(DonatorController::class)->group(function(){
+    // Route::get('/admin/donation','create')->name('goTodonationCard');
+    // Route::post('/admin/donation','store')->name('storeDonationCard');
+});
+
+
+
+
+
 
 
 

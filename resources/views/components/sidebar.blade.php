@@ -50,7 +50,7 @@
 
 
           <li class="nav-item">
-              <a class="nav-link collapsed" href="{{ url('donation') }}">
+              <a class="nav-link collapsed" href="{{route('showDonationCard')}}">
                   <i class="bi bi-person-check-fill"></i>
                   <span>Donation</span>
               </a>
