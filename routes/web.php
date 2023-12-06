@@ -33,6 +33,19 @@ Route::get('/home', function () {
     return view('home');
 });
 
+// Route::get('/', function () {
+//     return view('home');
+// });
+// Route::get('/home', function () {
+//     return view('home');
+// });
+
+
+Route::get('/post_content', function () {
+    return view('post_content');
+});
+
+
 
 
 Route::get('/donate', function () {
