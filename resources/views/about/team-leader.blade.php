@@ -58,7 +58,9 @@
 
                     @if ($item->title === 'leader')
                         <?php
-                            $fb_link = $telegram_link = $linkin_link = '#';
+                            $fb_link ='https://web.facebook.com/profile.php?id=100094879493602';
+                            $telegram_link ='https://t.me/erobot_generalknowledge';
+                            $linkin_link = 'https://www.linkedin.com/company/erobotkh';
                         ?>
                         @foreach ($social_member as $social)
                             @if ($social->member_id === $item->id)
@@ -80,7 +82,7 @@
 
                         <x-team-leader-card name="{{ $item->first_name }} {{ $item->last_name }}"
                             title="{{ $item->name }} {{ $item->title }}"
-                            photo="/images/photo_members/{{ $item->profile }}"
+                            photo="{{ $item->profile }}"
                             facebook="<?php echo $fb_link; ?>"
                             telegram="<?php echo $telegram_link; ?>"
                             linkin="<?php echo $linkin_link; ?>" />
@@ -132,7 +134,7 @@
 
                         <x-team-leader-card name="{{ $item->first_name }} {{ $item->last_name }}"
                             title="{{ $item->name }} {{ $item->title }}"
-                            photo="/images/photo_members/{{ $item->profile }}"
+                            photo="{{ $item->profile }}"
                             facebook="<?php echo $fb_link; ?>"
                             telegram="<?php echo $telegram_link; ?>"
                             linkin="<?php echo $linkin_link; ?>" />
