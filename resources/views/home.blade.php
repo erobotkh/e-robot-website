@@ -1,4 +1,3 @@
-
 <x-layout>
     <div class="home_wrapper">
 
@@ -16,8 +15,8 @@
                         <a href="./list_content#programSection">
                             <div class="programObject"><img src="images/E-STEM_icon.png" alt=""></div>
                             <div class="subtitleDetail">
-                                <div class="programSubtitle"><h2  style="font-family: 'Battambang', cursive;">STEM FOR US</h2></div>
-                                <article class="aboutProgram line-clamp-4 ">STEM FOR US(Science, Technology, Engineering, and Mathematics) program is designed to inspire and equip students with the skills and knowledge needed to excel in today's rapidly evolving technological world. </article>
+                                <div class="programSubtitle"><h2  style="font-family: 'Battambang', cursive;">STEM for youth</h2></div>
+                                <article class="aboutProgram line-clamp-4 ">STEM for youth(Science, Technology, Engineering, and Mathematics) program is designed to inspire and equip students with the skills and knowledge needed to excel in today's rapidly evolving technological world. </article>
                             </div>
 
                         </a>
@@ -73,7 +72,7 @@
                         <a href="#">
                             <div class="programObject"><img src="images/Sprout_of_Ideas_logo.jpg" alt=""></div>
                             <div class="subtitleDetail">
-                                <div class="programSubtitle"><h2  style="font-family: 'Battambang', cursive;">ពន្លកគំនិត-Sprout of Ideas</h2></div>
+                                <div class="programSubtitle"><h2  style="font-family: 'Battambang', cursive;">ពន្លកគំនិត-Ponlork Komnit</h2></div>
                                 <article class="aboutProgram line-clamp-4">Cultivate creativity, inspire, create new stories, guide, explain, educate children to have good discipline and morality in life, encourage and encourage children to study hard without giving up.</article>
                             </div>
 
@@ -155,7 +154,7 @@
                 <div class="teamContainer">
 
                     <div class="teamCard">
-                        <a href="about/department">
+                        <a href="about/departement">
                             <div class="teamImage">
 
                                 <img src="images/inovation_cover.webp" alt="">
@@ -170,7 +169,7 @@
                         </a>
                     </div>
                     <div class="teamCard">
-                        <a href="about/department">
+                        <a href="about/departement">
                             <div class="teamImage">
 
                                 <img src="images/social_engagement_cover.png" alt="">
@@ -185,7 +184,7 @@
                         </a>
                     </div>
                     <div class="teamCard">
-                        <a href="about/department">
+                        <a href="about/departement">
                             <div class="teamImage">
 
                                 <img src="images/finance.jpg" alt="">
@@ -200,7 +199,7 @@
                         </a>
                     </div>
                     <div class="teamCard">
-                        <a href="about/department">
+                        <a href="about/departement">
                             <div class="teamImage">
 
                                 <img src="images/plannig_strategy_cover.jpg" alt="">
@@ -215,7 +214,7 @@
                         </a>
                     </div>
                     <div class="teamCard">
-                        <a href="about/department">
+                        <a href="about/departement">
                             <div class="teamImage">
 
                                 <img src="images/hr_admin_cover.jpg" alt="">

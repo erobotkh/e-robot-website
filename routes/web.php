@@ -164,9 +164,9 @@ Route::controller(ViewActivityController::class)->group(function () {
 Route::controller(DonationController::class)->group(function(){
     Route::get('/donation','index')->name('donation_view');
     // Route::get('/admin/donation','create')->name('goTodonationCard');
-    Route::post('/admin/donation','store')->name('storeDonationCard');
-    Route::get('/admin/donation','show')->name('showDonationCard');
-    Route::delete('/admin/donation/remove','delete')->name('deleteDonationCard');
+    // Route::post('/admin/donation','store')->name('storeDonationCard');
+    // Route::get('/admin/donation','show')->name('showDonationCard');
+    // Route::delete('/admin/donation/remove','delete')->name('deleteDonationCard');
 
 });
 
@@ -181,19 +181,27 @@ Route::controller(DepartementController::class)->group(function(){
 });
 
 // admin side
-// donator
-Route::controller(DonatorController::class)->group(function(){
-    // Route::get('/admin/donation','create')->name('goTodonationCard');
-    // Route::post('/admin/donation','store')->name('storeDonationCard');
-});
+// Route::middleware(['auth'])->group(function(){
+    // donator
+    Route::controller(DonatorController::class)->group(function(){
+        Route::get('/admin/donator','show')->name('showDonator');
+        Route::post('/admin/donator','store')->name('storeDonator');
+        Route::post('/admin/donator/edit','update')->name('updateDonator');
+        Route::delete('/admin/donator/remove','delete')->name('deleteDonator');
+    });
+
+    // donation
+    Route::controller(DonationController::class)->group(function(){
+
+        Route::post('/admin/donation','store')->name('storeDonationCard');
+        Route::get('/admin/donation','show')->name('showDonationCard');
+        Route::delete('/admin/donation/remove','delete')->name('deleteDonationCard');
+        Route::post('/admin/donation/edit','update')->name('editDonationCard');
+
+    });
 
 
-
-
-
-
-
-
+// });
 
 //register
 Route::get('/register', function () {

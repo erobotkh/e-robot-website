@@ -6,7 +6,7 @@
 
 </style>
 <x-layout>
-        <div class="image_bg"></div>
+        {{-- <div class="image_bg"></div> --}}
 
         <div class="categorySection w-full flex justify-evenly p-10 pb-0">
                 @foreach ($category as $item)
