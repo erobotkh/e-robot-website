@@ -7,7 +7,7 @@
         Add Post Content
     </a>
 
-    <table class="table table-hover mt-3">
+    <table class="table table-hover mt-3 table-striped ">
         <thead>
             <tr align="center" class="fw-bold">
                 <td>ID</td>
@@ -21,12 +21,11 @@
 
         <tbody>
             @foreach ($data as $item)
-                <tr align="center" class="fw-bold" style="line-height: 50px">
+                <tr align="center" >
                     <td>{{ $item->id }}</td>
                     <td>{{ $item->title }}</td>
                     <td>{{ $item->category_name }}</td>
-                    <td><img style="width: 50px; height: 50px" src="{{ 'images/' . $item->image_name }}" alt="">
-                    </td>
+                    <td><img style="width: 80px" src="{{ $item->image_name }}" alt=""></td>
 
                     <td>{{ $item->discription }}</td>
                     <td class="d-flex gap-2 justify-content-center">

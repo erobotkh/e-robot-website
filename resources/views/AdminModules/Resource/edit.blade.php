@@ -25,7 +25,7 @@
     <main class="p-4">
 
         <form method="POST" action="{{ route('admin.resource.update', $resource) }}"
-            class="flex flex-col gap-2">
+            class="flex flex-col gap-2" enctype="multipart/form-data">
             @csrf
             @method('PUT')
             <label for="title" class="form-label required fs-5">Title</label>

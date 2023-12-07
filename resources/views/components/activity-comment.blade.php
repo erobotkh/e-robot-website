@@ -1,9 +1,11 @@
 {{-- @props(['comments','firstname','lastname','date','sub_comment','sub_profile','sub_name','sub_date']) --}}
-@props(['comments','firstname','lastname','date','sub_comment'])
-
+@props(['comments','firstname','lastname','date','sub_comment','profile'])
+@if (!@empty($comments))
 <div class=" py-2 px-3 rounded-md my-3 " >
     <div class="flex items-center ">
-        <img src="https://img.freepik.com/premium-photo/japanese-girl-cherry-blossom-tree-landscape-anime-manga-illustration_691560-7776.jpg"
+        {{-- <img src=" https://img.freepik.com/premium-photo/japanese-girl-cherry-blossom-tree-landscape-anime-manga-illustration_691560-7776.jpg"
+            alt="" class="w-[45px] h-[45px] rounded-full mr-3"> --}}
+        <img src="{{$profile}}"
             alt="" class="w-[45px] h-[45px] rounded-full mr-3">
         <div class=" w-full">
             <div class="flex items-center justify-between">
@@ -32,3 +34,7 @@
 
 
 </div>
+
+
+@endif
+

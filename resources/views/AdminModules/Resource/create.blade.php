@@ -24,7 +24,7 @@
 <body>
     <main class="p-4">
 
-        <form method="POST" action="{{ route('admin.resource.store') }}" class="flex flex-col gap-2">
+        <form method="POST" action="{{ route('admin.resource.store') }}" class="flex flex-col gap-2" enctype="multipart/form-data">
             @csrf
 
             <label for="title" class="form-label required">Title</label>
@@ -33,7 +33,8 @@
                 <div><span class="text-xs text-red-500">*{{ $message }}</span></div>
             @enderror
             <label for="image" class="form-label required">Cover Image</label>
-            <input name="image" type="file" class="p-4 form-control"  />
+            <input type="file" name="image" class="p-4 form-control" accept="image/*"/>
+            <!-- <input type="file" name="image" id="image" > -->
             @error('image')
                 <div><span class="text-xs text-red-500">*{{ $message }}</span></div>
             @enderror

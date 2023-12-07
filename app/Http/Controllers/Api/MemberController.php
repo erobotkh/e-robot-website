@@ -105,6 +105,19 @@ class MemberController extends Controller
         }
         return $this->sendResponse($data_member, "Successfully");
     }
+    public function showLeader($id)
+    {
+        $data_member = Member::where('member_position_id',$id)->get();
+        foreach ($data_member as $value) {
+            $team = Team::where('id', $value->team_id)->first();
+            $value->team_name = $team->name;
+            $value->team_cover = $team->cover;
+            $member_position = MemberPosition::where('id', $value->member_position_id)->first();
+            $value->member_position_title = $member_position->title;
+            $value->socail = Member::find($value->id)->socails()->get();
+        }
+        return $this->sendResponse($data_member, "Successfully");
+    }
 
     /**
      * Show the form for editing the specified resource.

@@ -29,18 +29,33 @@ class ResourceController extends Controller
             'description' => 'required|string|max:5000',
             'category_id' => 'required',
         ]);
-
-        $image_file = $request->image;
-        dd($image_file);
-        $url = Storage::disk('do')->putFile(
-            "erobot/post-content",
-            $image_file,
-            'public'
-        );
+        $extension = $request->file('image')->extension();
+        $image_file = $request->file('image');
      
+        // $url = Storage::disk('do')->putFileAs(
+        //     "erobot/post-content",
+        //     $image_file,
+        //     'public'
+        // );
+        // dd($url);
 
-            dd($url);
+        
 
+        try {
+            $url = Storage::disk('do')->put(
+                "erobot/post-content",
+                $image_file,
+               'public'
+            );
+            // dd($url);
+            // $path = Storage::disk('do')->putFileAs('uploads', $request->file('uploaded_file'), time().'.'.$extension)
+       
+        } catch (Exception $e) {
+            // Handle upload error
+            echo 'Failed to upload image: ' . $e->getMessage();
+            dd($e->getMessage());
+        }
+  
         $resource = new Resource();
         $resource->title = $request->title;
         $resource->description = $request->description;
@@ -87,7 +102,7 @@ class ResourceController extends Controller
 
             // Create the directory if it doesn't exist
             if (!is_dir(public_path($dirPath))) {
-@mkdir(public_path($dirPath), 0755, true);
+                @mkdir(public_path($dirPath), 0755, true);
             }
 
             // Move the file to the correct directory

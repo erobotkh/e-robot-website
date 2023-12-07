@@ -10,7 +10,6 @@
               </a>
           </li><!-- End Dashboard Nav -->
 
-
           <li class="nav-item">
               <a class="nav-link collapsed" href="{{ url('postContent') }}">
                   <i class="bi bi-file-post"></i>
@@ -18,14 +17,12 @@
               </a>
           </li>
 
-
           <li class="nav-item">
               <a class="nav-link collapsed" href="{{ url('category') }}">
                   <i class="bi bi-bookmarks-fill"></i>
                   <span>Category</span>
               </a>
           </li>
-
 
           <li class="nav-item">
               <a class="nav-link collapsed" href="{{ route('member.index') }}">
@@ -50,9 +47,16 @@
 
 
           <li class="nav-item">
-              <a class="nav-link collapsed" href="{{ url('donation') }}">
-                  <i class="bi bi-person-check-fill"></i>
+              <a class="nav-link collapsed" href="{{ route('showDonationCard') }}">
+                  <i class='bx bxs-coin-stack'></i>
                   <span>Donation</span>
+              </a>
+          </li>
+
+          <li class="nav-item">
+              <a class="nav-link collapsed" href="/admin/donator?type=">
+                <i class='bx bxs-coin'></i>
+                  <span>Donator</span>
               </a>
           </li>
 

@@ -24,7 +24,7 @@ class PostContentResource extends JsonResource
         return [
             'id'                 => $this['id'],
             'title'              => $this['title'],
-            'discription'        => $this['discription'],
+            'description'        => $this['description'],
             'image_path'         => $this['image_path'],
             'category_id'        => $this['category']['id'],
             'post_user'          => [

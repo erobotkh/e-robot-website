@@ -107,18 +107,18 @@ class AuthController extends Controller
         }
         $phone = $request->phone;
   
-        $expirationTime = 1; // 1 minute
+        // $expirationTime = 4; // 1 minute
         
         // Check if the OTP code has already been sent for this phone number.
+
         $phoneCache = session()->get('phone_' . $phone);
-    
-        if ($phoneCache) {
+
+        if(time() - session()->get('last_send_otp') < 60 && $phoneCache){ //1 minute
             return redirect()->route('user.verify_otpForm')->with('error','OTP code already sent. Please wait for 1 minute to resend.');
         }
 
         // // Generate a random OTP code.
         $otpCode = str_pad(rand(0, 999999), 6, '0', STR_PAD_LEFT);
- 
         $phoneTrim = Str::of($phone)->ltrim('0');
 
       //  Send the OTP code to the user's phone number.
@@ -127,13 +127,14 @@ class AuthController extends Controller
             'Content-Type' => 'application/json',
         ])->post('https://cloudapi.plasgate.com/rest/send?private_key=' . config('plasgate.private_key'), [
             "sender" => "SMS Info",
-            "to"  => "855" . 964138003,
+            "to"  => "855" . $phoneTrim,
             "content" => '" ' . $otpCode . ' "' . ' is your verification code.'
         ]);
       
-        session()->put('otp_code_' . $phone, $otpCode, now()->addMinutes($expirationTime));
-        session()->put('phone_' . $phone,  $phone, now()->addMinutes($expirationTime));
-        session(['expiration_time_' . $phone => $expirationTime]);
+        session()->put('otp_code_' . $phone, $otpCode);
+        session()->put('phone_' . $phone , $phone);
+        session(['last_send_otp' => time()]);
+        // session(['expiration_time_' . $phone => $expirationTime]);
         
         return redirect()->route('user.verify_otpForm');
     }
@@ -170,9 +171,9 @@ class AuthController extends Controller
                 $data = User::create($user);
                 //login user
                 Auth::login($data);
-                return redirect()->route('home')->with('success', "User login Successfully");
+                return redirect('/')->with('success', "User login Successfully");
             }
-            return redirect()->route('home')->with('error', "User login not Successfully");
+            return redirect('/')->with('error', "User login not Successfully");
         } else {
             return back()->with("error","Otp is invalid");
         }

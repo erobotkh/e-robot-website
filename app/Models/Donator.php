@@ -11,5 +11,6 @@ class Donator extends Model
     protected $fillable = [
         'name',
         'amount',
+        'currency_type',
     ];
 }

@@ -1,4 +1,4 @@
-<div class="offcanvas w-25 offcanvas-end h-50" tabindex="-1" id="postContent" aria-labelledby="teamLabel">
+<div class="offcanvas  offcanvas-end " tabindex="-1" id="postContent" aria-labelledby="teamLabel">
     <div class="offcanvas-header">
         <h3 class="offcanvas-title fw-bold" id="teamLabel">Create Post Content</h3>
         <div class="rotate-img">
@@ -32,7 +32,7 @@
 
                 <div>
                     <label for=""> Description:</label>
-                    <textarea name="discription" class="form-control" rows="10"></textarea>
+                    <textarea name="description" class="form-control" rows="10"></textarea>
                 </div>
 
                 <div>

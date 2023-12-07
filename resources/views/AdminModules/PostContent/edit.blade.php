@@ -42,7 +42,7 @@
 
             <div>
                 <label for=""> Description:</label>
-                <textarea name="discription" class="form-control" value="{{ $data->discription }}" rows="10"></textarea>
+                <textarea name="description" class="form-control" value="{{ $data->description }}" rows="10"></textarea>
             </div> <br>
         </div>
 

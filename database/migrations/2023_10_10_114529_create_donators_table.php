@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->double('amount');
+            $table->string('currency_type');
             $table->timestamps();
         });
     }

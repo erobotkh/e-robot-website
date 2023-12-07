@@ -10,20 +10,26 @@
         </div>
 
         <x-about-title title="Teams of E-robot"/>
-        <div class="w-100  grid gap-[20px]  sm:grid-cols-2 lg:grid-cols-3 my-10">
+        {{-- <div class="w-100  grid gap-[20px]  sm:grid-cols-2 lg:grid-cols-3 my-10">
             <x-team-card department="Robotics" teamLeader="Hak Kimhong" leaderProfile="./images/photo_members/Hak_Kimhong.jpg" teamMember="20" image="./images/robotics_cover.jpg" description="We design, develop, and deploy cutting-edge robotic solutions that solve complex problems, streamline processes, and enhance productivity. We are dedicated to pushing the boundaries of automation and innovation to benefit our organization and society."/>
             <x-team-card department="DevOp" teamLeader="Korn Sophea" leaderProfile="./images/photo_members/Korn_Sophea.jpg" teamMember="20" image="./images/DevOp_cover.jpg" description="We bridge the gap between development and operations, enabling seamless collaboration and continuous improvement. We aim to automate processes, accelerate software delivery, and enhance reliability to ensure our products and services meet."/>
             <x-team-card department="Social Media" teamLeader="Rann Sreynith" leaderProfile="./images/photo_members/Rann_Sreynith.JPG" teamMember="20" image="./images/Social_media_cover.avif" description="We cultivate an engaging online presence that reflects our E-robot's values, connects with our audience, and drives meaningful for everyone. We aim to share compelling content, spark conversations, and create a positive and lasting impact on our community."/>
             <x-team-card department="Finance & Account" teamLeader="Ung sreymuch" leaderProfile="./images/photo_members/Ung_Sreymuch.jpg" teamMember="20" image="./images/finance_account_cover.webp" description="We uphold financial integrity, provide accurate and timely reporting, and optimize resource allocation. We are committed to supporting our organization's financial health and growth through prudent financial management and strategic financial planning."/>
             <x-team-card department="Planning & Strategy" teamLeader="Pan Sovann" leaderProfile="./images/photo_members/Pan_Sovann.jpg" teamMember="20" image="./images/planning_strategy_cover.png" description="We chart the course for our organization's success. We work collaboratively to develop clear goals, informed decisions, and actionable plans that drive innovation, growth, and resilience in a rapidly evolving landscape."/>
             <x-team-card department="HR & Admin" teamLeader="Tro Bory" leaderProfile="./images/photo_members/Tro_Bory.jpg" teamMember="20" image="./images/hr_admin_cover.webp" description="We nurture a thriving and harmonious work environment. We focus on attracting, developing, and supporting our talented team members while ensuring seamless administrative operations. Our goal is to empower our organization to achieve its objectives with a strong and engaged workforce."/>
-        
+
+        </div> --}}
+        <div class="w-100  grid gap-[20px]  sm:grid-cols-2 lg:grid-cols-3 my-10">
+            @foreach ($team as $item)
+                <x-team-card department="{{$item->name}}" teamLeader="{{$item->first_name}} {{$item->last_name}}" leaderProfile="{{$item->profile}}" teamMember="20" image="./images/robotics_cover.jpg" description="{{$item->bio}}"/>
+
+            @endforeach
         </div>
-        <x-about-title title="Subteams of E-robot"/>
+        {{-- <x-about-title title="Subteams of E-robot"/>
         <div class="w-100 grid gap-[20px]  sm:grid-cols-2 lg:grid-cols-3 my-10">
             <x-team-card department="Website Development" teamLeader="Meth Farrizart" leaderProfile="./images/photo_members/Meth_Farrizart.jpg" teamMember="20" image="./images/website_cover.jpg" description="We create exceptional online experiences. We are dedicated to crafting user-friendly, visually appealing, and technically robust websites that effectively convey our message, engage our audience, and drive our digital success."/>
             <x-team-card department="Mobile Development" teamLeader="Korn Sophea" leaderProfile="./images/photo_members/Korn_Sophea.jpg" teamMember="20" image="./images/mobile-app-development_cover.jpg" description="We craft innovative and user-centric mobile applications. We are committed to delivering seamless, high-quality, and feature-rich mobile solutions that enhance user experiences and empower our organization's mobile presence."/>
             <x-team-card department="UX/UI Design" teamLeader="Mak Channa" leaderProfile="./images/photo_members/Mak_Channa.jpg" teamMember="20" image="./images/ux_ui_cover.jpg" description="We elevate user experiences through thoughtful design. We strive to create intuitive and visually captivating interfaces that delight users, foster engagement, and align with our organization's goals, ultimately enhancing the overall user journey."/>
-        </div>
+        </div> --}}
     </div>
-</x-layout> 
+</x-layout>
