@@ -16,6 +16,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\PostContentController;
 use App\Http\Controllers\viewMembersController;
 use App\Http\Controllers\ResourceController;
+use App\Http\Controllers\ResourceFrontendController;
 use App\Models\PostContent;
 use Illuminate\Support\Facades\Route;
 
@@ -64,7 +65,7 @@ Route::get('/register', function () {
 // Admin Route
 Route::get('/admin', function () {
     return view('NiceAdmin.index');
-});
+})->name('admin.dashboard');
 
 Route::get('postContent/', function () {
     return view('AdminModules.PostContent.index');
@@ -142,13 +143,8 @@ Route::get('about/team-member', function () {
 
 //resoure
 
-// Route::get('/resource', function () {
-//     return view('resource.index');
-// });
-
-// Route::get('/resource/show', function () {
-//     return view('resource.show');
-// });
+Route::get('/resource', [ResourceFrontendController::class, 'index'])->name('resource.index');
+Route::get('/resource/{resource}/show',[ResourceFrontendController::class, 'show'])->name('resource.show');
 
 // view post content
 Route::controller(ViewActivityController::class)->group(function () {

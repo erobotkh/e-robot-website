@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+use Illuminate\Support\Facades\Date;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Http\Request;
 use App\Models\Resource;
@@ -9,8 +10,9 @@ class ResourceController extends Controller
 {
     public function index (){
         $categories = Category::all();
-        $rescources =  Resource::all();
-        return view('AdminModules.Resource.index',compact('rescources', 'categories'));
+        // $resources = Resource::orderBy('created_at', 'desc')->paginate(6);
+        $resources = Resource::filter(request(['search','filter','sort']))->paginate(6)->withQueryString();
+        return view('AdminModules.Resource.index',compact('resources', 'categories'));
     }
 
     public function show(Resource $resource){
@@ -28,41 +30,34 @@ class ResourceController extends Controller
             'image' => 'required',
             'description' => 'required|string|max:5000',
             'category_id' => 'required',
+            'sub_title' => 'required',
         ]);
         $extension = $request->file('image')->extension();
         $image_file = $request->file('image');
      
-        // $url = Storage::disk('do')->putFileAs(
-        //     "erobot/post-content",
-        //     $image_file,
-        //     'public'
-        // );
-        // dd($url);
-
-        
-
         try {
             $url = Storage::disk('do')->put(
                 "erobot/post-content",
                 $image_file,
                'public'
             );
-            // dd($url);
-            // $path = Storage::disk('do')->putFileAs('uploads', $request->file('uploaded_file'), time().'.'.$extension)
        
         } catch (Exception $e) {
             // Handle upload error
             echo 'Failed to upload image: ' . $e->getMessage();
             dd($e->getMessage());
         }
-  
+        $currentDate = Date::now();
+        $formattedDate = $currentDate->format('d F Y');
         $resource = new Resource();
         $resource->title = $request->title;
         $resource->description = $request->description;
         $resource->image = $url;
+        $resource->sub_title = $request->sub_title;
         $resource->category_id = $request->category_id;
+        $resource->date =   $formattedDate;
         $resource->save();
-        return redirect()->route('admin.resource.index')->with('success','Resource created successfully.');
+        return redirect()->route('admin.resource.index')->with('success','Resource created successfully!');
     }
 
     public function edit(Resource $resource){
@@ -75,18 +70,38 @@ class ResourceController extends Controller
         $data = $request->validate([
             'description' => 'required|string|max:5000',
             'title' => 'required',
-            'image' => 'required',
             'category_id' => 'required',
+            'sub_title' => 'required',
         ]);
+
+        if($request->hasFile('image')){
+          
+            $image_file = $request->file('image');
+         
+            try {
+                $url = Storage::disk('do')->put(
+                    "erobot/post-content",
+                    $image_file,
+                   'public'
+                );
+           
+            } catch (Exception $e) {
+                // Handle upload error
+                echo 'Failed to upload image: ' . $e->getMessage();
+                dd($e->getMessage());
+            }
+
+            $data['image'] = $url;
+        }
 
         $resource->update($data);
         
-        return redirect()->route('admin.resource.index')->with('success','Resource updated successfully');
+        return redirect()->route('admin.resource.index')->with('success','Resource updated successfully!');
     }
 
     public function destroy(Resource $resource){
         $resource->delete();
-        return redirect()->route('admin.resource.index')->with('success','Resource deleted successfully.');
+        return redirect()->route('admin.resource.index')->with('success','Resource deleted successfully!');
     }
 
     public function uploadCkEditor(Request $request)
@@ -102,7 +117,7 @@ class ResourceController extends Controller
 
             // Create the directory if it doesn't exist
             if (!is_dir(public_path($dirPath))) {
-                @mkdir(public_path($dirPath), 0755, true);
+@mkdir(public_path($dirPath), 0755, true);
             }
 
             // Move the file to the correct directory
