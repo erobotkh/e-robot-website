@@ -62,7 +62,7 @@
 
 
           <li class="nav-item">
-              <a class="nav-link collapsed" href="{{ url('reference') }}">
+              <a class="nav-link collapsed" href="{{ url('admin/resource') }}">
                   <i class="bi bi-person-check-fill"></i>
                   <span>Resource</span>
               </a>
