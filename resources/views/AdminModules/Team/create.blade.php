@@ -18,7 +18,13 @@
                 <div>
                     <label for=""> Bio:</label>
                     <input type="text" name="bio" class="form-control" placeholder="Bio">
-                </div> <br>
+                </div>
+
+                <div>
+                    <label for=""> Cover:</label>
+                    <input type="file" name="image_name" class="form-control" placeholder="Input profile">
+                </div>
+                <br>
 
             </div>
 
