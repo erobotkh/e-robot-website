@@ -98,15 +98,15 @@ E-Robot | Resource
 
                                         <button class="px-2 py-1.5 bg-red-600 rounded-md text-white"
                                             data-bs-toggle="modal" data-value="{{ $data->id }}"
-                                            data-bs-target="#showDelete" id="btn-delete">
+                                            data-bs-target="#{{ $data->id }}" id="btn-delete">
                                             Delete</button>
                                         <!--romove Modal -->
-                                        <div class="modal fade" id="showDelete" tabindex="-1" aria-labelledby="delete"
-                                            aria-hidden="true">
+                                        <div class="modal fade" id="{{ $data->id }}" tabindex="-1"
+                                            aria-labelledby="delete" aria-hidden="true">
                                             <div class="modal-dialog">
                                                 <div class="modal-content">
                                                     <div class="modal-header">
-                                                        <h5 class="modal-title" id="delete">Remove donator</h5>
+                                                        <h5 class="modal-title" id="delete">Remove Rresource</h5>
                                                         <button type="button" class="btn-close" data-bs-dismiss="modal"
                                                             aria-label="Close"></button>
                                                     </div>
