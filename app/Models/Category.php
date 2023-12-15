@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Notifications\Notifiable;
-
+use App\Models\Resource;
 class Category extends Model
 {
     use HasFactory, Notifiable;
@@ -17,6 +17,10 @@ class Category extends Model
     public function postcontents(): HasMany
     {
         return $this->hasMany(PostContent::class);
+    }
+    public function resource(): HasMany
+    {
+        return $this->hasMany(Resource::class);
     }
 }
 
