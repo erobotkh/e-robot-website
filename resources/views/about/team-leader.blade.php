@@ -4,22 +4,15 @@
         <div class="p-5 lg:py-20 bg-gray-50">
             <div class="container mx-auto px-6 md:px-12 xl:px-32">
                 <div class="mb-16 text-center">
-                    <x-about-title title="Team Leaders of E-robot" />
-                    <p class="text-gray-600 lg:w-8/12 lg:mx-auto">Tailus prides itself not only on award-winning
-                        technology, but also on the talent of its people of some of the brightest minds and most
-                        experienced executives in business.</p>
+                    <!-- <x-about-title title="Team Leaders of E-robot" /> -->
+                    <h1 class="font-bold text-3xl font-heading text-red-600 uppercase"
+                        style="font-family: 'Battambang', cursive;">
+                        Team Leaders of E-robot
+                    </h1>
+                    <p class="text-gray-600 lg:w-8/12 lg:mx-auto">A TEAM THAT COMES WITH A PURE HEART OF CAMBODIA YOUTHS
+                    </p>
                 </div>
-                <div class="grid gap-12 items-center md:grid-cols-3">
-                    <div class="space-y-4 text-center">
-                        <img class="w-64 h-64 mx-auto object-cover rounded-xl md:w-40 md:h-40 lg:w-64 lg:h-64 "
-                            src="/images/photo_members/Han_Leangsiv.jpeg" alt="co-founder" loading="lazy" width="640"
-                            height="805">
-                        <div>
-                            <h4 class="text-2xl font-bold uppercase" style="font-family: 'Battambang', cursive;">HAN
-                                LEANGSIV</h4>
-                            <span class="block text-sm text-gray-500 uppercase">Co-Founder</span>
-                        </div>
-                    </div>
+                <div class="flex flex-col gap-12 items-ceter justify-evenly md:flex-row">
                     <div class="space-y-4 text-center">
                         <img class="w-64 h-64 mx-auto object-cover rounded-xl md:w-48 md:h-64 lg:w-64 lg:h-80"
                             src="/images/photo_members/Suy_Kosal.jpg" alt="Founder" loading="lazy" width="1000"
@@ -31,14 +24,17 @@
                         </div>
                     </div>
                     <div class="space-y-4 text-center">
-                        <img class="w-64 h-64 mx-auto object-cover rounded-xl md:w-40 md:h-40 lg:w-64 lg:h-64"
-                            src="/images/photo_members/sticker-e-robot.png" alt="Co-Founder" loading="lazy"
-                            width="1000" height="667">
+                        <img class="w-64 h-64 mx-auto object-cover rounded-xl md:w-48 md:h-64 lg:w-64 lg:h-80"
+                            src="/images/photo_members/Han_Leangsiv.jpeg" alt="co-founder" loading="lazy" width="640"
+                            height="805">
                         <div>
-                            <h4 class="text-2xl font-bold uppercase" style="font-family: 'Battambang', cursive;"></h4>
-                            <span class="block text-sm text-gray-500 uppercase"></span>
+                            <h4 class="text-2xl font-bold uppercase" style="font-family: 'Battambang', cursive;">HAN
+                                LEANGSIV</h4>
+                            <span class="block text-sm text-gray-500 uppercase">Co-Founder</span>
                         </div>
                     </div>
+
+
                 </div>
             </div>
         </div>
@@ -54,19 +50,69 @@
 
             </div>
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-                @foreach ($data_member as $item)
+                @foreach($data_member as $item)
 
-                    @if ($item->title === 'leader')
+                    @if($item->title === 'leader')
                         <?php
                             $fb_link ='https://web.facebook.com/profile.php?id=100094879493602';
                             $telegram_link ='https://t.me/erobot_generalknowledge';
                             $linkin_link = 'https://www.linkedin.com/company/erobotkh';
                         ?>
-                        @foreach ($social_member as $social)
-                            @if ($social->member_id === $item->id)
+                        @foreach($social_member as $social)
+                            @if($social->member_id === $item->id)
 
                                 @switch($social->name )
                                     @case('telegram')
+                                        <?php $telegram_link = $social->link; ?>
+                                        @break
+                                    @case('facebook')
+                                        <?php $fb_link = $social->link; ?>
+                                        @break
+                                    @case('linkin')
+                                        <?php $linkin_link = $social->link; ?>
+                                        @break
+                                    @default
+                                    @endswitch
+                                @endif
+                            @endforeach
+    
+                            <x-team-leader-card name="{{ $item->first_name }} {{ $item->last_name }}"
+                                title="{{ $item->name }} {{ $item->title }}" photo="{{ $item->profile }}"
+                                facebook="<?php echo $fb_link; ?>" telegram="<?php echo $telegram_link; ?>"
+                                linkin="<?php echo $linkin_link; ?>" />
+                        @endif
+                    @endforeach
+                    {{-- <x-team-leader-card name="Rann Sreynith" title="Social Media Team" photo="/images/photo_members/Rann_Sreynith.JPG" facebook="https://www.facebook.com/profile.php?id=100070627689101&mibextid=LQQJ4d" telegram="https://t.me/sreynith_1411" linkin="#" />
+                                                    <x-team-leader-card name="Korn Sophea" title="Mobile Development Team" photo="/images/photo_members/Korn_Sophea.jpg" facebook="https://www.facebook.com/korn.sophea.718?mibextid=ZbWKwL" telegram="https://t.me/mooni_li" linkin="#" />
+                                                    <x-team-leader-card name="Meth Farrizart" title="Website Team" photo="/images/photo_members/Meth_Farrizart.jpg" facebook="https://www.facebook.com/farrizart.meth" telegram="https://t.me/greatdev09" linkin="#" />--}}
+                    {{-- <x-team-leader-card name="Pan Sovann" title="Planning and Strategy Team" photo="/images/photo_members/Pan_Sovann.jpg" facebook="#" telegram="https://t.me/domlong_choeng" linkin="#" />
+                                                    <x-team-leader-card name="Tro Bory" title="HR & Admin Team" photo="/images/photo_members/Tro_Bory.jpg" facebook="https://www.facebook.com/bory.smilefull" telegram="https://t.me/BoryTro" linkin="#" />
+                                                    <x-team-leader-card name="Ung sreymuch" title="Financial Team" photo="/images/photo_members/Ung_Sreymuch.jpg" facebook="https://www.facebook.com/ung.sreymuch" telegram="https://t.me/ungsreymuch" linkin="#" />
+                                                    <x-team-leader-card name="Van Sela" title="Competition" photo="/images/photo_members/Van_Sela.jpg" facebook="https://www.facebook.com/sela.van.10?mibextid=ZbWKwL" telegram="https://t.me/sela_van" linkin="#" /> --}}
+            </section>
+    
+            <!-- component -->
+            <section class="mx-auto px-4 sm:px-6 lg:px-10 pb-12">
+                <div class="text-center pb-12">
+                    <h1 class="font-bold text-3xl font-heading text-red-600 uppercase"
+                        style="font-family: 'Battambang', cursive;">
+                        Check our awesome team members
+                    </h1>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                    @foreach($data_member as $item)
+    
+                        @if($item->title === 'member')
+                            <?php
+                                                                    $fb_link ='https://web.facebook.com/profile.php?id=100094879493602';
+                                                                    $telegram_link ='https://t.me/erobot_generalknowledge';
+                                                                    $linkin_link = 'https://www.linkedin.com/company/erobotkh';
+                                                                ?>
+                            @foreach($social_member as $social)
+                                @if($social->member_id === $item->id)
+    
+                                    @switch($social->name )
+                                        @case('telegram')
                                         <?php $telegram_link = $social->link; ?>
                                         @break
                                     @case('facebook')
@@ -81,62 +127,8 @@
                         @endforeach
 
                         <x-team-leader-card name="{{ $item->first_name }} {{ $item->last_name }}"
-                            title="{{ $item->name }} {{ $item->title }}"
-                            photo="{{ $item->profile }}"
-                            facebook="<?php echo $fb_link; ?>"
-                            telegram="<?php echo $telegram_link; ?>"
-                            linkin="<?php echo $linkin_link; ?>" />
-                    @endif
-                @endforeach
-                {{-- <x-team-leader-card name="Rann Sreynith" title="Social Media Team" photo="/images/photo_members/Rann_Sreynith.JPG" facebook="https://www.facebook.com/profile.php?id=100070627689101&mibextid=LQQJ4d" telegram="https://t.me/sreynith_1411" linkin="#" />
-            <x-team-leader-card name="Korn Sophea" title="Mobile Development Team" photo="/images/photo_members/Korn_Sophea.jpg" facebook="https://www.facebook.com/korn.sophea.718?mibextid=ZbWKwL" telegram="https://t.me/mooni_li" linkin="#" />
-            <x-team-leader-card name="Meth Farrizart" title="Website Team" photo="/images/photo_members/Meth_Farrizart.jpg" facebook="https://www.facebook.com/farrizart.meth" telegram="https://t.me/greatdev09" linkin="#" />--}}
-            {{-- <x-team-leader-card name="Pan Sovann" title="Planning and Strategy Team" photo="/images/photo_members/Pan_Sovann.jpg" facebook="#" telegram="https://t.me/domlong_choeng" linkin="#" />
-            <x-team-leader-card name="Tro Bory" title="HR & Admin Team" photo="/images/photo_members/Tro_Bory.jpg" facebook="https://www.facebook.com/bory.smilefull" telegram="https://t.me/BoryTro" linkin="#" />
-            <x-team-leader-card name="Ung sreymuch" title="Financial Team" photo="/images/photo_members/Ung_Sreymuch.jpg" facebook="https://www.facebook.com/ung.sreymuch" telegram="https://t.me/ungsreymuch" linkin="#" />
-            <x-team-leader-card name="Van Sela" title="Competition" photo="/images/photo_members/Van_Sela.jpg" facebook="https://www.facebook.com/sela.van.10?mibextid=ZbWKwL" telegram="https://t.me/sela_van" linkin="#" /> --}}
-        </section>
-
-        <!-- component -->
-        <section class="mx-auto px-4 sm:px-6 lg:px-10 pb-12">
-            <div class="text-center pb-12">
-                <h1 class="font-bold text-3xl font-heading text-red-600 uppercase"
-                    style="font-family: 'Battambang', cursive;">
-                    Check our awesome team members
-                </h1>
-            </div>
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-                @foreach ($data_member as $item)
-
-                    @if ($item->title === 'member')
-                        <?php
-                            $fb_link ='https://web.facebook.com/profile.php?id=100094879493602';
-                            $telegram_link ='https://t.me/erobot_generalknowledge';
-                            $linkin_link = 'https://www.linkedin.com/company/erobotkh';
-                        ?>
-                        @foreach ($social_member as $social)
-                            @if ($social->member_id === $item->id)
-
-                                @switch($social->name )
-                                    @case('telegram')
-                                        <?php $telegram_link = $social->link; ?>
-                                        @break
-                                    @case('facebook')
-                                        <?php $fb_link = $social->link; ?>
-                                        @break
-                                    @case('linkin')
-                                        <?php $linkin_link = $social->link; ?>
-                                        @break
-                                    @default
-                                @endswitch
-                            @endif
-                        @endforeach
-
-                        <x-team-leader-card name="{{ $item->first_name }} {{ $item->last_name }}"
-                            title="{{ $item->name }} {{ $item->title }}"
-                            photo="{{ $item->profile }}"
-                            facebook="<?php echo $fb_link; ?>"
-                            telegram="<?php echo $telegram_link; ?>"
+                            title="{{ $item->name }} {{ $item->title }}" photo="{{ $item->profile }}"
+                            facebook="<?php echo $fb_link; ?>" telegram="<?php echo $telegram_link; ?>"
                             linkin="<?php echo $linkin_link; ?>" />
                     @endif
                 @endforeach

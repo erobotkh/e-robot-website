@@ -42,9 +42,11 @@ class Resource extends Model
                       break;
                     case 'latest':
                         $query->orderBy('created_at','DESC');
+                        // $query->orderBy('id','DESC');
                     break;
                     case 'oldest':
                         $query->orderBy('created_at','ASC');
+                        // $query->orderBy('id','ASC');
                   }
             }
            
