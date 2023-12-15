@@ -20,20 +20,28 @@ class PostContentController extends Controller
     }
     public function store(Request $request)
     {
-        $postContent = new PostContent;
-        $postContent->title = $request->input('title');
-        $postContent->description = $request->input('description');
-        $postContent->category_id = $request->input('category_id');
 
-        if ($request->hasFile('image_name')) {
-            $file = $request->file('image_name');
-            $ext = $file->getClientOriginalExtension();
-            $filename = time() . '.' . $ext;
-            $file->move('images', $filename);
-            $postContent->image_name = $filename;
+        $image_name = $request->file("image_name");
+        $url = " ";
+        if ($image_name) {
+            $url = Storage::disk('do')->putFile(
+                "erobot/PostContent-image",
+                $image_name,
+                'public'
+            );
         }
+        $this->validate($request, [
+            "title" => 'required',
+            "category_id" => 'required',
+            "image_name" => "required|image|mimes:jpeg,jpg,png",
+        ]);
 
-        $postContent->save();
+        $this->create([
+            "title" => $request->title,
+            "category_id" => $request->category_id,
+            "image_name" => $url,
+        ]);
+
         return redirect()->route('postContent.index');
     }
     public function edit($id)
