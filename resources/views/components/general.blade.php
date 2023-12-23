@@ -10,12 +10,16 @@
 
     <title>@yield('site-title')</title>
 
-    <meta content="" name="description">
-    <meta content="" name="keywords">
+    <meta name="description" content="E-Robot is a team that comes with a pure heart of cambodia youths.">
+    <meta name="keywords" content="">
+    <meta name="author" content="E_Robot_Development_Team">
 
     <!-- Favicons -->
-    <link href="{{ url('assets/img/favicon.png') }}" rel="icon">
-    <link href="{{ url('assets/img/apple-touch-icon.png') }}" rel="apple-touch-icon">
+    <link rel="icon" href="{{asset("assets/img/erobot-no-bg.png")}}">
+
+
+    {{-- <link href="{{ url('assets/img/favicon.png') }}" rel="icon"> --}}
+    {{-- <link href="{{ url('assets/img/apple-touch-icon.png') }}" rel="apple-touch-icon"> --}}
 
     <!-- Google Fonts -->
     <link href="{{ url('https://fonts.gstatic.com') }}" rel="preconnect">

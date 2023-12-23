@@ -3,12 +3,13 @@
 
       <ul class="sidebar-nav" id="sidebar-nav">
 
-          <li class="nav-item">
+          {{-- <li class="nav-item">
               <a class="nav-link" href="{{ url('admin') }}">
                   <i class="bi bi-grid"></i>
                   <span>Dashboard</span>
               </a>
-          </li><!-- End Dashboard Nav -->
+          </li> --}}
+          <!-- End Dashboard Nav -->
 
           <li class="nav-item">
               <a class="nav-link collapsed" href="{{ url('postContent') }}">
@@ -63,28 +64,28 @@
 
           <li class="nav-item">
               <a class="nav-link collapsed" href="{{ url('admin/resource') }}">
-                  <i class="bi bi-person-check-fill"></i>
+                  <i class='bx bxs-book-open'></i>
                   <span>Resource</span>
               </a>
           </li>
 
 
-          <li class="nav-item">
+          {{-- <li class="nav-item">
               <a class="nav-link collapsed" href="{{ url('user') }}">
                   <i class="bi bi-person-check-fill"></i>
                   <span>User</span>
               </a>
-          </li>
+          </li> --}}
 
 
-          <li class="nav-item">
+          {{-- <li class="nav-item">
               <a class="nav-link collapsed" href="{{ url('report') }}">
                   <i class="bi bi-flag-fill"></i>
                   <span>Report</span>
               </a>
-          </li>
+          </li> --}}
 
-
+{{--
           <li class="nav-heading">Pages</li>
 
           <li class="nav-item">
@@ -115,6 +116,7 @@
                   <span>Log Out</span>
               </a>
           </li><!-- End Login Page Nav -->
+          --}}
 
       </ul>
 

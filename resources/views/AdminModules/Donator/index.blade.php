@@ -47,30 +47,42 @@
         </script>
     @endif
     <main id="main" class="main">
-        <div class="d-flex ">
-            <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#add_card">
-                Add Donator
-            </button>
+        <div class="d-flex align-items-center justify-content-between  ">
+            <div class="pagetitle">
+                <h1>Donator</h1>
+                <nav>
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item">
+                            <a href="/admin">Dashboard</a>
+                        </li>
+                        <li class="breadcrumb-item active">Donator</li>
+                    </ol>
+                </nav>
+            </div>
 
-            <h2 class=" m-auto fw-bold  ">Donator Table</h2>
+
+            {{-- filter --}}
+            <div class="filterSection rounded  d-flex align-items-center justify-content-center gap-5">
+                <button class="btn btn-danger " data-bs-toggle="modal" data-bs-target="#add_card">
+                    Add Donator
+                </button>
+                <div class="filterSection d-flex flex-row-reverse position-relative">
+                    <button class="btn btn-outline-danger dropdown-toggle"  role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                    Filter
+                    </button>
+
+                    <ul class="dropdown-menu position-absolute" aria-labelledby="dropdownMenuLink">
+                    <li><a class="dropdown-item" href="/admin/donator?type=">All</a></li>
+                    <li><a class="dropdown-item" href="/admin/donator?type=dollar">Dollar $</a></li>
+                    <li><a class="dropdown-item" href="/admin/donator?type=reil">Reil ៛</a></li>
+                    </ul>
+                </div>
+
+            </div>
         </div>
 
-        {{-- filter --}}
-        <div class="filterSection rounded ">
 
-            <div class="filterSection d-flex flex-row-reverse ">
-                <a class="btn btn-outline-success dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
-                  Filter
-                </a>
-
-                <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                  <li><a class="dropdown-item" href="/admin/donator?type=">All</a></li>
-                  <li><a class="dropdown-item" href="/admin/donator?type=dollar">Dollar $</a></li>
-                  <li><a class="dropdown-item" href="/admin/donator?type=reil">Reil ៛</a></li>
-                </ul>
-              </div>
-
-        </div>
+        <hr style="border: 2px solid ">
 
         {{-- view information of donation card --}}
         <table class="table table-hover mt-3 table-bordered ">

@@ -13,7 +13,7 @@
                 Welcome to E-robot
             </p>
 
-            <div class="flex gap-2">
+            {{-- <div class="flex gap-2">
                 <a href="#"
                     class="flex items-center justify-center mt-2 text-white rounded-lg shadow-md hover:bg-gray-100 w-full">
                     <div class="px-4 py-3">
@@ -73,14 +73,17 @@
                         Facebook
                     </h1>
                 </a>
-            </div>
-            <div class="mt-4 flex items-center justify-between">
+            </div> --}}
+
+
+            {{-- <div class="mt-4 flex items-center justify-between">
                 <span class="border-b w-1/5 lg:w-1/4"></span>
                 <a href="#" class="text-xs text-center text-gray-500 uppercase">or login with phone number</a>
                 <span class="border-b w-1/5 lg:w-1/4"></span>
-            </div>
+            </div> --}}
+
             <div>
-                <form method="POST" action="{{ route('user.login') }}">
+                <form method="POST" action="{{ route('login') }}">
                     @csrf
 
                     <div class="mt-4">
@@ -98,7 +101,7 @@
                     <div class="mt-4">
                         <div class="flex justify-between items-center">
                             <label class="block text-gray-700 text-sm font-bold mb-2">Password</label>
-                            <a href="#" class="text-xs text-red-500">Forget Password?</a>
+                            {{-- <a href="#" class="text-xs text-red-500">Forget Password?</a> --}}
                         </div>
                         <input
                             class="bg-gray-200 text-gray-700 focus:outline-none focus:shadow-outline border border-gray-300 rounded py-2 px-4 block w-full appearance-none"
@@ -115,14 +118,14 @@
                     </div>
                 </form>
             </div>
-            <div class="mt-4 ">
+            {{-- <div class="mt-4 ">
                 <div class="text-xs text-gray-500 text-center">Don't have an account?</div>
                 <div class="mt-4 flex items-center justify-between">
                     <span class="border-b w-1/5 md:w-1/4"></span>
                     <a href="/register" class="text-xs text-blue-500 underline">Sign up now</a>
                     <span class="border-b w-1/5 md:w-1/4"></span>
                 </div>
-            </div>
+            </div> --}}
         </div>
     </div>
 </x-login-register-layout>

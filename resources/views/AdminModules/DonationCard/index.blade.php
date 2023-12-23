@@ -51,17 +51,28 @@
 
 
     <main id="main" class="main">
-        <div class="d-flex ">
-            <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#add_card">
+        <div class="d-flex align-items-center  justify-content-between  ">
+            <div class="pagetitle">
+                <h1>Donation</h1>
+
+                <nav>
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item">
+                            <a href="/admin">Dashboard</a>
+                        </li>
+                        <li class="breadcrumb-item active">Donation</li>
+                    </ol>
+                </nav>
+            </div>
+            <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#add_card">
                 Add Card
             </button>
-
-            <h2 class=" m-auto fw-bold  ">Donation card</h2>
         </div>
+        <hr style="border: 2px solid">
 
 
         {{-- view information of donation card --}}
-        <table class="table table-hover mt-3">
+        <table class="table table-hover mt-3 table-bordered">
             <thead>
                 <tr>
 

@@ -111,7 +111,7 @@
             </div> --}}
             {{-- @props(['acc_type','qr_code','acc_num','recipient_name','recipient_position']) --}}
             @foreach ($info as $data)
-                <x-donation-card acc_type='{{$data->acc_type}}' qr_code='/images/{{$data->qr_code}}' acc_num='{{$data->acc_number}}' recipient_name='{{$data->recipient_name}}' recipient_position='{{$data->recipient_position}}' currency_symbol='{{$data->currency_symbol}}'></x-donation-card>
+                <x-donation-card acc_type='{{$data->acc_type}}' qr_code='{{$data->qr_code}}' acc_num='{{$data->acc_number}}' recipient_name='{{$data->recipient_name}}' recipient_position='{{$data->recipient_position}}' currency_symbol='{{$data->currency_symbol}}'></x-donation-card>
             @endforeach
         </div>
         <div class="  flex flex-col items-center ">

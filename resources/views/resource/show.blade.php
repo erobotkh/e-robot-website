@@ -15,7 +15,7 @@
             <br>
             <hr>
             <br>
-            <div class="md:hidden flex flex-col gap-3 items-center text-red-600">
+            {{-- <div class="md:hidden flex flex-col gap-3 items-center text-red-600">
                 <i>Share this resource: </i>
                 <!-- AddToAny BEGIN -->
                 <div class="a2a_kit a2a_kit_size_32 a2a_default_style ">
@@ -28,7 +28,7 @@
                 </div>
                 <script async src="https://static.addtoany.com/menu/page.js"></script>
                 <!-- AddToAny END -->
-            </div>
+            </div> --}}
             <div class="mx-auto my-5"> <img src="{{ $resource->image }}" alt="cover image"
                     class="block mx-auto w-full max-h-[400px] rounded" />
             </div>
@@ -50,7 +50,7 @@
             </div>
         </div>
 
-        <div class="hidden md:flex flex-col gap-3 items-center text-red-600 fixed top-[200px] left-4">
+        {{-- <div class="hidden md:flex flex-col gap-3 items-center text-red-600 fixed top-[200px] left-4">
 
             <!-- AddToAny BEGIN -->
             <div class="a2a_kit a2a_kit_size_32 a2a_default_style a2a_vertical_style" data-a2a-scroll-show="100,20">
@@ -63,7 +63,7 @@
             </div>
             <script async src="https://static.addtoany.com/menu/page.js"></script>
             <!-- AddToAny END -->
-        </div>
+        </div> --}}
 
     </div>
 

@@ -9,7 +9,7 @@
         <p class="text-xl text-red-600 text-center font-semibold">
           Welcome to E-robot
         </p>
-        <div class="flex gap-2">
+        {{-- <div class="flex gap-2">
           <a
             href="#"
             class="flex items-center justify-center mt-2 text-white rounded-lg shadow-md hover:bg-gray-100 w-full"
@@ -109,15 +109,17 @@
               Facebook
             </h1>
           </a>
-        </div>
-        <div class="mt-4 flex items-center justify-between">
+        </div> --}}
+
+        {{-- <div class="mt-4 flex items-center justify-between">
           <span class="border-b w-1/5 lg:w-1/4"></span>
           <a href="#" class="text-xs text-center text-gray-500 uppercase"
             >or Sign up with Phone number</a
           >
           <span class="border-b w-1/5 lg:w-1/4"></span>
-        </div>
-        <form method="POST" action="{{route('user.register')}}">
+        </div> --}}
+
+        <form method="POST" action="{{route('register')}}">
           @csrf
           @method('POST')
           <div class="mt-4">

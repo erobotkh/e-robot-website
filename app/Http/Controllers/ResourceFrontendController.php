@@ -10,6 +10,9 @@ class ResourceFrontendController extends Controller
     public function index()
     {
         $resources = Resource::orderBy('created_at', 'desc')->paginate(8);
+        if(empty($resources)) {
+            $resources = new Resource();
+        }
         return view('resource.index',compact('resources'));
     }
 

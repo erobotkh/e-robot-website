@@ -53,13 +53,13 @@ class DonationController extends Controller
         // dd($qr_code);
         if($qr_code){
             $new_qr_code = time() .".". $qr_code->getClientOriginalName();
-            // $path ='assets/image';
-            // $qr_code->move($path, $new_qr_code);
-            $url = Storage::disk('do')->putFile(
-                "erobot/donation-qr_code",
-                $qr_code,
-                'public'
-            );
+            $path ='images/';
+            $qr_code->move($path, $new_qr_code);
+            // $url = Storage::disk('do')->putFile(
+            //     "erobot/donation-qr_code",
+            //     $qr_code,
+            //     'public'
+            // );
         }
         $acc_type = $request->acc_type;
         if($acc_type=="dollar"){
@@ -72,7 +72,7 @@ class DonationController extends Controller
             "acc_number"=> $request->acc_number,
             "acc_type"=> $acc_type,
             "currency_symbol"=> $currency_symbol,
-            "qr_code"=> $url,
+            "qr_code"=> '/'.$path.$new_qr_code,
             "recipient_name"=> $request->recipient_name,
             "recipient_position"=> $request->recipient_position,
         ]);

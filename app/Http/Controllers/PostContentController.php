@@ -14,6 +14,8 @@ class PostContentController extends Controller
             ->select('post_contents.*', 'categories.category_name')
             ->join('categories', 'categories.id', '=', 'post_contents.category_id')
             ->get();
+
+    
         return view('AdminModules.PostContent.index', [
             'data' => $data
         ]);

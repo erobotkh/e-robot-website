@@ -91,7 +91,8 @@
 
         </div>
     </div>
-    <div
+    
+    {{-- <div
         class="headerTop_right lg:w-[250px] md:w-[28%] h-full flex items-center justify-between text-white font-semibold">
 
 
@@ -134,7 +135,7 @@
         </div>
 
 
-    </div>
+    </div> --}}
 </div>
 
 

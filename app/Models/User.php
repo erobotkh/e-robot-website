@@ -25,7 +25,7 @@ class User extends Authenticatable
         'status',
         'phone',
         'password',
-        
+
     ];
     public function postcontents():HasMany{
         return $this->hasMany(PostContent::class);

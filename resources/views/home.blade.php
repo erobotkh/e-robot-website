@@ -12,7 +12,7 @@
                 <div class="programTitle"><h1 style="font-family: 'Battambang', cursive;">Our Programs</h1></div>
                 <div class="programContainer">
                     <div class="programCard">
-                        <a href="./list_content#programSection">
+                        <a href="#">
                             <div class="programObject"><img src="images/E-STEM_icon.png" alt=""></div>
                             <div class="subtitleDetail">
                                 <div class="programSubtitle"><h2  style="font-family: 'Battambang', cursive;">STEM for youth</h2></div>
@@ -99,7 +99,8 @@
 
                 <div class="videoContainer">
                     <div class="video">
-                        <iframe width="700" height="380" src="https://www.youtube.com/embed/iz6Ke1YNcV0?si=l9e7YalAweoztFnK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>                    </div>
+                        <iframe width="700" height="380" src="https://www.youtube.com/embed/iz6Ke1YNcV0?si=l9e7YalAweoztFnK" title="YouTube video player" frameborder="0" allow="autoplay ;accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
                     <div class="articleContianer">
                         <div class="videoSubtitle"><h2 style="font-family: 'Battambang', cursive;">E-Robot History</h2></div>
                         <div class="videoDate">

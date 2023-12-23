@@ -6,7 +6,7 @@
                     <a href="/home">
                         <img class=" w-100 min-w-[80px]" src="{{asset('./images/logo_erobot-removebg.png')}}" alt="">
                     </a>
-                </div>  
+                </div>
                 <div>
                     <p class="text-center text-[14px] font-semibold uppercase">A team that comes with a pure heart of cambodia youths</p>
                     <div class="flex justify-center  gap-4 mt-2">
@@ -44,7 +44,7 @@
                         </a> -->
                     </div>
                 </div>
-            </div>  
+            </div>
 
             <div class=" grid-1 border-l border-red-600 pl-5">
                 <p class="font-bold uppercase text-red-600 text-xl"  style="font-family: 'Battambang', cursive;">Quick Link</p>
@@ -62,15 +62,15 @@
                 <div class="flex flex-col items-start mt-3 space-y-2">
                     <a href="mailto:ERobotTeam@gmail.com"  class=" hover:underline hover:text-red-600">ERobotTeam@gmail.com</a>
                     <a href="tel:+85510567014" class="  hover:underline hover:text-red-600">+855 10 567 014</a>
-                    <a href="https://goo.gl/maps/PCNf8SqMeKSSYAxc7" target="_blank" class=" hover:underline hover:text-red-600">Borei 100 Knong Village Teuk Thla Commune Sen Sok quarter Phnom Penh Cambodia</a>
+                    <a href="https://maps.app.goo.gl/jMEZcTa4wTXDLkHh6" target="_blank" class=" hover:underline hover:text-red-600">Phum Roung Chakr, Phnom Penh</a>
                 </div>
             </div>
         </div>
-        
+
         <hr class="my-6 border-gray-200 md:my-8 ">
-        
+
         <div class="flex flex-col gap-3 ">
-<!--          
+<!--
             <div class="flex gap-4">
                 <a href="#">
                     <button class="bg-blue-500 p-2 font-semibold text-white inline-flex items-center space-x-2 rounded-full hover:border border-black">
@@ -115,7 +115,7 @@
                             <img src="images/logo_erobot.png" alt="">
 
                         </a>
-                        
+
                     </div>
                     <div class="quote"><p>The universe of us is loving and curiosity.</p></div>
                     <div class="media">
@@ -165,7 +165,7 @@
                         <a href="#">
                             <div class="playStoreImage">
                                 <img src="images/playStore.png" alt="">
-    
+
                             </div>
                             <div class="subtitle">Play Store</div>
                         </a>
