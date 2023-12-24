@@ -72,6 +72,7 @@ Route::get('post-content/show_post_of_another_user/{id}', [PostContentController
 
 Route::get('donation/show',[DonationController::class,'showInfo']);
 Route::get('donator/show',[DonationController::class,'showDonator']);
+Route::post('donator/create',[DonationController::class,'createDonator']);
 
 Route::get('achievment/show',[AchievmentController::class,'showInfo']);
 
@@ -81,6 +82,7 @@ Route::middleware(['auth:api'])->group(function () {
     Route::post('category/store', [CategoryController::class, 'store']);
     
     Route::post('post-content/store', [PostContentController::class, 'store']);
+    Route::post('post-content/edit', [PostContentController::class, 'edit']);
     Route::get('post-content/index', [PostContentController::class, 'index']);
     Route::post('post-content/show', [PostContentController::class, 'show']);
     Route::delete('post-content/{post_content_id}', [PostContentController::class, 'destroy']);

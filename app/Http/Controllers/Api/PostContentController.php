@@ -113,6 +113,37 @@ class PostContentController extends Controller
         $data = PostContent::create(['title' => $title, 'description' => $description, 'image_name' => $url, 'category_id' => $category_id, 'user_id' => $user_id]);
         return $this->sendResponse($data, "Post Successfully");
     }
+    public function edit(Request $request)
+    {
+        $rule = [
+            'title' => 'required',
+            'description' => 'nullable',
+            'category_id' => 'required',
+            'post_id'=>'required'
+        ];
+        // dd($request);
+        $input = $request->only('title', 'description', 'category_id','post_id');
+        $validator = Validator::make($input, $rule);
+        if ($validator->fails()) {
+            return $this->sendError("Post Fail", $validator->messages());
+        }
+
+        $title = $request->title;
+        $description = $request->description;
+        $category_id = $request->category_id;
+        $user_id = Auth::id();
+       
+        if(PostContent::where(['id'=>$request->post_id])->first()){
+            // dd(PostContent::where(['id'=>$request->post_id])->first());
+            $data = PostContent::where(['id'=>$request->post_id])->first();
+            $data->update(['title' => $title, 'description' => $description, 'category_id' => $category_id, 'user_id' => $user_id]);
+            return $this->sendResponse($data, "Update Successfully");
+        }else{
+            return $this->sendError( "Update Fail");
+        }
+      
+        
+    }
 
     /**
      * Display the specified resource.

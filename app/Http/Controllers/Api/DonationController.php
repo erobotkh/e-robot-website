@@ -35,6 +35,17 @@ class DonationController extends Controller
 
         return response()->json($response, $code);
     }
+    public function createDonator(Request $request){
+        $this->validate($request,[
+            'name'=>'required',
+            'amount'=>'required',
+            "currency_type"=>"required"
+        ]);
+        $data=Donator::create($request->all());
+        if($data){
+            return response()->json(['code'=>200,"message"=>"Create Successfully",'data'=>$data]);
+        }
+    }
     public function showInfo(){
         $data=Donation::all();
         return response()->json(['code'=>200,'message'=>"Successfully",'data'=>$data]);
