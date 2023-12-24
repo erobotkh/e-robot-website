@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Team;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\DB;
 
 class TeamController extends Controller
@@ -18,32 +19,34 @@ class TeamController extends Controller
     }
 
     /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
      * Store a newly created resource in storage.
      */
     public function store(Request $request)
     {
-        $request->validate([
-            'name' => 'required',
+        $cover = $request->file("image_name");
+        $url = " ";
+        if ($cover) {
+            $url = Storage::disk('do')->putFile(
+                "erobot/Team-cover",
+                $cover,
+                'public'
+            );
+        }
+        $this->validate($request, [
+            "name" => 'required',
+            "bio" => 'required',
+            "image_name" => "required|image|mimes:jpeg,jpg,png",
         ]);
 
-        Team::create($request->post());
-        return redirect()->route('team.index');
-    }
+        $this->create([
+            "name" => $request->name,
+            "bio" => $request->bio,
+            "image_name" => $url,
+        ]);
 
-    /**
-     * Display the specified resource.
-     */
-    public function show(string $id)
-    {
-        //
+
+        // $team->save();
+        return redirect()->route('team.index');
     }
 
     /**
