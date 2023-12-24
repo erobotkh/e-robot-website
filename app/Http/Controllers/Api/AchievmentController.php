@@ -36,7 +36,7 @@ class AchievmentController extends Controller
         return response()->json($response, $code);
     }
     public function showInfo(){
-        $data=Achievment::all();
+        $data=Achievment::first();
         return response()->json(['code'=>200,'message'=>"Successfully",'data'=>$data]);
         
     }

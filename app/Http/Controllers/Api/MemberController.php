@@ -111,7 +111,7 @@ class MemberController extends Controller
         foreach ($data_member as $value) {
             $team = Team::where('id', $value->team_id)->first();
             $value->team_name = $team->name;
-            $value->team_cover = $team->cover;
+            $value->team_cover = $team->cover_path;
             $member_position = MemberPosition::where('id', $value->member_position_id)->first();
             $value->member_position_title = $member_position->title;
             $value->socail = Member::find($value->id)->socails()->get();

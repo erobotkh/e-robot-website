@@ -54,7 +54,7 @@ class DonatorController extends Controller
      */
     public function update(Request $request)
     {
-        // dd($request->update_currency_type);
+        dd($request->update_currency_type);
 
         $donator= Donator::find($request->update_id)->update([
             "name"=> $request->name,

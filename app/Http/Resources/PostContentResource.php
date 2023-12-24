@@ -27,6 +27,7 @@ class PostContentResource extends JsonResource
             'description'        => $this['description'],
             'image_path'         => $this['image_path'],
             'category_id'        => $this['category']['id'],
+            'category_name'        => $this['category']['category_name'],
             'post_user'          => [
                                     'id' => $this['user']['id'],
                                     'first-name' => $this['user']['first_name'],
