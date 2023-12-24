@@ -43,7 +43,6 @@ class DonationController extends Controller
         ]);
         $qr_code = $request->file("qr_code");
         $url=" ";
-        // dd($qr_code);
         if($qr_code){
             // $new_qr_code = time() .".". $qr_code->getClientOriginalName();
             // $path ='images/';
