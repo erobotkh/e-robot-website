@@ -14,7 +14,7 @@ class PositionController extends Controller
     public function index()
     {
         $pos = DB::table('member_positions')->orderBy('id', 'desc')?->get();
-        
+
         return view('AdminModules.Position.index', compact('pos'));
     }
 
@@ -65,11 +65,6 @@ class PositionController extends Controller
         return redirect()->route('position.index');
     }
 
-    public function delete($id)
-    {
-        $pos = DB::table('positions')?->find($id);
-        return view('AdminModules.Position.delete', compact('pos'));
-    }
     /**
      * Remove the specified resource from storage.
      */

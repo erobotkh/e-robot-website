@@ -13,6 +13,7 @@
                 <td>ID</td>
                 <td>Team</td>
                 <td>Bio</td>
+                <td>Cover</td>
                 <td>Action</td>
             </tr>
         </thead>
@@ -24,6 +25,8 @@
                     <td>{{ $item->id }}</td>
                     <td>{{ $item->name }}</td>
                     <td>{{ $item->bio }}</td>
+                    <td><img style="width: 80px" src="{{ $item->cover }}" alt=""></td>
+
                     <td class="d-flex gap-2 justify-content-center">
                         <div>
                             <a href="{{ route('team.edit', $item->id) }}" class="btn btn-success"> Edit </a>

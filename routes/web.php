@@ -52,9 +52,6 @@ Route::get('/post_content', function () {
     return view('post_content');
 });
 
-
-
-
 Route::get('/donate', function () {
     return view('donation');
 });
@@ -190,8 +187,8 @@ Route::middleware(['auth'])->group(function(){
         Route::delete('/admin/donator/remove','delete')->name('deleteDonator');
     });
 
-    // donation
-    Route::controller(DonationController::class)->group(function(){
+// donation
+Route::controller(DonationController::class)->group(function () {
 
         Route::post('/admin/donation','store')->name('storeDonationCard');
         Route::get('/admin/donation','show')->name('showDonationCard');

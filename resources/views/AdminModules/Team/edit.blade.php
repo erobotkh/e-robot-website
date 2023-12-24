@@ -31,7 +31,13 @@
             <div>
                 <label for=""> Bio:</label>
                 <input type="text" name="bio" class="form-control" value="{{ $team->bio }}">
-            </div> <br>
+            </div>
+
+            <div>
+                <label for=""> Cover:</label>
+                <input type="file" name="image_name" class="form-control">
+            </div>
+            <br>
 
         </div>
 
