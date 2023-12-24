@@ -16,6 +16,12 @@ class DonatorController extends Controller
      */
     public function store(Request $request)
     {
+        $this->validate($request, [
+            "name"=> "required",
+            "amount"=> "required",
+            "currency_type"=> "required",
+
+        ]);
 
         if($request->file('donatorExcel')){
             Excel::import(new donatorImportByExcel, $request->file('donatorExcel'));
@@ -54,7 +60,12 @@ class DonatorController extends Controller
      */
     public function update(Request $request)
     {
-        // dd($request->update_currency_type);
+        $this->validate($request, [
+            "name"=> "required",
+            "amount"=> "required",
+            "currency_type"=> "required",
+
+        ]);
 
         $donator= Donator::find($request->update_id)->update([
             "name"=> $request->name,

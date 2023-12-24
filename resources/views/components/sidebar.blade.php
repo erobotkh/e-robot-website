@@ -70,12 +70,12 @@
           </li>
 
 
-          {{-- <li class="nav-item">
-              <a class="nav-link collapsed" href="{{ url('user') }}">
+          <li class="nav-item">
+              <a class="nav-link collapsed" href="{{ route('showAllUser') }}">
                   <i class="bi bi-person-check-fill"></i>
                   <span>User</span>
               </a>
-          </li> --}}
+          </li>
 
 
           {{-- <li class="nav-item">

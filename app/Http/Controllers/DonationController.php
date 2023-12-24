@@ -28,13 +28,6 @@ class DonationController extends Controller
         return view('donation',compact('info','donator'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
-    {
-        return view("AdminModules.DonationCard.store");
-    }
 
     /**
      * Store a newly created resource in storage.
@@ -43,7 +36,7 @@ class DonationController extends Controller
     {
         $this->validate($request, [
             "acc_number"=> "required|min:8|max:20",
-            "acc_type",
+            "acc_type"=>"required",
             "qr_code"=> "required|image|mimes:jpeg,jpg,png",
             "recipient_name"=> "required|min:3|max:30",
             "recipient_position"=> "required|min:5|max:50",
@@ -52,14 +45,14 @@ class DonationController extends Controller
         $url=" ";
         // dd($qr_code);
         if($qr_code){
-            $new_qr_code = time() .".". $qr_code->getClientOriginalName();
-            $path ='images/';
-            $qr_code->move($path, $new_qr_code);
-            // $url = Storage::disk('do')->putFile(
-            //     "erobot/donation-qr_code",
-            //     $qr_code,
-            //     'public'
-            // );
+            // $new_qr_code = time() .".". $qr_code->getClientOriginalName();
+            // $path ='images/';
+            // $qr_code->move($path, $new_qr_code);
+            $url = Storage::disk('do')->putFile(
+                "erobot/donation-qr_code",
+                $qr_code,
+                'public'
+            );
         }
         $acc_type = $request->acc_type;
         if($acc_type=="dollar"){
@@ -72,7 +65,8 @@ class DonationController extends Controller
             "acc_number"=> $request->acc_number,
             "acc_type"=> $acc_type,
             "currency_symbol"=> $currency_symbol,
-            "qr_code"=> '/'.$path.$new_qr_code,
+            // "qr_code"=> '/'.$path.$new_qr_code,
+            "qr_code"=> $url,
             "recipient_name"=> $request->recipient_name,
             "recipient_position"=> $request->recipient_position,
         ]);
@@ -109,22 +103,14 @@ class DonationController extends Controller
     }
 
     /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(donation $donation)
-    {
-
-
-    }
-
-    /**
      * Update the specified resource in storage.
      */
     public function update(Request $request)
     {
         $this->validate($request, [
             "acc_number"=> "required|min:8|max:20",
-            "acc_type",
+            "acc_type"=>"required",
+            "qr_code"=> "required|image|mimes:jpeg,jpg,png",
             "recipient_name"=> "required|min:3|max:30",
             "recipient_position"=> "required|min:5|max:50",
         ]);
@@ -166,11 +152,5 @@ class DonationController extends Controller
         }
     }
 
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(Donation $donation)
-    {
-        //
-    }
+
 }

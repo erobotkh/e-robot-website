@@ -4,8 +4,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DetailContent;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\HomeController;
-use App\Http\Controllers\AdminController;
 use App\Http\Controllers\TeamController;
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\MemberController;
 use App\Http\Controllers\DonatorController;
 use App\Http\Controllers\CategoryController;
@@ -19,6 +19,7 @@ use App\Http\Controllers\viewMembersController;
 use App\Http\Controllers\ViewActivityController;
 use App\Http\Controllers\ActivityCmtSubController;
 use App\Http\Controllers\ResourceFrontendController;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -178,7 +179,7 @@ Route::controller(DepartementController::class)->group(function(){
 
 
 
-//=============== admin side
+//============================[ admin side ]=======================
 Route::middleware(['auth'])->group(function(){
 
     // donator
@@ -196,6 +197,12 @@ Route::middleware(['auth'])->group(function(){
         Route::get('/admin/donation','show')->name('showDonationCard');
         Route::delete('/admin/donation/remove','delete')->name('deleteDonationCard');
         Route::post('/admin/donation/edit','update')->name('editDonationCard');
+
+    });
+    // user
+    Route::controller(UserController::class)->group(function(){
+        Route::get('/admin/user','show')->name('showAllUser');
+        Route::get('/admin/user/search','searchUser')->name('searchUser');
 
     });
 

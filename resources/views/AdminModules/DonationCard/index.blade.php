@@ -72,7 +72,7 @@
 
 
         {{-- view information of donation card --}}
-        <table class="table table-hover mt-3 table-bordered">
+        <table class="table table-hover table-striped  mt-3 table-bordered">
             <thead>
                 <tr>
 

@@ -21,7 +21,7 @@
             </nav>
         </div>
         <div class="d-flex align-items-center  justify-content-center  " style="height:50vh">
-            <span class="fw-bold " style="font-size:36px">Welcome to E-Robot Admin Dashboard </span>
+            <div style="font-size:36px">Welcome to <span style="color:red; font-size:56px; font-weight:500">E</span><span style="color:red; font-weight:600">-Robot</span> Admin Dashboard </div>
         </div>
         <!-- End Page Title -->
 
