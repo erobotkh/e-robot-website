@@ -27,7 +27,7 @@
                     <td>{{ $item->category_name }}</td>
                     <td><img style="width: 80px" src="{{ $item->image_name }}" alt=""></td>
 
-                    <td>{{ $item->discription }}</td>
+                    <td>{{ $item->description }}</td>
                     <td class="d-flex gap-2 justify-content-center">
                         <div>
                             <a href="{{ route('postContent.edit', $item->id) }}" class="btn btn-success"> Edit </a>
