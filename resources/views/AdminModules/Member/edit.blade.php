@@ -38,7 +38,10 @@
             <div>
                 <label for="">Image:</label>
                 <input type="file"class="form-control" name="profile">
-                <img src="{{url($data->profile)}}" style="width:80px;" alt="">
+
+                <?php $data->profile = env('DO_URL').$data->profile ?>
+
+                <img src="{{$data->profile}}" style="width:80px;" alt="">
                 <input type="hidden" name="old_profile" value="{{$data->profile}}">
             </div>
             <div>

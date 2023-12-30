@@ -79,6 +79,7 @@
                                 @endswitch
                             @endif
                         @endforeach
+                        <?php $item->profile = env('DO_URL').$item->profile ?>
 
                         <x-team-leader-card name="{{ $item->first_name }} {{ $item->last_name }}"
                             title="{{ $item->name }} {{ $item->title }}"
@@ -134,7 +135,7 @@
                                 @endswitch
                             @endif
                         @endforeach
-
+                        <?php $item->profile = env('DO_URL').$item->profile ?>
                         <x-team-leader-card name="{{ $item->first_name }} {{ $item->last_name }}"
                             title="{{ $item->name }} {{ $item->title }}"
                             photo="{{ $item->profile }}"

@@ -33,7 +33,10 @@
                     <td>{{ $members->title }}</td>
                     <td>{{ $members->name }}</td>
                     <td>{{ $members->bio }}</td>
-                    <td><img style="width: 50px; height: 50px" src="{{ 'images/' . $members->profile }}" alt="">
+
+                    <?php $members->profile = env('DO_URL').$members->profile ?>
+
+                    <td><img style="width: 50px; height: 50px" src="{{$members->profile}}" alt="">
                     </td>
 
                     <td class="d-flex gap-2 justify-content-center">

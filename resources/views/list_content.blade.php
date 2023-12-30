@@ -48,6 +48,7 @@
                         @foreach ($viewActivity as $data)
 
                             @if ($item->c_id == $data->category_id)
+                                <?php $data->image_name = env('DO_URL').$data->image_name ?>
                                 <x-activity-card category="{{$item->c_name}} {{$item->c_name.$data->id }}" post_cate_id="{{$data->category_id}}"  post_id="{{$data->id}}" banner="{{$data->image_name}}"
                                     like="{{ $data->like_count }}" comment="{{ $data->comment_count }}"
                                     title="{{ $data->title }}" description="{{ $data->description }}" ></x-activity-card>
