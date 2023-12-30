@@ -25,6 +25,12 @@
                     <td>{{ $item->id }}</td>
                     <td>{{ $item->name }}</td>
                     <td>{{ $item->bio }}</td>
+
+                    <?php
+                        $item->cover = env('DO_URL').$item->cover
+
+                    ?>
+
                     <td><img style="width: 80px" src="{{ $item->cover }}" alt=""></td>
 
                     <td class="d-flex gap-2 justify-content-center">

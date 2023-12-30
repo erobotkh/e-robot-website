@@ -25,6 +25,8 @@
                     <td>{{ $item->id }}</td>
                     <td>{{ $item->title }}</td>
                     <td>{{ $item->category_name }}</td>
+                    <?php $item->image_name = env('DO_URL').$item->image_name ?>
+
                     <td><img style="width: 80px" src="{{ $item->image_name }}" alt=""></td>
 
                     <td>{{ $item->description }}</td>

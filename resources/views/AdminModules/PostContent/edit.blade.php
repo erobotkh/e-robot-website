@@ -24,6 +24,9 @@
                 <div>
                     <label for=""> Image</label>
                     <input type="file" name="image_name" class="form-control">
+
+                    <?php $data->image_name = env('DO_URL').$data->image_name ?>
+
                     <img src="{{ $data->image_name }}" style="width: 80px" alt="">
                     <input type="hidden" name="old_image_name" value="{{ $data->image_name }}">
                 </div>

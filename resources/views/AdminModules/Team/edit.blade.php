@@ -36,6 +36,12 @@
             <div>
                 <label for=""> Cover:</label>
                 <input type="file" name="cover" class="form-control">
+
+                <?php
+                    $team->cover = env('DO_URL').$team->cover
+
+                ?>
+
                 <img src="{{$team->cover}}" style="width: 80px" alt="">
                 <input type="hidden" name="old_cover" value="{{$team->cover}}">
             </div>

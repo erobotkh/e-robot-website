@@ -25,6 +25,8 @@
                 <h2>{{$detailContent->title}}</h2>
             </div>
             <div class="image mb-8">
+                <?php $detailContent->image_name = env('DO_URL').$detailContent->image_name ?>
+
                 <img class="w-full h-[80vh] object-cover" src="{{ asset($detailContent->image_name) }}" alt="">
 
             </div>

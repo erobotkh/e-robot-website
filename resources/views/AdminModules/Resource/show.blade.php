@@ -24,6 +24,8 @@ E-Robot | Resource
         <div class="text-2xl mt-6 text-center"> {!! $resource->sub_title !!}</div>
         <div class="text-2xl mt-6 text-center "> {{ $resource->date }}</div>
         <div class="text-center  text-xl">Category: {{ $resource->category->category_name }}</div>
+        <?php $resource->image = env('DO_URL').$resource->image ?>
+
         <div class="mx-auto"> <img src="{{ $resource->image }}" alt="cover image" class="block mx-auto" /></div>
 
         <br>

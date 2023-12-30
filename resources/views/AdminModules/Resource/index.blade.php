@@ -45,7 +45,7 @@ E-Robot | Resource
                         <thead class="bg-white border-b font-bold">
                             <tr>
                                 <th scope="col" class="text-md outline-none px-6 py-4 text-left">
-                                    #
+                                    No
                                 </th>
                                 <th scope="col" class="text-md outline-none px-6 py-4 text-left">
                                     Title
@@ -85,6 +85,7 @@ E-Robot | Resource
                                     <td class="text-md outline-none  px-6 py-4 whitespace-nowrap">
                                         {{ $data->category->category_name }}</td>
                                     <td class="text-md outline-none  px-6 py-4 whitespace-nowrap">
+                                        <?php $data->image = env('DO_URL').$data->image ?>
                                         <div><img class="w-[60px] h-[40px]" src="{{ $data->image }}" /></div>
                                     </td>
                                     <td
