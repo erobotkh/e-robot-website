@@ -64,7 +64,7 @@ class DonatorController extends Controller
             }
 
             $rs_page = ($page - 1) * 6;
-            $allDonator = Donator::select('name','amount','currency_type')->where('currency_type', $currency)->limit(6)->offset($rs_page)->get();
+            $allDonator = Donator::select("*")->where('currency_type', $currency)->limit(6)->offset($rs_page)->get();
 
             // $allDonator = Donator::where("currency_type",$request->type)->get();
 
@@ -72,9 +72,9 @@ class DonatorController extends Controller
             $total_donator = Donator::count();
             $total_page = ceil($total_donator / 6);
             $rs_page = ($page - 1) * 6;
-            $allDonator = Donator::select('name','amount','currency_type')->limit(6)->offset($rs_page)->get();
+            $allDonator = Donator::select("*")->limit(6)->offset($rs_page)->get();
 
-            // $allDonator = Donator::select('name','amount','currency_type')->paginate(6)->withQueryString();
+            // $allDonator = Donator::select("*")->paginate(6)->withQueryString();
 
         }
 
