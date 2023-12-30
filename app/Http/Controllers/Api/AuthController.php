@@ -133,7 +133,7 @@ class AuthController extends Controller
         // Send the OTP code to the user's phone number.
         Http::withHeaders([
             'X-Secret' => config('plasgate.x_secret')
-        ])->post('https://cloudapi.plasgate.com/rest/send?private_key=' . config('plasgate.private_key'), [
+        ])->withOptions(['verify'=>false])->post('https://cloudapi.plasgate.com/rest/send?private_key=' . config('plasgate.private_key'), [
             "sender" => "SMS Info",
             "to"  => "855" . $phoneTrim,
             "content" => '" ' . $otpCode . ' "' . ' is your verification code.'
@@ -213,7 +213,7 @@ class AuthController extends Controller
         // Send the OTP code to the user's phone number.
         $response_url = Http::withHeaders([
             'X-Secret' => config('plasgate.x_secret')
-        ])->post('https://cloudapi.plasgate.com/rest/send?private_key=' . config('plasgate.private_key'), [
+        ])->withOptions(['verify'=>false])->post('https://cloudapi.plasgate.com/rest/send?private_key=' . config('plasgate.private_key'), [
             "sender" => "SMS Info",
             "to"  => "855" . $phoneTrim,
             "content" => '" ' . $otpCode . ' "' . ' is your verification code.'
