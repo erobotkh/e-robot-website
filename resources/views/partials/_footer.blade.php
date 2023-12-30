@@ -1,15 +1,15 @@
 <footer class="border-t-2 border-red-600">
-    <div class="container px-5 pt-5 mx-auto">
-        <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-y-10 lg:grid-cols-3">
-            <div class="grid-1 sm:col-span-2 lg:col-span-1 flex flex-col lg:flex-row lg:items-center  lg:justify-center ">
+    <div class="container px-3 pt-5 mx-auto">
+        <div class="grid grid-cols-1 gap-5 sm:grid-cols-2 sm:gap-y-10 lg:grid-cols-3">
+            <div class=" grid-1 sm:col-span-2 lg:col-span-1 flex flex-col lg:flex-row lg:items-center  lg:justify-center ">
                 <div class="flex flex-col mx-auto space-y-3 md:space-y-0 md:flex-row">
                     <a href="/home">
-                        <img class=" w-100 min-w-[80px]" src="{{asset('./images/logo_erobot-removebg.png')}}" alt="">
+                        <img style=" width:100%; min-width:80px" src="{{url('/images/logo/E_robot_logo.png')}}" alt="">
                     </a>
                 </div>
                 <div>
                     <p class="text-center text-[14px] font-semibold uppercase">A team that comes with a pure heart of cambodia youths</p>
-                    <div class="flex justify-center  gap-4 mt-2">
+                    <div class="flex justify-center  gap-2 mt-2">
                         <a href="https://web.facebook.com/profile.php?id=100094879493602" target="_blank">
                             <button class="bg-blue-500 p-2 font-semibold text-white inline-flex items-center space-x-2 rounded-full hover:border border-black">
                             <svg class="w-3 h-3 fill-current" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" /></svg>
@@ -37,11 +37,11 @@
                                 <img src="/images/tiktok_logo.png" class="w-full h-full fill-current"alt="Tiktok">
                             </button>
                         </a>
-                        <!-- <a href="mailto:ERobotTeam@gmail.com" >
+                         <a href="mailto:ERobotTeam@gmail.com" >
                             <button class="bg-red-500 p-2 font-semibold text-white inline-flex items-center space-x-2 rounded-full hover:border border-black">
                                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="w-3" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><g fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 0C5.372 0 0 5.373 0 12s5.372 12 12 12c6.627 0 12-5.373 12-12S18.627 0 12 0zm.14 19.018c-3.868 0-7-3.14-7-7.018c0-3.878 3.132-7.018 7-7.018c1.89 0 3.47.697 4.682 1.829l-1.974 1.978v-.004c-.735-.702-1.667-1.062-2.708-1.062c-2.31 0-4.187 1.956-4.187 4.273c0 2.315 1.877 4.277 4.187 4.277c2.096 0 3.522-1.202 3.816-2.852H12.14v-2.737h6.585c.088.47.135.96.135 1.474c0 4.01-2.677 6.86-6.72 6.86z" fill="currentColor"/></g></svg>
                             </button>
-                        </a> -->
+                        </a>
                     </div>
                 </div>
             </div>
@@ -67,10 +67,12 @@
             </div>
         </div>
 
-        <hr class="my-6 border-gray-200 md:my-8 ">
+        <hr class="my-3 border-gray-200 md:my-5 ">
+        <div>
+            <span class="">Copyright © 2023 E-robot</span>
+        </div>
+        {{-- <div class="flex flex-col gap-3 ">
 
-        <div class="flex flex-col gap-3 ">
-<!--
             <div class="flex gap-4">
                 <a href="#">
                     <button class="bg-blue-500 p-2 font-semibold text-white inline-flex items-center space-x-2 rounded-full hover:border border-black">
@@ -99,15 +101,13 @@
                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="w-5" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><g fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 0C5.372 0 0 5.373 0 12s5.372 12 12 12c6.627 0 12-5.373 12-12S18.627 0 12 0zm.14 19.018c-3.868 0-7-3.14-7-7.018c0-3.878 3.132-7.018 7-7.018c1.89 0 3.47.697 4.682 1.829l-1.974 1.978v-.004c-.735-.702-1.667-1.062-2.708-1.062c-2.31 0-4.187 1.956-4.187 4.273c0 2.315 1.877 4.277 4.187 4.277c2.096 0 3.522-1.202 3.816-2.852H12.14v-2.737h6.585c.088.47.135.96.135 1.474c0 4.01-2.677 6.86-6.72 6.86z" fill="currentColor"/></g></svg>
                     </button>
                 </a>
-            </div> -->
-            <div>
-                <span class="">Copyright © 2022 E-robot</span>
             </div>
-        </div>
+
+        </div> --}}
     </div>
 </footer>
 
-<!-- <footer class="footer">
+ {{-- <footer class="footer">
             <div class="footerContainer">
                 <div class="footerLogo">
                     <div class="logo">
@@ -177,5 +177,5 @@
                 <span>Copyright&copy; 202x E-Robot, All rights reversed.</span>
                 <a href="#">Term & Privacy</a>
             </div>
-        </footer> -->
+        </footer> --}}
 

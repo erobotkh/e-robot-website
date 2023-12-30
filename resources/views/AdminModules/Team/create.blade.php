@@ -1,4 +1,4 @@
-<div class="offcanvas w-25 offcanvas-end h-50" tabindex="-1" id="team" aria-labelledby="teamLabel">
+<div class="offcanvas offcanvas-end" tabindex="-1" id="team" aria-labelledby="teamLabel">
     <div class="offcanvas-header">
         <h3 class="offcanvas-title fw-bold" id="teamLabel">Create Team</h3>
         <div class="rotate-img">
@@ -22,7 +22,7 @@
 
                 <div>
                     <label for=""> Cover:</label>
-                    <input type="file" name="image_name" class="form-control" placeholder="Input profile">
+                    <input type="file" name="cover" class="form-control" placeholder="Input profile">
                 </div>
                 <br>
 

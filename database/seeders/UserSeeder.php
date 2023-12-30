@@ -17,33 +17,22 @@ class UserSeeder extends Seeder
     {
         $users = [
             [
-                "first_name"=> "E-Robot",
-                "last_name"=> "Admin",
+                "first_name"=> "-Robot",
+                "last_name"=> "E",
                 // "email"=>"@dmin_e_robot@gmail.com",
                 "phone"=> "010567014",
                 "password"=> bcrypt("E-Robot_@dmin"),
             ],
-            [
-                "first_name"=> "Tong",
-                "last_name"=> "Meng",
-                // "email"=>"@dmin_e_robot@gmail.com",
-                "phone"=> "087544835",
-                "password"=> bcrypt("E-Robot_@tongmeng"),
-            ],
+
         ];
         $users_profile =[
             [
-                "profile_image"=>"sticker-e-robot.png",
-                "cover_image"=> "sticker-e-robot.png",
+                "profile_image"=>"images/photo_members/sticker-e-robot.png",
+                "cover_image"=> "images/photo_members/sticker-e-robot.png",
                 "bio"=> "Admin of E-Robot",
                 "user_id"=>1,
             ],
-            [
-                "profile_image"=>"sticker-e-robot.png",
-                "cover_image"=> "sticker-e-robot.png",
-                "bio"=> "Website Developer at E-Robot",
-                "user_id"=>2,
-            ],
+
         ];
         DB::table('users')->insert($users);
         DB::table('user_profiles')->insert($users_profile);

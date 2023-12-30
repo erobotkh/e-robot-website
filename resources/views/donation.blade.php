@@ -125,11 +125,11 @@
                     </div>
 
                     <div class="h-[60vh] flex justify-center  overflow-y-scroll md:w-[500px] sm:w-[380px] ">
-                        <table class="lg:w-[500px] md:w-[500px] sm:w-[380px] text-center text-[15px]  table table-striped" style="box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;">
+                        <table class=" h-[5%]  lg:w-[500px] md:w-[500px] sm:w-[380px] text-center text-[15px]  table table-striped" style="box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;">
                             @foreach ($donator as $data)
-                                <tr class="bg-[#fff]">
+                                <tr class="">
                                     <td class="p-2 w-[60%]">{{$data->name}}</td>
-                                    <td class="p-2 w-[40%]">{{$data->updated_at}}</td>
+                                    <td class="p-2 w-[40%]">{{$data->created_at->format('F d Y')}}</td>
                                 </tr>
                             @endforeach
 

@@ -24,13 +24,11 @@ class ViewActivityController extends Controller
         $viewActivity = DB::table('post_contents as pc')
             ->leftJoin(DB::raw('(SELECT post_content_id, COUNT(*) as like_count FROM likes GROUP BY post_content_id) as lk'), 'pc.id', '=', 'lk.post_content_id')
             ->leftJoin(DB::raw('(SELECT post_content_id, COUNT(*) as comment_count FROM comments GROUP BY post_content_id) as cm'), 'pc.id', '=', 'cm.post_content_id')
-            // ->leftJoin(DB::raw('(SELECT post_content_id, COUNT(*) as sub_comment_count FROM sub_comments GROUP BY post_content_id) as sbcm'), 'pc.id', '=', 'sbcm.post_content_id')
             ->select(
                 'pc.*',
                 DB::raw('IFNULL(lk.like_count, 0) as like_count'),
                 DB::raw('IFNULL(cm.comment_count, 0) as comment_count'),
-                // DB::raw('IFNULL(sbcm.sub_comment_count, 0) as sub_comment_count'),
-            )
+            )->limit(100)
             ->get();
 
         $category = PostContent::select('post_contents.category_id', 'categories.id AS c_id', 'categories.category_name as c_name')

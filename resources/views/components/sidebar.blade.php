@@ -3,12 +3,12 @@
 
       <ul class="sidebar-nav" id="sidebar-nav">
 
-          {{-- <li class="nav-item">
-              <a class="nav-link" href="{{ url('admin') }}">
+          <li class="nav-item">
+              <a class="nav-link collapsed" href="{{ url('admin') }}">
                   <i class="bi bi-grid"></i>
                   <span>Dashboard</span>
               </a>
-          </li> --}}
+          </li>
           <!-- End Dashboard Nav -->
 
           <li class="nav-item">
@@ -55,7 +55,7 @@
           </li>
 
           <li class="nav-item">
-              <a class="nav-link collapsed" href="/admin/donator?type=">
+              <a class="nav-link collapsed" href="/admin/donator?type=&page=1">
                 <i class='bx bxs-coin'></i>
                   <span>Donator</span>
               </a>
@@ -64,7 +64,7 @@
 
           <li class="nav-item">
               <a class="nav-link collapsed" href="{{ url('admin/resource') }}">
-                  <i class='bx bxs-book-open'></i>
+                  <i class='bi bi-book'></i>
                   <span>Resource</span>
               </a>
           </li>

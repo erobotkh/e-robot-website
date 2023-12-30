@@ -10,12 +10,15 @@
 
         <div class="categorySection w-full flex justify-evenly p-10 pb-0">
                 @foreach ($category as $item)
-                    <div class="category_icon h-[100px] w-[100px] bg-white ">
-                        <a href="#{{$item->c_name}}Section " class="w-full h-[80%] flex flex-col items-center justify-center p-5 rounded-md">
-                            <div class="icon h-2/3 w-auto">
-                                <img src="/images/{{$item->c_name}}_icon.png" alt="" class="h-full aspect-square object-contain">
+                    <div class="category_icon bg-white ">
+                        <a href="#{{$item->c_name}}Section " class="w-full flex flex-col items-center justify-center p-2 rounded-md">
+                            <div class="icon  w-auto">
+                                <?php $item->c_name = strtolower($item->c_name) ?>
+                                {{-- <img src="{{url('/images/$item->c_name_icon.png')}}" alt="" class="h-full aspect-square object-contain"> --}}
                             </div>
-                            <div class="name">{{$item->c_name}}</div>
+                            <?php $item->c_name = strtoupper($item->c_name) ?>
+
+                            <div class="name font-bold px-2">{{$item->c_name}}</div>
                         </a>
 
                     </div>
@@ -73,6 +76,7 @@
                             </li>
                         </ul>
                     </nav>
+
 
                 @endforeach
 

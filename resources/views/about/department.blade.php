@@ -21,7 +21,7 @@
         </div> --}}
         <div class="w-100  grid gap-[20px]  sm:grid-cols-2 lg:grid-cols-3 my-10">
             @foreach ($team as $item)
-                <x-team-card department="{{$item->name}}" teamLeader="{{$item->first_name}} {{$item->last_name}}" leaderProfile="{{$item->profile}}" teamMember="20" image="./images/robotics_cover.jpg" description="{{$item->bio}}"/>
+                <x-team-card department="{{$item->name}}" teamLeader="{{$item->first_name}} {{$item->last_name}}" leaderProfile="{{$item->profile}}" teamMember="20" image="{{$item->cover}}" description="{{$item->bio}}"/>
 
             @endforeach
         </div>

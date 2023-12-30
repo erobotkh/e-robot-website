@@ -20,23 +20,23 @@
                 </ol>
             </nav>
         </div>
-        <div class="d-flex align-items-center  justify-content-center  " style="height:50vh">
+        {{-- <div class="d-flex align-items-center  justify-content-center  " style="height:50vh">
             <div style="font-size:36px">Welcome to <span style="color:red; font-size:56px; font-weight:500">E</span><span style="color:red; font-weight:600">-Robot</span> Admin Dashboard </div>
-        </div>
+        </div> --}}
         <!-- End Page Title -->
 
-        {{-- <section class="section dashboard">
+        <section class="section dashboard">
             <div class="row">
 
                 <!-- Left side columns -->
                 <div class="col-lg-8">
                     <div class="row">
 
-                        <!-- Sales Card -->
+                        <!-- Post Content -->
                         <div class="col-xxl-4 col-md-6">
                             <div class="card info-card sales-card">
 
-                                <div class="filter">
+                                {{-- <div class="filter">
                                     <a class="icon" href="#" data-bs-toggle="dropdown">
                                         <i class="bi bi-three-dots"></i>
                                     </a>
@@ -55,22 +55,25 @@
                                             <a class="dropdown-item" href="#">This Year</a>
                                         </li>
                                     </ul>
-                                </div>
+                                </div> --}}
 
                                 <div class="card-body">
-                                    <h5 class="card-title">Sales
-                                        <span>| Today</span>
+                                    <a href="{{ url('postContent') }}">
+                                        <h5 class="card-title" style="color: black">Post contents
+                                        <span>| Total</span>
                                     </h5>
+                                    </a>
+
 
                                     <div class="d-flex align-items-center">
                                         <div
                                             class="card-icon rounded-circle d-flex align-items-center justify-content-center">
-                                            <i class="bi bi-cart"></i>
+                                            <i class="bi bi-file-post"></i>
                                         </div>
                                         <div class="ps-3">
-                                            <h6>145</h6>
-                                            <span class="text-success small pt-1 fw-bold">12%</span>
-                                            <span class="text-muted small pt-2 ps-1">increase</span>
+                                            <h6>{{$postContents}}</h6>
+                                            {{-- <span class="text-success small pt-1 fw-bold">12%</span> --}}
+                                            {{-- <span class="text-muted small pt-2 ps-1">increase</span> --}}
 
                                         </div>
                                     </div>
@@ -78,13 +81,13 @@
 
                             </div>
                         </div>
-                        <!-- End Sales Card -->
+                        <!-- End Post content -->
 
-                        <!-- Revenue Card -->
+                        <!-- Resource Card -->
                         <div class="col-xxl-4 col-md-6">
                             <div class="card info-card revenue-card">
 
-                                <div class="filter">
+                                {{-- <div class="filter">
                                     <a class="icon" href="#" data-bs-toggle="dropdown">
                                         <i class="bi bi-three-dots"></i>
                                     </a>
@@ -103,22 +106,26 @@
                                             <a class="dropdown-item" href="#">This Year</a>
                                         </li>
                                     </ul>
-                                </div>
+                                </div> --}}
 
                                 <div class="card-body">
-                                    <h5 class="card-title">Revenue
-                                        <span>| This Month</span>
-                                    </h5>
+                                    <a href="{{ url('admin/resource') }}">
+                                        <h5 class="card-title" style="color: black"  >Resources
+                                            <span>| Total</span>
+                                        </h5>
+                                    </a>
+
 
                                     <div class="d-flex align-items-center">
                                         <div
                                             class="card-icon rounded-circle d-flex align-items-center justify-content-center">
-                                            <i class="bi bi-currency-dollar"></i>
+                                            <i class="bi bi-book"></i>
+
                                         </div>
                                         <div class="ps-3">
-                                            <h6>$3,264</h6>
-                                            <span class="text-success small pt-1 fw-bold">8%</span>
-                                            <span class="text-muted small pt-2 ps-1">increase</span>
+                                            <h6>{{$resources}}</h6>
+                                            {{-- <span class="text-success small pt-1 fw-bold">8%</span>
+                                            <span class="text-muted small pt-2 ps-1">increase</span> --}}
 
                                         </div>
                                     </div>
@@ -126,10 +133,10 @@
 
                             </div>
                         </div>
-                        <!-- End Revenue Card -->
+                        <!-- End Resource Card -->
 
-                        <!-- Customers Card -->
-                        <div class="col-xxl-4 col-xl-12">
+                        <!-- Users -->
+                        {{-- <div class="col-xxl-4 col-xl-12">
 
                             <div class="card info-card customers-card">
 
@@ -155,8 +162,11 @@
                                 </div>
 
                                 <div class="card-body">
-                                    <h5 class="card-title">Customers
-                                        <span>| This Year</span>
+                                    <a href="">
+
+                                    </a>
+                                    <h5 class="card-title" style="color: black">Users
+                                        <span>| Total</span>
                                     </h5>
 
                                     <div class="d-flex align-items-center">
@@ -175,11 +185,112 @@
                                 </div>
                             </div>
 
-                        </div>
+                        </div> --}}
 
+                        <!-- User  -->
+                        <div class="col-xxl-4 col-md-6">
+                            <div class="card info-card sales-card">
+
+                                {{-- <div class="filter">
+                                    <a class="icon" href="#" data-bs-toggle="dropdown">
+                                        <i class="bi bi-three-dots"></i>
+                                    </a>
+                                    <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+                                        <li class="dropdown-header text-start">
+                                            <h6>Filter</h6>
+                                        </li>
+
+                                        <li>
+                                            <a class="dropdown-item" href="#">Today</a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" href="#">This Month</a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" href="#">This Year</a>
+                                        </li>
+                                    </ul>
+                                </div> --}}
+
+                                <div class="card-body">
+                                    <a href="{{ route('showAllUser') }}">
+                                        <h5 class="card-title" style="color: black">User
+                                            <span>| Total</span>
+                                        </h5>
+                                    </a>
+
+
+                                    <div class="d-flex align-items-center">
+                                        <div
+                                            class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                                            <i class="bi bi-person-check-fill"></i>
+                                        </div>
+                                        <div class="ps-3">
+                                            <h6>{{$users}}</h6>
+                                            {{-- <span class="text-success small pt-1 fw-bold">12%</span> --}}
+                                            {{-- <span class="text-muted small pt-2 ps-1">increase</span> --}}
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <!-- End Post content -->
+
+                        <!-- Member Card -->
+                        <div class="col-xxl-4 col-md-6">
+                            <div class="card info-card revenue-card">
+
+                                {{-- <div class="filter">
+                                    <a class="icon" href="#" data-bs-toggle="dropdown">
+                                        <i class="bi bi-three-dots"></i>
+                                    </a>
+                                    <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+                                        <li class="dropdown-header text-start">
+                                            <h6>Filter</h6>
+                                        </li>
+
+                                        <li>
+                                            <a class="dropdown-item" href="#">Today</a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" href="#">This Month</a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" href="#">This Year</a>
+                                        </li>
+                                    </ul>
+                                </div> --}}
+
+                                <div class="card-body">
+                                    <a href="{{ route('member.index') }}">
+                                        <h5 class="card-title" style="color: black">Member
+                                            <span>| Total</span>
+                                        </h5>
+                                    </a>
+
+
+                                    <div class="d-flex align-items-center">
+                                        <div
+                                            class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                                            <i class="bi bi-person-square"></i>
+                                        </div>
+                                        <div class="ps-3">
+                                            <h6>{{$members}}</h6>
+                                            {{-- <span class="text-success small pt-1 fw-bold">8%</span>
+                                            <span class="text-muted small pt-2 ps-1">increase</span> --}}
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <!-- End Resource Card -->
 
                         <!-- Recent Sales -->
-                        <div class="col-12">
+                        {{-- <div class="col-12">
                             <div class="card recent-sales overflow-auto">
 
                                 <div class="filter">
@@ -204,7 +315,10 @@
                                 </div>
 
                                 <div class="card-body">
-                                    <h5 class="card-title">Recent Sales
+                                    <a href="">
+
+                                    </a>
+                                    <h5 class="card-title" style="color: black">Recent Sales
                                         <span>| Today</span>
                                     </h5>
 
@@ -291,11 +405,11 @@
                                 </div>
 
                             </div>
-                        </div>
+                        </div> --}}
                         <!-- End Recent Sales -->
 
                         <!-- Top Selling -->
-                        <div class="col-12">
+                        {{-- <div class="col-12">
                             <div class="card top-selling overflow-auto">
 
                                 <div class="filter">
@@ -320,7 +434,7 @@
                                 </div>
 
                                 <div class="card-body pb-0">
-                                    <h5 class="card-title">Top Selling
+                                    <h5 class="card-title" style="color: black">Top Selling
                                         <span>| Today</span>
                                     </h5>
 
@@ -406,7 +520,7 @@
                                 </div>
 
                             </div>
-                        </div>
+                        </div> --}}
                         <!-- End Top Selling -->
 
                     </div>
@@ -417,7 +531,7 @@
                 <div class="col-lg-4">
 
                     <!-- Recent Activity -->
-                    <div class="card">
+                    {{-- <div class="card">
                         <div class="filter">
                             <a class="icon" href="#" data-bs-toggle="dropdown">
                                 <i class="bi bi-three-dots"></i>
@@ -440,7 +554,7 @@
                         </div>
 
                         <div class="card-body">
-                            <h5 class="card-title">Recent Activity
+                            <h5 class="card-title" style="color: black">Recent Activity
                                 <span>| Today</span>
                             </h5>
 
@@ -507,11 +621,11 @@
                             </div>
 
                         </div>
-                    </div>
+                    </div> --}}
                     <!-- End Recent Activity -->
 
                     <!-- Budget Report -->
-                    <div class="card">
+                    {{-- <div class="card">
                         <div class="filter">
                             <a class="icon" href="#" data-bs-toggle="dropdown">
                                 <i class="bi bi-three-dots"></i>
@@ -534,7 +648,7 @@
                         </div>
 
                         <div class="card-body pb-0">
-                            <h5 class="card-title">Budget Report
+                            <h5 class="card-title" style="color: black">Budget Report
                                 <span>| This Month</span>
                             </h5>
 
@@ -601,11 +715,11 @@
                             </script>
 
                         </div>
-                    </div>
+                    </div> --}}
                     <!-- End Budget Report -->
 
                     <!-- Website Traffic -->
-                    <div class="card">
+                    {{-- <div class="card">
                         <div class="filter">
                             <a class="icon" href="#" data-bs-toggle="dropdown">
                                 <i class="bi bi-three-dots"></i>
@@ -628,7 +742,7 @@
                         </div>
 
                         <div class="card-body pb-0">
-                            <h5 class="card-title">Website Traffic
+                            <h5 class="card-title" style="color: black">Website Traffic
                                 <span>| Today</span>
                             </h5>
 
@@ -691,11 +805,11 @@
                             </script>
 
                         </div>
-                    </div>
+                    </div> --}}
                     <!-- End Website Traffic -->
 
                     <!-- News & Updates Traffic -->
-                    <div class="card">
+                    {{-- <div class="card">
                         <div class="filter">
                             <a class="icon" href="#" data-bs-toggle="dropdown">
                                 <i class="bi bi-three-dots"></i>
@@ -718,7 +832,7 @@
                         </div>
 
                         <div class="card-body pb-0">
-                            <h5 class="card-title">News &amp; Updates
+                            <h5 class="card-title" style="color: black">News &amp; Updates
                                 <span>| Today</span>
                             </h5>
 
@@ -768,14 +882,14 @@
                             <!-- End sidebar recent posts-->
 
                         </div>
-                    </div>
+                    </div> --}}
                     <!-- End News & Updates -->
 
                 </div>
                 <!-- End Right side columns -->
 
             </div>
-        </section> --}}
+        </section>
 
     </main>
 

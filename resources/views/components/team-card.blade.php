@@ -1,6 +1,6 @@
 @props(['department', 'description', 'teamLeader', 'teamMember', 'image' ,'leaderProfile'])
 
-<div class="w-full rounded-xl shadow-lg hover:shadow-xl border">
+<div class="w-full rounded-xl shadow-lg hover:shadow-xl border" style="min-height: 40vh; max-height:60vh">
     <a class="text-decoration-none w-full">
         <div class="w-full h-[45%]  rounded relative">
             <img class="w-full h-full rounded-xl " src="{{asset($image)}}" alt="">

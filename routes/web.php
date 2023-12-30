@@ -20,6 +20,7 @@ use App\Http\Controllers\ViewActivityController;
 use App\Http\Controllers\ActivityCmtSubController;
 use App\Http\Controllers\ResourceFrontendController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\DashboardController;
 
 /*
 |--------------------------------------------------------------------------
@@ -60,65 +61,6 @@ Route::get('/register', function () {
 });
 
 
-// Admin Route
-// Route::get('/admin', function () {
-//     return view('NiceAdmin.index');
-// })->name('admin.dashboard');
-
-// Route::get('postContent/', function () {
-//     return view('AdminModules.PostContent.index');
-// });
-
-// Route::get('/report', function () {
-//     return view('AdminModules.Report.index');
-// });
-
-
-// Route::resource('member', MemberController::class);
-// Route::resource('position', PositionController::class);
-// Route::resource('team', TeamController::class);
-// Route::resource('category', CategoryController::class);
-// Route::resource('postContent', PostContentController::class);
-// // Route::resource('admin/resource', ResourceController::class);
-
-// Route::get('/delete', [PositionController::class], 'delete');
-
-// Route::get('/delete', function () {
-//     return view('AdminModules.Member.delete');
-// });
-
-
-// Route::get('/user', function () {
-//     return view('AdminModules.User.index');
-// });
-
-// Route::get('/reference', function () {
-//     return view('AdminModules.Report.index');
-// });
-
-
-
-// Route::get('/admin/donation', function () {
-//     return view('AdminModules.Report.index');
-// });
-
-
-
-// Route::get('/users-profile', function () {
-//     return view('NiceAdmin.users-profile');
-// });
-
-// Route::get('/pages-contact', function () {
-//     return view('NiceAdmin.pages-contact');
-// });
-
-// Route::get('/pages-register', function () {
-//     return view('NiceAdmin.pages-register');
-// });
-
-// Route::get('/pages-login', function () {
-//     return view('NiceAdmin.pages-login');
-// });
 
 
 //about us
@@ -128,15 +70,12 @@ Route::get('about/mission-vision', function () {
 Route::get('about/history', function () {
     return view('about.history');
 });
-// Route::get('about/team-leader', function () {
-//     return view('about.team-leader');
-// });
+Route::get('about/Logo-Stickers', function () {
+    return view('about.logo-stickers');
+});
 Route::get('about/team-member', function () {
     return view('about.team-member');
 });
-// Route::get('about/department', function () {
-//     return view('about.department');
-// });
 
 
 //resoure
@@ -187,8 +126,8 @@ Route::middleware(['auth'])->group(function(){
         Route::delete('/admin/donator/remove','delete')->name('deleteDonator');
     });
 
-// donation
-Route::controller(DonationController::class)->group(function () {
+    // donation
+    Route::controller(DonationController::class)->group(function () {
 
         Route::post('/admin/donation','store')->name('storeDonationCard');
         Route::get('/admin/donation','show')->name('showDonationCard');
@@ -223,10 +162,11 @@ Route::controller(DonationController::class)->group(function () {
         return view('NiceAdmin.pages-contact');
     });
 
-    Route::get('/admin', function () {
-        return view('NiceAdmin.index');
-    })->name('admin.dashboard');
-
+    // Route::get('/admin', function () {
+    //     return view('NiceAdmin.index');
+    // })->name('admin.dashboard');
+    Route::get('/admin',[DashboardController::class,'index'])->name('admin.dashboard');
+        
     Route::get('/admin/postContent', function () {
         return view('AdminModules.PostContent.index');
     });

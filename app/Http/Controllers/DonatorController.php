@@ -16,27 +16,31 @@ class DonatorController extends Controller
      */
     public function store(Request $request)
     {
-        $this->validate($request, [
-            "name"=> "required",
-            "amount"=> "required",
-            "currency_type"=> "required",
 
-        ]);
 
         if($request->file('donatorExcel')){
-            Excel::import(new donatorImportByExcel, $request->file('donatorExcel'));
+           $add_donator = Excel::import(new donatorImportByExcel, $request->file('donatorExcel'));
 
         }else{
-            Donator::create([
+            $this->validate($request, [
+                "add_name"=> "required",
+                "add_amount"=> "required",
+                "add_currency"=> "required",
+            ]);
+            $add_donator = Donator::create([
                 "name"=> $request->add_name,
                 "amount"=> $request->add_amount,
                 "currency_type"=> $request->add_currency,
             ]);
         }
 
+        if($add_donator){
+            return redirect('/admin/donator')->with("create_success","");
+        }else{
+            return redirect('/admin/donator')->with("error","");
 
+        }
 
-        return back()->with("create_success","");
     }
 
     /**
@@ -44,15 +48,37 @@ class DonatorController extends Controller
      */
     public function show(Request $request)
     {
+        $currency = $request->type;
+            $page = $request->page;
+
+        //  else {
+        //     $page = 1;
+        // }
+
         if($request->type){
-            $allDonator = Donator::where("currency_type",$request->type)->get();
+            $total_donator = Donator::where('currency_type',$currency)->count();
+            $total_page = ceil($total_donator / 6);
+
+            if($page > $total_page){
+                $page = 1;
+            }
+
+            $rs_page = ($page - 1) * 6;
+            $allDonator = Donator::select('name','amount','currency_type')->where('currency_type', $currency)->limit(6)->offset($rs_page)->get();
+
+            // $allDonator = Donator::where("currency_type",$request->type)->get();
 
         }else{
-            $allDonator = Donator::all();
+            $total_donator = Donator::count();
+            $total_page = ceil($total_donator / 6);
+            $rs_page = ($page - 1) * 6;
+            $allDonator = Donator::select('name','amount','currency_type')->limit(6)->offset($rs_page)->get();
+
+            // $allDonator = Donator::select('name','amount','currency_type')->paginate(6)->withQueryString();
 
         }
 
-        return view("AdminModules.Donator.index",compact("allDonator"));
+        return view("AdminModules.Donator.index",compact("allDonator","total_page","currency","page"));
     }
 
     /**
@@ -63,8 +89,7 @@ class DonatorController extends Controller
         $this->validate($request, [
             "name"=> "required",
             "amount"=> "required",
-            "currency_type"=> "required",
-
+            "update_currency_type"=> "required",
         ]);
 
         $donator= Donator::find($request->update_id)->update([

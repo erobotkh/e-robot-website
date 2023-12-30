@@ -153,7 +153,7 @@
                                                 <label for="update_qr_code" class="form-label fw-bold">QR Code </label>
                                                 <input class="form-control" type="file" id="update_qr_code"
                                                     name="qr_code">
-                                                <img height="80" src="{{ $items->qr_code }}">
+                                                <img style="height: 80px" src="{{ $items->qr_code }}">
                                                 <input type="hidden" value="{{ $items->qr_code }}" name='old_qr_code'>
                                             </div>
                                             <div class="mb-3">
@@ -276,6 +276,7 @@
  <script src="{{ url('https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js') }}"
  integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
  crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
  {{-- sweet alert --}}
  <script src="{{ url('https://unpkg.com/sweetalert/dist/sweetalert.min.js') }}"></script>
 

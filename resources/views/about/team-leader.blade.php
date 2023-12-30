@@ -50,18 +50,18 @@
                     style="font-family: 'Battambang', cursive;">
                     Check our awesome team leaders
                 </h1>
-
-
             </div>
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
                 @foreach ($data_member as $item)
+                    <?php
+                        $fb_link ='https://web.facebook.com/profile.php?id=100094879493602';
+                        $telegram_link ='https://t.me/erobot_generalknowledge';
+                        $linkin_link = 'https://www.linkedin.com/company/erobotkh';
 
-                    @if ($item->title === 'leader')
-                        <?php
-                            $fb_link ='https://web.facebook.com/profile.php?id=100094879493602';
-                            $telegram_link ='https://t.me/erobot_generalknowledge';
-                            $linkin_link = 'https://www.linkedin.com/company/erobotkh';
-                        ?>
+                        $position = strtolower($item->title);
+                    ?>
+                    @if ($position === 'leader' )
+
                         @foreach ($social_member as $social)
                             @if ($social->member_id === $item->id)
 
@@ -88,6 +88,7 @@
                             linkin="<?php echo $linkin_link; ?>" />
                     @endif
                 @endforeach
+
                 {{-- <x-team-leader-card name="Rann Sreynith" title="Social Media Team" photo="/images/photo_members/Rann_Sreynith.JPG" facebook="https://www.facebook.com/profile.php?id=100070627689101&mibextid=LQQJ4d" telegram="https://t.me/sreynith_1411" linkin="#" />
             <x-team-leader-card name="Korn Sophea" title="Mobile Development Team" photo="/images/photo_members/Korn_Sophea.jpg" facebook="https://www.facebook.com/korn.sophea.718?mibextid=ZbWKwL" telegram="https://t.me/mooni_li" linkin="#" />
             <x-team-leader-card name="Meth Farrizart" title="Website Team" photo="/images/photo_members/Meth_Farrizart.jpg" facebook="https://www.facebook.com/farrizart.meth" telegram="https://t.me/greatdev09" linkin="#" />--}}
@@ -107,13 +108,15 @@
             </div>
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
                 @foreach ($data_member as $item)
+                    <?php
+                        $fb_link ='https://web.facebook.com/profile.php?id=100094879493602';
+                        $telegram_link ='https://t.me/erobot_generalknowledge';
+                        $linkin_link = 'https://www.linkedin.com/company/erobotkh';
+                        $position = strtolower($item->title);
 
-                    @if ($item->title === 'member')
-                        <?php
-                            $fb_link ='https://web.facebook.com/profile.php?id=100094879493602';
-                            $telegram_link ='https://t.me/erobot_generalknowledge';
-                            $linkin_link = 'https://www.linkedin.com/company/erobotkh';
-                        ?>
+                    ?>
+                    @if ($position === 'member')
+
                         @foreach ($social_member as $social)
                             @if ($social->member_id === $item->id)
 

@@ -11,30 +11,7 @@ use Illuminate\Support\Facades\Storage;
 
 class viewMembersController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
-    public function index()
-    {
-        $data_member = Member::select('members.*','member_positions.title')
-        ->join('member_positions', 'member_positions.id','=','members.member_position_id');
-    }
 
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(Request $request)
-    {
-        //
-    }
 
     /**
      * Display the specified resource.
@@ -68,27 +45,6 @@ class viewMembersController extends Controller
         return view('about.team-leader',compact('data_member','social_member'));
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(member $member)
-    {
-        //
-    }
 
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, member $member)
-    {
-        //
-    }
 
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(member $member)
-    {
-        //
-    }
 }

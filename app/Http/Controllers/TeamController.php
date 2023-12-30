@@ -23,26 +23,19 @@ class TeamController extends Controller
      */
     public function store(Request $request)
     {
-        $cover = $request->file("image_name");
-        $url = " ";
-        if ($cover) {
-            $url = Storage::disk('do')->putFile(
-                "erobot/Team-cover",
-                $cover,
-                'public'
-            );
-        }
-        $this->validate($request, [
-            "name" => 'required',
-            "bio" => 'required',
-            "image_name" => "required|image|mimes:jpeg,jpg,png",
-        ]);
 
-        $this->create([
-            "name" => $request->name,
-            "bio" => $request->bio,
-            "image_name" => $url,
+        $this->validate($request,[
+            'name'=>'required',
+            'cover'=>'required|image|max:10240',
+            'bio'=>'required'
         ]);
+        $image_file = $request->cover;
+        $url = Storage::disk('do')->putFile(
+            "erobot/team",
+            $image_file,
+            'public'
+        );
+        $data=Team::create(['name'=>$request->name,'cover'=>$url,'bio'=>$request->bio]);
 
 
         // $team->save();
@@ -64,6 +57,22 @@ class TeamController extends Controller
     public function update(Request $request, string $id)
     {
         Team::find($id)->update($request->all());
+        $this->validate($request,[
+            'name'=>'required',
+            'bio'=>'required'
+        ]);
+        $cover = $request->cover;
+        if($cover){
+            $url = Storage::disk('do')->putFile(
+                "erobot/team",
+                $cover,
+                'public'
+            );
+        }else{
+            $url = $request->old_cover;
+        }
+        $data=Team::find($id)->update(['name'=>$request->name,'cover'=>$url,'bio'=>$request->bio]);
+
         return redirect()->route('team.index');
     }
 
