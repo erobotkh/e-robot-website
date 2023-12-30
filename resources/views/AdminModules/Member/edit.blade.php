@@ -1,74 +1,4 @@
-{{-- <form action="{{ route('member.update', $members->id) }}" method="POST" enctype="multipart/form-data"
-    class="form-group mt-4">
-    @csrf
-    @method('PATCH')
 
-    <div class="offcanvas w-25 offcanvas-end" tabindex="-1" id="editMember-{{ $members->id }}"
-        aria-labelledby="editMemberLabel">
-        <div class="offcanvas-header">
-            <h3 class="offcanvas-title fw-bold" id="editMemberLabel">Edit Member</h3>
-            <div class="rotate-img">
-                <img src="https://cdn1.iconfinder.com/data/icons/everyday-5/64/cross_delete_stop_x_denied_stopped-256.png"
-                    width="40px" height="40px" data-bs-dismiss="offcanvas" aria-label="Close" style="cursor: grab;">
-            </div>
-        </div>
-        <div class="offcanvas-body">
-            <div class="row gap-4">
-                <div>
-                    <label for=""> MemberID:</label>
-                    <input type="text" class="form-control" value="{{ $members->id }}" readonly>
-                </div>
-                <div>
-                    <label for=""> First Name:</label>
-                    <input type="text" class="form-control" value="{{ $members->first_name }}">
-                </div>
-                <div>
-                    <label for=""> Last Name:</label>
-                    <input type="text" class="form-control" value="{{ $members->last_name }}">
-                </div>
-                <div>
-                    <label for="">Bio: </label>
-                    <input type="text" class="form-control" value="{{ $members->bio }}">
-                </div>
-                <div>
-                    <label for="">Image:</label>
-                    <input type="file"class="form-control">
-                </div>
-                <div>
-                    <label for="">Position:</label>
-                    <select class="custom-select w-100 p-2">
-                        @php
-                            $team = DB::table('member_positions')->get();
-                        @endphp
-
-                        @foreach ($team as $teams)
-                            <option value="{{ $teams->id }}">{{ $teams->title }}</option>
-                        @endforeach
-
-                    </select>
-                </div>
-                <div>
-                    <label for="">From Team:</label>
-                    <select class="custom-select w-100 p-2" name="team_id">
-                        @php
-                            $team = DB::table('teams')->get();
-                        @endphp
-
-                        @foreach ($team as $teams)
-                            <option value="{{ $teams->id }}">{{ $teams->name }}</option>
-                        @endforeach
-
-                    </select>
-                </div> <br>
-            </div>
-
-            <button class=" btn btn-danger" data-bs-dismiss="offcanvas" type="button"> Cancel </button>
-            <button type="submit" class="btn btn-success"> Edit </button>
-
-        </div>
-
-    </div>
-</form> --}}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -91,7 +21,7 @@
         <div class="row gap-4 mt-5">
             <div>
                 <label for=""> MemberID:</label>
-                <input type="text" name="id" class="form-control" value="{{ $data->id }}" readonly>
+                <input type="text" name="id" class="form-control" value="{{ $data->id }}" readonly disabled >
             </div>
             <div>
                 <label for=""> First Name:</label>
@@ -107,7 +37,9 @@
             </div>
             <div>
                 <label for="">Image:</label>
-                <input type="file"class="form-control">
+                <input type="file"class="form-control" name="profile">
+                <img src="{{url($data->profile)}}" style="width:80px;" alt="">
+                <input type="hidden" name="old_profile" value="{{$data->profile}}">
             </div>
             <div>
                 <label for="">Position:</label>
@@ -117,7 +49,13 @@
                     @endphp
 
                     @foreach ($team as $teams)
-                        <option value="{{ $teams->id }}">{{ $teams->title }}</option>
+                        @if ($teams->id == $data->member_position_id)
+                            <option value="{{ $teams->id }}" selected>{{ $teams->title }}</option>
+
+                        @else
+                            <option value="{{ $teams->id }}">{{ $teams->title }}</option>
+
+                        @endif
                     @endforeach
 
                 </select>
@@ -130,7 +68,13 @@
                     @endphp
 
                     @foreach ($team as $teams)
-                        <option value="{{ $teams->id }}">{{ $teams->name }}</option>
+                        @if ($teams->id == $data->team_id)
+                            <option value="{{ $teams->id }}" selected>{{ $teams->name }}</option>
+                        @else
+                            <option value="{{ $teams->id }}">{{ $teams->name }}</option>
+
+                        @endif
+
                     @endforeach
 
                 </select>

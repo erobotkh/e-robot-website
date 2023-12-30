@@ -3,8 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Models\Member;
+use App\Models\Socail;
 use Illuminate\Http\Request;
+use TheSeer\Tokenizer\Exception;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Storage;
 
 class MemberController extends Controller
 {
@@ -34,37 +37,56 @@ class MemberController extends Controller
      */
     public function store(Request $request)
     {
-        // dd($request);
-        $member = new Member;
-        $member->first_name = $request->input('first_name');
-        $member->last_name = $request->input('last_name');
-        $member->bio = $request->input('bio');
-        $member->member_position_id = $request->input('member_position_id');
-        $member->team_id = $request->input('team_id');
+        $this->validate($request,[
+            'first_name'=>'required',
+            'last_name'=>'required',
+            'bio'=>'required',
+            'profile'=>'required',
+            'member_position_id'=>'required',
+            'team_id'=>'required',
+        ]);
+            $profile = $request->file('profile');
+            $url = Storage::disk('do')->putFile(
+                "erobot/member-profile",
+                $profile,
+                'public'
+            );
 
-        if ($request->hasFile('profile')) {
-            $file = $request->file('profile');
-            $ext = $file->getClientOriginalExtension();
-            $filename = time() . '.' . $ext;
-            $file->move('images', $filename);
-            $member->profile = $filename;
-        }
+            $data = Member::create([
+                'first_name' => $request->first_name,
+                "last_name" => $request->last_name,
+                'bio' => $request->bio,
+                'profile' => $url,
+                'member_position_id' => $request->member_position_id,
+                'team_id' => $request->team_id
+            ]);
+            $m_id = Member::select('id')->orderBy('id','desc')->first();
+            $linkFb =$request->facebook;
+            $linkTeleg=$request->telegram;
+            $linkLinkIn=$request->linkIn;
 
+            if(!$linkFb){
+                $linkFb ='https://web.facebook.com/profile.php?id=100094879493602';
+            }
+            if(!$linkTeleg){
+                $linkTeleg='https://t.me/erobot_generalknowledge';
+            }
+            if(!$linkLinkIn){
+                $linkLinkIn='https://www.linkedin.com/company/erobotkh';
+            }
+            $link=[$linkFb,$linkTeleg,$linkLinkIn];
+            $linkName=['facebook','telegram','linkIn'];
+            for($i =0 ; $i<3 ; $i++){
+                $member_socail = Socail::create([
+                    "icon"=>$linkName[$i],
+                    "name"=>$linkName[$i],
+                    "member_id"=>$m_id->id,
+                    "link"=>$link[$i],
+                ]);
+            }
 
-        // $request->validate([
-        //     'first_name' => 'required',
-        //     'last_name' => 'required',
-        //     'bio' => 'required',
-        //     'member_position_id' => 'required',
-        //     'team_id' => 'required',
-        //     'profile' => 'required',
-
-
-        // ]);
-
-        $member->save();
-        // Member::create($request->post());
         return redirect()->route('member.index');
+
     }
 
     /**
@@ -77,7 +99,8 @@ class MemberController extends Controller
 
     public function edit($id)
     {
-        $data = DB::table('members')->find($id);
+        // $data = DB::table('members')->find($id);
+        $data = Member::find($id);
         return view('AdminModules.Member.edit', compact('data'));
     }
 
@@ -86,7 +109,34 @@ class MemberController extends Controller
      */
     public function update(Request $request, $id)
     {
-        Member::find($id)->update($request->all());
+        $this->validate($request,[
+            'first_name'=>'required',
+            'last_name'=>'required',
+            'bio'=>'required',
+            'member_position_id'=>'required',
+            'team_id'=>'required',
+        ]);
+
+        $profile = $request->file('profile');
+        if($profile){
+            $url = Storage::disk('do')->putFile(
+                "erobot/member-profile",
+                $profile,
+                'public'
+            );
+        }else{
+            $url = $request->old_profile;
+        }
+
+
+        $data = Member::find($id)->update([
+            'first_name' => $request->first_name,
+            "last_name" => $request->last_name,
+            'bio' => $request->bio,
+            'profile' => $url,
+            'member_position_id' => $request->member_position_id,
+            'team_id' => $request->team_id
+        ]);
         return redirect()->route('member.index');
     }
 
@@ -94,7 +144,7 @@ class MemberController extends Controller
     public function delete($id)
     {
         $data = DB::table('members')->find($id);
-        return view('AdminModules.Member.delete', compact('data'));
+        return view('AdminModules.Member.delete');
     }
 
 
@@ -104,6 +154,7 @@ class MemberController extends Controller
     public function destroy($id)
     {
         $data = DB::table('members')->delete($id);
-        return redirect()->route('member.index', compact('data'));
+        $socail = Socail::where('member_id',$id)->delete();
+        return redirect()->route('member.index');
     }
 }

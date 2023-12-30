@@ -72,9 +72,10 @@
                     </button>
 
                     <ul class="dropdown-menu position-absolute" aria-labelledby="dropdownMenuLink">
-                    <li><a class="dropdown-item" href="/admin/donator?type=">All</a></li>
-                    <li><a class="dropdown-item" href="/admin/donator?type=dollar">Dollar $</a></li>
-                    <li><a class="dropdown-item" href="/admin/donator?type=reil">Reil ៛</a></li>
+                    
+                    <li><a class="dropdown-item" href="/admin/donator?type=&page={{$page}}">All</a></li>
+                    <li><a class="dropdown-item" href="/admin/donator?type=dollar&page={{$page}}">Dollar $</a></li>
+                    <li><a class="dropdown-item" href="/admin/donator?type=reil&page={{$page}}">Reil ៛</a></li>
                     </ul>
                 </div>
 
@@ -91,7 +92,6 @@
 
                     <th>Name</th>
                     <th>Amount</th>
-
                     <th>Actions</th>
                 </tr>
             </thead>
@@ -101,7 +101,7 @@
 
                 @foreach ($allDonator as $items)
                     <tr class="align-items-center justify-content-center">
-
+                        <?php $items->currency_type = strtolower($items->currency_type)?>
                         <td>{{ $items->name }}</td>
                         @if ($items->currency_type == "dollar")
                             <td>{{ $items->amount }} $</td>
@@ -187,7 +187,35 @@
 
             </tbody>
         </table>
+        <div class="mt-5 d-flex justify-content-end ">
+            <nav aria-label="Page navigation example">
+                <ul class="pagination">
+                    @if ($currency == "dollar")
 
+                        @for ($i = 1; $i <= $total_page; $i++)
+                            <li class="page-item  "><a class="page-link" href="/admin/donator?type=dollar&page={{$i}}">{{$i}}</a></li>
+
+                        @endfor
+                    @elseif ($currency == "reil")
+
+                        @for ($i = 1; $i <= $total_page; $i++)
+                            <li class="page-item  "><a class="page-link" href="/admin/donator?type=reil&page={{$i}}">{{$i}}</a></li>
+
+                        @endfor
+                    @else
+                        @for ($i = 1; $i <= $total_page; $i++)
+                            <li class="page-item  "><a class="page-link" href="/admin/donator?type=&page={{$i}}">{{$i}}</a></li>
+
+                        @endfor
+                    @endif
+                    {{-- @for ($i = 1; $i <= $total_page; $i++)
+                    <li class="page-item  "><a class="page-link" href="/admin/donator?type=&page={{$i}}">{{$i}}</a></li>
+
+                    @endfor --}}
+
+                </ul>
+            </nav>
+         </div>
         <!-- add new donator Modal -->
         <div class="modal fade" id="add_card" tabindex="-1" aria-labelledby="Add_Card" aria-hidden="true">
             <div class="modal-dialog">
@@ -242,7 +270,7 @@
             </div>
         </div>
 
-        <!--romove Modal -->
+        <!--remove Modal -->
         <div class="modal fade" id="showDelete" tabindex="-1" aria-labelledby="delete" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">

@@ -24,8 +24,8 @@
                       <i class="bi bi-search"></i>
                   </a>
               </li><!-- End Search Icon--> --}}
-        {{--
-              <li class="nav-item dropdown">
+
+              {{-- <li class="nav-item dropdown">
 
                   <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown">
                       <i class="bi bi-bell"></i>
@@ -98,9 +98,9 @@
 
                   </ul><!-- End Notification Dropdown Items -->
 
-              </li><!-- End Notification Nav -->
+              </li><!-- End Notification Nav --> --}}
 
-              <li class="nav-item dropdown">
+              {{-- <li class="nav-item dropdown">
 
                   <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown">
                       <i class="bi bi-chat-left-text"></i>
@@ -164,8 +164,8 @@
 
                   </ul><!-- End Messages Dropdown Items -->
 
-              </li><!-- End Messages Nav -->
-        --}}
+              </li><!-- End Messages Nav --> --}}
+
 
               <li class="nav-item dropdown pe-3">
 
@@ -176,13 +176,18 @@
                   </a><!-- End Profile Iamge Icon -->
 
                   <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
-                      <li class="dropdown-header">
-                          <h6>{{Auth()->user()->last_name}}{{ Auth()->user()->first_name}}</h6>
-                          <span>Web Developer</span>
-                      </li>
-                      <li>
-                          <hr class="dropdown-divider">
-                      </li>
+
+                        <li class="dropdown-header d-flex align-items-center" >
+                                <img src="{{url('images/photo_members/sticker-e-robot.png')}}" alt="Profile" class="rounded-circle" style="height:80px">
+
+                            <div class="">
+                                <h6>{{Auth()->user()->last_name}}{{ Auth()->user()->first_name}}</h6>
+                                <span>Admin of E-Robot</span>
+                            </div>
+                        </li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
 
                       {{-- <li>
                           <a class="dropdown-item d-flex align-items-center" href="{{ url('users-profile') }}">

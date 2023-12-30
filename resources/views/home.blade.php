@@ -72,7 +72,7 @@
                         <a href="#">
                             <div class="programObject"><img src="images/Sprout_of_Ideas_logo.jpg" alt=""></div>
                             <div class="subtitleDetail">
-                                <div class="programSubtitle"><h2  style="font-family: 'Battambang', cursive;">ពន្លកគំនិត-Ponlork Komnit</h2></div>
+                                <div class="programSubtitle"><h2  style="font-family: 'Battambang', cursive;">Punlork Komnith</h2></div>
                                 <article class="aboutProgram line-clamp-4">Cultivate creativity, inspire, create new stories, guide, explain, educate children to have good discipline and morality in life, encourage and encourage children to study hard without giving up.</article>
                             </div>
 

@@ -22,7 +22,7 @@
         <div class="row gap-4 mt-5">
             <div>
                 <label for=""> TeamID:</label>
-                <input type="text" name="id" class="form-control" value="{{ $team->id }}" readonly>
+                <input type="text" name="id" class="form-control" value="{{ $team->id }}" readonly disabled >
             </div>
             <div>
                 <label for=""> Position Name:</label>
@@ -35,7 +35,9 @@
 
             <div>
                 <label for=""> Cover:</label>
-                <input type="file" name="image_name" class="form-control">
+                <input type="file" name="cover" class="form-control">
+                <img src="{{$team->cover}}" style="width: 80px" alt="">
+                <input type="hidden" name="old_cover" value="{{$team->cover}}">
             </div>
             <br>
 

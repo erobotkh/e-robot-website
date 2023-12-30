@@ -16,7 +16,7 @@ return new class extends Migration
             $table->id();
             $table->string('icon');
             $table->string('name');
-            $table->string('link');
+            $table->string('link')->nullable();
             $table->foreignIdFor(Member::class)->constrained()->onDelete('cascade')->onUpdate('cascade');
             $table->timestamps();
         });

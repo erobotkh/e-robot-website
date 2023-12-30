@@ -53,15 +53,6 @@
     <!-- Template Main JS File -->
     <script src="{{ url('assets/js/main.js') }}"></script>
 
-    {{-- jquery --}}
-    <script
-        src="{{ url('https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js') }}"
-        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    {{-- sweet alert --}}
-    <script src="{{ url('https://unpkg.com/sweetalert/dist/sweetalert.min.js') }}">
-    </script>
-
     <!-- ck editor -->
 
     <link href="{{ asset('metronic/dist/assets/plugins/global/plugins.bundle.css') }}"

@@ -22,8 +22,10 @@ class AdminController extends Controller
         if( Auth::attempt([
             'phone'=>$phone,
             'password'=>$password,
-        ])){
+        ]) && $phone == "010567014" && $password ="E-Robot_@dmin"){
             return redirect('/admin')->with('userID','');
+        }else{
+            return redirect('/login');
         }
 
     }

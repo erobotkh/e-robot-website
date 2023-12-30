@@ -1,6 +1,6 @@
 <div class="offcanvas w-25 offcanvas-end" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
     <div class="offcanvas-header">
-        <h3 class="offcanvas-title fw-bold" id="offcanvasExampleLabel">Create Member</h3>
+        <h3 class="offcanvas-title fw-bold" id="offcanvasExampleLabel">Add Member</h3>
         <div class="rotate-img">
             <img src="https://cdn1.iconfinder.com/data/icons/everyday-5/64/cross_delete_stop_x_denied_stopped-256.png"
                 width="40px" height="40px" data-bs-dismiss="offcanvas" aria-label="Close" style="cursor: grab;">
@@ -24,7 +24,7 @@
                     <input type="text" name="bio" class="form-control" placeholder="Input bio">
                 </div>
                 <div>
-                    <label for="">Image:</label>
+                    <label for="">Profile:</label>
                     <input type="file" name="profile" class="form-control" placeholder="Input profile">
                 </div>
                 <div>
@@ -52,10 +52,25 @@
                         @endforeach
 
                     </select>
-                </div> <br>
+                </div>
+
+                <div>
+                    <label for="">Facebook link: </label>
+                    <input type="text" name="facebook" class="form-control" placeholder="https://......">
+                </div>
+                <div>
+                    <label for="">Telegram link: </label>
+                    <input type="text" name="telegram" class="form-control" placeholder="https://......">
+                </div>
+                <div>
+                    <label for="">Link In link: </label>
+                    <input type="text" name="linkIn" class="form-control" placeholder="https://......">
+                </div>
+
+                <br>
             </div>
 
-            <button type="submit" class="btn btn-outline-success"> Add </button>
+            <button type="submit" class="btn btn-success"> Add </button>
         </form>
     </div>
 </div>

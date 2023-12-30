@@ -91,7 +91,7 @@
 
         </div>
     </div>
-    
+
     {{-- <div
         class="headerTop_right lg:w-[250px] md:w-[28%] h-full flex items-center justify-between text-white font-semibold">
 
@@ -149,9 +149,9 @@
                 <div class="flex items-center justify-end  ">
                     <a class="flex-shrink-0" href="/home">
                         <img class="block lg:hidden h-14 w-auto "
-                            src="{{ asset('./images/logo_erobot-removebg.png') }}" alt="Logo">
+                            src="{{ asset('./images/logo/E_robot_logo.png') }}" alt="Logo">
                         <img class="hidden lg:block h-16 w-auto "
-                            src="{{ asset('./images/logo_erobot-removebg.png') }}" alt="Logo">
+                            src="{{ asset('./images/logo/E_robot_logo.png') }}" alt="Logo">
                     </a>
                     <div class="hidden lg:block">
                         <div class="flex">
@@ -203,6 +203,12 @@
                                         <li
                                             class="rounded-sm px-3 py-2 text-xs font-semibold hover:bg-black hover:text-white">
                                             Department</li>
+                                    </a>
+
+                                    <a href="/about/Logo-Stickers">
+                                        <li
+                                            class="rounded-sm px-3 py-2 text-xs font-semibold hover:bg-black hover:text-white">
+                                            Logo & Stickers</li>
                                     </a>
                                 </ul>
                             </div>
@@ -293,9 +299,9 @@
                                 class="flex items-center w-full p-2 text-base transition duration-75 rounded-lg hover:text-white group hover:bg-black  pl-11">History</a>
                         </li>
                         <li>
-                            <a href="/about/mission-vision"
-                                class="flex items-center w-full p-2 text-base transition duration-75 rounded-lg hover:text-white group hover:bg-black pl-11">Mission,
-                                Vision and Value</a>
+                            <a href="/about/Logo-Stickers"
+                                class="flex items-center w-full p-2 text-base transition duration-75 rounded-lg hover:text-white group hover:bg-black pl-11">
+                                Mission, Vision and Value</a>
                         </li>
                         <li>
                             <a href="/about/team-leader"
@@ -309,6 +315,11 @@
                             <a href="/about/department"
                                 class="flex items-center w-full p-2 text-base transition duration-75 rounded-lg hover:text-white group hover:bg-black pl-11"
                                 style="font-family: 'Battambang', cursive;">Department</a>
+                        </li>
+                        <li>
+                            <a href="/about/department"
+                                class="flex items-center w-full p-2 text-base transition duration-75 rounded-lg hover:text-white group hover:bg-black pl-11"
+                                style="font-family: 'Battambang', cursive;">Logo & Stickers</a>
                         </li>
                     </ul>
                 </li>

@@ -1,4 +1,4 @@
-<div class="offcanvas w-25 offcanvas-end h-50" tabindex="-1" id="position" aria-labelledby="positionLabel">
+<div class="offcanvas offcanvas-end" tabindex="-1" id="position" aria-labelledby="positionLabel">
     <div class="offcanvas-header">
         <h3 class="offcanvas-title fw-bold" id="positionLabel">Create Position</h3>
         <div class="rotate-img">
@@ -16,10 +16,7 @@
                     <label for=""> Position Name:</label>
                     <input type="text" name="title" class="form-control" placeholder="Title Name">
                 </div> <br>
-                <div>
-                    <label for=""> Bio:</label>
-                    <input type="text" name="bio" class="form-control" placeholder="Bio">
-                </div> <br>
+
             </div>
 
             <button type="submit" class="btn btn-primary"> Submit </button>
