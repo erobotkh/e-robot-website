@@ -59,6 +59,8 @@
         <div class="post_thumbnail w-[20vw] mt-[7vh] rounded sticky top-0">
             <h2 class="text-center text-xl font-bold bg-red-600 text-white py-2 rounded mb-1">Related Post</h2>
             @foreach ($thumbnail as $item)
+                <?php $item->image_name = env('DO_URL').$item->image_name ?>
+
                 <x-activit-thumbnail post_id='{{$item->id}}'  banner='{{$item->image_name}}' post_cate_id='{{$detailContent->category_id}}' title='{{$item->title}}' ca='{{$item->c_name}}'></x-activit-thumbnail>
             @endforeach
         </div>

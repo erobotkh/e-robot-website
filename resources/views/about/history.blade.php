@@ -13,29 +13,5 @@
         </div>
         <div class="w-full my-8"><img class="object-fit w-full" src={{asset('./images/erobot-cover.jpg')}} alt=""></div>
 
-
-        <div class="downloadSection flex items-center justify-center border rounded">
-            <div class="section1 border  rounded w-[33.33%] flex">
-                <div class="logo border flex items-center justify-center w-[50%] border-[red]">
-                    <a href="{{url('/images/logo_erobot-removebg.png')}}" class="" target="_blank" download>
-                        <img src="{{url('/images/logo_erobot-removebg.png')}}" alt="">
-                    </a>
-                </div>
-                <div class="border flex items-center justify-center   w-[50%] ">
-                    <div class="1 border w-[50%] border-b-[red] "></div>
-                    <div class="2 border w-[50%] border-t-[red] "></div>
-                </div>
-
-            </div>
-            <div class="section2 border  rounded w-[33.33%] border-[red]">
-                <div class="top">
-
-                </div>
-                <div class="center text-center" style="font-weight: bold">We're glad our Logo, Sticker users.</div>
-                <div class="bottom"></div>
-            </div>
-            <div class="section3 border  rounded w-[33.33%] border-[red]"></div>
-        </div>
-
     </div>
 </x-layout>
