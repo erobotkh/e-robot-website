@@ -12,15 +12,14 @@
 
         <!-- resource card wrapper -->
         <div class="grid auto-rows-auto sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-            <?php $resource->image = env('DO_URL').$resource->image ?>
 
             @foreach($resources as $resource)
+                <?php $resource->image = env('DO_URL').$resource->image ?>
+
                 <x-resource-card title="{{ $resource->title }}" image="{{ $resource->image }}"
                     description="{{ $resource->description }}" subTitle="{{ $resource->sub_title }}"
                     link="{{ route('resource.show', $resource) }}" />
             @endforeach
-
-
         </div>
         <div class="mt-5"> {{ $resources->links() }}</div>
 </x-layout>
