@@ -18,7 +18,7 @@ class viewMembersController extends Controller
      */
     public function show()
     {
-        $data_member = Member::select('members.*','member_positions.title','teams.name')
+        $data_member = Member::select('members.*','member_positions.title','teams.*')
         ->join('member_positions', 'member_positions.id','=','members.member_position_id')
         ->join('teams', 'teams.id','=','members.team_id')
         ->get();
