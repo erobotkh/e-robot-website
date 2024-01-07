@@ -8,7 +8,7 @@ class DepartementController extends Controller
 {
     public function show(){
 
-        $team = Member::Select('members.*','member_positions.title','teams.name','teams.bio')
+        $team = Member::Select('members.*','member_positions.title','teams.*')
                 ->Where('member_position_id',1)
                 ->join('teams', 'teams.id','=','members.team_id')
                 ->join('member_positions', 'member_positions.id','=','members.member_position_id')
