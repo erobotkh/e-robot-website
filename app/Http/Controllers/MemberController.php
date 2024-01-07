@@ -40,7 +40,7 @@ class MemberController extends Controller
         $this->validate($request,[
             'first_name'=>'required',
             'last_name'=>'required',
-            'bio'=>'required',
+            'bio',
             'profile'=>'required',
             'member_position_id'=>'required',
             'team_id'=>'required',
@@ -51,11 +51,15 @@ class MemberController extends Controller
                 $profile,
                 'public'
             );
-
+            if($request->bio){
+                $bio = $request->bio;
+            }else{
+                $bio =" ";
+            }
             $data = Member::create([
                 'first_name' => $request->first_name,
                 "last_name" => $request->last_name,
-                'bio' => $request->bio,
+                'bio' => $bio,
                 'profile' => $url,
                 'member_position_id' => $request->member_position_id,
                 'team_id' => $request->team_id
