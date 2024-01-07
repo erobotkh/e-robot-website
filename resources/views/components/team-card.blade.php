@@ -18,6 +18,6 @@
             </div>
         </div>
         <div class="  px-8 mt-[10px] pb-1 font-bold  text-xl text-[#DC2626] uppercase"><h2>{{$department}}</h2></div>
-        <article class="px-8 mb-4 text-justify line-clamp-5">{{$description}}</article>
+        <article class="px-8 mb-4 text-justify line-clamp-4">{{$description}}</article>
     </a>
 </div>
