@@ -29,6 +29,8 @@
                 <script async src="https://static.addtoany.com/menu/page.js"></script>
                 <!-- AddToAny END -->
             </div> --}}
+            <?php $resource->image= env('DO_URL').$resource->image?>
+
             <div class="mx-auto my-5"> <img src="{{ $resource->image }}" alt="cover image"
                     class="block mx-auto w-full max-h-[400px] rounded" />
             </div>
@@ -42,6 +44,8 @@
             <h1 class="font-bold text-2xl uppercase pb-4 border-b-2 border-red-600 my-10 text-red-600">Related Resources
             </h1>
             <div class="grid auto-rows-auto md:grid-cols-3 sm:gap-1 md:gap-3 lg:gap-6">
+                <?php $resource->image= env('DO_URL').$resource->image?>
+
                 @foreach($related_resources as $resource)
                     <x-resource-card title="{{ $resource->title }}" image="{{ $resource->image }}"
                         description="{{ $resource->description }}" subTitle="{{ $resource->sub_title }}"
